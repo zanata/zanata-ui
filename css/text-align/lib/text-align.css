@@ -1,0 +1,17 @@
+/**
+ * DOC
+ *
+ * ### Text Align
+ *
+ * ```example
+ * <p class='tal mb1/2'>Aligned Left</p>
+ * <p class='tar mb1/2'>Aligned Right</p>
+ * <p class='tac mb1/2'>Aligned Center</p>
+ * <p class='taj mb1/2 measure'>Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+ * ```
+ */
+
+.tal { text-align:left }
+.tac { text-align:center }
+.tar { text-align:right }
+.taj { text-align:justify }

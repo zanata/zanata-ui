@@ -1,0 +1,19 @@
+/**
+ * DOC
+ *
+ * ### List
+ *
+ * Defaults to `list-style-position: inside`
+ *
+ * ```example
+ * <ul>
+ *   <li class="listd">List item disc</li>
+ *   <li class="listc">List item circle</li>
+ *   <li class="lists">List item square</li>
+ * </ul>
+ * ```
+ */
+
+.listd { list-style-type: disc; list-style-position: inside; }
+.listc { list-style-type: circle; list-style-position: inside; }
+.lists { list-style-type: square; list-style-position: inside; }

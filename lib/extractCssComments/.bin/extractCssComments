@@ -1,0 +1,85 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+var extractCssComments = require('../')
+
+/**
+ * Main
+ */
+
+function main (argv, callback) {
+  var input
+  var output
+  var arg
+
+  function getarg () {
+    var arg = argv.shift()
+
+    if (arg.indexOf('--') === 0) {
+      // e.g. --opt
+      arg = arg.split('=')
+      if (arg.length > 1) {
+        // e.g. --opt=val
+        argv.unshift(arg.slice(1).join('='))
+      }
+      arg = arg[0]
+    } else if (arg[0] === '-') {
+      if (arg.length > 2) {
+        // e.g. -abc
+        argv = arg.substring(1).split('').map(function (ch) {
+          return '-' + ch
+        }).concat(argv)
+        arg = argv.shift()
+      } else {
+        // e.g. -a
+      }
+    } else {
+      // e.g. foo
+    }
+
+    return arg
+  }
+
+  while (argv.length) {
+    arg = getarg()
+    switch (arg) {
+      case '-o':
+      case '--output':
+        output = argv.shift()
+        break
+      case '-i':
+      case '--input':
+        input = argv.shift()
+        break
+      case '-h':
+      case '--help':
+        return 'help'
+    }
+  }
+
+  if (!input) {
+    process.stdout.write('Please enter an input file `-i <filepath>`')
+    return callback()
+  } else {
+    var data = extractCssComments(input)
+    if (!output) {
+      process.stdout.write(data + '\n')
+      return callback()
+    }
+    return fs.writeFile(output, data, callback)
+  }
+}
+
+/**
+ * Expose / Entry Point
+ */
+
+if (!module.parent) {
+  process.title = 'extractCssComments'
+  main(process.argv.slice(), function (err, code) {
+    if (err) throw err
+    return process.exit(code || 0)
+  })
+} else {
+  module.exports = main
+}

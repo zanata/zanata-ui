@@ -1,0 +1,101 @@
+/**
+ * DOC
+ *
+ * ### Borders
+ *
+ * Default is solid 1px
+ *
+ * - bd = border (required)
+ * - `[nothing]` = all
+ * - h = horizontal
+ * - v = vertical
+ * - t = top
+ * - r = right
+ * - b = bottom
+ * - l = left
+ *
+ * ```example
+ * <div class="mb1/2 bd">Default Border</div>
+ * <div class="mb1/2 bdh">Border Horizontal</div>
+ * <div class="bdt">Border Top</div>
+ * ```
+ *
+ * #### Border Width
+ *
+ * - 1
+ * - 2
+ *
+ * ```example
+ * <div class="mb1/2 bd bd2">Default Border 2px</div>
+ * <div class="mb1/2 bdh bdw2">Border Horizontal 2px</div>
+ * <div class="bdt bdw2">Border Top 2px</div>
+ * ```
+ *
+ * #### Border Style
+ *
+ *   - s = solid
+ *   - dot = dotted
+ *   - dash = dashed
+ *
+ * ```example
+ * <div class="mb1/2 bd bdsdash">Default Border dashed</div>
+ * <div class="mb1/2 bdh bdshdot">Border Horizontal Dotted</div>
+ * <div class="bd bdsbdot">Border Default, Bottom Dashed</div>
+ * ```
+ */
+
+.bd       { border-width: 1px; border-style: solid }
+.bdh      { border-left-width: 1px; border-right-width: 1px; border-left-style: solid; border-right-style: solid }
+.bdv      { border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid }
+.bdt      { border-top-width: 1px; border-top-style: solid }
+.bdr      { border-right-width: 1px; border-right-style: solid }
+.bdb      { border-bottom-width: 1px; border-bottom-style: solid }
+.bdl      { border-left-width: 1px; border-left-style: solid }
+
+.bd2      { border-width: 2px; border-style: solid }
+.bd2h     { border-left-width: 2px; border-right-width: 2px; border-left-style: solid; border-right-style: solid }
+.bd2v     { border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid }
+.bd2t     { border-top-width: 2px; border-top-style: solid }
+.bd2r     { border-right-width: 2px; border-right-style: solid }
+.bd2b     { border-bottom-width: 2px; border-bottom-style: solid }
+.bd2l     { border-left-width: 2px; border-left-style: solid }
+
+.bdw1     { border-width: 1px }
+.bdwh1    { border-left-width: 1px; border-right-width: 1px }
+.bdwv1    { border-top-width: 1px; border-bottom-width: 1px }
+.bdwt1    { border-top-width: 1px }
+.bdwr1    { border-right-width: 1px }
+.bdwb1    { border-bottom-width: 1px }
+.bdwl1    { border-left-width: 1px }
+
+.bdw2     { border-width: 2px }
+.bdwh2    { border-left-width: 2px; border-right-width: 2px }
+.bdwv2    { border-top-width: 2px; border-bottom-width: 2px }
+.bdwt2    { border-top-width: 2px }
+.bdwr2    { border-right-width: 2px }
+.bdwb2    { border-bottom-width: 2px }
+.bdwl2    { border-left-width: 2px }
+
+.bdss     { border-style: solid }
+.bdssh    { border-left-style: solid; border-right-style: solid }
+.bdssv    { border-top-style: solid; border-bottom-style: solid }
+.bdsst    { border-top-style: solid }
+.bdssr    { border-right-style: solid }
+.bdssb    { border-bottom-style: solid }
+.bdssl    { border-left-style: solid }
+
+.bdsdot   { border-style: dotted }
+.bdshdot  { border-left-style: dotted; border-right-style: dotted }
+.bdsvdot  { border-top-style: dotted; border-bottom-style: dotted }
+.bdstdot  { border-top-style: dotted }
+.bdsrdot  { border-right-style: dotted }
+.bdsbdot  { border-bottom-style: dotted }
+.bdsldot  { border-left-style: dotted }
+
+.bdsdash  { border-style: dashed }
+.bdshdash { border-left-style: dashed; border-right-style: dashed }
+.bdsvdash { border-top-style: dashed; border-bottom-style: dashed }
+.bdstdash { border-top-style: dashed }
+.bdsrdash { border-right-style: dashed }
+.bdsbdash { border-bottom-style: dashed }
+.bdsldash { border-left-style: dashed }

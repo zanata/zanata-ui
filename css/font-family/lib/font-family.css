@@ -1,0 +1,14 @@
+/**
+ * DOC
+ *
+ * ### Font Family
+ *
+ * ```example
+ * <p class="ffsans fz2">Using a Sans Serif font</p>
+ * <p class="ffmono fz2">Using a Monospace font</p>
+ * ```
+ *
+ */
+
+.ffsans { font-family: 'Source Sans Pro', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; }
+.ffmono, .ffcode, code { font-family: Consolas, monaco, monospace; }

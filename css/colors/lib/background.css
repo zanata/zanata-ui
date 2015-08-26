@@ -1,0 +1,157 @@
+/**
+ * DOC
+ *
+ * #### Background Colors
+ *
+ * ##### Desaturated
+ *
+ * ```example
+ * <p class="p1/4 bgcblack cwhite">.bgcblack</p>
+ * <p class="p1/4 bgcblack90 cwhite">.bgcblack90</p>
+ * <p class="p1/4 bgcblack80 cwhite">.bgcblack80</p>
+ * <p class="p1/4 bgcblack70 cwhite">.bgcblack70</p>
+ * <p class="p1/4 bgcblack60 cwhite">.bgcblack60</p>
+ * <p class="p1/4 bgcgray cwhite">.bgcgray</p>
+ * <p class="p1/4 bgcwhite60">.bgcwhite60</p>
+ * <p class="p1/4 bgcwhite70">.bgcwhite70</p>
+ * <p class="p1/4 bgcwhite80">.bgcwhite80</p>
+ * <p class="p1/4 bgcwhite90">.bgcwhite90</p>
+ * <p class="p1/4 bgccwhite">.bgcwhite</p>
+ * ```
+ *
+ */
+
+.bgcblack         { background-color: hsl(0, 0%, 0%) }
+.bgcblack90       { background-color: hsl(0, 0%, 10%) }
+.bgcblack80       { background-color: hsl(0, 0%, 20%) }
+.bgcblack70       { background-color: hsl(0, 0%, 30%) }
+.bgcblack60       { background-color: hsl(0, 0%, 40%) }
+.bgcgray          { background-color: hsl(0, 0%, 50%) }
+.bgcwhite60       { background-color: hsl(0, 0%, 60%) }
+.bgcwhite70       { background-color: hsl(0, 0%, 70%) }
+.bgcwhite80       { background-color: hsl(0, 0%, 80%) }
+.bgcwhite90       { background-color: hsl(0, 0%, 90%) }
+.bgcwhite         { background-color: hsl(0, 0%, 100%) }
+
+/**
+ * DOC
+ *
+ * ##### Transparency
+ *
+ * ```example
+ * <p class="p1/4 bgcblack90a cwhite">.bgcblack90a</p>
+ * <p class="p1/4 bgcblack80a cwhite">.bgcblack80a</p>
+ * <p class="p1/4 bgcblack70a cwhite">.bgcblack70a</p>
+ * <p class="p1/4 bgcblack60a cwhite">.bgcblack60a</p>
+ * <p class="p1/4 bgcblack50a cwhite">.bgcblack50a</p>
+ * <p class="p1/4 bgcblack40a">.bgcblack40a</p>
+ * <p class="p1/4 bgcblack30a">.bgcblack30a</p>
+ * <p class="p1/4 bgcblack20a">.bgcblack20a</p>
+ * <p class="p1/4 bgcblack10a">.bgcblack10a</p>
+ * ```
+ *
+ */
+
+.bgcblack90a       { background-color: hsla(0, 0%, 10%, .9) }
+.bgcblack80a       { background-color: hsla(0, 0%, 20%, .8) }
+.bgcblack70a       { background-color: hsla(0, 0%, 30%, .7) }
+.bgcblack60a       { background-color: hsla(0, 0%, 40%, .6) }
+.bgcblack50a       { background-color: hsla(0, 0%, 50%, .5) }
+.bgcblack40a       { background-color: hsla(0, 0%, 60%, .4) }
+.bgcblack30a       { background-color: hsla(0, 0%, 70%, .3) }
+.bgcblack20a       { background-color: hsla(0, 0%, 80%, .2) }
+.bgcblack10a       { background-color: hsla(0, 0%, 90%, .1) }
+
+ /**
+ * DOC
+ *
+ * ##### Brand Colors
+ *
+ * ```example
+ * <p class="p1/4 bgcpri cwhite">.bgcpri</p>
+ * <p class="p1/4 bgcsec cwhite">.bgcsec</p>
+ * <p class="p1/4 bgcter cwhite">.bgcter</p>
+ * ```
+ */
+
+.bgcpri { background-color: var(--primary) }
+.bgcsec { background-color: var(--secondary) }
+.bgcter { background-color: var(--tertiary) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Tint
+ *
+ * ```example
+ * <p class="p1/4 bgcsec90 cwhite">.bgcsec90</p>
+ * <p class="p1/4 bgcsec80 cwhite">.bgcsec80</p>
+ * <p class="p1/4 bgcsec70 cwhite">.bgcsec70</p>
+ * <p class="p1/4 bgcsec60 cwhite">.bgcsec60</p>
+ * <p class="p1/4 bgcsec50">.bgcsec50</p>
+ * <p class="p1/4 bgcsec40">.bgcsec40</p>
+ * <p class="p1/4 bgcsec30">.bgcsec30</p>
+ * <p class="p1/4 bgcsec20">.bgcsec20</p>
+ * <p class="p1/4 bgcsec10">.bgcsec10</p>
+ * ```
+ */
+
+.bgcsec90        { background-color: color(var(--secondary) tint(10%)) }
+.bgcsec80        { background-color: color(var(--secondary) tint(20%)) }
+.bgcsec70        { background-color: color(var(--secondary) tint(30%)) }
+.bgcsec60        { background-color: color(var(--secondary) tint(40%)) }
+.bgcsec50        { background-color: color(var(--secondary) tint(50%)) }
+.bgcsec40        { background-color: color(var(--secondary) tint(60%)) }
+.bgcsec30        { background-color: color(var(--secondary) tint(70%)) }
+.bgcsec20        { background-color: color(var(--secondary) tint(80%)) }
+.bgcsec10        { background-color: color(var(--secondary) tint(90%)) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Transparency
+ *
+ * ```example
+ * <p class="p1/4 bgcsec90a cwhite">.bgcsec90a</p>
+ * <p class="p1/4 bgcsec80a cwhite">.bgcsec80a</p>
+ * <p class="p1/4 bgcsec70a cwhite">.bgcsec70a</p>
+ * <p class="p1/4 bgcsec60a cwhite">.bgcsec60a</p>
+ * <p class="p1/4 bgcsec50a">.bgcsec50a</p>
+ * <p class="p1/4 bgcsec40a">.bgcsec40a</p>
+ * <p class="p1/4 bgcsec30a">.bgcsec30a</p>
+ * <p class="p1/4 bgcsec20a">.bgcsec20a</p>
+ * <p class="p1/4 bgcsec10a">.bgcsec10a</p>
+ * ```
+ */
+
+.bgcsec90a        { background-color: color(var(--secondary) tint(10%) alpha(90%)) }
+.bgcsec80a        { background-color: color(var(--secondary) tint(20%) alpha(80%)) }
+.bgcsec70a        { background-color: color(var(--secondary) tint(30%) alpha(70%)) }
+.bgcsec60a        { background-color: color(var(--secondary) tint(40%) alpha(60%)) }
+.bgcsec50a        { background-color: color(var(--secondary) tint(50%) alpha(50%)) }
+.bgcsec40a        { background-color: color(var(--secondary) tint(60%) alpha(40%)) }
+.bgcsec30a        { background-color: color(var(--secondary) tint(70%) alpha(30%)) }
+.bgcsec20a        { background-color: color(var(--secondary) tint(80%) alpha(20%)) }
+.bgcsec10a        { background-color: color(var(--secondary) tint(90%) alpha(10%)) }
+
+/**
+ * DOC
+ *
+ * ##### Status
+ *
+ * ```example
+ * <p class="p1/4 bgchighlight cwhite">.bgchighlight</p>
+ * <p class="p1/4 bgcsuccess cwhite">.bgcsuccess</p>
+ * <p class="p1/4 bgcunsure">.bgcunsure</p>
+ * <p class="p1/4 bgcwarning cwhite">.bgcwarning</p>
+ * <p class="p1/4 bgcdanger cwhite">.bgcdanger</p>
+ * <p class="p1/4 bgcneutral">.bgcneutral</p>
+ * ```
+ */
+
+.bgchighlight     { background-color: var(--highlight) }
+.bgcsuccess       { background-color: var(--success) }
+.bgcunsure        { background-color: var(--unsure) }
+.bgcwarning       { background-color: var(--warning) }
+.bgcdanger        { background-color: var(--danger) }
+.bgcneutral       { background-color: var(--neutral) }

@@ -1,0 +1,155 @@
+/**
+ * DOC
+ *
+ * #### Border Colors
+ *
+ * ##### Desaturated
+ *
+ * ```example
+ * <div class="mb1/2 bd bdcblack">Border color black</div>
+ * <div class="mb1/2 bd bdcblack90">Border color bdcblack90</div>
+ * <div class="mb1/2 bd bdcblack80">Border color bdcblack80</div>
+ * <div class="mb1/2 bd bdcblack70">Border color bdcblack70</div>
+ * <div class="mb1/2 bd bdcblack60">Border color bdcblack60</div>
+ * <div class="mb1/2 bd bdcgray">Border color bdcgray</div>
+ * <div class="mb1/2 bd bdcwhite60">Border color bdcwhite60</div>
+ * <div class="mb1/2 bd bdcwhite70">Border color bdcwhite70</div>
+ * <div class="mb1/2 bd bdcwhite80">Border color bdcwhite80</div>
+ * <div class="mb1/2 bd bdcwhite90">Border color bdcwhite90</div>
+ * <div class="bd bdcwhite">Border color white</div>
+ * ```
+ */
+
+.bdcblack         { border-color: hsl(0, 0%, 0%) }
+.bdcblack90       { border-color: hsl(0, 0%, 10%) }
+.bdcblack80       { border-color: hsl(0, 0%, 20%) }
+.bdcblack70       { border-color: hsl(0, 0%, 30%) }
+.bdcblack60       { border-color: hsl(0, 0%, 40%) }
+.bdcgray          { border-color: hsl(0, 0%, 50%) }
+.bdcwhite60       { border-color: hsl(0, 0%, 60%) }
+.bdcwhite70       { border-color: hsl(0, 0%, 70%) }
+.bdcwhite80       { border-color: hsl(0, 0%, 80%) }
+.bdcwhite90       { border-color: hsl(0, 0%, 90%) }
+.bdcwhite         { border-color: hsl(0, 0%, 100%) }
+
+/**
+ * DOC
+ *
+ * ##### Transparent
+ *
+ * ```example
+ * <div class="mb1/2 bd bdcblack90a">Border color bdcblack90a</div>
+ * <div class="mb1/2 bd bdcblack80a">Border color bdcblack80a</div>
+ * <div class="mb1/2 bd bdcblack70a">Border color bdcblack70a</div>
+ * <div class="mb1/2 bd bdcblack60a">Border color bdcblack60a</div>
+ * <div class="mb1/2 bd bdcblack50a">Border color bdcblack50a</div>
+ * <div class="mb1/2 bd bdcblack40a">Border color bdcblack40a</div>
+ * <div class="mb1/2 bd bdcblack30a">Border color bdcblack30a</div>
+ * <div class="mb1/2 bd bdcblack20a">Border color bdcblack20a</div>
+ * <div class="mb1/2 bd bdcblack10a">Border color bdcblack10a</div>
+ * ```
+ */
+
+.bdcblack90a      { border-color: hsla(0, 0%, 10%, .9) }
+.bdcblack80a      { border-color: hsla(0, 0%, 20%, .8) }
+.bdcblack70a      { border-color: hsla(0, 0%, 30%, .7) }
+.bdcblack60a      { border-color: hsla(0, 0%, 40%, .6) }
+.bdcblack50a      { border-color: hsla(0, 0%, 50%, .5) }
+.bdcblack40a      { border-color: hsla(0, 0%, 60%, .4) }
+.bdcblack30a      { border-color: hsla(0, 0%, 70%, .3) }
+.bdcblack20a      { border-color: hsla(0, 0%, 80%, .2) }
+.bdcblack10a      { border-color: hsla(0, 0%, 90%, .1) }
+
+ /**
+  * DOC
+  *
+  * ##### Brand Colors
+  *
+  * ```example
+  * <div class="mb1/2 bd bdcpri">Border color primary</div>
+  * <div class="mb1/2 bd bdcsec">Border color secondary</div>
+  * <div class="bd bdcter">Border color tertiary</div>
+  * ```
+  */
+
+.bdcpri           { border-color: var(--primary) }
+.bdcsec           { border-color: var(--secondary) }
+.bdcter           { border-color: var(--tertiary) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Tint
+ *
+ * ```example
+ * <div class="mb1/2 bd bdcsec90">Border color bdcsec90</div>
+ * <div class="mb1/2 bd bdcsec80">Border color bdcsec80</div>
+ * <div class="mb1/2 bd bdcsec70">Border color bdcsec70</div>
+ * <div class="mb1/2 bd bdcsec60">Border color bdcsec60</div>
+ * <div class="mb1/2 bd bdcsec50">Border color bdcsec50</div>
+ * <div class="mb1/2 bd bdcsec40">Border color bdcsec40</div>
+ * <div class="mb1/2 bd bdcsec30">Border color bdcsec30</div>
+ * <div class="mb1/2 bd bdcsec20">Border color bdcsec20</div>
+ * <div class="bd bdcsec10">Border color bsec10</div>
+ * ```
+ */
+
+.bdcsec90         { border-color: color(var(--secondary) tint(10%)) }
+.bdcsec80         { border-color: color(var(--secondary) tint(20%)) }
+.bdcsec70         { border-color: color(var(--secondary) tint(30%)) }
+.bdcsec60         { border-color: color(var(--secondary) tint(40%)) }
+.bdcsec50         { border-color: color(var(--secondary) tint(50%)) }
+.bdcsec40         { border-color: color(var(--secondary) tint(60%)) }
+.bdcsec30         { border-color: color(var(--secondary) tint(70%)) }
+.bdcsec20         { border-color: color(var(--secondary) tint(80%)) }
+.bdcsec10         { border-color: color(var(--secondary) tint(90%)) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Transparency
+ *
+ * ```example
+ * <p class="mb1/2 bd bdcsec90a">Border color bdcsec90a</p>
+ * <p class="mb1/2 bd bdcsec80a">Border color bdcsec80a</p>
+ * <p class="mb1/2 bd bdcsec70a">Border color bdcsec70a</p>
+ * <p class="mb1/2 bd bdcsec60a">Border color bdcsec60a</p>
+ * <p class="mb1/2 bd bdcsec50a">Border color bdcsec50a</p>
+ * <p class="mb1/2 bd bdcsec40a">Border color bdcsec40a</p>
+ * <p class="mb1/2 bd bdcsec30a">Border color bdcsec30a</p>
+ * <p class="mb1/2 bd bdcsec20a">Border color bdcsec20a</p>
+ * <p class="bd bdcsec10a">Border color bdcsec10a</p>
+ * ```
+ */
+
+.bdcsec90a { border-color: color(var(--secondary) tint(10%) alpha(90%)) }
+.bdcsec80a { border-color: color(var(--secondary) tint(20%) alpha(80%)) }
+.bdcsec70a { border-color: color(var(--secondary) tint(30%) alpha(70%)) }
+.bdcsec60a { border-color: color(var(--secondary) tint(40%) alpha(60%)) }
+.bdcsec50a { border-color: color(var(--secondary) tint(50%) alpha(50%)) }
+.bdcsec40a { border-color: color(var(--secondary) tint(60%) alpha(40%)) }
+.bdcsec30a { border-color: color(var(--secondary) tint(70%) alpha(30%)) }
+.bdcsec20a { border-color: color(var(--secondary) tint(80%) alpha(20%)) }
+.bdcsec10a { border-color: color(var(--secondary) tint(90%) alpha(10%)) }
+
+ /**
+ * DOC
+ *
+ * ##### State Colors
+ *
+ * ```example
+ * <div class="mb1/2 bd bdchighlight">Border color bdchighlight</div>
+ * <div class="mb1/2 bd bdcsuccess">Border color bdcsuccess</div>
+ * <div class="mb1/2 bd bdcunsure">Border color bdcunsure</div>
+ * <div class="mb1/2 bd bdcwarning">Border color bdcwarning</div>
+ * <div class="mb1/2 bd bdcdanger">Border color bdcdanger</div>
+ * <div class="mb1/2 bd bdcneutral">Border color bdcneutral</div>
+ * ```
+ */
+
+.bdchighlight     { border-color: var(--highlight) }
+.bdcsuccess       { border-color: var(--success) }
+.bdcunsure        { border-color: var(--unsure) }
+.bdcwarning       { border-color: var(--warning) }
+.bdcdanger        { border-color: var(--danger) }
+.bdcneutral       { border-color: var(--neutral) }

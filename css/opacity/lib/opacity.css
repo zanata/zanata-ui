@@ -1,0 +1,30 @@
+/**
+ * DOC
+ *
+ * ### Opacity
+ *
+ * ```example
+ * <div class="op100">Opacity 100%</div>
+ * <div class="op90">Opacity 90%</div>
+ * <div class="op80">Opacity 80%</div>
+ * <div class="op70">Opacity 70%</div>
+ * <div class="op60">Opacity 60%</div>
+ * <div class="op50">Opacity 50%</div>
+ * <div class="op40">Opacity 40%</div>
+ * <div class="op30">Opacity 30%</div>
+ * <div class="op20">Opacity 20%</div>
+ * <div class="op10">Opacity 10%</div>
+ * <div class="op0">Opacity 0%</div>
+ */
+
+.op100 { opacity: 1 }
+.op90  { opacity: .9 }
+.op80  { opacity: .8 }
+.op70  { opacity: .7 }
+.op60  { opacity: .6 }
+.op50  { opacity: .5 }
+.op40  { opacity: .4 }
+.op30  { opacity: .3 }
+.op20  { opacity: .2 }
+.op10  { opacity: .1 }
+.op0   { opacity: 0 }

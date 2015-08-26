@@ -1,0 +1,32 @@
+/**
+ * DOC
+ *
+ * ### Overflow
+ *
+ * Whether or not items in the container overflow
+ *
+ * ```example
+ * <div class='dfx fxw jcc'>
+ *   <div class='ovv mr1 mb1 bgcsec10 w8 h8'>Visible: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ovh mr1 mb1 bgcsec10 w8 h8'>Hidden: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ovs mr1 mb1 bgcsec10 w8 h8'>Scroll: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ova mr1 mb1 bgcsec10 w8 h8'>Auto: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ovyh mr1 mb1 bgcsec10 ovxs w8 h8'><div class='w16'>X Scroll: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div></div>
+ *   <div class='ovyh mr1 mb1 bgcsec10 w8 h8'>Y Hidden: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ * </div>
+ * ```
+ *
+ */
+
+.ovv  { overflow: visible }
+.ovh  { overflow: hidden }
+.ovs  { overflow: scroll }
+.ova  { overflow: auto }
+.ovxh { overflow-x: hidden }
+.ovxv { overflow-x: visible }
+.ovxs { overflow-x: scroll }
+.ovxa { overflow-x: auto }
+.ovyv { overflow-y: visible }
+.ovyh { overflow-y: hidden }
+.ovys { overflow-y: scroll }
+.ovya { overflow-y: auto }

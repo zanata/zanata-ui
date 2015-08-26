@@ -1,0 +1,329 @@
+/**
+ * DOC
+ *
+ * ### Flex
+ *
+ * The flex-object is a powerful suite of utilities based on the
+ * <a href="http://www.w3.org/TR/css3-flexbox/">flexible box layout module</a>.
+ * These utilities can replace the need for a grid system in many instances,
+ * but can also be combined with the Basscss grid for even more possibilities.
+ *
+ * Note: browser support for the flexible box layout module is limited. See http://caniuse.com/#feat=flexbox
+ *
+ * #### Display Flex
+ * To begin, add the `.dfx` class to a parent element.
+ * This sets the element to `display: flex` and enables a flex context for all direct child elements.
+ *
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.dfx { display: flex }
+
+/**
+ * DOC
+ *
+ * #### Flex Column
+ *
+ * To arrange items vertically, use the `.fxdc` utility.
+ *
+ * ```example
+ * <div class="dfx fxdc">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxdc  { flex-direction: column }
+
+/**
+ * DOC
+ *
+ * #### Flex Wrap
+ *
+ * To wrap elements, use the `.fxw` utility.
+ *
+ * ```example
+ * <div class="dfx fxw">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ *
+ */
+
+.fxw    { flex-wrap: wrap }
+
+/**
+ * DOC
+ *
+ * #### Alignment
+ *
+ * Use these utilities to control vertical alignment of child elements.
+ *
+ * ##### Align Items Center
+ *
+ * To vertically center child elements, add the `.aic` class to the parent element.
+ *
+ * ```example
+ * <div class="dfx aic">
+ *   <div class="fxauto ph2 pv4 csec bd">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2 csec bd">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aic   { align-items: center }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Baseline
+ *
+ * To align child elements to their baseline, use the `.aib` utility.
+ *
+ * ```example
+ * <div class="dfx aib csec bdb">
+ *   <div class="fxauto ph2">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aib { align-items: baseline }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Stretch
+ *
+ * To stretch all elements to fill the height of the parent, use the `.ais` utility.
+ *
+ * ```example
+ * <div class="dfx ais">
+ *   <div class="fxauto ph2 pv4 csec bd">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2 csec bd">Hot dog</div>
+ * </div>
+ * ```
+ *
+ * ##### Align Items Stretch with Nested Content
+ *
+ * To ensure nested elements stretch as well, add the `.flex` class to relevant elements.
+ *
+ * ```example
+ * <div class="dfx ais">
+ *   <div class="fxauto ph2 pv4 csec bd">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="dfx csec bd">
+ *     <div class="ph2 cwhite bgcsec">
+ *       Hot dog
+ *     </div>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.ais  { align-items: stretch }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Flex Start
+ *
+ * To align child elements to the top, use the `.aifs` utility.
+ *
+ * ```example
+ * <div class="dfx aifs csec bt">
+ *   <div class="fxauto ph2">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aifs    { align-items: flex-start }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Flex End
+ *
+ * To align child elements to the bottom, use the `.aife` utility.
+ *
+ * ```example
+ * <div class="dfx aife csec bbd">
+ *   <div class="fxauto ph2">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aife      { align-items: flex-end }
+
+/**
+ * DOC
+ *
+ * #### Justify
+ *
+ * ##### Justify Content Center
+ *
+ * To automatically center child elements horizontally, use `.jcc`.
+ *
+ * ```example
+ * <div class="dfx h16 aic jcc">
+ *   <div class="p1 w8 h8 bd">Burger</div>
+ * </div>
+ * ```
+ */
+
+.jcc  { justify-content: center }
+
+/**
+ * DOC
+ *
+ * ##### Justify Content Space Between
+ *
+ * To automatically fill the space between child elements, use `.jcsp`.
+ *
+ * ```example
+ * <div class="dfx jcsb">
+ *   <div class="p1 bd">Burger</div>
+ *   <div class="p1 bd">Burger</div>
+ *   <div class="p1 bd">Burger</div>
+ * </div>
+ * ```
+ */
+
+.jcsb  { justify-content: space-between }
+
+
+/*
+ * 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893
+ */
+
+/**
+ * DOC
+ *
+ * #### Child elements
+ *
+ * To control the size and behavior of child elements, use these utilities.
+ *
+ * ##### Flex Auto
+ *
+ * To make an element grow or shrink as needed, use the `.fxauto` utility. Which sets `flex: 1 1 auto`.
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="fxauto csec bd"></div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxauto {
+  flex: 1 1 auto;
+  min-width: 0; /* 1 */
+  min-height: 0; /* 1 */
+}
+
+/**
+ * DOC
+ *
+ * ##### Flex Grow
+ *
+ * To make an element grow, but not shrink, use the `.flex-grow` utility. Which set `flex: 1 0 auto`.
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="fxgrow csec bd"></div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxg { flex: 1 0 auto }
+
+/**
+ * DOC
+ *
+ * ##### Flex None
+ *
+ * To prevent an element from growing or shrinking, use the `.fxn` utility.
+ *
+ * ```example
+ * <div class="flex">
+ *   <div class="fxauto ph2 pv1 bd">Hamburger</div>
+ *   <div class="fxauto ph2 pv1 bd">Hamburger</div>
+ *   <div class="flex-none ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxn { flex: none }
+
+/**
+ * DOC
+ *
+ * #### Ordering
+ *
+ * To change the order of child elements, use the `.flex-first` and `.flex-last` utilities.
+ *
+ * ##### Order First
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ord1st ph2 pv1 bd">First Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.ordfirst { order: -1 }
+
+/**
+ * DOC
+ *
+ * ##### Order Last
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ordlast ph2 pv1 bd">Last Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.ordlast  { order: 99999 }

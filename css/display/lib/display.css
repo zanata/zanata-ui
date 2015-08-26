@@ -1,0 +1,80 @@
+/**
+ * DOC
+ *
+ * ### Display
+ *
+ * - d = display (required)
+ * - n     = none
+ * - b     = block
+ * - ib    = inline-block
+ * - fx    = flex (Also in flex module)
+ * - it    = inline-table
+ * - t     = table
+ * - tc    = table-cell
+ * - tr    = table-row
+ * - tcol  = table-column
+ * - tcolg = table-column-group
+ *
+ * #### Display Block
+ *
+ * Block will inherently set width to 100% of its parent element. It will also cause a line break, even if the declared width doesn't take up the full width of the parent.
+ *
+ * ```example
+ * <div class="db bgcsec10 mb1/2">display: block</div>
+ * <div class="db bgcsec10 w8">display: block</div>
+ * ```
+ *
+ * #### Display Inline Block
+ *
+ * Inline-block will wrap around content inline. It also allows you to set height and width properties on the element, which display inline does not allow you to do. It does render the white-space inbeween elements, so if you set width: 25% to four elements they will not just render as a 4 column layout by default.
+ *
+ * ```example
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * ```
+ *
+ * #### Display Inline
+ *
+ * Set content inline. Inline doesn't respect height or width values. It does not render white space between elements.
+ *
+ * ```example
+ * <div class="di bgcsec10"> display: inline </div>
+ * <div class="di bgcsec10"> display: inline </div>
+ * <div class="di bgcsec10"> display: inline </div>
+ * ```
+ *
+ * #### Display Table
+ *
+ * Display table can be combined with display table-cell to render a table without table markup. This can be useful for vertically aligning content or for auto-calculating a variable amount of table cells.
+ *
+ * ```example
+ * <div class="dt mbs">
+ *   <div class="dtc p1/4 bgcsec10">display</div>
+ *   <div class="dtc p1/4 bgsec20">table</div>
+ *   <div class="dtc p1/4 bgcsec10">will automatically</div>
+ *   <div class="dtc p1/4 bgsec20">compute cell width</div>
+ * </div>
+ * ```
+ *
+ * #### Display None
+ *
+ * You can set the display of any element to none (hide it) by tacking on the `dn` class.
+ *
+ * ```example
+ * <div class="dn bgcsec10">Now you don't</div>
+ * ```
+ *
+ */
+
+.dn {     display: none }
+.di {     display: inline }
+.db {     display: block }
+.dib {    display: inline-block }
+.dit {    display: inline-table }
+.dt {     display: table; table-layout: fixed; width: 100% }
+.dtr {    display: table-row }
+.dtc {    display: table-cell }
+.dtcol {  display: table-column }
+.dtcolg { display: table-column-group }
