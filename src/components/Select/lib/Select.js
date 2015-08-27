@@ -9,7 +9,6 @@ var Icon = require('../../Icon');
 var Value = require('./Value');
 var SingleValue = require('./SingleValue');
 var Option = require('./Option');
-import css from '../css/default.css'
 
 var requestId = 0;
 
