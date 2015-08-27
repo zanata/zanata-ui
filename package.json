@@ -6,6 +6,9 @@
   "style": "index.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:lib": "babel src --out-dir lib & cssnext ./src/styles/index.css ./lib/styles/index.css & cssnext ./src/styles/index.css ./dist/zanata-ui.css --compress",
+    "build:umd:min": "webpack src/index.js dist/zanata-ui.min.js --config webpack.config.production.js",
+    "build": "npm run build:lib",
     "hot-dev-server": "npm run styleguide & npm run generate-svg-sprite && webpack-dev-server --config webpack.config.js --hot --progress --colors --inline --history-api-fallback",
     "styleguide": "./lib/extractCssComments/.bin/extractCssComments -i ./index.css -o ./styleguide.md",
     "generate-svg-sprite": "svg-sprite -sD components/Icons --symbol-dest '' --ss icons.svg --si components/Icons/src/*.svg",
@@ -30,8 +33,10 @@
     "zanata-css-base": "lukebrooker/zanata-css-base"
   },
   "devDependencies": {
+    "babel": "^5.8.21",
     "classnames": "^2.1.3",
     "css-loader": "^0.16.0",
+    "cssnext": "^1.8.4",
     "cssnext-loader": "^1.0.1",
     "extract-text-webpack-plugin": "^0.8.2",
     "stats-webpack-plugin": "^0.2.1",

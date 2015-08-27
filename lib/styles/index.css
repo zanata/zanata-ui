@@ -1,0 +1,2592 @@
+/**
+ * DOC
+ *
+ * # Style Guide
+ *
+ * Utility class names based off [Emmet CSS Shortcuts](http://docs.emmet.io/cheat-sheet/)
+ *
+ */
+
+/**
+ * DOC
+ *
+ * <hr class="mt2 mb4 csec20">
+ *
+ * ## Base
+ *
+ */
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/**
+ * Base
+ */
+
+/**
+ * DOC
+ *
+ * ### Forms
+ *
+ */
+
+/**
+ * DOC
+ *
+ * #### Button
+ *
+ * ```example
+ * <button>Button</button>
+ * ```
+ */
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+/* Reset buttons so they can be used like links */
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: inherit;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: inherit;
+}
+
+/**
+ * DOC
+ *
+ * #### Text Fields
+ *
+ * ```example
+ * <input type="text" placeholder="Text input">
+ * ```
+ *
+ * ```example
+ * <input type="search" placeholder="Search input">
+ * ```
+ */
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: hsl(193, 30%, 73%);
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: hsl(193, 30%, 73%);
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: hsl(193, 30%, 73%);
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: hsl(193, 30%, 73%);
+}
+
+:focus::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: hsl(194, 30%, 86%);
+}
+:focus:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: hsl(194, 30%, 86%);
+}
+:focus::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: hsl(194, 30%, 86%);
+}
+:focus:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: hsl(194, 30%, 86%);
+}
+
+/* Don't use `input` tag selector for less specificity */
+
+[type=text],
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=time],
+[type=url],
+[type=week],
+textarea {
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: inherit;
+  border: inherit;
+}
+
+[type=text],
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=time],
+[type=url],
+[type=week] {
+  height: 24px;
+  height: 1.5rem;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+/**
+ * DOC
+ *
+ * #### Select
+ *
+ * ```example
+ * <select>
+ *   <option>Option 1</option>
+ *   <option>Option 2</option>
+ *   <option>Option 3</option>
+ * </select>
+ * ```
+ *
+ */
+
+select {
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  font-size: 100%;
+  line-height: 1.5;
+}
+/**
+ * Headings
+ *
+ * Reset to default font size to allow easy reuse
+ * Use extra classes for styling
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul:empty,
+ol:empty {
+  /* Hide empty lists */
+  display: none;
+}
+
+dd {
+  margin: 0;
+}
+/**
+ * DOC
+ *
+ * ### Tables
+ *
+ * ```example
+ * <table>
+ *   <thead>
+ *     <tr>
+ *       <th>Heading 1</th>
+ *       <th>Heading 2</th>
+ *       <th>Heading 3</th>
+ *       <th colspan="2">Heading 4 across columns</th>
+ *     </tr>
+ *   </thead>
+ *   <tbody>
+ *     <tr>
+ *       <td>Some data</td>
+ *       <td>Some more data</td>
+ *       <td>More again</td>
+ *       <td>23245</td>
+ *       <td><button>Button</button></td>
+ *     </tr>
+ *     <tr>
+ *       <td>Some data</td>
+ *       <td>Some more data</td>
+ *       <td>More again</td>
+ *       <td>23245</td>
+ *       <td><button>Button</button></td>
+ *     </tr>
+ *     <tr>
+ *       <td>Some data</td>
+ *       <td>Some more data</td>
+ *       <td>More again</td>
+ *       <td>23245</td>
+ *       <td><button>Button</button></td>
+ *     </tr>
+ *     <tr>
+ *       <td>Some data</td>
+ *       <td>Some more data</td>
+ *       <td>More again</td>
+ *       <td>23245</td>
+ *       <td><button>Button</button></td>
+ *     </tr>
+ *     <tr>
+ *       <td>Some data</td>
+ *       <td>Some more data</td>
+ *       <td>More again</td>
+ *       <td>23245</td>
+ *       <td><button>Button</button></td>
+ *     </tr>
+ *     <tr>
+ *       <td>Some data</td>
+ *       <td>Some more data</td>
+ *       <td>More again</td>
+ *       <td>23245</td>
+ *       <td><button>Button</button></td>
+ *     </tr>
+ *     <tr>
+ *       <td>Some data</td>
+ *       <td>Some more data</td>
+ *       <td>More again</td>
+ *       <td>23245</td>
+ *       <td><button>Button</button></td>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ * ```
+ *
+ */
+
+th {
+  font-weight: inherit;
+  text-align: left;
+}
+img {
+  max-width: 100%;
+}
+
+svg {
+  max-height: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: #999;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid;
+}
+
+iframe {
+  border: 0;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Consolas, monaco, monospace;
+  margin: 0;
+}
+
+blockquote,
+dl,
+dd,
+p,
+pre {
+  margin: 0;
+}
+
+/**
+ * DOC
+ *
+ * <hr class="mv4 csec20">
+ *
+ * ## Typography
+ */
+
+/**
+ * DOC
+ *
+ * ### Font Size
+ *
+ * Based on a minor-third scale. 0 is the default font size. Anything above scale 5 should only be used for features or heroes
+ *
+ * - n = negative
+ *
+ * ```example
+ * <p class="fz10">Font size 10</p>
+ * <p class="fz9">Font size 9</p>
+ * <p class="fz8">Font size 8</p>
+ * <p class="fz7">Font size 7</p>
+ * <p class="fz6">Font size 6</p>
+ * <p class="fz5">Font size 5</p>
+ * <p class="fz4">Font size 4</p>
+ * <p class="fz3">Font size 3</p>
+ * <p class="fz2">Font size 2</p>
+ * <p class="fz1">Font size 1</p>
+ * <p class="fz0">Default Font size</p>
+ * <p class="fzn1">Negative Font size 1</p>
+ * <p class="fzn2">Negative Font size 2</p>
+ * ```
+ *
+ */
+
+.fz10 { font-size: 99px; font-size: 6.192rem }
+.fz9  { font-size: 82px; font-size: 5.16rem }
+.fz8  { font-size: 68px; font-size: 4.3rem }
+.fz7  { font-size: 57px; font-size: 3.583rem }
+.fz6  { font-size: 47px; font-size: 2.986rem }
+.fz5  { font-size: 39px; font-size: 2.488rem }
+.fz4  { font-size: 33px; font-size: 2.074rem }
+.fz3  { font-size: 27px; font-size: 1.728rem }
+.fz2  { font-size: 23px; font-size: 1.44rem }
+.fz1  { font-size: 19px; font-size: 1.2rem }
+.fz0  { font-size: 16px; font-size: 1rem }
+.fzn1 { font-size: 13px; font-size: 0.833rem }
+.fzn2 { font-size: 11px; font-size: 0.694rem }
+
+/**
+ * Container queries
+ *
+ * - cq-ns
+ * - cq-md
+ * - cq-lg
+ *
+ * Coming soon
+ */
+/**
+ * DOC
+ *
+ * ### Font Family
+ *
+ * ```example
+ * <p class="ffsans fz2">Using a Sans Serif font</p>
+ * <p class="ffmono fz2">Using a Monospace font</p>
+ * ```
+ *
+ */
+
+.ffsans { font-family: 'Source Sans Pro', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; }
+.ffmono, .ffcode, code { font-family: Consolas, monaco, monospace; }
+/**
+ * DOC
+ *
+ * ### Font Weight
+ *
+ * ```example
+ * <p class="fw100">Sample text with .fw100</p>
+ * <p class="fw200">Sample text with .fw200</p>
+ * <p class="fw300">Sample text with .fw300</p>
+ * <p class="fwl">Sample text with .fwl</p>
+ * <p class="fw400">Sample text with .fw400</p>
+ * <p class="fwn">Sample text with .fwn</p>
+ * <p class="fw500">Sample text with .fw500</p>
+ * <p class="fw600">Sample text with .fw600</p>
+ * <p class="fwsb">Sample text with .fwsb</p>
+ * <p class="fw700">Sample text with .fw700</p>
+ * <p class="fwb">Sample text with .fwb</p>
+ * <p class="fw800">Sample text with .fw800</p>
+ * <p class="fw900">Sample text with .fw900</p>
+ * ```
+ *
+ */
+
+.fw100        { font-weight: 100; }
+.fw200        { font-weight: 200; }
+.fw300, .fwl  { font-weight: 300; }
+.fw400, .fwn  { font-weight: 400; }
+.fw500        { font-weight: 500; }
+.fw600, .fwsb { font-weight: 600; }
+.fw700, .fwb  { font-weight: 700; }
+.fw800        { font-weight: 800; }
+.fw900        { font-weight: 900; }
+/**
+ * DOC
+ *
+ * ### Text Align
+ *
+ * ```example
+ * <p class='tal mb1/2'>Aligned Left</p>
+ * <p class='tar mb1/2'>Aligned Right</p>
+ * <p class='tac mb1/2'>Aligned Center</p>
+ * <p class='taj mb1/2 measure'>Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+ * ```
+ */
+
+.tal { text-align:left }
+.tac { text-align:center }
+.tar { text-align:right }
+.taj { text-align:justify }
+/**
+ * DOC
+ *
+ * ### Vertical Align
+ *
+ * #### Inline Alignment
+ *
+ * ```example
+ * <p class="fz2 measure">
+ *   Lorem ipsum dolor sit amet, consetetur sadipscing <span class="vasub fzn1 bgcsec10">Sub aligned text (vasub)</span>elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At <span class="vasup fzn1 bgcsec10">Super aligned text (vasup)</span> vero eos et accusam et justo duo dolores et ea rebum.
+ * </p>
+ * ```
+ *
+ * #### Table Alignment
+ *
+ * ```example
+ * <table border="0" cellspacing="8" cellpadding="8">
+ *   <tbody>
+ *     <tr>
+ *       <td>
+ *         .vam
+ *       </td>
+ *       <td class="measure bgcsec20">
+ *         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ *       </td>
+ *       <td class="vam bgcsec10">
+ *         Aligned to middle
+ *       </td>
+ *     </tr>
+ *     <tr class="bdt bdcwhite bd2">
+ *       <td>
+ *         .vat
+ *       </td>
+ *       <td class="measure bgcsec20">
+ *         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ *       </td>
+ *       <td class="vat bgcsec10">
+ *         Aligned to top
+ *       </td>
+ *     </tr>
+ *     <tr class="bdt bdcwhite bd2">
+ *       <td>
+ *         .vbtm
+ *       </td>
+ *       <td class="measure bgcsec20">
+ *         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ *       </td>
+ *       <td class="vab bgcsec10">
+ *         Aligned to Bottom
+ *       </td>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ * ```
+ *
+ */
+
+.vabl      { vertical-align: baseline }
+.vasub     { vertical-align: sub }
+.vasup     { vertical-align: super }
+.vatt      { vertical-align: text-top }
+.vatb      { vertical-align: text-bottom }
+.vam       { vertical-align: middle }
+.vat       { vertical-align: top }
+.vab       { vertical-align: bottom }
+/**
+ * DOC
+ *
+ * ### List
+ *
+ * Defaults to `list-style-position: inside`
+ *
+ * ```example
+ * <ul>
+ *   <li class="listd">List item disc</li>
+ *   <li class="listc">List item circle</li>
+ *   <li class="lists">List item square</li>
+ * </ul>
+ * ```
+ */
+
+.listd { list-style-type: disc; list-style-position: inside; }
+.listc { list-style-type: circle; list-style-position: inside; }
+.lists { list-style-type: square; list-style-position: inside; }
+
+/**
+ * DOC
+ *
+ * <hr class="mv4 csec20">
+ *
+ * ## Layout
+ *
+ */
+
+/**
+ * DOC
+ *
+ * ### Spacing
+ *
+ * Using a rhythm of 1.5 times base font size
+ *
+ * - p = padding
+ * - m = margin
+ * - [nothing] = all
+ * - h = horizontal
+ * - v = vertical
+ * - t = top
+ * - r = right
+ * - b = bottom
+ * - l = left
+ *
+ * Available sizes are:
+ *
+ * - 0
+ * - 1/4
+ * - 1/2
+ * - 3/4
+ * - 1
+ * - 1&1/2
+ * - 2
+ * - 4
+ * - 8
+ * - 16
+ *
+ * ```example
+ * <div class="p1/4 mv2 bgsec20">.p1/4 .mv2</div>
+ * ```
+ *
+ * ```example
+ * <div class="p1&1/2 ml1&1/2 bgsec20">.p1&1/2 .ml1&1/2</div>
+ * ```
+ *
+ * ```example
+ * <div class="p4 m4 bgsec20">.p1&1/2 .m4</div>
+ * ```
+ *
+ */
+
+.p0        { padding: 0 }
+.p1\/4     { padding: 6px; padding: .375rem }
+.p1\/2     { padding: 12px; padding: .75rem }
+.p3\/4     { padding: 18px; padding: 1.125rem }
+.p1        { padding: 24px; padding: 1.5rem }
+.p1\&1\/2  { padding: 36px; padding: 2.25rem }
+.p2        { padding: 48px; padding: 3rem }
+.p4        { padding: 96px; padding: 6rem }
+.p8        { padding: 192px; padding: 12rem }
+.p16       { padding: 384px; padding: 24rem }
+
+.ph0       { padding-left: 0;        padding-right: 0 }
+.ph1\/4    { padding-left: 6px; padding-left: .375rem;  padding-right: 6px;  padding-right: .375rem }
+.ph1\/2    { padding-left: 12px; padding-left: .75rem;   padding-right: 12px;   padding-right: .75rem }
+.ph3\/4    { padding-left: 18px; padding-left: 1.125rem; padding-right: 18px; padding-right: 1.125rem }
+.ph1       { padding-left: 24px; padding-left: 1.5rem;   padding-right: 24px;   padding-right: 1.5rem }
+.ph1\&1\/2 { padding-left: 36px; padding-left: 2.25rem;  padding-right: 36px;  padding-right: 2.25rem }
+.ph2       { padding-left: 48px; padding-left: 3rem;     padding-right: 48px;     padding-right: 3rem }
+.ph4       { padding-left: 96px; padding-left: 6rem;     padding-right: 96px;     padding-right: 6rem }
+.ph8       { padding-left: 192px; padding-left: 12rem;    padding-right: 192px;    padding-right: 12rem }
+.ph16      { padding-left: 384px; padding-left: 24rem;    padding-right: 384px;    padding-right: 24rem }
+
+.pv0       { padding-top: 0;         padding-bottom: 0 }
+.pv1\/4    { padding-top: 6px; padding-top: .375rem;   padding-bottom: 6px;   padding-bottom: .375rem }
+.pv1\/2    { padding-top: 12px; padding-top: .75rem;    padding-bottom: 12px;    padding-bottom: .75rem }
+.pv3\/4    { padding-top: 18px; padding-top: 1.125rem;  padding-bottom: 18px;  padding-bottom: 1.125rem }
+.pv1       { padding-top: 24px; padding-top: 1.5rem;    padding-bottom: 24px;    padding-bottom: 1.5rem }
+.pv1\&1\/2 { padding-top: 36px; padding-top: 2.25rem;   padding-bottom: 36px;   padding-bottom: 2.25rem }
+.pv2       { padding-top: 48px; padding-top: 3rem;      padding-bottom: 48px;      padding-bottom: 3rem }
+.pv4       { padding-top: 96px; padding-top: 6rem;      padding-bottom: 96px;      padding-bottom: 6rem }
+.pv8       { padding-top: 192px; padding-top: 12rem;     padding-bottom: 192px;     padding-bottom: 12rem }
+.pv16      { padding-top: 384px; padding-top: 24rem;     padding-bottom: 384px;     padding-bottom: 24rem }
+
+.pt0       { padding-top: 0 }
+.pt1\/4    { padding-top: 6px; padding-top: .375rem }
+.pt1\/2    { padding-top: 12px; padding-top: .75rem }
+.pt3\/4    { padding-top: 18px; padding-top: 1.125rem }
+.pt1       { padding-top: 24px; padding-top: 1.5rem }
+.pt1\&1\/2 { padding-top: 36px; padding-top: 2.25rem }
+.pt2       { padding-top: 48px; padding-top: 3rem }
+.pt4       { padding-top: 96px; padding-top: 6rem }
+.pt8       { padding-top: 192px; padding-top: 12rem }
+.pt16      { padding-top: 384px; padding-top: 24rem }
+
+.pr0       { padding-right: 0 }
+.pr1\/4    { padding-right: 6px; padding-right: .375rem }
+.pr1\/2    { padding-right: 12px; padding-right: .75rem }
+.pr3\/4    { padding-right: 18px; padding-right: 1.125rem }
+.pr1       { padding-right: 24px; padding-right: 1.5rem }
+.pr1\&1\/2 { padding-right: 36px; padding-right: 2.25rem }
+.pr2       { padding-right: 48px; padding-right: 3rem }
+.pr4       { padding-right: 96px; padding-right: 6rem }
+.pr8       { padding-right: 192px; padding-right: 12rem }
+.pr16      { padding-right: 384px; padding-right: 24rem }
+
+.pb0       { padding-bottom: 0 }
+.pb1\/4    { padding-bottom: 6px; padding-bottom: .375rem }
+.pb1\/2    { padding-bottom: 12px; padding-bottom: .75rem }
+.pb3\/4    { padding-bottom: 18px; padding-bottom: 1.125rem }
+.pb1       { padding-bottom: 24px; padding-bottom: 1.5rem }
+.pb1\&1\/2 { padding-bottom: 36px; padding-bottom: 2.25rem }
+.pb2       { padding-bottom: 48px; padding-bottom: 3rem }
+.pb4       { padding-bottom: 96px; padding-bottom: 6rem }
+.pb8       { padding-bottom: 192px; padding-bottom: 12rem }
+.pb16      { padding-bottom: 384px; padding-bottom: 24rem }
+
+.pl0       { padding-left: 0 }
+.pl1\/4    { padding-left: 6px; padding-left: .375rem }
+.pl1\/2    { padding-left: 12px; padding-left: .75rem }
+.pl3\/4    { padding-left: 18px; padding-left: 1.125rem }
+.pl1       { padding-left: 24px; padding-left: 1.5rem }
+.pl1\&1\/2 { padding-left: 36px; padding-left: 2.25rem }
+.pl2       { padding-left: 48px; padding-left: 3rem }
+.pl4       { padding-left: 96px; padding-left: 6rem }
+.pl8       { padding-left: 192px; padding-left: 12rem }
+.pl16      { padding-left: 384px; padding-left: 24rem }
+
+.m0        { margin: 0 }
+.m1\/4     { margin: 6px; margin: .375rem }
+.m1\/2     { margin: 12px; margin: .75rem }
+.m3\/4     { margin: 18px; margin: 1.125rem }
+.m1        { margin: 24px; margin: 1.5rem }
+.m1\&1\/2  { margin: 36px; margin: 2.25rem }
+.m2        { margin: 48px; margin: 3rem }
+.m4        { margin: 96px; margin: 6rem }
+.m8        { margin: 192px; margin: 12rem }
+.m16       { margin: 384px; margin: 24rem }
+
+.mh0       { margin-left: 0;        margin-right: 0 }
+.mh1\/4    { margin-left: 6px; margin-left: .375rem;  margin-right: 6px;  margin-right: .375rem }
+.mh1\/2    { margin-left: 12px; margin-left: .75rem;   margin-right: 12px;   margin-right: .75rem }
+.mh3\/4    { margin-left: 18px; margin-left: 1.125rem; margin-right: 18px; margin-right: 1.125rem }
+.mh1       { margin-left: 24px; margin-left: 1.5rem;   margin-right: 24px;   margin-right: 1.5rem }
+.mh1\&1\/2 { margin-left: 36px; margin-left: 2.25rem;  margin-right: 36px;  margin-right: 2.25rem }
+.mh2       { margin-left: 48px; margin-left: 3rem;     margin-right: 48px;     margin-right: 3rem }
+.mh4       { margin-left: 96px; margin-left: 6rem;     margin-right: 96px;     margin-right: 6rem }
+.mh8       { margin-left: 192px; margin-left: 12rem;    margin-right: 192px;    margin-right: 12rem }
+.mh16      { margin-left: 384px; margin-left: 24rem;    margin-right: 384px;    margin-right: 24rem }
+
+.mv0       { margin-top: 0;         margin-bottom: 0 }
+.mv1\/4    { margin-top: 6px; margin-top: .375rem;   margin-bottom: 6px;   margin-bottom: .375rem }
+.mv1\/2    { margin-top: 12px; margin-top: .75rem;    margin-bottom: 12px;    margin-bottom: .75rem }
+.mv3\/4    { margin-top: 18px; margin-top: 1.125rem;  margin-bottom: 18px;  margin-bottom: 1.125rem }
+.mv1       { margin-top: 24px; margin-top: 1.5rem;    margin-bottom: 24px;    margin-bottom: 1.5rem }
+.mv1\&1\/2 { margin-top: 36px; margin-top: 2.25rem;   margin-bottom: 36px;   margin-bottom: 2.25rem }
+.mv2       { margin-top: 48px; margin-top: 3rem;      margin-bottom: 48px;      margin-bottom: 3rem }
+.mv4       { margin-top: 96px; margin-top: 6rem;      margin-bottom: 96px;      margin-bottom: 6rem }
+.mv8       { margin-top: 192px; margin-top: 12rem;     margin-bottom: 192px;     margin-bottom: 12rem }
+.mv16      { margin-top: 384px; margin-top: 24rem;     margin-bottom: 384px;     margin-bottom: 24rem }
+
+.mt0       { margin-top: 0 }
+.mt1\/4    { margin-top: 6px; margin-top: .375rem }
+.mt1\/2    { margin-top: 12px; margin-top: .75rem }
+.mt3\/4    { margin-top: 18px; margin-top: 1.125rem }
+.mt1       { margin-top: 24px; margin-top: 1.5rem }
+.mt1\&1\/2 { margin-top: 36px; margin-top: 2.25rem }
+.mt2       { margin-top: 48px; margin-top: 3rem }
+.mt4       { margin-top: 96px; margin-top: 6rem }
+.mt8       { margin-top: 192px; margin-top: 12rem }
+.mt16      { margin-top: 384px; margin-top: 24rem }
+
+.mr0       { margin-right: 0 }
+.mr1\/4    { margin-right: 6px; margin-right: .375rem }
+.mr1\/2    { margin-right: 12px; margin-right: .75rem }
+.mr3\/4    { margin-right: 18px; margin-right: 1.125rem }
+.mr1       { margin-right: 24px; margin-right: 1.5rem }
+.mr1\&1\/2 { margin-right: 36px; margin-right: 2.25rem }
+.mr2       { margin-right: 48px; margin-right: 3rem }
+.mr4       { margin-right: 96px; margin-right: 6rem }
+.mr8       { margin-right: 192px; margin-right: 12rem }
+.mr16      { margin-right: 384px; margin-right: 24rem }
+
+.mb0       { margin-bottom: 0 }
+.mb1\/4    { margin-bottom: 6px; margin-bottom: .375rem }
+.mb1\/2    { margin-bottom: 12px; margin-bottom: .75rem }
+.mb3\/4    { margin-bottom: 18px; margin-bottom: 1.125rem }
+.mb1       { margin-bottom: 24px; margin-bottom: 1.5rem }
+.mb1\&1\/2 { margin-bottom: 36px; margin-bottom: 2.25rem }
+.mb2       { margin-bottom: 48px; margin-bottom: 3rem }
+.mb4       { margin-bottom: 96px; margin-bottom: 6rem }
+.mb8       { margin-bottom: 192px; margin-bottom: 12rem }
+.mb16      { margin-bottom: 384px; margin-bottom: 24rem }
+
+.ml0       { margin-left: 0 }
+.ml1\/4    { margin-left: 6px; margin-left: .375rem }
+.ml1\/2    { margin-left: 12px; margin-left: .75rem }
+.ml3\/4    { margin-left: 18px; margin-left: 1.125rem }
+.ml1       { margin-left: 24px; margin-left: 1.5rem }
+.ml1\&1\/2 { margin-left: 36px; margin-left: 2.25rem }
+.ml2       { margin-left: 48px; margin-left: 3rem }
+.ml4       { margin-left: 96px; margin-left: 6rem }
+.ml8       { margin-left: 192px; margin-left: 12rem }
+.ml16      { margin-left: 384px; margin-left: 24rem }
+/**
+ * DOC
+ *
+ * ### Width
+ *
+ * There are 2 types of widths:
+ *
+ * - vertical rhythm based (e.g. 1 = 1.5rem, 1&1/2 = 2.25rem etc)
+ * - percentage based (e.g. 50p = 50%)
+ *
+ * #### Rhythm based
+ *
+ * ```example
+ * <div class="bgsec10 mb1/2"><div class="w1/4 bgsec30">1/4</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w1/2 bgsec30">1/2</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w3/4 bgsec30">3/4</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w1 bgsec30">1</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w1&1/2 bgsec30">1&1/2</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w2 bgsec30">2</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w4 bgsec30">4</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w8 bgsec30">8</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w16 bgsec30">16</div></div>
+ * ```
+ */
+
+.w1\/4    { width: 6px; width: .375rem }
+.w1\/2    { width: 12px; width: .75rem }
+.w3\/4    { width: 18px; width: 1.125rem }
+.w1       { width: 24px; width: 1.5rem }
+.w1\&1\/2 { width: 36px; width: 2.25rem }
+.w2       { width: 48px; width: 3rem }
+.w4       { width: 96px; width: 6rem }
+.w8       { width: 192px; width: 12rem }
+.w16      { width: 384px; width: 24rem }
+
+/**
+ * DOC
+ *
+ * #### Percentage based
+ *
+ * ```example
+ * <div class="bgsec10 mb1/2"><div class="w10p bgsec30">10p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w20p bgsec30">20p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w30p bgsec30">30p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w40p bgsec30">40p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w50p bgsec30">50p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w60p bgsec30">60p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w70p bgsec30">70p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w80p bgsec30">80p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w90p bgsec30">90p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w100p bgsec30">100p</div></div>
+ * ```
+ */
+
+.w10p  { width: 10% }
+.w20p  { width: 20% }
+.w30p  { width: 30% }
+.w40p  { width: 40% }
+.w50p  { width: 50% }
+.w60p  { width: 60% }
+.w70p  { width: 70% }
+.w80p  { width: 80% }
+.w90p  { width: 90% }
+.w100p { width: 100% }
+
+/**
+ * DOC
+ *
+ * #### Font Scale based
+ *
+ * ```example
+ * <div class="bgsec10 mb1/2"><div class="wsn2 bgsec30">wsn2</div></div>
+ * <div class="bgsec10 mb1/2"><div class="wsn1 bgsec30">wsn1</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws1 bgsec30">ws1</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws2 bgsec30">ws2</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws3 bgsec30">ws3</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws4 bgsec30">ws4</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws5 bgsec30">ws5</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws6 bgsec30">ws6</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws7 bgsec30">ws7</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws8 bgsec30">ws8</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws9 bgsec30">ws9</div></div>
+ * <div class="bgsec10 mb1/2"><div class="ws10 bgsec30">ws10</div></div>
+ * ```
+ */
+
+.ws10 { width: 99px; width: 6.192rem }
+.ws9  { width: 82px; width: 5.16rem }
+.ws8  { width: 68px; width: 4.3rem }
+.ws7  { width: 57px; width: 3.583rem }
+.ws6  { width: 47px; width: 2.986rem }
+.ws5  { width: 39px; width: 2.488rem }
+.ws4  { width: 33px; width: 2.074rem }
+.ws3  { width: 27px; width: 1.728rem }
+.ws2  { width: 23px; width: 1.44rem }
+.ws1  { width: 19px; width: 1.2rem }
+.ws0  { width: 16px; width: 1rem }
+.wsn1 { width: 13px; width: 0.833rem }
+.wsn2 { width: 11px; width: 0.694rem }
+/**
+ * DOC
+ *
+ * ### Height
+ *
+ * There are 2 types of heights:
+ *
+ * - vertical rhythm based (e.g. 1 = 1.5rem, 1&1/2 = 2.25rem etc)
+ * - percentage based (e.g. 50p = 50%)
+ *
+ * #### Rhythm based
+ *
+ * ```example
+ * <div class="h1 mb1/2 bgcsec10"><div class="h1/4 bgcsec30">1/4</div></div>
+ * <div class="h1 mb1/2 bgcsec10"><div class="h1/2 bgcsec30">1/2</div></div>
+ * <div class="h1 mb1/2 bgcsec10"><div class="h3/4 bgcsec30">3/4</div></div>
+ * <div class="h1 mb1/2 bgcsec30">1</div>
+ * <div class="h1&1/2 mb1/2 bgcsec30">1&1/2</div>
+ * <div class="h2 mb1/2 bgcsec30">2</div>
+ * <div class="h4 mb1/2 bgcsec30">4</div>
+ * <div class="h8 mb1/2 bgcsec30">8</div>
+ * <div class="h16 mb1/2 bgcsec30">16</div>
+ * ```
+ */
+
+.h1\/4    { height: 6px; height: .375rem }
+.h1\/2    { height: 12px; height: .75rem }
+.h3\/4    { height: 18px; height: 1.125rem }
+.h1       { height: 24px; height: 1.5rem }
+.h1\&1\/2 { height: 36px; height: 2.25rem }
+.h2       { height: 48px; height: 3rem }
+.h4       { height: 96px; height: 6rem }
+.h8       { height: 192px; height: 12rem }
+.h16      { height: 384px; height: 24rem }
+
+/**
+ * DOC
+ *
+ * #### Percentage based
+ *
+ * ```example
+ * <div class="h8 mb1/2 bgcsec10"><div class="h10p bgcsec30">10p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h20p bgcsec30">20p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h30p bgcsec30">30p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h40p bgcsec30">40p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h50p bgcsec30">50p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h60p bgcsec30">60p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h70p bgcsec30">70p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h80p bgcsec30">80p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h90p bgcsec30">90p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="h100p bgcsec30">100p</div></div>
+ * ```
+ */
+
+.h10p  { height: 10% }
+.h20p  { height: 20% }
+.h30p  { height: 30% }
+.h40p  { height: 40% }
+.h50p  { height: 50% }
+.h60p  { height: 60% }
+.h70p  { height: 70% }
+.h80p  { height: 80% }
+.h90p  { height: 90% }
+.h100p { height: 100% }
+
+/**
+ * DOC
+ *
+ * #### Font Scale based
+ *
+ * ```example
+ * <div class="bgsec10 mb1/2"><div class="hsn2 bgsec30">hsn2</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hsn1 bgsec30">hsn1</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs1 bgsec30">hs1</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs2 bgsec30">hs2</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs3 bgsec30">hs3</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs4 bgsec30">hs4</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs5 bgsec30">hs5</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs6 bgsec30">hs6</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs7 bgsec30">hs7</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs8 bgsec30">hs8</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs9 bgsec30">hs9</div></div>
+ * <div class="bgsec10 mb1/2"><div class="hs10 bgsec30">hs10</div></div>
+ * ```
+ */
+
+.hs10 { height: 99px; height: 6.192rem }
+.hs9  { height: 82px; height: 5.16rem }
+.hs8  { height: 68px; height: 4.3rem }
+.hs7  { height: 57px; height: 3.583rem }
+.hs6  { height: 47px; height: 2.986rem }
+.hs5  { height: 39px; height: 2.488rem }
+.hs4  { height: 33px; height: 2.074rem }
+.hs3  { height: 27px; height: 1.728rem }
+.hs2  { height: 23px; height: 1.44rem }
+.hs1  { height: 19px; height: 1.2rem }
+.hs0  { height: 16px; height: 1rem }
+.hsn1 { height: 13px; height: 0.833rem }
+.hsn2 { height: 11px; height: 0.694rem }
+/**
+ * DOC
+ *
+ * ### Position
+ *
+ * ```example
+ * <div class="posr">
+ *   <button>Button</button>
+ *   <div class="posa bgwhite bd bdcsec20 bdrs1/4">
+ *     <a href="#" class="db p1/4">Dropdown Action</a>
+ *     <a href="#" class="db p1/4">Action</a>
+ *     <a href="#" class="db p1/4">Action</a>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.posr    { position: relative }
+.posa    { position: absolute }
+.posf    { position: fixed }
+
+.a0      { top: 0; right: 0; bottom: 0; left: 0 }
+.t0      { top: 0 }
+.r0      { right: 0 }
+.b0      { bottom: 0 }
+.l0      { left: 0 }
+
+.t1      { top: 24px; top: 1.5rem }
+.r1      { right: 24px; right: 1.5rem }
+.b1      { bottom: 24px; bottom: 1.5rem }
+.l1      { left: 24px; left: 1.5rem }
+
+.t2      { top: 48px; top: 3rem }
+.r2      { right: 48px; right: 3rem }
+.b2      { bottom: 48px; bottom: 3rem }
+.l2      { left: 48px; left: 3rem }
+
+.z1      { z-index: 1 }
+.z2      { z-index: 2 }
+.z3      { z-index: 3 }
+.z4      { z-index: 4 }
+/**
+ * DOC
+ *
+ * ### Display
+ *
+ * - d = display (required)
+ * - n     = none
+ * - b     = block
+ * - ib    = inline-block
+ * - fx    = flex (Also in flex module)
+ * - it    = inline-table
+ * - t     = table
+ * - tc    = table-cell
+ * - tr    = table-row
+ * - tcol  = table-column
+ * - tcolg = table-column-group
+ *
+ * #### Display Block
+ *
+ * Block will inherently set width to 100% of its parent element. It will also cause a line break, even if the declared width doesn't take up the full width of the parent.
+ *
+ * ```example
+ * <div class="db bgcsec10 mb1/2">display: block</div>
+ * <div class="db bgcsec10 w8">display: block</div>
+ * ```
+ *
+ * #### Display Inline Block
+ *
+ * Inline-block will wrap around content inline. It also allows you to set height and width properties on the element, which display inline does not allow you to do. It does render the white-space inbeween elements, so if you set width: 25% to four elements they will not just render as a 4 column layout by default.
+ *
+ * ```example
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * <div class="dib bgcsec10">display: inline-block</div>
+ * ```
+ *
+ * #### Display Inline
+ *
+ * Set content inline. Inline doesn't respect height or width values. It does not render white space between elements.
+ *
+ * ```example
+ * <div class="di bgcsec10"> display: inline </div>
+ * <div class="di bgcsec10"> display: inline </div>
+ * <div class="di bgcsec10"> display: inline </div>
+ * ```
+ *
+ * #### Display Table
+ *
+ * Display table can be combined with display table-cell to render a table without table markup. This can be useful for vertically aligning content or for auto-calculating a variable amount of table cells.
+ *
+ * ```example
+ * <div class="dt mbs">
+ *   <div class="dtc p1/4 bgcsec10">display</div>
+ *   <div class="dtc p1/4 bgsec20">table</div>
+ *   <div class="dtc p1/4 bgcsec10">will automatically</div>
+ *   <div class="dtc p1/4 bgsec20">compute cell width</div>
+ * </div>
+ * ```
+ *
+ * #### Display None
+ *
+ * You can set the display of any element to none (hide it) by tacking on the `dn` class.
+ *
+ * ```example
+ * <div class="dn bgcsec10">Now you don't</div>
+ * ```
+ *
+ */
+
+.dn {     display: none }
+.di {     display: inline }
+.db {     display: block }
+.dib {    display: inline-block }
+.dit {    display: inline-table }
+.dt {     display: table; table-layout: fixed; width: 100% }
+.dtr {    display: table-row }
+.dtc {    display: table-cell }
+.dtcol {  display: table-column }
+.dtcolg { display: table-column-group }
+/**
+ * DOC
+ *
+ * ### Overflow
+ *
+ * Whether or not items in the container overflow
+ *
+ * ```example
+ * <div class='dfx fxw jcc'>
+ *   <div class='ovv mr1 mb1 bgcsec10 w8 h8'>Visible: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ovh mr1 mb1 bgcsec10 w8 h8'>Hidden: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ovs mr1 mb1 bgcsec10 w8 h8'>Scroll: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ova mr1 mb1 bgcsec10 w8 h8'>Auto: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ *   <div class='ovyh mr1 mb1 bgcsec10 ovxs w8 h8'><div class='w16'>X Scroll: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div></div>
+ *   <div class='ovyh mr1 mb1 bgcsec10 w8 h8'>Y Hidden: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
+ * </div>
+ * ```
+ *
+ */
+
+.ovv  { overflow: visible }
+.ovh  { overflow: hidden }
+.ovs  { overflow: scroll }
+.ova  { overflow: auto }
+.ovxh { overflow-x: hidden }
+.ovxv { overflow-x: visible }
+.ovxs { overflow-x: scroll }
+.ovxa { overflow-x: auto }
+.ovyv { overflow-y: visible }
+.ovyh { overflow-y: hidden }
+.ovys { overflow-y: scroll }
+.ovya { overflow-y: auto }
+/**
+ * DOC
+ *
+ * ### Flex
+ *
+ * The flex-object is a powerful suite of utilities based on the
+ * <a href="http://www.w3.org/TR/css3-flexbox/">flexible box layout module</a>.
+ * These utilities can replace the need for a grid system in many instances,
+ * but can also be combined with the Basscss grid for even more possibilities.
+ *
+ * Note: browser support for the flexible box layout module is limited. See http://caniuse.com/#feat=flexbox
+ *
+ * #### Display Flex
+ * To begin, add the `.dfx` class to a parent element.
+ * This sets the element to `display: flex` and enables a flex context for all direct child elements.
+ *
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.dfx { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+
+/**
+ * DOC
+ *
+ * #### Flex Column
+ *
+ * To arrange items vertically, use the `.fxdc` utility.
+ *
+ * ```example
+ * <div class="dfx fxdc">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxdc  { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column }
+
+/**
+ * DOC
+ *
+ * #### Flex Wrap
+ *
+ * To wrap elements, use the `.fxw` utility.
+ *
+ * ```example
+ * <div class="dfx fxw">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ *
+ */
+
+.fxw    { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap }
+
+/**
+ * DOC
+ *
+ * #### Alignment
+ *
+ * Use these utilities to control vertical alignment of child elements.
+ *
+ * ##### Align Items Center
+ *
+ * To vertically center child elements, add the `.aic` class to the parent element.
+ *
+ * ```example
+ * <div class="dfx aic">
+ *   <div class="fxauto ph2 pv4 csec bd">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2 csec bd">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aic   { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Baseline
+ *
+ * To align child elements to their baseline, use the `.aib` utility.
+ *
+ * ```example
+ * <div class="dfx aib csec bdb">
+ *   <div class="fxauto ph2">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aib { -webkit-box-align: baseline; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Stretch
+ *
+ * To stretch all elements to fill the height of the parent, use the `.ais` utility.
+ *
+ * ```example
+ * <div class="dfx ais">
+ *   <div class="fxauto ph2 pv4 csec bd">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2 csec bd">Hot dog</div>
+ * </div>
+ * ```
+ *
+ * ##### Align Items Stretch with Nested Content
+ *
+ * To ensure nested elements stretch as well, add the `.flex` class to relevant elements.
+ *
+ * ```example
+ * <div class="dfx ais">
+ *   <div class="fxauto ph2 pv4 csec bd">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="dfx csec bd">
+ *     <div class="ph2 cwhite bgcsec">
+ *       Hot dog
+ *     </div>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.ais  { -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Flex Start
+ *
+ * To align child elements to the top, use the `.aifs` utility.
+ *
+ * ```example
+ * <div class="dfx aifs csec bt">
+ *   <div class="fxauto ph2">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aifs    { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start }
+
+/**
+ * DOC
+ *
+ * ##### Align Items Flex End
+ *
+ * To align child elements to the bottom, use the `.aife` utility.
+ *
+ * ```example
+ * <div class="dfx aife csec bbd">
+ *   <div class="fxauto ph2">
+ *     <h1 class="fz6 m0">Hamburger</h1>
+ *   </div>
+ *   <div class="ph2">Hot dog</div>
+ * </div>
+ * ```
+ */
+
+.aife      { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end }
+
+/**
+ * DOC
+ *
+ * #### Justify
+ *
+ * ##### Justify Content Center
+ *
+ * To automatically center child elements horizontally, use `.jcc`.
+ *
+ * ```example
+ * <div class="dfx h16 aic jcc">
+ *   <div class="p1 w8 h8 bd">Burger</div>
+ * </div>
+ * ```
+ */
+
+.jcc  { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center }
+
+/**
+ * DOC
+ *
+ * ##### Justify Content Space Between
+ *
+ * To automatically fill the space between child elements, use `.jcsp`.
+ *
+ * ```example
+ * <div class="dfx jcsb">
+ *   <div class="p1 bd">Burger</div>
+ *   <div class="p1 bd">Burger</div>
+ *   <div class="p1 bd">Burger</div>
+ * </div>
+ * ```
+ */
+
+.jcsb  { -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between }
+
+
+/*
+ * 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893
+ */
+
+/**
+ * DOC
+ *
+ * #### Child elements
+ *
+ * To control the size and behavior of child elements, use these utilities.
+ *
+ * ##### Flex Auto
+ *
+ * To make an element grow or shrink as needed, use the `.fxauto` utility. Which sets `flex: 1 1 auto`.
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="fxauto csec bd"></div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxauto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0; /* 1 */
+  min-height: 0; /* 1 */
+}
+
+/**
+ * DOC
+ *
+ * ##### Flex Grow
+ *
+ * To make an element grow, but not shrink, use the `.flex-grow` utility. Which set `flex: 1 0 auto`.
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="fxgrow csec bd"></div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxg { -webkit-box-flex: 1; -webkit-flex: 1 0 auto; -ms-flex: 1 0 auto; flex: 1 0 auto }
+
+/**
+ * DOC
+ *
+ * ##### Flex None
+ *
+ * To prevent an element from growing or shrinking, use the `.fxn` utility.
+ *
+ * ```example
+ * <div class="flex">
+ *   <div class="fxauto ph2 pv1 bd">Hamburger</div>
+ *   <div class="fxauto ph2 pv1 bd">Hamburger</div>
+ *   <div class="flex-none ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.fxn { -webkit-box-flex: 0; -webkit-flex: none; -ms-flex: none; flex: none }
+
+/**
+ * DOC
+ *
+ * #### Ordering
+ *
+ * To change the order of child elements, use the `.flex-first` and `.flex-last` utilities.
+ *
+ * ##### Order First
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ord1st ph2 pv1 bd">First Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.ordfirst { -webkit-box-ordinal-group: 0; -webkit-order: -1; -ms-flex-order: -1; order: -1 }
+
+/**
+ * DOC
+ *
+ * ##### Order Last
+ *
+ * ```example
+ * <div class="dfx">
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ *   <div class="ordlast ph2 pv1 bd">Last Hamburger</div>
+ *   <div class="ph2 pv1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.ordlast  { -webkit-box-ordinal-group: 100000; -webkit-order: 99999; -ms-flex-order: 99999; order: 99999 }
+
+/**
+ * DOC
+ *
+ * <hr class="mv4 csec20">
+ *
+ * ## Theme
+ *
+ */
+
+/**
+ * DOC
+ *
+ * ### Colors
+ *
+ * #### Text Colors
+ *
+ * ##### Desaturated
+ *
+ * ```example
+ * <p class="cblack">.cblack</p>
+ * <p class="cblack90">.cblack90</p>
+ * <p class="cblack80">.cblack80</p>
+ * <p class="cblack70">.cblack70</p>
+ * <p class="cblack60">.cblack60</p>
+ * <p class="cgray">.cgray</p>
+ * <p class="cwhite60">.cwhite60</p>
+ * <p class="cwhite70">.cwhite70</p>
+ * <p class="cwhite80">.cwhite80</p>
+ * <p class="cwhite90">.cwhite90</p>
+ * <p class="cwhite">.cwhite</p>
+ * ```
+ */
+
+.cblack         { color: hsl(0, 0%, 0%); }
+.cblack90       { color: hsl(0, 0%, 10%); }
+.cblack80       { color: hsl(0, 0%, 20%); }
+.cblack70       { color: hsl(0, 0%, 30%); }
+.cblack60       { color: hsl(0, 0%, 40%); }
+.cgray          { color: hsl(0, 0%, 50%); }
+.cwhite60       { color: hsl(0, 0%, 60%); }
+.cwhite70       { color: hsl(0, 0%, 70%); }
+.cwhite80       { color: hsl(0, 0%, 80%); }
+.cwhite90       { color: hsl(0, 0%, 90%); }
+.cwhite         { color: hsl(0, 0%, 100%); }
+
+/**
+ * DOC
+ *
+ * ##### Transparent
+ *
+ * ```example
+ * <p class="cblack90a">.cblack90a</p>
+ * <p class="cblack80a">.cblack80a</p>
+ * <p class="cblack70a">.cblack70a</p>
+ * <p class="cblack60a">.cblack60a</p>
+ * <p class="cblack50a">.cblack50a</p>
+ * <p class="cblack40a">.cblack40a</p>
+ * <p class="cblack30a">.cblack30a</p>
+ * <p class="cblack20a">.cblack20a</p>
+ * <p class="cblack10a">.cblack10a</p>
+ * ```
+ */
+
+.cblack90a { color: hsla(0, 0%, 10%, .9); }
+.cblack80a { color: hsla(0, 0%, 20%, .8); }
+.cblack70a { color: hsla(0, 0%, 30%, .7); }
+.cblack60a { color: hsla(0, 0%, 40%, .6); }
+.cblack50a { color: hsla(0, 0%, 50%, .5); }
+.cblack40a { color: hsla(0, 0%, 60%, .4); }
+.cblack30a { color: hsla(0, 0%, 70%, .3); }
+.cblack20a { color: hsla(0, 0%, 80%, .2); }
+.cblack10a { color: hsla(0, 0%, 90%, .1); }
+
+/**
+ * DOC
+ *
+ * ##### Brand Colors
+ *
+ * ```example
+ * <p class="cpri">.cpri – primary</p>
+ * <p class="csec">.csec – secondary</p>
+ * <p class="cter">.cter – tertiary</p>
+ * ```
+ */
+
+.cpri { color: hsl(194, 97%, 43%) }
+.csec { color: hsl(194, 62%, 33%) }
+.cter { color: hsl(254, 71%, 65%) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Tints
+ *
+ * ```example
+ * <p class="csec90">.csec90</p>
+ * <p class="csec80">.csec80</p>
+ * <p class="csec70">.csec70</p>
+ * <p class="csec60">.csec60</p>
+ * <p class="csec50">.csec50</p>
+ * <p class="csec40">.csec40</p>
+ * <p class="csec30">.csec30</p>
+ * <p class="csec20">.csec20</p>
+ * <p class="csec10">.csec10</p>
+ * ```
+ */
+
+.csec90 { color: rgb(54, 126, 148) }
+.csec80 { color: rgb(77, 141, 160) }
+.csec70 { color: rgb(99, 155, 172) }
+.csec60 { color: rgb(121, 169, 184) }
+.csec50 { color: rgb(144, 184, 196) }
+.csec40 { color: rgb(166, 198, 207) }
+.csec30 { color: rgb(188, 212, 219) }
+.csec20 { color: rgb(210, 226, 231) }
+.csec10 { color: rgb(233, 241, 243) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Transparency
+ *
+ * ```example
+ * <p class="csec90a">.csec90a</p>
+ * <p class="csec80a">.csec80a</p>
+ * <p class="csec70a">.csec70a</p>
+ * <p class="csec60a">.csec60a</p>
+ * <p class="csec50a">.csec50a</p>
+ * <p class="csec40a">.csec40a</p>
+ * <p class="csec30a">.csec30a</p>
+ * <p class="csec20a">.csec20a</p>
+ * <p class="csec10a">.csec10a</p>
+ * ```
+ */
+
+.csec90a { color: #367E94; color: rgba(54, 126, 148, 0.9) }
+.csec80a { color: #4D8DA0; color: rgba(77, 141, 160, 0.8) }
+.csec70a { color: #639BAC; color: rgba(99, 155, 172, 0.7) }
+.csec60a { color: #79A9B8; color: rgba(121, 169, 184, 0.6) }
+.csec50a { color: #90B8C4; color: rgba(144, 184, 196, 0.5) }
+.csec40a { color: #A6C6CF; color: rgba(166, 198, 207, 0.4) }
+.csec30a { color: #BCD4DB; color: rgba(188, 212, 219, 0.3) }
+.csec20a { color: #D2E2E7; color: rgba(210, 226, 231, 0.2) }
+.csec10a { color: #E9F1F3; color: rgba(233, 241, 243, 0.1) }
+
+/**
+ * DOC
+ *
+ * ##### Status
+ *
+ * ```example
+ * <p class="chighlight">.chighlight</p>
+ * <p class="csuccess">.csuccess</p>
+ * <p class="cunsure">.cunsure</p>
+ * <p class="cwarning">.cwarning</p>
+ * <p class="cdanger">.cdanger</p>
+ * <p class="cneutral">.cneutral</p>
+ * ```
+ */
+
+.chighlight     { color: hsl(194, 97%, 43%) }
+.csuccess       { color: hsl(137, 51%, 58%) }
+.cunsure        { color: hsl(57, 82%, 51%) }
+.cwarning       { color: hsl(40, 100%, 50%) }
+.cdanger        { color: hsl(359, 100%, 62%) }
+.cneutral       { color: hsl(195, 32%, 80%) }
+/**
+ * DOC
+ *
+ * #### Background Colors
+ *
+ * ##### Desaturated
+ *
+ * ```example
+ * <p class="p1/4 bgcblack cwhite">.bgcblack</p>
+ * <p class="p1/4 bgcblack90 cwhite">.bgcblack90</p>
+ * <p class="p1/4 bgcblack80 cwhite">.bgcblack80</p>
+ * <p class="p1/4 bgcblack70 cwhite">.bgcblack70</p>
+ * <p class="p1/4 bgcblack60 cwhite">.bgcblack60</p>
+ * <p class="p1/4 bgcgray cwhite">.bgcgray</p>
+ * <p class="p1/4 bgcwhite60">.bgcwhite60</p>
+ * <p class="p1/4 bgcwhite70">.bgcwhite70</p>
+ * <p class="p1/4 bgcwhite80">.bgcwhite80</p>
+ * <p class="p1/4 bgcwhite90">.bgcwhite90</p>
+ * <p class="p1/4 bgccwhite">.bgcwhite</p>
+ * ```
+ *
+ */
+
+.bgcblack         { background-color: hsl(0, 0%, 0%) }
+.bgcblack90       { background-color: hsl(0, 0%, 10%) }
+.bgcblack80       { background-color: hsl(0, 0%, 20%) }
+.bgcblack70       { background-color: hsl(0, 0%, 30%) }
+.bgcblack60       { background-color: hsl(0, 0%, 40%) }
+.bgcgray          { background-color: hsl(0, 0%, 50%) }
+.bgcwhite60       { background-color: hsl(0, 0%, 60%) }
+.bgcwhite70       { background-color: hsl(0, 0%, 70%) }
+.bgcwhite80       { background-color: hsl(0, 0%, 80%) }
+.bgcwhite90       { background-color: hsl(0, 0%, 90%) }
+.bgcwhite         { background-color: hsl(0, 0%, 100%) }
+
+/**
+ * DOC
+ *
+ * ##### Transparency
+ *
+ * ```example
+ * <p class="p1/4 bgcblack90a cwhite">.bgcblack90a</p>
+ * <p class="p1/4 bgcblack80a cwhite">.bgcblack80a</p>
+ * <p class="p1/4 bgcblack70a cwhite">.bgcblack70a</p>
+ * <p class="p1/4 bgcblack60a cwhite">.bgcblack60a</p>
+ * <p class="p1/4 bgcblack50a cwhite">.bgcblack50a</p>
+ * <p class="p1/4 bgcblack40a">.bgcblack40a</p>
+ * <p class="p1/4 bgcblack30a">.bgcblack30a</p>
+ * <p class="p1/4 bgcblack20a">.bgcblack20a</p>
+ * <p class="p1/4 bgcblack10a">.bgcblack10a</p>
+ * ```
+ *
+ */
+
+.bgcblack90a       { background-color: hsla(0, 0%, 10%, .9) }
+.bgcblack80a       { background-color: hsla(0, 0%, 20%, .8) }
+.bgcblack70a       { background-color: hsla(0, 0%, 30%, .7) }
+.bgcblack60a       { background-color: hsla(0, 0%, 40%, .6) }
+.bgcblack50a       { background-color: hsla(0, 0%, 50%, .5) }
+.bgcblack40a       { background-color: hsla(0, 0%, 60%, .4) }
+.bgcblack30a       { background-color: hsla(0, 0%, 70%, .3) }
+.bgcblack20a       { background-color: hsla(0, 0%, 80%, .2) }
+.bgcblack10a       { background-color: hsla(0, 0%, 90%, .1) }
+
+ /**
+ * DOC
+ *
+ * ##### Brand Colors
+ *
+ * ```example
+ * <p class="p1/4 bgcpri cwhite">.bgcpri</p>
+ * <p class="p1/4 bgcsec cwhite">.bgcsec</p>
+ * <p class="p1/4 bgcter cwhite">.bgcter</p>
+ * ```
+ */
+
+.bgcpri { background-color: hsl(194, 97%, 43%) }
+.bgcsec { background-color: hsl(194, 62%, 33%) }
+.bgcter { background-color: hsl(254, 71%, 65%) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Tint
+ *
+ * ```example
+ * <p class="p1/4 bgcsec90 cwhite">.bgcsec90</p>
+ * <p class="p1/4 bgcsec80 cwhite">.bgcsec80</p>
+ * <p class="p1/4 bgcsec70 cwhite">.bgcsec70</p>
+ * <p class="p1/4 bgcsec60 cwhite">.bgcsec60</p>
+ * <p class="p1/4 bgcsec50">.bgcsec50</p>
+ * <p class="p1/4 bgcsec40">.bgcsec40</p>
+ * <p class="p1/4 bgcsec30">.bgcsec30</p>
+ * <p class="p1/4 bgcsec20">.bgcsec20</p>
+ * <p class="p1/4 bgcsec10">.bgcsec10</p>
+ * ```
+ */
+
+.bgcsec90        { background-color: rgb(54, 126, 148) }
+.bgcsec80        { background-color: rgb(77, 141, 160) }
+.bgcsec70        { background-color: rgb(99, 155, 172) }
+.bgcsec60        { background-color: rgb(121, 169, 184) }
+.bgcsec50        { background-color: rgb(144, 184, 196) }
+.bgcsec40        { background-color: rgb(166, 198, 207) }
+.bgcsec30        { background-color: rgb(188, 212, 219) }
+.bgcsec20        { background-color: rgb(210, 226, 231) }
+.bgcsec10        { background-color: rgb(233, 241, 243) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Transparency
+ *
+ * ```example
+ * <p class="p1/4 bgcsec90a cwhite">.bgcsec90a</p>
+ * <p class="p1/4 bgcsec80a cwhite">.bgcsec80a</p>
+ * <p class="p1/4 bgcsec70a cwhite">.bgcsec70a</p>
+ * <p class="p1/4 bgcsec60a cwhite">.bgcsec60a</p>
+ * <p class="p1/4 bgcsec50a">.bgcsec50a</p>
+ * <p class="p1/4 bgcsec40a">.bgcsec40a</p>
+ * <p class="p1/4 bgcsec30a">.bgcsec30a</p>
+ * <p class="p1/4 bgcsec20a">.bgcsec20a</p>
+ * <p class="p1/4 bgcsec10a">.bgcsec10a</p>
+ * ```
+ */
+
+.bgcsec90a        { background-color: #367E94; background-color: rgba(54, 126, 148, 0.9) }
+.bgcsec80a        { background-color: #4D8DA0; background-color: rgba(77, 141, 160, 0.8) }
+.bgcsec70a        { background-color: #639BAC; background-color: rgba(99, 155, 172, 0.7) }
+.bgcsec60a        { background-color: #79A9B8; background-color: rgba(121, 169, 184, 0.6) }
+.bgcsec50a        { background-color: #90B8C4; background-color: rgba(144, 184, 196, 0.5) }
+.bgcsec40a        { background-color: #A6C6CF; background-color: rgba(166, 198, 207, 0.4) }
+.bgcsec30a        { background-color: #BCD4DB; background-color: rgba(188, 212, 219, 0.3) }
+.bgcsec20a        { background-color: #D2E2E7; background-color: rgba(210, 226, 231, 0.2) }
+.bgcsec10a        { background-color: #E9F1F3; background-color: rgba(233, 241, 243, 0.1) }
+
+/**
+ * DOC
+ *
+ * ##### Status
+ *
+ * ```example
+ * <p class="p1/4 bgchighlight cwhite">.bgchighlight</p>
+ * <p class="p1/4 bgcsuccess cwhite">.bgcsuccess</p>
+ * <p class="p1/4 bgcunsure">.bgcunsure</p>
+ * <p class="p1/4 bgcwarning cwhite">.bgcwarning</p>
+ * <p class="p1/4 bgcdanger cwhite">.bgcdanger</p>
+ * <p class="p1/4 bgcneutral">.bgcneutral</p>
+ * ```
+ */
+
+.bgchighlight     { background-color: hsl(194, 97%, 43%) }
+.bgcsuccess       { background-color: hsl(137, 51%, 58%) }
+.bgcunsure        { background-color: hsl(57, 82%, 51%) }
+.bgcwarning       { background-color: hsl(40, 100%, 50%) }
+.bgcdanger        { background-color: hsl(359, 100%, 62%) }
+.bgcneutral       { background-color: hsl(195, 32%, 80%) }
+/**
+ * DOC
+ *
+ * #### Border Colors
+ *
+ * ##### Desaturated
+ *
+ * ```example
+ * <div class="mb1/2 bd bdcblack">Border color black</div>
+ * <div class="mb1/2 bd bdcblack90">Border color bdcblack90</div>
+ * <div class="mb1/2 bd bdcblack80">Border color bdcblack80</div>
+ * <div class="mb1/2 bd bdcblack70">Border color bdcblack70</div>
+ * <div class="mb1/2 bd bdcblack60">Border color bdcblack60</div>
+ * <div class="mb1/2 bd bdcgray">Border color bdcgray</div>
+ * <div class="mb1/2 bd bdcwhite60">Border color bdcwhite60</div>
+ * <div class="mb1/2 bd bdcwhite70">Border color bdcwhite70</div>
+ * <div class="mb1/2 bd bdcwhite80">Border color bdcwhite80</div>
+ * <div class="mb1/2 bd bdcwhite90">Border color bdcwhite90</div>
+ * <div class="bd bdcwhite">Border color white</div>
+ * ```
+ */
+
+.bdcblack         { border-color: hsl(0, 0%, 0%) }
+.bdcblack90       { border-color: hsl(0, 0%, 10%) }
+.bdcblack80       { border-color: hsl(0, 0%, 20%) }
+.bdcblack70       { border-color: hsl(0, 0%, 30%) }
+.bdcblack60       { border-color: hsl(0, 0%, 40%) }
+.bdcgray          { border-color: hsl(0, 0%, 50%) }
+.bdcwhite60       { border-color: hsl(0, 0%, 60%) }
+.bdcwhite70       { border-color: hsl(0, 0%, 70%) }
+.bdcwhite80       { border-color: hsl(0, 0%, 80%) }
+.bdcwhite90       { border-color: hsl(0, 0%, 90%) }
+.bdcwhite         { border-color: hsl(0, 0%, 100%) }
+
+/**
+ * DOC
+ *
+ * ##### Transparent
+ *
+ * ```example
+ * <div class="mb1/2 bd bdcblack90a">Border color bdcblack90a</div>
+ * <div class="mb1/2 bd bdcblack80a">Border color bdcblack80a</div>
+ * <div class="mb1/2 bd bdcblack70a">Border color bdcblack70a</div>
+ * <div class="mb1/2 bd bdcblack60a">Border color bdcblack60a</div>
+ * <div class="mb1/2 bd bdcblack50a">Border color bdcblack50a</div>
+ * <div class="mb1/2 bd bdcblack40a">Border color bdcblack40a</div>
+ * <div class="mb1/2 bd bdcblack30a">Border color bdcblack30a</div>
+ * <div class="mb1/2 bd bdcblack20a">Border color bdcblack20a</div>
+ * <div class="mb1/2 bd bdcblack10a">Border color bdcblack10a</div>
+ * ```
+ */
+
+.bdcblack90a      { border-color: hsla(0, 0%, 10%, .9) }
+.bdcblack80a      { border-color: hsla(0, 0%, 20%, .8) }
+.bdcblack70a      { border-color: hsla(0, 0%, 30%, .7) }
+.bdcblack60a      { border-color: hsla(0, 0%, 40%, .6) }
+.bdcblack50a      { border-color: hsla(0, 0%, 50%, .5) }
+.bdcblack40a      { border-color: hsla(0, 0%, 60%, .4) }
+.bdcblack30a      { border-color: hsla(0, 0%, 70%, .3) }
+.bdcblack20a      { border-color: hsla(0, 0%, 80%, .2) }
+.bdcblack10a      { border-color: hsla(0, 0%, 90%, .1) }
+
+ /**
+  * DOC
+  *
+  * ##### Brand Colors
+  *
+  * ```example
+  * <div class="mb1/2 bd bdcpri">Border color primary</div>
+  * <div class="mb1/2 bd bdcsec">Border color secondary</div>
+  * <div class="bd bdcter">Border color tertiary</div>
+  * ```
+  */
+
+.bdcpri           { border-color: hsl(194, 97%, 43%) }
+.bdcsec           { border-color: hsl(194, 62%, 33%) }
+.bdcter           { border-color: hsl(254, 71%, 65%) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Tint
+ *
+ * ```example
+ * <div class="mb1/2 bd bdcsec90">Border color bdcsec90</div>
+ * <div class="mb1/2 bd bdcsec80">Border color bdcsec80</div>
+ * <div class="mb1/2 bd bdcsec70">Border color bdcsec70</div>
+ * <div class="mb1/2 bd bdcsec60">Border color bdcsec60</div>
+ * <div class="mb1/2 bd bdcsec50">Border color bdcsec50</div>
+ * <div class="mb1/2 bd bdcsec40">Border color bdcsec40</div>
+ * <div class="mb1/2 bd bdcsec30">Border color bdcsec30</div>
+ * <div class="mb1/2 bd bdcsec20">Border color bdcsec20</div>
+ * <div class="bd bdcsec10">Border color bsec10</div>
+ * ```
+ */
+
+.bdcsec90         { border-color: rgb(54, 126, 148) }
+.bdcsec80         { border-color: rgb(77, 141, 160) }
+.bdcsec70         { border-color: rgb(99, 155, 172) }
+.bdcsec60         { border-color: rgb(121, 169, 184) }
+.bdcsec50         { border-color: rgb(144, 184, 196) }
+.bdcsec40         { border-color: rgb(166, 198, 207) }
+.bdcsec30         { border-color: rgb(188, 212, 219) }
+.bdcsec20         { border-color: rgb(210, 226, 231) }
+.bdcsec10         { border-color: rgb(233, 241, 243) }
+
+/**
+ * DOC
+ *
+ * ##### Secondary Transparency
+ *
+ * ```example
+ * <p class="mb1/2 bd bdcsec90a">Border color bdcsec90a</p>
+ * <p class="mb1/2 bd bdcsec80a">Border color bdcsec80a</p>
+ * <p class="mb1/2 bd bdcsec70a">Border color bdcsec70a</p>
+ * <p class="mb1/2 bd bdcsec60a">Border color bdcsec60a</p>
+ * <p class="mb1/2 bd bdcsec50a">Border color bdcsec50a</p>
+ * <p class="mb1/2 bd bdcsec40a">Border color bdcsec40a</p>
+ * <p class="mb1/2 bd bdcsec30a">Border color bdcsec30a</p>
+ * <p class="mb1/2 bd bdcsec20a">Border color bdcsec20a</p>
+ * <p class="bd bdcsec10a">Border color bdcsec10a</p>
+ * ```
+ */
+
+.bdcsec90a { border-color: #367E94; border-color: rgba(54, 126, 148, 0.9) }
+.bdcsec80a { border-color: #4D8DA0; border-color: rgba(77, 141, 160, 0.8) }
+.bdcsec70a { border-color: #639BAC; border-color: rgba(99, 155, 172, 0.7) }
+.bdcsec60a { border-color: #79A9B8; border-color: rgba(121, 169, 184, 0.6) }
+.bdcsec50a { border-color: #90B8C4; border-color: rgba(144, 184, 196, 0.5) }
+.bdcsec40a { border-color: #A6C6CF; border-color: rgba(166, 198, 207, 0.4) }
+.bdcsec30a { border-color: #BCD4DB; border-color: rgba(188, 212, 219, 0.3) }
+.bdcsec20a { border-color: #D2E2E7; border-color: rgba(210, 226, 231, 0.2) }
+.bdcsec10a { border-color: #E9F1F3; border-color: rgba(233, 241, 243, 0.1) }
+
+ /**
+ * DOC
+ *
+ * ##### State Colors
+ *
+ * ```example
+ * <div class="mb1/2 bd bdchighlight">Border color bdchighlight</div>
+ * <div class="mb1/2 bd bdcsuccess">Border color bdcsuccess</div>
+ * <div class="mb1/2 bd bdcunsure">Border color bdcunsure</div>
+ * <div class="mb1/2 bd bdcwarning">Border color bdcwarning</div>
+ * <div class="mb1/2 bd bdcdanger">Border color bdcdanger</div>
+ * <div class="mb1/2 bd bdcneutral">Border color bdcneutral</div>
+ * ```
+ */
+
+.bdchighlight     { border-color: hsl(194, 97%, 43%) }
+.bdcsuccess       { border-color: hsl(137, 51%, 58%) }
+.bdcunsure        { border-color: hsl(57, 82%, 51%) }
+.bdcwarning       { border-color: hsl(40, 100%, 50%) }
+.bdcdanger        { border-color: hsl(359, 100%, 62%) }
+.bdcneutral       { border-color: hsl(195, 32%, 80%) }
+/**
+ * DOC
+ *
+ * ### Borders
+ *
+ * Default is solid 1px
+ *
+ * - bd = border (required)
+ * - `[nothing]` = all
+ * - h = horizontal
+ * - v = vertical
+ * - t = top
+ * - r = right
+ * - b = bottom
+ * - l = left
+ *
+ * ```example
+ * <div class="mb1/2 bd">Default Border</div>
+ * <div class="mb1/2 bdh">Border Horizontal</div>
+ * <div class="bdt">Border Top</div>
+ * ```
+ *
+ * #### Border Width
+ *
+ * - 1
+ * - 2
+ *
+ * ```example
+ * <div class="mb1/2 bd bd2">Default Border 2px</div>
+ * <div class="mb1/2 bdh bdw2">Border Horizontal 2px</div>
+ * <div class="bdt bdw2">Border Top 2px</div>
+ * ```
+ *
+ * #### Border Style
+ *
+ *   - s = solid
+ *   - dot = dotted
+ *   - dash = dashed
+ *
+ * ```example
+ * <div class="mb1/2 bd bdsdash">Default Border dashed</div>
+ * <div class="mb1/2 bdh bdshdot">Border Horizontal Dotted</div>
+ * <div class="bd bdsbdot">Border Default, Bottom Dashed</div>
+ * ```
+ */
+
+.bd       { border-width: 1px; border-style: solid }
+.bdh      { border-left-width: 1px; border-right-width: 1px; border-left-style: solid; border-right-style: solid }
+.bdv      { border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid }
+.bdt      { border-top-width: 1px; border-top-style: solid }
+.bdr      { border-right-width: 1px; border-right-style: solid }
+.bdb      { border-bottom-width: 1px; border-bottom-style: solid }
+.bdl      { border-left-width: 1px; border-left-style: solid }
+
+.bd2      { border-width: 2px; border-style: solid }
+.bd2h     { border-left-width: 2px; border-right-width: 2px; border-left-style: solid; border-right-style: solid }
+.bd2v     { border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid }
+.bd2t     { border-top-width: 2px; border-top-style: solid }
+.bd2r     { border-right-width: 2px; border-right-style: solid }
+.bd2b     { border-bottom-width: 2px; border-bottom-style: solid }
+.bd2l     { border-left-width: 2px; border-left-style: solid }
+
+.bdw1     { border-width: 1px }
+.bdwh1    { border-left-width: 1px; border-right-width: 1px }
+.bdwv1    { border-top-width: 1px; border-bottom-width: 1px }
+.bdwt1    { border-top-width: 1px }
+.bdwr1    { border-right-width: 1px }
+.bdwb1    { border-bottom-width: 1px }
+.bdwl1    { border-left-width: 1px }
+
+.bdw2     { border-width: 2px }
+.bdwh2    { border-left-width: 2px; border-right-width: 2px }
+.bdwv2    { border-top-width: 2px; border-bottom-width: 2px }
+.bdwt2    { border-top-width: 2px }
+.bdwr2    { border-right-width: 2px }
+.bdwb2    { border-bottom-width: 2px }
+.bdwl2    { border-left-width: 2px }
+
+.bdss     { border-style: solid }
+.bdssh    { border-left-style: solid; border-right-style: solid }
+.bdssv    { border-top-style: solid; border-bottom-style: solid }
+.bdsst    { border-top-style: solid }
+.bdssr    { border-right-style: solid }
+.bdssb    { border-bottom-style: solid }
+.bdssl    { border-left-style: solid }
+
+.bdsdot   { border-style: dotted }
+.bdshdot  { border-left-style: dotted; border-right-style: dotted }
+.bdsvdot  { border-top-style: dotted; border-bottom-style: dotted }
+.bdstdot  { border-top-style: dotted }
+.bdsrdot  { border-right-style: dotted }
+.bdsbdot  { border-bottom-style: dotted }
+.bdsldot  { border-left-style: dotted }
+
+.bdsdash  { border-style: dashed }
+.bdshdash { border-left-style: dashed; border-right-style: dashed }
+.bdsvdash { border-top-style: dashed; border-bottom-style: dashed }
+.bdstdash { border-top-style: dashed }
+.bdsrdash { border-right-style: dashed }
+.bdsbdash { border-bottom-style: dashed }
+.bdsldash { border-left-style: dashed }
+/**
+ * DOC
+ *
+ * ### Border Radius
+ *
+ * Use this to round corners of elements
+ *
+ * #### Border Radius Amount
+ *
+ * ```example
+ * <div class="bdrs bd h2 mb1/2 p1/2">Totally rounded</div>
+ * <div class="bdrs0 bd h2 mb1/2 p1/2">No border radius</div>
+ * <div class="bdrs1/4 bd h2 mb1/2 p1/2">1/4 line-height border radius</div>
+ * <div class="bdrs1/2 bd h2 mb1/2 p1/2">1/2 line-height border radius</div>
+ * <div class="bdrs3/4 bd h2 mb1/2 p1/2">3/4 line-height border radius</div>
+ * <div class="bdrs1 bd h4 mb1/2 p1/2">1 line-height border radius</div>
+ * <div class="bdrs2 bd h8 mb1/2 p1/2">2 line-height border radius</div>
+ * <div class="bdrs4 bd h16 mb1/2 p1/2">4 line-height border radius</div>
+ * ```
+ *
+ * #### Border Radius Sides
+ *
+ * ```example
+ * <div class="bdrst bd h2 mb1/2 p1/2">Border radius top</div>
+ * <div class="bdrsr bd h2 mb1/2 p1/2">Border radius right</div>
+ * <div class="bdrsbd bd h2 mb1/2 p1/2">Border radius bottom</div>
+ * <div class="bdrsl bd h2 mb1/2 p1/2">Border radius left</div>
+ * <div class="bdrst1/4 bd h2 mb1/2 p1/2">Border radius top 1/4</div>
+ * <div class="bdrsl1/2 bd h2 mb1/2 p1/2">Border radius left 1/2</div>
+ * ```
+ *
+ */
+
+.bdrs         { border-radius: 100rem }
+.bdrs0        { border-radius: 0 }
+.bdrs1\/4     { border-radius: .375rem }
+.bdrs1\/2     { border-radius: .75rem }
+.bdrs3\/4     { border-radius: 1.125rem }
+.bdrs1        { border-radius: 1.5rem }
+.bdrs1\&1\/2  { border-radius: 2.25rem }
+.bdrs2        { border-radius: 3rem }
+.bdrs4        { border-radius: 6rem }
+
+.bdrst        { border-top-left-radius: 1600px; border-top-left-radius: 100rem; border-top-right-radius: 1600px; border-top-right-radius: 100rem }
+.bdrst0       { border-top-left-radius: 0; border-top-right-radius: 0 }
+.bdrst1\/4    { border-top-left-radius: 6px; border-top-left-radius: .375rem; border-top-right-radius: 6px; border-top-right-radius: .375rem }
+.bdrst1\/2    { border-top-left-radius: 12px; border-top-left-radius: .75rem; border-top-right-radius: 12px; border-top-right-radius: .75rem }
+.bdrst3\/4    { border-top-left-radius: 18px; border-top-left-radius: 1.125rem; border-top-right-radius: 18px; border-top-right-radius: 1.125rem }
+.bdrst1       { border-top-left-radius: 24px; border-top-left-radius: 1.5rem; border-top-right-radius: 24px; border-top-right-radius: 1.5rem }
+.bdrst1\&1\/2 { border-top-left-radius: 36px; border-top-left-radius: 2.25rem; border-top-right-radius: 36px; border-top-right-radius: 2.25rem }
+.bdrst2       { border-top-left-radius: 48px; border-top-left-radius: 3rem; border-top-right-radius: 48px; border-top-right-radius: 3rem }
+.bdrst4       { border-top-left-radius: 96px; border-top-left-radius: 6rem; border-top-right-radius: 96px; border-top-right-radius: 6rem }
+
+.bdrsr        { border-top-right-radius: 1600px; border-top-right-radius: 100rem; border-bottom-right-radius: 1600px; border-bottom-right-radius: 100rem }
+.bdrsr0       { border-top-right-radius: 0; border-bottom-right-radius: 0 }
+.bdrsr1\/4    { border-top-right-radius: 6px; border-top-right-radius: .375rem; border-bottom-right-radius: 6px; border-bottom-right-radius: .375rem }
+.bdrsr1\/2    { border-top-right-radius: 12px; border-top-right-radius: .75rem; border-bottom-right-radius: 12px; border-bottom-right-radius: .75rem }
+.bdrsr3\/4    { border-top-right-radius: 18px; border-top-right-radius: 1.125rem; border-bottom-right-radius: 18px; border-bottom-right-radius: 1.125rem }
+.bdrsr1       { border-top-right-radius: 24px; border-top-right-radius: 1.5rem; border-bottom-right-radius: 24px; border-bottom-right-radius: 1.5rem }
+.bdrsr1\&1\/2 { border-top-right-radius: 36px; border-top-right-radius: 2.25rem; border-bottom-right-radius: 36px; border-bottom-right-radius: 2.25rem }
+.bdrsr2       { border-top-right-radius: 48px; border-top-right-radius: 3rem; border-bottom-right-radius: 48px; border-bottom-right-radius: 3rem }
+.bdrsr4       { border-top-right-radius: 96px; border-top-right-radius: 6rem; border-bottom-right-radius: 96px; border-bottom-right-radius: 6rem }
+
+.bdrsb        { border-bottom-right-radius: 1600px; border-bottom-right-radius: 100rem; border-bottom-left-radius: 1600px; border-bottom-left-radius: 100rem }
+.bdrsb0       { border-bottom-right-radius: 0; border-bottom-left-radius: 0 }
+.bdrsb1\/4    { border-bottom-right-radius: 6px; border-bottom-right-radius: .375rem; border-bottom-left-radius: 6px; border-bottom-left-radius: .375rem }
+.bdrsb1\/2    { border-bottom-right-radius: 12px; border-bottom-right-radius: .75rem; border-bottom-left-radius: 12px; border-bottom-left-radius: .75rem }
+.bdrsb3\/4    { border-bottom-right-radius: 18px; border-bottom-right-radius: 1.125rem; border-bottom-left-radius: 18px; border-bottom-left-radius: 1.125rem }
+.bdrsb1       { border-bottom-right-radius: 24px; border-bottom-right-radius: 1.5rem; border-bottom-left-radius: 24px; border-bottom-left-radius: 1.5rem }
+.bdrsb1\&1\/2 { border-bottom-right-radius: 36px; border-bottom-right-radius: 2.25rem; border-bottom-left-radius: 36px; border-bottom-left-radius: 2.25rem }
+.bdrsb2       { border-bottom-right-radius: 48px; border-bottom-right-radius: 3rem; border-bottom-left-radius: 48px; border-bottom-left-radius: 3rem }
+.bdrsb4       { border-bottom-right-radius: 96px; border-bottom-right-radius: 6rem; border-bottom-left-radius: 96px; border-bottom-left-radius: 6rem }
+
+.bdrsl        { border-bottom-left-radius: 1600px; border-bottom-left-radius: 100rem; border-top-left-radius: 1600px; border-top-left-radius: 100rem }
+.bdrsl0       { border-bottom-left-radius: 0; border-top-left-radius: 0 }
+.bdrsl1\/4    { border-bottom-left-radius: 6px; border-bottom-left-radius: .375rem; border-top-left-radius: 6px; border-top-left-radius: .375rem }
+.bdrsl1\/2    { border-bottom-left-radius: 12px; border-bottom-left-radius: .75rem; border-top-left-radius: 12px; border-top-left-radius: .75rem }
+.bdrsl3\/4    { border-bottom-left-radius: 18px; border-bottom-left-radius: 1.125rem; border-top-left-radius: 18px; border-top-left-radius: 1.125rem }
+.bdrsl1       { border-bottom-left-radius: 24px; border-bottom-left-radius: 1.5rem; border-top-left-radius: 24px; border-top-left-radius: 1.5rem }
+.bdrsl1\&1\/2 { border-bottom-left-radius: 36px; border-bottom-left-radius: 2.25rem; border-top-left-radius: 36px; border-top-left-radius: 2.25rem }
+.bdrsl2       { border-bottom-left-radius: 48px; border-bottom-left-radius: 3rem; border-top-left-radius: 48px; border-top-left-radius: 3rem }
+.bdrsl4       { border-bottom-left-radius: 96px; border-bottom-left-radius: 6rem; border-top-left-radius: 96px; border-top-left-radius: 6rem }
+/**
+ * DOC
+ *
+ * ### Opacity
+ *
+ * ```example
+ * <div class="op100">Opacity 100%</div>
+ * <div class="op90">Opacity 90%</div>
+ * <div class="op80">Opacity 80%</div>
+ * <div class="op70">Opacity 70%</div>
+ * <div class="op60">Opacity 60%</div>
+ * <div class="op50">Opacity 50%</div>
+ * <div class="op40">Opacity 40%</div>
+ * <div class="op30">Opacity 30%</div>
+ * <div class="op20">Opacity 20%</div>
+ * <div class="op10">Opacity 10%</div>
+ * <div class="op0">Opacity 0%</div>
+ */
+
+.op100 { opacity: 1 }
+.op90  { opacity: .9 }
+.op80  { opacity: .8 }
+.op70  { opacity: .7 }
+.op60  { opacity: .6 }
+.op50  { opacity: .5 }
+.op40  { opacity: .4 }
+.op30  { opacity: .3 }
+.op20  { opacity: .2 }
+.op10  { opacity: .1 }
+.op0   { opacity: 0 }
