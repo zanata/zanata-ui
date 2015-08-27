@@ -63,3 +63,9 @@
 @import './borders';
 @import './border-radius';
 @import './opacity';
+
+/**
+ * Components - Temporary
+ */
+
+@import '../components/Select/css/default.css';
