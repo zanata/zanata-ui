@@ -1,5 +1,5 @@
 import React from 'react'
-import css from './index.css'
+import css from './styles/index.css'
 import Router from 'react-router'
 import { DefaultRoute, Link, Route, RouteHandler } from 'react-router'
 import Icons from './components/Icons'

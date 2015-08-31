@@ -1524,10 +1524,16 @@ pre {
  *
  */
 
+ /**
+  * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+  * inline-block will display at its default size, and not limit its width to
+  * 100% of an ancestral container.
+  */
+
 .dn {     display: none }
 .di {     display: inline }
 .db {     display: block }
-.dib {    display: inline-block }
+.dib {    display: inline-block; max-width: 100%; } /* 1 */
 .dit {    display: inline-table }
 .dt {     display: table; table-layout: fixed; width: 100% }
 .dtr {    display: table-row }
@@ -2590,6 +2596,35 @@ pre {
 .op20  { opacity: .2 }
 .op10  { opacity: .1 }
 .op0   { opacity: 0 }
+
+/**
+ * DOC
+ *
+ * <hr class="mv4 csec20">
+ *
+ * ## Miscellaneous
+ *
+ */
+
+/**
+ * DOC
+ *
+ * ### Accessibility
+ *
+ * #### Screen Reader only
+ *
+ * Will hide something visually. Mostly just used for hiding from users other than screen readers
+ */
+
+.sronly {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
 
 /**
  * Components - Temporary

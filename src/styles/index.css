@@ -65,6 +65,17 @@
 @import './opacity';
 
 /**
+ * DOC
+ *
+ * <hr class="mv4 csec20">
+ *
+ * ## Miscellaneous
+ *
+ */
+
+@import './accessibility';
+
+/**
  * Components - Temporary
  */
 
