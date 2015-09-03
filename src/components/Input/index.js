@@ -6,6 +6,7 @@ import shallowequal from 'shallowequal'
 class Input extends React.Component {
   constructor () {
     super()
+    this._handleChange = this._handleChange.bind(this)
     this._handleFocus = this._handleFocus.bind(this)
     this._handleBlur = this._handleBlur.bind(this)
     this._handleMouseEnter = this._handleMouseEnter.bind(this)
@@ -18,6 +19,9 @@ class Input extends React.Component {
   }
   shouldComponentUpdate (nextProps, nextState) {
     return !shallowequal(nextProps, this.props) || !shallowequal(nextState, this.state)
+  }
+  _handleChange (event) {
+    this.setState({value: event.target.value})
   }
   _handleFocus (event, cb) {
     if (!this.props.disabled) this.setState({focused: true})
@@ -35,19 +39,13 @@ class Input extends React.Component {
     this.setState({hover: false})
     if (typeof this.props.onMouseEnter === 'function') this.props.onMouseLeave()
   }
-  _handleChange (event) {
-    this.setState({value: event.target.value});
-  }
-  render: function() {
-    var value = this.state.value;
-    return <input type="text" value={value} onChange={this.handleChange} />;
-  }
   render () {
     const type = this.props.type || 'text'
     const inputId = this.props.id || uniqueId(camelCase(this.props.label) + '_')
     const describeId = this.props.description ? inputId + '_d' : undefined
     const inputStatusClass = this.props.status ? 'bdc' + this.props.status : undefined
     const textStatusClass = this.props.status ? 'c' + this.props.status : undefined
+    let value = this.state.value
     let labelClasses = cx(
       'db fwsb csec pv1/4',
       textStatusClass,
@@ -84,6 +82,7 @@ class Input extends React.Component {
           {...this.props}
           type={type}
           id={inputId}
+          value={value}
           aria-describedby={describeId}
           onChange={this._handleChange}
           onMouseEnter={this._handleMouseEnter}

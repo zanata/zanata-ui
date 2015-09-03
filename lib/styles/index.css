@@ -992,6 +992,35 @@ pre {
 /**
  * DOC
  *
+ * ### White Space
+ *
+ * ```example
+ * <div class="whsp w4 mb1 1/4 bgcwhite90">
+ *   This should be pre
+ *   It should keep     extra spacing
+ * </div>
+ * <div class="whsnw mb1 w4 1/4 bgcwhite90">This will go past the boundary of the div and stay on a single line</div>
+ * <div class="whspw w4 1/4 bgcwhite90">
+ *   This should be pre-wrap
+ *   It should keep     extra spacing
+ *   and wrap
+ * </div>
+ * ```
+ */
+
+.whsp   { white-space:pre }
+.whsnw  { white-space:nowrap }
+.whspw  { white-space:pre-wrap }
+.whspl  { white-space:pre-line }
+.whsc   { white-space-collapse: }
+.whscn  { white-space-collapse:normal }
+.whsck  { white-space-collapse:keep-all }
+.whscl  { white-space-collapse:loose }
+.whscbs { white-space-collapse:break-strict }
+.whscba { white-space-collapse:break-all }
+/**
+ * DOC
+ *
  * ### List
  *
  * Defaults to `list-style-position: inside`
@@ -1049,15 +1078,15 @@ pre {
  * - 16
  *
  * ```example
- * <div class="p1/4 mv2 bgsec20">.p1/4 .mv2</div>
+ * <div class="p1/4 mv2 bgcsec20">.p1/4 .mv2</div>
  * ```
  *
  * ```example
- * <div class="p1&1/2 ml1&1/2 bgsec20">.p1&1/2 .ml1&1/2</div>
+ * <div class="p1&1/2 ml1&1/2 bgcsec20">.p1&1/2 .ml1&1/2</div>
  * ```
  *
  * ```example
- * <div class="p4 m4 bgsec20">.p1&1/2 .m4</div>
+ * <div class="p4 m4 bgcsec20">.p1&1/2 .m4</div>
  * ```
  *
  */
@@ -1508,9 +1537,9 @@ pre {
  * ```example
  * <div class="dt mbs">
  *   <div class="dtc p1/4 bgcsec10">display</div>
- *   <div class="dtc p1/4 bgsec20">table</div>
+ *   <div class="dtc p1/4 bgcsec20">table</div>
  *   <div class="dtc p1/4 bgcsec10">will automatically</div>
- *   <div class="dtc p1/4 bgsec20">compute cell width</div>
+ *   <div class="dtc p1/4 bgcsec20">compute cell width</div>
  * </div>
  * ```
  *
@@ -1572,6 +1601,18 @@ pre {
 .ovyh { overflow-y: hidden }
 .ovys { overflow-y: scroll }
 .ovya { overflow-y: auto }
+/**
+ * DOC
+ *
+ * ### Text Overflow
+ *
+ * <div class="tove ovh whsnw w4 p1/2 bgcsec10">Text overflow ellipsis</div>
+ *
+ */
+
+.tove {
+  text-overflow: ellipsis;
+}
 /**
  * DOC
  *
@@ -2150,6 +2191,34 @@ pre {
 .bgcpri { background-color: hsl(194, 97%, 43%) }
 .bgcsec { background-color: hsl(194, 62%, 33%) }
 .bgcter { background-color: hsl(254, 71%, 65%) }
+
+/**
+ * DOC
+ *
+ * ##### Primary Tint
+ *
+ * ```example
+ * <p class="p1/4 bgcpri90 cwhite">.bgcpri90</p>
+ * <p class="p1/4 bgcpri80 cwhite">.bgcpri80</p>
+ * <p class="p1/4 bgcpri70 cwhite">.bgcpri70</p>
+ * <p class="p1/4 bgcpri60 cwhite">.bgcpri60</p>
+ * <p class="p1/4 bgcpri50">.bgcpri50</p>
+ * <p class="p1/4 bgcpri40">.bgcpri40</p>
+ * <p class="p1/4 bgcpri30">.bgcpri30</p>
+ * <p class="p1/4 bgcpri20">.bgcpri20</p>
+ * <p class="p1/4 bgcpri10">.bgcpri10</p>
+ * ```
+ */
+
+.bgcpri90        { background-color: rgb(28, 175, 220) }
+.bgcpri80        { background-color: rgb(53, 184, 224) }
+.bgcpri70        { background-color: rgb(79, 193, 228) }
+.bgcpri60        { background-color: rgb(104, 202, 232) }
+.bgcpri50        { background-color: rgb(129, 211, 236) }
+.bgcpri40        { background-color: rgb(154, 219, 239) }
+.bgcpri30        { background-color: rgb(179, 228, 243) }
+.bgcpri20        { background-color: rgb(205, 237, 247) }
+.bgcpri10        { background-color: rgb(230, 246, 251) }
 
 /**
  * DOC
