@@ -52,9 +52,9 @@
  * ```example
  * <div class="dt mbs">
  *   <div class="dtc p1/4 bgcsec10">display</div>
- *   <div class="dtc p1/4 bgsec20">table</div>
+ *   <div class="dtc p1/4 bgcsec20">table</div>
  *   <div class="dtc p1/4 bgcsec10">will automatically</div>
- *   <div class="dtc p1/4 bgsec20">compute cell width</div>
+ *   <div class="dtc p1/4 bgcsec20">compute cell width</div>
  * </div>
  * ```
  *

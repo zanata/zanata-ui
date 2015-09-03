@@ -212,6 +212,20 @@ Based on a minor-third scale. 0 is the default font size. Anything above scale 5
 </table>
 ```
 
+### White Space
+
+```example
+<div class="whsp w4 mb1 1/4 bgcwhite90">
+  This should be pre
+  It should keep     extra spacing
+</div>
+<div class="whsnw mb1 w4 1/4 bgcwhite90">This will go past the boundary of the div and stay on a single line</div>
+<div class="whspw w4 1/4 bgcwhite90">
+  This should be pre-wrap
+  It should keep     extra spacing
+  and wrap
+</div>
+```
 ### List
 
 Defaults to `list-style-position: inside`
@@ -255,15 +269,15 @@ Available sizes are:
 - 16
 
 ```example
-<div class="p1/4 mv2 bgsec20">.p1/4 .mv2</div>
+<div class="p1/4 mv2 bgcsec20">.p1/4 .mv2</div>
 ```
 
 ```example
-<div class="p1&1/2 ml1&1/2 bgsec20">.p1&1/2 .ml1&1/2</div>
+<div class="p1&1/2 ml1&1/2 bgcsec20">.p1&1/2 .ml1&1/2</div>
 ```
 
 ```example
-<div class="p4 m4 bgsec20">.p1&1/2 .m4</div>
+<div class="p4 m4 bgcsec20">.p1&1/2 .m4</div>
 ```
 
 ### Width
@@ -429,9 +443,9 @@ Display table can be combined with display table-cell to render a table without 
 ```example
 <div class="dt mbs">
   <div class="dtc p1/4 bgcsec10">display</div>
-  <div class="dtc p1/4 bgsec20">table</div>
+  <div class="dtc p1/4 bgcsec20">table</div>
   <div class="dtc p1/4 bgcsec10">will automatically</div>
-  <div class="dtc p1/4 bgsec20">compute cell width</div>
+  <div class="dtc p1/4 bgcsec20">compute cell width</div>
 </div>
 ```
 
@@ -457,6 +471,10 @@ Whether or not items in the container overflow
   <div class='ovyh mr1 mb1 bgcsec10 w8 h8'>Y Hidden: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</div>
 </div>
 ```
+
+### Text Overflow
+
+<div class="tove ovh whsnw w4 p1/2 bgcsec10">Text overflow ellipsis</div>
 
 ### Flex
 
@@ -792,6 +810,19 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="p1/4 bgcsec cwhite">.bgcsec</p>
 <p class="p1/4 bgcter cwhite">.bgcter</p>
 ```
+##### Primary Tint
+
+```example
+<p class="p1/4 bgcpri90 cwhite">.bgcpri90</p>
+<p class="p1/4 bgcpri80 cwhite">.bgcpri80</p>
+<p class="p1/4 bgcpri70 cwhite">.bgcpri70</p>
+<p class="p1/4 bgcpri60 cwhite">.bgcpri60</p>
+<p class="p1/4 bgcpri50">.bgcpri50</p>
+<p class="p1/4 bgcpri40">.bgcpri40</p>
+<p class="p1/4 bgcpri30">.bgcpri30</p>
+<p class="p1/4 bgcpri20">.bgcpri20</p>
+<p class="p1/4 bgcpri10">.bgcpri10</p>
+```
 ##### Secondary Tint
 
 ```example
@@ -977,3 +1008,12 @@ Use this to round corners of elements
 <div class="op20">Opacity 20%</div>
 <div class="op10">Opacity 10%</div>
 <div class="op0">Opacity 0%</div>
+<hr class="mv4 csec20">
+
+## Miscellaneous
+
+### Accessibility
+
+#### Screen Reader only
+
+Will hide something visually. Mostly just used for hiding from users other than screen readers

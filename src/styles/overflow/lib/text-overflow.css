@@ -1,0 +1,12 @@
+/**
+ * DOC
+ *
+ * ### Text Overflow
+ *
+ * <div class="tove ovh whsnw w4 p1/2 bgcsec10">Text overflow ellipsis</div>
+ *
+ */
+
+.tove {
+  text-overflow: ellipsis;
+}

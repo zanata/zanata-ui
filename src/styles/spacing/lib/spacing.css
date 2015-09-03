@@ -29,15 +29,15 @@
  * - 16
  *
  * ```example
- * <div class="p1/4 mv2 bgsec20">.p1/4 .mv2</div>
+ * <div class="p1/4 mv2 bgcsec20">.p1/4 .mv2</div>
  * ```
  *
  * ```example
- * <div class="p1&1/2 ml1&1/2 bgsec20">.p1&1/2 .ml1&1/2</div>
+ * <div class="p1&1/2 ml1&1/2 bgcsec20">.p1&1/2 .ml1&1/2</div>
  * ```
  *
  * ```example
- * <div class="p4 m4 bgsec20">.p1&1/2 .m4</div>
+ * <div class="p4 m4 bgcsec20">.p1&1/2 .m4</div>
  * ```
  *
  */

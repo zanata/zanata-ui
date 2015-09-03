@@ -81,6 +81,34 @@
 /**
  * DOC
  *
+ * ##### Primary Tint
+ *
+ * ```example
+ * <p class="p1/4 bgcpri90 cwhite">.bgcpri90</p>
+ * <p class="p1/4 bgcpri80 cwhite">.bgcpri80</p>
+ * <p class="p1/4 bgcpri70 cwhite">.bgcpri70</p>
+ * <p class="p1/4 bgcpri60 cwhite">.bgcpri60</p>
+ * <p class="p1/4 bgcpri50">.bgcpri50</p>
+ * <p class="p1/4 bgcpri40">.bgcpri40</p>
+ * <p class="p1/4 bgcpri30">.bgcpri30</p>
+ * <p class="p1/4 bgcpri20">.bgcpri20</p>
+ * <p class="p1/4 bgcpri10">.bgcpri10</p>
+ * ```
+ */
+
+.bgcpri90        { background-color: color(var(--primary) tint(10%)) }
+.bgcpri80        { background-color: color(var(--primary) tint(20%)) }
+.bgcpri70        { background-color: color(var(--primary) tint(30%)) }
+.bgcpri60        { background-color: color(var(--primary) tint(40%)) }
+.bgcpri50        { background-color: color(var(--primary) tint(50%)) }
+.bgcpri40        { background-color: color(var(--primary) tint(60%)) }
+.bgcpri30        { background-color: color(var(--primary) tint(70%)) }
+.bgcpri20        { background-color: color(var(--primary) tint(80%)) }
+.bgcpri10        { background-color: color(var(--primary) tint(90%)) }
+
+/**
+ * DOC
+ *
  * ##### Secondary Tint
  *
  * ```example
