@@ -12,7 +12,8 @@ class Input extends React.Component {
     this._handleMouseLeave = this._handleMouseLeave.bind(this)
     this.state = {
       focused: false,
-      hover: false
+      hover: false,
+      value: ''
     }
   }
   shouldComponentUpdate (nextProps, nextState) {
@@ -34,10 +35,17 @@ class Input extends React.Component {
     this.setState({hover: false})
     if (typeof this.props.onMouseEnter === 'function') this.props.onMouseLeave()
   }
+  _handleChange (event) {
+    this.setState({value: event.target.value});
+  }
+  render: function() {
+    var value = this.state.value;
+    return <input type="text" value={value} onChange={this.handleChange} />;
+  }
   render () {
     const type = this.props.type || 'text'
-    const inputId = uniqueId(camelCase(this.props.label) + '_')
-    const describeId = this.props.description ? uniqueId(camelCase(this.props.label) + '_d_') : undefined
+    const inputId = this.props.id || uniqueId(camelCase(this.props.label) + '_')
+    const describeId = this.props.description ? inputId + '_d' : undefined
     const inputStatusClass = this.props.status ? 'bdc' + this.props.status : undefined
     const textStatusClass = this.props.status ? 'c' + this.props.status : undefined
     let labelClasses = cx(
@@ -77,6 +85,7 @@ class Input extends React.Component {
           type={type}
           id={inputId}
           aria-describedby={describeId}
+          onChange={this._handleChange}
           onMouseEnter={this._handleMouseEnter}
           onMouseLeave={this._handleMouseLeave}
           onFocus={this._handleFocus}
@@ -93,6 +102,7 @@ Input.propTypes = {
   label: React.PropTypes.string.isRequired,
   description: React.PropTypes.string,
   type: React.PropTypes.string,
+  id: React.PropTypes.string,
   status: React.PropTypes.string,
   outline: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
