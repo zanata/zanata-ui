@@ -4,8 +4,8 @@ import { uniqueId, camelCase } from 'lodash'
 import shallowequal from 'shallowequal'
 
 class Input extends React.Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this._handleChange = this._handleChange.bind(this)
     this._handleFocus = this._handleFocus.bind(this)
     this._handleBlur = this._handleBlur.bind(this)
@@ -14,7 +14,7 @@ class Input extends React.Component {
     this.state = {
       focused: false,
       hover: false,
-      value: ''
+      value: props.value
     }
   }
   shouldComponentUpdate (nextProps, nextState) {
@@ -101,6 +101,7 @@ Input.propTypes = {
   label: React.PropTypes.string.isRequired,
   description: React.PropTypes.string,
   type: React.PropTypes.string,
+  value: React.PropTypes.string,
   id: React.PropTypes.string,
   status: React.PropTypes.string,
   outline: React.PropTypes.bool,
