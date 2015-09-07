@@ -1,5 +1,3 @@
-// WIP
-
 module.exports = [
   require('./make-webpack-config')({
     // commonsChunk: true,
@@ -9,7 +7,6 @@ module.exports = [
     // devtool: 'source-map'
   }),
   require('./make-webpack-config')({
-    prerender: true,
     minimize: true
   })
 ]
