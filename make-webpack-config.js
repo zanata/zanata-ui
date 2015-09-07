@@ -33,8 +33,7 @@ module.exports = function (options) {
     pathinfo: options.debug
   }
   var excludeFromStats = [
-    /node_modules[\\\/]react(-router)?[\\\/]/,
-    /node_modules[\\\/]items-store[\\\/]/
+    /node_modules[\\\/]react(-router)?[\\\/]/
   ]
   var plugins = [
     new webpack.PrefetchPlugin('react'),
