@@ -19,6 +19,15 @@
 @import 'zanata-css-base';
 
 /**
+ * Components
+ *
+ * Go first so utility styles will override them
+ */
+
+@import '../components/Select/index.css';
+@import '../components/FixedDataTable/index.css';
+
+/**
  * DOC
  *
  * <hr class="mv4 csec20">
@@ -75,9 +84,3 @@
  */
 
 @import './accessibility';
-
-/**
- * Components - Temporary
- */
-
-@import '../components/Select/css/default.css';

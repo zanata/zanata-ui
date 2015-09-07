@@ -385,7 +385,7 @@ There are 2 types of heights:
 ```example
 <div class="posr">
   <button>Button</button>
-  <div class="posa bgwhite bd bdcsec20 bdrs1/4">
+  <div class="posa bgcwhite bd bdcsec20 bdrs1/4">
     <a href="#" class="db p1/4">Dropdown Action</a>
     <a href="#" class="db p1/4">Action</a>
     <a href="#" class="db p1/4">Action</a>
@@ -1008,6 +1008,7 @@ Use this to round corners of elements
 <div class="op20">Opacity 20%</div>
 <div class="op10">Opacity 10%</div>
 <div class="op0">Opacity 0%</div>
+```
 <hr class="mv4 csec20">
 
 ## Miscellaneous
@@ -1017,3 +1018,8 @@ Use this to round corners of elements
 #### Screen Reader only
 
 Will hide something visually. Mostly just used for hiding from users other than screen readers
+
+```example
+<label class="sronly">Enter some things</label>
+<input type="text" placeholder="Enter some things" />
+```

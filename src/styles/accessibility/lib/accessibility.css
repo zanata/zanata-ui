@@ -6,6 +6,11 @@
  * #### Screen Reader only
  *
  * Will hide something visually. Mostly just used for hiding from users other than screen readers
+ *
+ * ```example
+ * <label class="sronly">Enter some things</label>
+ * <input type="text" placeholder="Enter some things" />
+ * ```
  */
 
 .sronly {

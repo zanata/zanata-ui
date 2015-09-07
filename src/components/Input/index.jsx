@@ -3,39 +3,49 @@ import cx from 'classnames'
 import { uniqueId, camelCase } from 'lodash'
 import shallowequal from 'shallowequal'
 
+const PropTypes = React.PropTypes
+
 class Input extends React.Component {
-  constructor (props) {
-    super(props)
-    this._handleChange = this._handleChange.bind(this)
-    this._handleFocus = this._handleFocus.bind(this)
-    this._handleBlur = this._handleBlur.bind(this)
-    this._handleMouseEnter = this._handleMouseEnter.bind(this)
-    this._handleMouseLeave = this._handleMouseLeave.bind(this)
-    this.state = {
-      focused: false,
-      hover: false,
-      value: props.value
-    }
+  static propTypes = {
+    label: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    type: PropTypes.string,
+    value: PropTypes.string,
+    id: PropTypes.string,
+    status: PropTypes.string,
+    outline: PropTypes.bool,
+    disabled: PropTypes.bool,
+    hideLabel: PropTypes.bool,
+    className: PropTypes.string,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func
+  }
+  state = {
+    focused: false,
+    hover: false,
+    value: this.props.value
   }
   shouldComponentUpdate (nextProps, nextState) {
     return !shallowequal(nextProps, this.props) || !shallowequal(nextState, this.state)
   }
-  _handleChange (event) {
+  _handleChange = (event) => {
     this.setState({value: event.target.value})
   }
-  _handleFocus (event, cb) {
+  _handleFocus = (event, cb) => {
     if (!this.props.disabled) this.setState({focused: true})
     if (typeof this.props.onFocus === 'function') this.props.onFocus()
   }
-  _handleBlur (event) {
+  _handleBlur = (event) => {
     this.setState({focused: false})
     if (typeof this.props.onBlur === 'function') this.props.onBlur()
   }
-  _handleMouseEnter (event) {
+  _handleMouseEnter = (event) => {
     if (!this.props.disabled) this.setState({hover: true})
     if (typeof this.props.onMouseEnter === 'function') this.props.onMouseEnter()
   }
-  _handleMouseLeave (event) {
+  _handleMouseLeave = (event) => {
     this.setState({hover: false})
     if (typeof this.props.onMouseEnter === 'function') this.props.onMouseLeave()
   }
@@ -95,23 +105,6 @@ class Input extends React.Component {
     )
   }
 
-}
-
-Input.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string,
-  type: React.PropTypes.string,
-  value: React.PropTypes.string,
-  id: React.PropTypes.string,
-  status: React.PropTypes.string,
-  outline: React.PropTypes.bool,
-  disabled: React.PropTypes.bool,
-  hideLabel: React.PropTypes.bool,
-  className: React.PropTypes.string,
-  onFocus: React.PropTypes.func,
-  onBlur: React.PropTypes.func,
-  onMouseEnter: React.PropTypes.func,
-  onMouseLeave: React.PropTypes.func
 }
 
 export default Input

@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from '../Input'
+import ObjectDataExample from '../FixedDataTable/examples/ObjectDataExample'
 
 export default class App extends React.Component {
   render () {
@@ -19,6 +20,11 @@ export default class App extends React.Component {
           <Input label='Test input disabled' placeholder='Test input disabled' value='I&#39;m disabled' disabled outline className='w100p mb1' />
           <Input label='Test input error' placeholder='This can&#39;t be empty' status='danger' outline className='w100p mb1' />
           <Input label='Test input success with description' placeholder='Success' value='Awwww yeeeah!' description='Great job you got it right' status='success' outline className='w100p' />
+        </div>
+        <h2 className='fz4 fwl mb1 mt2 csec'>Fixed Data Table</h2>
+        <h3 className='fz3 fwsb mb1/2 csec'>Basic</h3>
+        <div>
+          <ObjectDataExample />
         </div>
       </div>
     )

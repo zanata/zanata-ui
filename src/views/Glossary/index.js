@@ -1,5 +1,5 @@
 import React from 'react'
-import Select from '../../components/Select/lib/Select.js'
+import Select from '../../components/Select/lib/Select'
 import Input from '../../components/Input'
 import Icon from '../../components/Icon'
 
