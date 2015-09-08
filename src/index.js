@@ -5,13 +5,15 @@ import Input from './components/Input'
 import Icons from './components/Icons'
 import Icon from './components/Icon'
 import FixedDataTable from './components/FixedDataTable'
+import KeyComponent from './components/KeyComponent'
 
 const Components = {
   Select: Select,
   Input: Input,
   Icons: Icons,
   Icon: Icon,
-  FixedDataTable: FixedDataTable
+  FixedDataTable: FixedDataTable,
+  KeyComponent: KeyComponent
 }
 
 export default Components
