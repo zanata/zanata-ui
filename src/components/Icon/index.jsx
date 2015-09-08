@@ -13,7 +13,7 @@ class Icon extends React.Component {
   render () {
     let svgIcon = `<use xlink:href="#Icon-${this.props.name}" />`
     let classes = cx(
-      'dib', 'posr',
+      'dib posr',
       this.props.className,
       this._sizeClasses(this.props.size)
     )
