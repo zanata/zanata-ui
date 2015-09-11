@@ -27,7 +27,7 @@ class App extends React.Component {
   render () {
     return (
     <div>
-        <Icons fileName='components/Icons/icons.svg' />
+        <Icons />
         <nav className='posf t0 h2 w100p z4 bdb bdcsec20 bgcwhite dfx'>
           <Link to='styles' className='p1/2 h2 cpri'>Styles</Link>
           <Link to='patterns' className='p1/2 h2 cpri'>Patterns</Link>

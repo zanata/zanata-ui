@@ -11,7 +11,7 @@
     "build": "npm run build:lib && npm run build:prod",
     "hot-dev-server": "webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 8000 --inline",
     "styleguide": "./utils/extractCssComments/.bin/extractCssComments -i ./src/styles/index.css -o ./styleguide.md",
-    "generate-svg-sprite": "svg-sprite -sD ./src/components/Icons --symbol-dest '' --ss icons.svg --si ./src/components/Icons/src/*.svg",
+    "generate-svg-sprite": "svg-sprite -sD ./src/components/Icons --symbol-dest '' --ss icons.svg --si ./src/components/Icons/src/*.svg && node ./utils/createSVGFile",
     "start": "npm run styleguide & npm run generate-svg-sprite && npm run hot-dev-server"
   },
   "author": "Luke Brooker",
@@ -29,6 +29,7 @@
     "react-input-autosize": "^0.5.0",
     "react-router": "^0.13.3",
     "shallowequal": "^0.2.2",
+    "svg-react-loader": "^0.1.5",
     "zanata-css-base": "lukebrooker/zanata-css-base"
   },
   "devDependencies": {

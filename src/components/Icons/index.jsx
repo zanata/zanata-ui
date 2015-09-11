@@ -1,32 +1,12 @@
 import React from 'react'
-import nets from 'nets'
+import IconsFile from 'babel!svg-react!./icons.svg?name=IconsFile'
 
 class Icons extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      svgContent: ''
-    }
-  }
-  componentDidMount () {
-    let self = this
-    nets({
-      url: this.props.fileName,
-      encoding: undefined
-    }, function (err, resp, body) {
-      if (err) throw err
-      self.setState({svgContent: body})
-    })
-  }
   render () {
     return (
-      <div dangerouslySetInnerHTML={{ __html: this.state.svgContent }} />
+      <IconsFile className='posa' />
     )
   }
-}
-
-Icons.propTypes = {
-  fileName: React.PropTypes.string.isRequired
 }
 
 export default Icons

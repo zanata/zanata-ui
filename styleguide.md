@@ -399,6 +399,7 @@ There are 2 types of heights:
 - b     = block
 - ib    = inline-block
 - fx    = flex (Also in flex module)
+- ifx    = flex (Also in flex module)
 - it    = inline-table
 - t     = table
 - tc    = table-cell
@@ -492,6 +493,17 @@ This sets the element to `display: flex` and enables a flex context for all dire
 
 ```example
 <div class="dfx">
+  <div class="p1 bd">Hamburger</div>
+  <div class="p1 bd">Hamburger</div>
+</div>
+```
+#### Display Inline Flex
+Similar to the `.dfx` class but puts the element inline.
+This sets the element to `display: inline-flex` and enables a flex context for all direct child elements.
+
+
+```example
+<div class="difx">
   <div class="p1 bd">Hamburger</div>
   <div class="p1 bd">Hamburger</div>
 </div>
