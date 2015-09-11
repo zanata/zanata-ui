@@ -6,7 +6,7 @@
   "style": "./lib/index.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:lib": "babel src --out-dir lib --stage 0 & cssnext ./src/styles/index.css ./lib/styles/index.css",
+    "build:lib": "babel src --out-dir lib --stage 0 & cssnext ./src/styles/index.css ./lib/styles/index.css & cp src/components/Icons/icons.svg lib/components/Icons",
     "build:prod": "webpack --config webpack-production.config.js --progress --profile --colors",
     "build": "npm run build:lib && npm run build:prod",
     "hot-dev-server": "webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 8000 --inline",
