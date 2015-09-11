@@ -61,8 +61,15 @@
   background-color: transparent;
 }
 
+.fixedDataTableCellLayout_wrap1 {
+  table-layout: fixed;
+}
+
 .public_fixedDataTableCell_cellContent {
   padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .public_fixedDataTableCell_columnResizerKnob {
