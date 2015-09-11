@@ -2381,6 +2381,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * - b     = block
  * - ib    = inline-block
  * - fx    = flex (Also in flex module)
+ * - ifx    = flex (Also in flex module)
  * - it    = inline-table
  * - t     = table
  * - tc    = table-cell
@@ -2447,16 +2448,18 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
   * 100% of an ancestral container.
   */
 
-.dn {     display: none }
-.di {     display: inline }
-.db {     display: block }
-.dib {    display: inline-block; max-width: 100%; } /* 1 */
-.dit {    display: inline-table }
-.dt {     display: table; table-layout: fixed; width: 100% }
-.dtr {    display: table-row }
-.dtc {    display: table-cell }
-.dtcol {  display: table-column }
-.dtcolg { display: table-column-group }
+.dn         { display: none }
+.di         { display: inline }
+.db         { display: block }
+.dib        { display: inline-block; max-width: 100%; } /* 1 */
+.dfx, .df   { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+.difx, .dif { display: -webkit-inline-box; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex }
+.dit        { display: inline-table }
+.dt         { display: table; table-layout: fixed; width: 100% }
+.dtr        { display: table-row }
+.dtc        { display: table-cell }
+.dtcol      { display: table-column }
+.dtcolg     { display: table-column-group }
 /**
  * DOC
  *
@@ -2527,6 +2530,24 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  */
 
 .dfx { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+
+/**
+ * DOC
+ *
+ * #### Display Inline Flex
+ * Similar to the `.dfx` class but puts the element inline.
+ * This sets the element to `display: inline-flex` and enables a flex context for all direct child elements.
+ *
+ *
+ * ```example
+ * <div class="difx">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.difx { display: -webkit-inline-box; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex }
 
 /**
  * DOC
@@ -3185,6 +3206,25 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .bgcwarning       { background-color: hsl(40, 100%, 50%) }
 .bgcdanger        { background-color: hsl(359, 100%, 62%) }
 .bgcneutral       { background-color: hsl(195, 32%, 80%) }
+
+
+/**
+ * DOC
+ *
+ * #### Current Color
+ *
+ * ```example
+ * <div class="cpri">
+ *   <div class="bgccur">
+ *     <span class="cwhite">My background is based in .cpri</span>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.bgccur {
+  background-color: currentColor;
+}
 /**
  * DOC
  *
@@ -3554,6 +3594,90 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .op20  { opacity: .2 }
 .op10  { opacity: .1 }
 .op0   { opacity: 0 }
+/**
+ * DOC
+ *
+ * ### Animations
+ *
+ * ```example
+ * <div class="bdrs bgcsec20 p1/2 animdur900ms animici animtfeob animnbd">Bounce Delay</div>
+ * ```
+ */
+
+/* Animation durations */
+
+.animdur100ms { -webkit-animation-duration: .1s; animation-duration: .1s }
+.animdur200ms { -webkit-animation-duration: .2s; animation-duration: .2s }
+.animdur300ms { -webkit-animation-duration: .3s; animation-duration: .3s }
+.animdur400ms { -webkit-animation-duration: .4s; animation-duration: .4s }
+.animdur500ms { -webkit-animation-duration: .5s; animation-duration: .5s }
+.animdur600ms { -webkit-animation-duration: .6s; animation-duration: .6s }
+.animdur700ms { -webkit-animation-duration: .7s; animation-duration: .7s }
+.animdur800ms { -webkit-animation-duration: .8s; animation-duration: .8s }
+.animdur900ms { -webkit-animation-duration: .9s; animation-duration: .9s }
+.animdur1s    { -webkit-animation-duration: 1s; animation-duration: 1s }
+
+/* Iterations */
+
+.animici { -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite }
+
+/* Easing */
+
+.animtfeo { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out }
+.animtfeob { -webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1.275); animation-timing-function: cubic-bezier(.175, .885, .32, 1.275) }
+
+/* Fill mode */
+
+.animfmb { -webkit-animation-fill-mode: backwards; animation-fill-mode: backwards }
+.animfmf { -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards }
+
+/* Animation Delay */
+
+.animdel100ms { -webkit-animation-delay: .1s; animation-delay: .1s }
+.animdel150ms { -webkit-animation-delay: .15s; animation-delay: .15s }
+.animdel200ms { -webkit-animation-delay: .2s; animation-delay: .2s }
+.animdel300ms { -webkit-animation-delay: .3s; animation-delay: .3s }
+.animdel400ms { -webkit-animation-delay: .4s; animation-delay: .4s }
+.animdel500ms { -webkit-animation-delay: .5s; animation-delay: .5s }
+.animdel600ms { -webkit-animation-delay: .6s; animation-delay: .6s }
+.animdel700ms { -webkit-animation-delay: .7s; animation-delay: .7s }
+.animdel800ms { -webkit-animation-delay: .8s; animation-delay: .8s }
+.animdel900ms { -webkit-animation-delay: .9s; animation-delay: .9s }
+.animdel1s    { -webkit-animation-delay: 1s; animation-delay: 1s }
+
+/* Animation names */
+
+.animnbd { -webkit-animation-name: bouncedelay; animation-name: bouncedelay }
+
+@-webkit-keyframes bouncedelay {
+  0%,
+  90%,
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    opacity: .1;
+  }
+  40% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes bouncedelay {
+  0%,
+  90%,
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    opacity: .1;
+  }
+  40% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    opacity: 1;
+  }
+}
 
 /**
  * DOC

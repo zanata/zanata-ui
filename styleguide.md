@@ -859,6 +859,15 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="p1/4 bgcdanger cwhite">.bgcdanger</p>
 <p class="p1/4 bgcneutral">.bgcneutral</p>
 ```
+#### Current Color
+
+```example
+<div class="cpri">
+  <div class="bgccur">
+    <span class="cwhite">My background is based in .cpri</span>
+  </div>
+</div>
+```
 #### Border Colors
 
 ##### Desaturated
@@ -1008,6 +1017,11 @@ Use this to round corners of elements
 <div class="op20">Opacity 20%</div>
 <div class="op10">Opacity 10%</div>
 <div class="op0">Opacity 0%</div>
+```
+### Animations
+
+```example
+<div class="bdrs bgcsec20 p1/2 animdur900ms animici animtfeob animnbd">Bounce Delay</div>
 ```
 <hr class="mv4 csec20">
 

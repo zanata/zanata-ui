@@ -1,0 +1,67 @@
+/**
+ * DOC
+ *
+ * ### Animations
+ *
+ * ```example
+ * <div class="bdrs bgcsec20 p1/2 animdur900ms animici animtfeob animnbd">Bounce Delay</div>
+ * ```
+ */
+
+/* Animation durations */
+
+.animdur100ms { animation-duration: .1s }
+.animdur200ms { animation-duration: .2s }
+.animdur300ms { animation-duration: .3s }
+.animdur400ms { animation-duration: .4s }
+.animdur500ms { animation-duration: .5s }
+.animdur600ms { animation-duration: .6s }
+.animdur700ms { animation-duration: .7s }
+.animdur800ms { animation-duration: .8s }
+.animdur900ms { animation-duration: .9s }
+.animdur1s    { animation-duration: 1s }
+
+/* Iterations */
+
+.animici { animation-iteration-count: infinite }
+
+/* Easing */
+
+.animtfeo { animation-timing-function: ease-out }
+.animtfeob { animation-timing-function: cubic-bezier(.175, .885, .32, 1.275) }
+
+/* Fill mode */
+
+.animfmb { animation-fill-mode: backwards }
+.animfmf { animation-fill-mode: forwards }
+
+/* Animation Delay */
+
+.animdel100ms { animation-delay: .1s }
+.animdel150ms { animation-delay: .15s }
+.animdel200ms { animation-delay: .2s }
+.animdel300ms { animation-delay: .3s }
+.animdel400ms { animation-delay: .4s }
+.animdel500ms { animation-delay: .5s }
+.animdel600ms { animation-delay: .6s }
+.animdel700ms { animation-delay: .7s }
+.animdel800ms { animation-delay: .8s }
+.animdel900ms { animation-delay: .9s }
+.animdel1s    { animation-delay: 1s }
+
+/* Animation names */
+
+.animnbd { animation-name: bouncedelay }
+
+@keyframes bouncedelay {
+  0%,
+  90%,
+  100% {
+    transform: scale(0, 0);
+    opacity: .1;
+  }
+  40% {
+    transform: scale(1.1, 1.1);
+    opacity: 1;
+  }
+}

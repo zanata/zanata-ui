@@ -28,6 +28,24 @@
 /**
  * DOC
  *
+ * #### Display Inline Flex
+ * Similar to the `.dfx` class but puts the element inline.
+ * This sets the element to `display: inline-flex` and enables a flex context for all direct child elements.
+ *
+ *
+ * ```example
+ * <div class="difx">
+ *   <div class="p1 bd">Hamburger</div>
+ *   <div class="p1 bd">Hamburger</div>
+ * </div>
+ * ```
+ */
+
+.difx { display: inline-flex }
+
+/**
+ * DOC
+ *
  * #### Flex Column
  *
  * To arrange items vertically, use the `.fxdc` utility.

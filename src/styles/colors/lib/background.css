@@ -183,3 +183,22 @@
 .bgcwarning       { background-color: var(--warning) }
 .bgcdanger        { background-color: var(--danger) }
 .bgcneutral       { background-color: var(--neutral) }
+
+
+/**
+ * DOC
+ *
+ * #### Current Color
+ *
+ * ```example
+ * <div class="cpri">
+ *   <div class="bgccur">
+ *     <span class="cwhite">My background is based in .cpri</span>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.bgccur {
+  background-color: currentColor;
+}

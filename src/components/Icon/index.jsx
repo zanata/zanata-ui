@@ -1,7 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
 
-class Icon extends React.Component {
+export default class Icon extends React.Component {
+  static propTypes = {
+    name: React.PropTypes.string.isRequired,
+    size: React.PropTypes.string,
+    className: React.PropTypes.string
+  }
   _sizeClasses (size) {
     switch (size) {
       case 'sn1': return 'wsn1 hsn1'
@@ -24,11 +29,3 @@ class Icon extends React.Component {
     )
   }
 }
-
-Icon.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  size: React.PropTypes.string,
-  className: React.PropTypes.string
-}
-
-export default Icon

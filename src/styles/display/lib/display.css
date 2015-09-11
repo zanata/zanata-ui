@@ -8,6 +8,7 @@
  * - b     = block
  * - ib    = inline-block
  * - fx    = flex (Also in flex module)
+ * - ifx    = flex (Also in flex module)
  * - it    = inline-table
  * - t     = table
  * - tc    = table-cell
@@ -74,13 +75,15 @@
   * 100% of an ancestral container.
   */
 
-.dn {     display: none }
-.di {     display: inline }
-.db {     display: block }
-.dib {    display: inline-block; max-width: 100%; } /* 1 */
-.dit {    display: inline-table }
-.dt {     display: table; table-layout: fixed; width: 100% }
-.dtr {    display: table-row }
-.dtc {    display: table-cell }
-.dtcol {  display: table-column }
-.dtcolg { display: table-column-group }
+.dn         { display: none }
+.di         { display: inline }
+.db         { display: block }
+.dib        { display: inline-block; max-width: 100%; } /* 1 */
+.dfx, .df   { display: flex }
+.difx, .dif { display: inline-flex }
+.dit        { display: inline-table }
+.dt         { display: table; table-layout: fixed; width: 100% }
+.dtr        { display: table-row }
+.dtc        { display: table-cell }
+.dtcol      { display: table-column }
+.dtcolg     { display: table-column-group }
