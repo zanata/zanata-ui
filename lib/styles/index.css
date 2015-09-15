@@ -554,6 +554,7 @@ textarea {
   outline: none;
   box-shadow: inherit;
   border: inherit;
+  background-color: inherit;
 }
 
 [type=text],
@@ -1634,14 +1635,8 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .public_fixedDataTable_bodyRow {
   border-bottom: 1px solid rgb(233, 241, 243);
   background-color: transparent;
-  opacity: .8;
   -webkit-transition: .1s all ease-out;
           transition: .1s all ease-out;
-}
-
-.fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTable_bodyRow {
-  opacity: 1;
-  background-color: rgb(244, 248, 249);
 }
 
 .public_fixedDataTable_main {
@@ -1820,6 +1815,23 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .tac { text-align:center }
 .tar { text-align:right }
 .taj { text-align:justify }
+/**
+ * DOC
+ *
+ * ### Text Transform
+ *
+ * ```example
+ * <div class='ttn'>Text transform <strong>none</strong></div>
+ * <div class='ttc'>Text transform <strong>capitalize</strong></div>
+ * <div class='ttu'>Text transform <strong>uppercase</strong></div>
+ * <div class='ttl'>Text transform <strong>lowercase</strong></div>
+ * ```
+ */
+
+.ttn { text-transform: none }
+.ttc { text-transform: capitalize }
+.ttu { text-transform: uppercase }
+.ttl { text-transform: lowercase }
 /**
  * DOC
  *
@@ -2156,6 +2168,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * #### Rhythm based
  *
  * ```example
+ * <div class="bgsec10 mb1/2"><div class="w0 bgsec30">0</div></div>
  * <div class="bgsec10 mb1/2"><div class="w1/4 bgsec30">1/4</div></div>
  * <div class="bgsec10 mb1/2"><div class="w1/2 bgsec30">1/2</div></div>
  * <div class="bgsec10 mb1/2"><div class="w3/4 bgsec30">3/4</div></div>
@@ -2168,6 +2181,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * ```
  */
 
+.w0       { width: 0 }
 .w1\/4    { width: 6px; width: .375rem }
 .w1\/2    { width: 12px; width: .75rem }
 .w3\/4    { width: 18px; width: 1.125rem }
@@ -2255,6 +2269,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * #### Rhythm based
  *
  * ```example
+ * <div class="h1 mb1/2 bgcsec10"><div class="h0 bgcsec30">0</div></div>
  * <div class="h1 mb1/2 bgcsec10"><div class="h1/4 bgcsec30">1/4</div></div>
  * <div class="h1 mb1/2 bgcsec10"><div class="h1/2 bgcsec30">1/2</div></div>
  * <div class="h1 mb1/2 bgcsec10"><div class="h3/4 bgcsec30">3/4</div></div>
@@ -2267,6 +2282,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * ```
  */
 
+.h0       { height: 0 }
 .h1\/4    { height: 6px; height: .375rem }
 .h1\/2    { height: 12px; height: .75rem }
 .h3\/4    { height: 18px; height: 1.125rem }
@@ -2865,6 +2881,26 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  */
 
 .ordlast  { -webkit-box-ordinal-group: 100000; -webkit-order: 99999; -ms-flex-order: 99999; order: 99999 }
+/**
+ * DOC
+ *
+ * ### Transform
+ *
+ * ```example
+ * <div class="trfr45">I'm rotated 45%</div>
+ * <div class="trfr90">I'm rotated 90%</div>
+ * <div class="trfr180">I'm rotated 180%</div>
+ * ```
+ */
+
+.trfr45  { -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg) }
+.trfr90  { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg) }
+.trfr135 { -webkit-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg) }
+.trfr180 { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg) }
+.trfr225 { -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg) }
+.trfr270 { -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg) }
+.trfr315 { -webkit-transform: rotate(315deg); -ms-transform: rotate(315deg); transform: rotate(315deg) }
+.trfr360 { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg) }
 
 /**
  * DOC
@@ -2929,15 +2965,43 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * ```
  */
 
-.cblack90a { color: hsla(0, 0%, 10%, .9); }
-.cblack80a { color: hsla(0, 0%, 20%, .8); }
-.cblack70a { color: hsla(0, 0%, 30%, .7); }
-.cblack60a { color: hsla(0, 0%, 40%, .6); }
-.cblack50a { color: hsla(0, 0%, 50%, .5); }
-.cblack40a { color: hsla(0, 0%, 60%, .4); }
-.cblack30a { color: hsla(0, 0%, 70%, .3); }
-.cblack20a { color: hsla(0, 0%, 80%, .2); }
-.cblack10a { color: hsla(0, 0%, 90%, .1); }
+.cblack90a { color: #000000; color: rgba(0, 0, 0, .9); }
+.cblack80a { color: #000000; color: rgba(0, 0, 0, .8); }
+.cblack70a { color: #000000; color: rgba(0, 0, 0, .7); }
+.cblack60a { color: #000000; color: rgba(0, 0, 0, .6); }
+.cblack50a { color: #000000; color: rgba(0, 0, 0, .5); }
+.cblack40a { color: #000000; color: rgba(0, 0, 0, .4); }
+.cblack30a { color: #000000; color: rgba(0, 0, 0, .3); }
+.cblack20a { color: #000000; color: rgba(0, 0, 0, .2); }
+.cblack10a { color: #000000; color: rgba(0, 0, 0, .1); }
+
+/**
+ * DOC
+ *
+ * ```example
+ * <div class="bgcblack p1/2">
+ *   <p class="cwhite90a">.cwhite90a</p>
+ *   <p class="cwhite80a">.cwhite80a</p>
+ *   <p class="cwhite70a">.cwhite70a</p>
+ *   <p class="cwhite60a">.cwhite60a</p>
+ *   <p class="cwhite50a">.cwhite50a</p>
+ *   <p class="cwhite40a">.cwhite40a</p>
+ *   <p class="cwhite30a">.cwhite30a</p>
+ *   <p class="cwhite20a">.cwhite20a</p>
+ *   <p class="cwhite10a">.cwhite10a</p>
+ * </div>
+ * ```
+ */
+
+.cwhite90a { color: #FFFFFF; color: rgba(255, 255, 255, .9) }
+.cwhite80a { color: #FFFFFF; color: rgba(255, 255, 255, .8) }
+.cwhite70a { color: #FFFFFF; color: rgba(255, 255, 255, .7) }
+.cwhite60a { color: #FFFFFF; color: rgba(255, 255, 255, .6) }
+.cwhite50a { color: #FFFFFF; color: rgba(255, 255, 255, .5) }
+.cwhite40a { color: #FFFFFF; color: rgba(255, 255, 255, .4) }
+.cwhite30a { color: #FFFFFF; color: rgba(255, 255, 255, .3) }
+.cwhite20a { color: #FFFFFF; color: rgba(255, 255, 255, .2) }
+.cwhite10a { color: #FFFFFF; color: rgba(255, 255, 255, .1) }
 
 /**
  * DOC
@@ -3086,15 +3150,43 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  *
  */
 
-.bgcblack90a       { background-color: hsla(0, 0%, 10%, .9) }
-.bgcblack80a       { background-color: hsla(0, 0%, 20%, .8) }
-.bgcblack70a       { background-color: hsla(0, 0%, 30%, .7) }
-.bgcblack60a       { background-color: hsla(0, 0%, 40%, .6) }
-.bgcblack50a       { background-color: hsla(0, 0%, 50%, .5) }
-.bgcblack40a       { background-color: hsla(0, 0%, 60%, .4) }
-.bgcblack30a       { background-color: hsla(0, 0%, 70%, .3) }
-.bgcblack20a       { background-color: hsla(0, 0%, 80%, .2) }
-.bgcblack10a       { background-color: hsla(0, 0%, 90%, .1) }
+.bgcblack90a       { background-color: #000000; background-color: rgba(0, 0, 0, .9) }
+.bgcblack80a       { background-color: #000000; background-color: rgba(0, 0, 0, .8) }
+.bgcblack70a       { background-color: #000000; background-color: rgba(0, 0, 0, .7) }
+.bgcblack60a       { background-color: #000000; background-color: rgba(0, 0, 0, .6) }
+.bgcblack50a       { background-color: #000000; background-color: rgba(0, 0, 0, .5) }
+.bgcblack40a       { background-color: #000000; background-color: rgba(0, 0, 0, .4) }
+.bgcblack30a       { background-color: #000000; background-color: rgba(0, 0, 0, .3) }
+.bgcblack20a       { background-color: #000000; background-color: rgba(0, 0, 0, .2) }
+.bgcblack10a       { background-color: #000000; background-color: rgba(0, 0, 0, .1) }
+
+/**
+ * DOC
+ *
+ * ```example
+ * <div class="bgcblack p1/2">
+ *   <p class="bgcwhite90a">.cwhite90a</p>
+ *   <p class="bgcwhite80a">.cwhite80a</p>
+ *   <p class="bgcwhite70a">.cwhite70a</p>
+ *   <p class="bgcwhite60a">.cwhite60a</p>
+ *   <p class="bgcwhite50a">.cwhite50a</p>
+ *   <p class="bgcwhite40a">.cwhite40a</p>
+ *   <p class="bgcwhite30a">.cwhite30a</p>
+ *   <p class="bgcwhite20a">.cwhite20a</p>
+ *   <p class="bgcwhite10a">.cwhite10a</p>
+ * </div>
+ * ```
+ */
+
+.bgcwhite90a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .9) }
+.bgcwhite80a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .8) }
+.bgcwhite70a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .7) }
+.bgcwhite60a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .6) }
+.bgcwhite50a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .5) }
+.bgcwhite40a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .4) }
+.bgcwhite30a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .3) }
+.bgcwhite20a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .2) }
+.bgcwhite10a { background-color: #FFFFFF; background-color: rgba(255, 255, 255, .1) }
 
  /**
  * DOC
@@ -3155,6 +3247,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * <p class="p1/4 bgcsec30">.bgcsec30</p>
  * <p class="p1/4 bgcsec20">.bgcsec20</p>
  * <p class="p1/4 bgcsec10">.bgcsec10</p>
+ * <p class="p1/4 bgcsec5">.bgcsec5</p>
  * ```
  */
 
@@ -3167,6 +3260,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .bgcsec30        { background-color: rgb(188, 212, 219) }
 .bgcsec20        { background-color: rgb(210, 226, 231) }
 .bgcsec10        { background-color: rgb(233, 241, 243) }
+.bgcsec5         { background-color: rgb(244, 248, 249) }
 
 /**
  * DOC
@@ -3183,6 +3277,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * <p class="p1/4 bgcsec30a">.bgcsec30a</p>
  * <p class="p1/4 bgcsec20a">.bgcsec20a</p>
  * <p class="p1/4 bgcsec10a">.bgcsec10a</p>
+ * <p class="p1/4 bgcsec5a">.bgcsec5a</p>
  * ```
  */
 
@@ -3195,6 +3290,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .bgcsec30a        { background-color: #BCD4DB; background-color: rgba(188, 212, 219, 0.3) }
 .bgcsec20a        { background-color: #D2E2E7; background-color: rgba(210, 226, 231, 0.2) }
 .bgcsec10a        { background-color: #E9F1F3; background-color: rgba(233, 241, 243, 0.1) }
+.bgcsec5a         { background-color: #E9F1F3; background-color: rgba(233, 241, 243, 0.05) }
 
 /**
  * DOC
@@ -3222,12 +3318,14 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 /**
  * DOC
  *
- * #### Current Color
+ * #### Utility Colors
+ *
+ * ##### Current Color
  *
  * ```example
  * <div class="cpri">
  *   <div class="bgccur">
- *     <span class="cwhite">My background is based in .cpri</span>
+ *     <span class="cwhite">My background is based on .cpri</span>
  *   </div>
  * </div>
  * ```
@@ -3235,6 +3333,24 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 
 .bgccur {
   background-color: currentColor;
+}
+
+/**
+ * DOC
+ *
+ * ##### Transparent
+ *
+ * ```example
+ * <div class="bgcsec10">
+ *   <div class="bgctrans">
+ *     My background is transparent</span>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.bgctrans {
+  background-color: transparent;
 }
 /**
  * DOC
@@ -3288,15 +3404,43 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * ```
  */
 
-.bdcblack90a      { border-color: hsla(0, 0%, 10%, .9) }
-.bdcblack80a      { border-color: hsla(0, 0%, 20%, .8) }
-.bdcblack70a      { border-color: hsla(0, 0%, 30%, .7) }
-.bdcblack60a      { border-color: hsla(0, 0%, 40%, .6) }
-.bdcblack50a      { border-color: hsla(0, 0%, 50%, .5) }
-.bdcblack40a      { border-color: hsla(0, 0%, 60%, .4) }
-.bdcblack30a      { border-color: hsla(0, 0%, 70%, .3) }
-.bdcblack20a      { border-color: hsla(0, 0%, 80%, .2) }
-.bdcblack10a      { border-color: hsla(0, 0%, 90%, .1) }
+.bdcblack90a      { border-color: #000000; border-color: rgba(0, 0, 0, .9) }
+.bdcblack80a      { border-color: #000000; border-color: rgba(0, 0, 0, .8) }
+.bdcblack70a      { border-color: #000000; border-color: rgba(0, 0, 0, .7) }
+.bdcblack60a      { border-color: #000000; border-color: rgba(0, 0, 0, .6) }
+.bdcblack50a      { border-color: #000000; border-color: rgba(0, 0, 0, .5) }
+.bdcblack40a      { border-color: #000000; border-color: rgba(0, 0, 0, .4) }
+.bdcblack30a      { border-color: #000000; border-color: rgba(0, 0, 0, .3) }
+.bdcblack20a      { border-color: #000000; border-color: rgba(0, 0, 0, .2) }
+.bdcblack10a      { border-color: #000000; border-color: rgba(0, 0, 0, .1) }
+
+/**
+ * DOC
+ *
+ * ```example
+ * <div class="bdcblack p1/2">
+ *   <p class="bdcwhite90a">.cwhite90a</p>
+ *   <p class="bdcwhite80a">.cwhite80a</p>
+ *   <p class="bdcwhite70a">.cwhite70a</p>
+ *   <p class="bdcwhite60a">.cwhite60a</p>
+ *   <p class="bdcwhite50a">.cwhite50a</p>
+ *   <p class="bdcwhite40a">.cwhite40a</p>
+ *   <p class="bdcwhite30a">.cwhite30a</p>
+ *   <p class="bdcwhite20a">.cwhite20a</p>
+ *   <p class="bdcwhite10a">.cwhite10a</p>
+ * </div>
+ * ```
+ */
+
+.bdcwhite90a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .9) }
+.bdcwhite80a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .8) }
+.bdcwhite70a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .7) }
+.bdcwhite60a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .6) }
+.bdcwhite50a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .5) }
+.bdcwhite40a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .4) }
+.bdcwhite30a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .3) }
+.bdcwhite20a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .2) }
+.bdcwhite10a { border-color: #FFFFFF; border-color: rgba(255, 255, 255, .1) }
 
  /**
   * DOC
@@ -3391,6 +3535,38 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .bdcwarning       { border-color: hsl(40, 100%, 50%) }
 .bdcdanger        { border-color: hsl(359, 100%, 62%) }
 .bdcneutral       { border-color: hsl(195, 32%, 80%) }
+
+/**
+ * DOC
+ *
+ * #### Utility Colors
+ *
+ * ##### Current Color
+ *
+ * ```example
+ * <div class="cpri">
+ *   <div class="bd2 bdccur">
+ *     <span class="cwhite">My border is based on .cpri</span>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.bdccur { border-color: currentColor }
+
+/**
+ * DOC
+ *
+ * ##### Transparent
+ *
+ * ```example
+ * <div class="bd2 bdctrans">
+ *   My border is transparent</span>
+ * </div>
+ * ```
+ */
+
+.bdctrans { border-color: transparent }
 /**
  * DOC
  *
@@ -3574,6 +3750,27 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .bdrsl1\&1\/2 { border-bottom-left-radius: 36px; border-bottom-left-radius: 2.25rem; border-top-left-radius: 36px; border-top-left-radius: 2.25rem }
 .bdrsl2       { border-bottom-left-radius: 48px; border-bottom-left-radius: 3rem; border-top-left-radius: 48px; border-top-left-radius: 3rem }
 .bdrsl4       { border-bottom-left-radius: 96px; border-bottom-left-radius: 6rem; border-top-left-radius: 96px; border-top-left-radius: 6rem }
+/**
+ * DOC
+ *
+ * ### Box Shadow
+ *
+ * #### Outset
+ *
+ * ```example
+ * <div class="bxsh1 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 1</div>
+ * <div class="bxsh2 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 2</div>
+ * <div class="bxsh3 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 3</div>
+ * <div class="bxsh4 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 4</div>
+ * <div class="bxsh5 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 5</div>
+ * ```
+ */
+
+.bxsh1 { box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.185) }
+.bxsh2 { box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.15) }
+.bxsh3 { box-shadow: 0 11px 7px 0 rgba(0, 0, 0, 0.09), 0 13px 25px 0 rgba(0, 0, 0, 0.15) }
+.bxsh4 { box-shadow: 0 14px 12px 0 rgba(0, 0, 0, 0.085), 0 20px 40px 0 rgba(0, 0, 0, 0.15) }
+.bxsh5 { box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.075), 0 27px 55px 0 rgba(0, 0, 0, 0.15) }
 /**
  * DOC
  *

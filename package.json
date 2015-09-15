@@ -5,8 +5,8 @@
   "main": "./lib/index.js",
   "style": "./lib/index.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:lib": "babel src --out-dir lib --stage 0 & cssnext ./src/styles/index.css ./lib/styles/index.css & cp src/components/Icons/icons.svg lib/components/Icons",
+    "test": "standard src/**/*.js ./src/**/*.jsx",
+    "build:lib": "npm run styleguide & cssnext ./src/styles/index.css ./lib/styles/index.css & cp src/components/Icons/icons.svg lib/components/Icons && babel src --out-dir lib --stage 0",
     "build:prod": "webpack --config webpack-production.config.js --progress --profile --colors",
     "build": "npm run build:lib && npm run build:prod",
     "hot-dev-server": "webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 8000 --inline",
@@ -14,12 +14,19 @@
     "generate-svg-sprite": "svg-sprite -sD ./src/components/Icons --symbol-dest '' --ss icons.svg --si ./src/components/Icons/src/*.svg && node ./utils/createSVGFile",
     "start": "npm run styleguide & npm run generate-svg-sprite && npm run hot-dev-server"
   },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "/src/components/Select/"
+    ]
+  },
   "author": "Luke Brooker",
   "license": "MIT",
   "dependencies": {
     "babel-loader": "^5.3.2",
     "classnames": "^2.1.3",
     "combokeys": "^2.4.3",
+    "dom-helpers": "^2.4.0",
     "fixed-data-table": "^0.4.6",
     "lodash": "^3.10.1",
     "marked": "^0.3.5",
@@ -27,6 +34,8 @@
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.8",
     "react-input-autosize": "^0.5.0",
+    "react-overlays": "^0.4.4",
+    "react-prop-types": "^0.3.0",
     "react-router": "^0.13.3",
     "shallowequal": "^0.2.2",
     "svg-react-loader": "^0.1.5",
@@ -34,6 +43,7 @@
   },
   "devDependencies": {
     "babel": "^5.8.23",
+    "babel-eslint": "^4.1.2",
     "classnames": "^2.1.3",
     "css-loader": "^0.16.0",
     "cssnext": "^1.8.4",
@@ -46,6 +56,7 @@
     "null-loader": "^0.1.1",
     "postcss": "^4.1.16",
     "postcss-import": "^6.2.0",
+    "standard": "^5.2.2",
     "stats-webpack-plugin": "^0.2.1",
     "style-loader": "^0.12.3",
     "svg-sprite": "^1.2.9",

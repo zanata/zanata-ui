@@ -35,7 +35,7 @@ class KeyComponent extends React.Component {
    * @param key
    */
   unbindShortcut = (key) => {
-    let index = this.keyboardBindings.indexOf(key);
+    let index = this.keyboardBindings.indexOf(key)
     if (index !== -1) {
       this.keyboardBindings.splice(index, 1)
     }
@@ -49,7 +49,7 @@ class KeyComponent extends React.Component {
       return
     }
     this.keyboardBindings.forEach(function (binding) {
-      combokeys.unbind(binding);
+      combokeys.unbind(binding)
     })
   }
   /**

@@ -1,0 +1,20 @@
+/**
+ * DOC
+ *
+ * ### Transform
+ *
+ * ```example
+ * <div class="trfr45">I'm rotated 45%</div>
+ * <div class="trfr90">I'm rotated 90%</div>
+ * <div class="trfr180">I'm rotated 180%</div>
+ * ```
+ */
+
+.trfr45  { transform: rotate(45deg) }
+.trfr90  { transform: rotate(90deg) }
+.trfr135 { transform: rotate(135deg) }
+.trfr180 { transform: rotate(180deg) }
+.trfr225 { transform: rotate(225deg) }
+.trfr270 { transform: rotate(270deg) }
+.trfr315 { transform: rotate(315deg) }
+.trfr360 { transform: rotate(360deg) }

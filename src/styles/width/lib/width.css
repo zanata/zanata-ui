@@ -11,6 +11,7 @@
  * #### Rhythm based
  *
  * ```example
+ * <div class="bgsec10 mb1/2"><div class="w0 bgsec30">0</div></div>
  * <div class="bgsec10 mb1/2"><div class="w1/4 bgsec30">1/4</div></div>
  * <div class="bgsec10 mb1/2"><div class="w1/2 bgsec30">1/2</div></div>
  * <div class="bgsec10 mb1/2"><div class="w3/4 bgsec30">3/4</div></div>
@@ -23,6 +24,7 @@
  * ```
  */
 
+.w0       { width: 0 }
 .w1\/4    { width: .375rem }
 .w1\/2    { width: .75rem }
 .w3\/4    { width: 1.125rem }

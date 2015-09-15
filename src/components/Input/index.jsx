@@ -20,6 +20,7 @@ class Input extends KeyComponent {
     hideLabel: PropTypes.bool,
     reset: PropTypes.bool,
     className: PropTypes.string,
+    onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
     onMouseEnter: PropTypes.func,
@@ -36,8 +37,9 @@ class Input extends KeyComponent {
   }
   _handleChange = (event) => {
     let value = event.target.value
-    if (this.props.onChange)
+    if (this.props.onChange) {
       this.props.onChange(event)
+    }
     this.setState({value: value})
   }
   _handleFocus = (event) => {
@@ -45,25 +47,30 @@ class Input extends KeyComponent {
       this.setState({focused: true})
       this.bindGlobalShortcut('esc', this._handleReset)
     }
-    if (this.props.onFocus)
+    if (this.props.onFocus) {
       this.props.onFocus(event)
+    }
   }
   _handleBlur = (event) => {
     this.setState({focused: false})
     this.unbindShortcut('esc')
-    if (this.props.onBlur)
+    if (this.props.onBlur) {
       this.props.onBlur(event)
+    }
   }
   _handleMouseEnter = (event) => {
-    if (!this.props.disabled)
+    if (!this.props.disabled) {
       this.setState({hover: true})
-    if (this.props.onMouseEnter)
+    }
+    if (this.props.onMouseEnter) {
       this.props.onMouseEnter(event)
+    }
   }
   _handleMouseLeave = (event) => {
     this.setState({hover: false})
-    if (this.props.onMouseEnter)
+    if (this.props.onMouseEnter) {
       this.props.onMouseLeave(event)
+    }
   }
   // Non Standard Events
   _handleReset = () => {
@@ -97,7 +104,7 @@ class Input extends KeyComponent {
         'bdcsec30': !this.state.hover && !this.state.focused && this.props.outline,
         'bdcsec50': this.state.hover && !this.state.focused && this.props.outline,
         'op50': this.props.disabled,
-        'bdcpri': this.state.focused && this.props.outline,
+        'bdcpri': this.state.focused && this.props.outline
       }
     )
     let descriptionClasses = cx(

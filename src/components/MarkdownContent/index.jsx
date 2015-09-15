@@ -42,7 +42,6 @@ class MarkdownContent extends React.Component {
       } else {
         return `<pre class="mv1"><code class="${this.options.langPrefix}${escape(lang, true)}">${(escaped ? code : escape(code, true))}\n</code></pre>\n`
       }
-
     }
 
     let self = this

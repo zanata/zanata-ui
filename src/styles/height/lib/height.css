@@ -11,6 +11,7 @@
  * #### Rhythm based
  *
  * ```example
+ * <div class="h1 mb1/2 bgcsec10"><div class="h0 bgcsec30">0</div></div>
  * <div class="h1 mb1/2 bgcsec10"><div class="h1/4 bgcsec30">1/4</div></div>
  * <div class="h1 mb1/2 bgcsec10"><div class="h1/2 bgcsec30">1/2</div></div>
  * <div class="h1 mb1/2 bgcsec10"><div class="h3/4 bgcsec30">3/4</div></div>
@@ -23,6 +24,7 @@
  * ```
  */
 
+.h0       { height: 0 }
 .h1\/4    { height: .375rem }
 .h1\/2    { height: .75rem }
 .h3\/4    { height: 1.125rem }

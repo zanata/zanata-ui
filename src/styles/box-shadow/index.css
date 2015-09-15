@@ -1,0 +1,21 @@
+/**
+ * DOC
+ *
+ * ### Box Shadow
+ *
+ * #### Outset
+ *
+ * ```example
+ * <div class="bxsh1 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 1</div>
+ * <div class="bxsh2 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 2</div>
+ * <div class="bxsh3 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 3</div>
+ * <div class="bxsh4 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 4</div>
+ * <div class="bxsh5 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 5</div>
+ * ```
+ */
+
+.bxsh1 { box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.185) }
+.bxsh2 { box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.15) }
+.bxsh3 { box-shadow: 0 11px 7px 0 rgba(0, 0, 0, 0.09), 0 13px 25px 0 rgba(0, 0, 0, 0.15) }
+.bxsh4 { box-shadow: 0 14px 12px 0 rgba(0, 0, 0, 0.085), 0 20px 40px 0 rgba(0, 0, 0, 0.15) }
+.bxsh5 { box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.075), 0 27px 55px 0 rgba(0, 0, 0, 0.15) }

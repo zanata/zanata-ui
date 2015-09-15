@@ -50,15 +50,43 @@
  * ```
  */
 
-.bdcblack90a      { border-color: hsla(0, 0%, 10%, .9) }
-.bdcblack80a      { border-color: hsla(0, 0%, 20%, .8) }
-.bdcblack70a      { border-color: hsla(0, 0%, 30%, .7) }
-.bdcblack60a      { border-color: hsla(0, 0%, 40%, .6) }
-.bdcblack50a      { border-color: hsla(0, 0%, 50%, .5) }
-.bdcblack40a      { border-color: hsla(0, 0%, 60%, .4) }
-.bdcblack30a      { border-color: hsla(0, 0%, 70%, .3) }
-.bdcblack20a      { border-color: hsla(0, 0%, 80%, .2) }
-.bdcblack10a      { border-color: hsla(0, 0%, 90%, .1) }
+.bdcblack90a      { border-color: rgba(0, 0, 0, .9) }
+.bdcblack80a      { border-color: rgba(0, 0, 0, .8) }
+.bdcblack70a      { border-color: rgba(0, 0, 0, .7) }
+.bdcblack60a      { border-color: rgba(0, 0, 0, .6) }
+.bdcblack50a      { border-color: rgba(0, 0, 0, .5) }
+.bdcblack40a      { border-color: rgba(0, 0, 0, .4) }
+.bdcblack30a      { border-color: rgba(0, 0, 0, .3) }
+.bdcblack20a      { border-color: rgba(0, 0, 0, .2) }
+.bdcblack10a      { border-color: rgba(0, 0, 0, .1) }
+
+/**
+ * DOC
+ *
+ * ```example
+ * <div class="bdcblack p1/2">
+ *   <p class="bdcwhite90a">.cwhite90a</p>
+ *   <p class="bdcwhite80a">.cwhite80a</p>
+ *   <p class="bdcwhite70a">.cwhite70a</p>
+ *   <p class="bdcwhite60a">.cwhite60a</p>
+ *   <p class="bdcwhite50a">.cwhite50a</p>
+ *   <p class="bdcwhite40a">.cwhite40a</p>
+ *   <p class="bdcwhite30a">.cwhite30a</p>
+ *   <p class="bdcwhite20a">.cwhite20a</p>
+ *   <p class="bdcwhite10a">.cwhite10a</p>
+ * </div>
+ * ```
+ */
+
+.bdcwhite90a { border-color: rgba(255, 255, 255, .9) }
+.bdcwhite80a { border-color: rgba(255, 255, 255, .8) }
+.bdcwhite70a { border-color: rgba(255, 255, 255, .7) }
+.bdcwhite60a { border-color: rgba(255, 255, 255, .6) }
+.bdcwhite50a { border-color: rgba(255, 255, 255, .5) }
+.bdcwhite40a { border-color: rgba(255, 255, 255, .4) }
+.bdcwhite30a { border-color: rgba(255, 255, 255, .3) }
+.bdcwhite20a { border-color: rgba(255, 255, 255, .2) }
+.bdcwhite10a { border-color: rgba(255, 255, 255, .1) }
 
  /**
   * DOC
@@ -153,3 +181,35 @@
 .bdcwarning       { border-color: var(--warning) }
 .bdcdanger        { border-color: var(--danger) }
 .bdcneutral       { border-color: var(--neutral) }
+
+/**
+ * DOC
+ *
+ * #### Utility Colors
+ *
+ * ##### Current Color
+ *
+ * ```example
+ * <div class="cpri">
+ *   <div class="bd2 bdccur">
+ *     <span class="cwhite">My border is based on .cpri</span>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.bdccur { border-color: currentColor }
+
+/**
+ * DOC
+ *
+ * ##### Transparent
+ *
+ * ```example
+ * <div class="bd2 bdctrans">
+ *   My border is transparent</span>
+ * </div>
+ * ```
+ */
+
+.bdctrans { border-color: transparent }

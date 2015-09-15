@@ -52,15 +52,43 @@
  *
  */
 
-.bgcblack90a       { background-color: hsla(0, 0%, 10%, .9) }
-.bgcblack80a       { background-color: hsla(0, 0%, 20%, .8) }
-.bgcblack70a       { background-color: hsla(0, 0%, 30%, .7) }
-.bgcblack60a       { background-color: hsla(0, 0%, 40%, .6) }
-.bgcblack50a       { background-color: hsla(0, 0%, 50%, .5) }
-.bgcblack40a       { background-color: hsla(0, 0%, 60%, .4) }
-.bgcblack30a       { background-color: hsla(0, 0%, 70%, .3) }
-.bgcblack20a       { background-color: hsla(0, 0%, 80%, .2) }
-.bgcblack10a       { background-color: hsla(0, 0%, 90%, .1) }
+.bgcblack90a       { background-color: rgba(0, 0, 0, .9) }
+.bgcblack80a       { background-color: rgba(0, 0, 0, .8) }
+.bgcblack70a       { background-color: rgba(0, 0, 0, .7) }
+.bgcblack60a       { background-color: rgba(0, 0, 0, .6) }
+.bgcblack50a       { background-color: rgba(0, 0, 0, .5) }
+.bgcblack40a       { background-color: rgba(0, 0, 0, .4) }
+.bgcblack30a       { background-color: rgba(0, 0, 0, .3) }
+.bgcblack20a       { background-color: rgba(0, 0, 0, .2) }
+.bgcblack10a       { background-color: rgba(0, 0, 0, .1) }
+
+/**
+ * DOC
+ *
+ * ```example
+ * <div class="bgcblack p1/2">
+ *   <p class="bgcwhite90a">.cwhite90a</p>
+ *   <p class="bgcwhite80a">.cwhite80a</p>
+ *   <p class="bgcwhite70a">.cwhite70a</p>
+ *   <p class="bgcwhite60a">.cwhite60a</p>
+ *   <p class="bgcwhite50a">.cwhite50a</p>
+ *   <p class="bgcwhite40a">.cwhite40a</p>
+ *   <p class="bgcwhite30a">.cwhite30a</p>
+ *   <p class="bgcwhite20a">.cwhite20a</p>
+ *   <p class="bgcwhite10a">.cwhite10a</p>
+ * </div>
+ * ```
+ */
+
+.bgcwhite90a { background-color: rgba(255, 255, 255, .9) }
+.bgcwhite80a { background-color: rgba(255, 255, 255, .8) }
+.bgcwhite70a { background-color: rgba(255, 255, 255, .7) }
+.bgcwhite60a { background-color: rgba(255, 255, 255, .6) }
+.bgcwhite50a { background-color: rgba(255, 255, 255, .5) }
+.bgcwhite40a { background-color: rgba(255, 255, 255, .4) }
+.bgcwhite30a { background-color: rgba(255, 255, 255, .3) }
+.bgcwhite20a { background-color: rgba(255, 255, 255, .2) }
+.bgcwhite10a { background-color: rgba(255, 255, 255, .1) }
 
  /**
  * DOC
@@ -121,6 +149,7 @@
  * <p class="p1/4 bgcsec30">.bgcsec30</p>
  * <p class="p1/4 bgcsec20">.bgcsec20</p>
  * <p class="p1/4 bgcsec10">.bgcsec10</p>
+ * <p class="p1/4 bgcsec5">.bgcsec5</p>
  * ```
  */
 
@@ -133,6 +162,7 @@
 .bgcsec30        { background-color: color(var(--secondary) tint(70%)) }
 .bgcsec20        { background-color: color(var(--secondary) tint(80%)) }
 .bgcsec10        { background-color: color(var(--secondary) tint(90%)) }
+.bgcsec5         { background-color: color(var(--secondary) tint(95%)) }
 
 /**
  * DOC
@@ -149,6 +179,7 @@
  * <p class="p1/4 bgcsec30a">.bgcsec30a</p>
  * <p class="p1/4 bgcsec20a">.bgcsec20a</p>
  * <p class="p1/4 bgcsec10a">.bgcsec10a</p>
+ * <p class="p1/4 bgcsec5a">.bgcsec5a</p>
  * ```
  */
 
@@ -161,6 +192,7 @@
 .bgcsec30a        { background-color: color(var(--secondary) tint(70%) alpha(30%)) }
 .bgcsec20a        { background-color: color(var(--secondary) tint(80%) alpha(20%)) }
 .bgcsec10a        { background-color: color(var(--secondary) tint(90%) alpha(10%)) }
+.bgcsec5a         { background-color: color(var(--secondary) tint(90%) alpha(5%)) }
 
 /**
  * DOC
@@ -188,12 +220,14 @@
 /**
  * DOC
  *
- * #### Current Color
+ * #### Utility Colors
+ *
+ * ##### Current Color
  *
  * ```example
  * <div class="cpri">
  *   <div class="bgccur">
- *     <span class="cwhite">My background is based in .cpri</span>
+ *     <span class="cwhite">My background is based on .cpri</span>
  *   </div>
  * </div>
  * ```
@@ -202,3 +236,23 @@
 .bgccur {
   background-color: currentColor;
 }
+
+/**
+ * DOC
+ *
+ * ##### Transparent
+ *
+ * ```example
+ * <div class="bgcsec10">
+ *   <div class="bgctrans">
+ *     My background is transparent</span>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.bgctrans {
+  background-color: transparent;
+}
+
+

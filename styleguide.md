@@ -157,6 +157,14 @@ Based on a minor-third scale. 0 is the default font size. Anything above scale 5
 <p class='tac mb1/2'>Aligned Center</p>
 <p class='taj mb1/2 measure'>Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
 ```
+### Text Transform
+
+```example
+<div class='ttn'>Text transform <strong>none</strong></div>
+<div class='ttc'>Text transform <strong>capitalize</strong></div>
+<div class='ttu'>Text transform <strong>uppercase</strong></div>
+<div class='ttl'>Text transform <strong>lowercase</strong></div>
+```
 ### Vertical Align
 
 #### Inline Alignment
@@ -290,6 +298,7 @@ There are 2 types of widths:
 #### Rhythm based
 
 ```example
+<div class="bgsec10 mb1/2"><div class="w0 bgsec30">0</div></div>
 <div class="bgsec10 mb1/2"><div class="w1/4 bgsec30">1/4</div></div>
 <div class="bgsec10 mb1/2"><div class="w1/2 bgsec30">1/2</div></div>
 <div class="bgsec10 mb1/2"><div class="w3/4 bgsec30">3/4</div></div>
@@ -340,6 +349,7 @@ There are 2 types of heights:
 #### Rhythm based
 
 ```example
+<div class="h1 mb1/2 bgcsec10"><div class="h0 bgcsec30">0</div></div>
 <div class="h1 mb1/2 bgcsec10"><div class="h1/4 bgcsec30">1/4</div></div>
 <div class="h1 mb1/2 bgcsec10"><div class="h1/2 bgcsec30">1/2</div></div>
 <div class="h1 mb1/2 bgcsec10"><div class="h3/4 bgcsec30">3/4</div></div>
@@ -704,6 +714,13 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
   <div class="ph2 pv1 bd">Hamburger</div>
 </div>
 ```
+### Transform
+
+```example
+<div class="trfr45">I'm rotated 45%</div>
+<div class="trfr90">I'm rotated 90%</div>
+<div class="trfr180">I'm rotated 180%</div>
+```
 <hr class="mv4 csec20">
 
 ## Theme
@@ -739,6 +756,19 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="cblack30a">.cblack30a</p>
 <p class="cblack20a">.cblack20a</p>
 <p class="cblack10a">.cblack10a</p>
+```
+```example
+<div class="bgcblack p1/2">
+  <p class="cwhite90a">.cwhite90a</p>
+  <p class="cwhite80a">.cwhite80a</p>
+  <p class="cwhite70a">.cwhite70a</p>
+  <p class="cwhite60a">.cwhite60a</p>
+  <p class="cwhite50a">.cwhite50a</p>
+  <p class="cwhite40a">.cwhite40a</p>
+  <p class="cwhite30a">.cwhite30a</p>
+  <p class="cwhite20a">.cwhite20a</p>
+  <p class="cwhite10a">.cwhite10a</p>
+</div>
 ```
 ##### Brand Colors
 
@@ -815,6 +845,19 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="p1/4 bgcblack10a">.bgcblack10a</p>
 ```
 
+```example
+<div class="bgcblack p1/2">
+  <p class="bgcwhite90a">.cwhite90a</p>
+  <p class="bgcwhite80a">.cwhite80a</p>
+  <p class="bgcwhite70a">.cwhite70a</p>
+  <p class="bgcwhite60a">.cwhite60a</p>
+  <p class="bgcwhite50a">.cwhite50a</p>
+  <p class="bgcwhite40a">.cwhite40a</p>
+  <p class="bgcwhite30a">.cwhite30a</p>
+  <p class="bgcwhite20a">.cwhite20a</p>
+  <p class="bgcwhite10a">.cwhite10a</p>
+</div>
+```
 ##### Brand Colors
 
 ```example
@@ -847,6 +890,7 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="p1/4 bgcsec30">.bgcsec30</p>
 <p class="p1/4 bgcsec20">.bgcsec20</p>
 <p class="p1/4 bgcsec10">.bgcsec10</p>
+<p class="p1/4 bgcsec5">.bgcsec5</p>
 ```
 ##### Secondary Transparency
 
@@ -860,6 +904,7 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="p1/4 bgcsec30a">.bgcsec30a</p>
 <p class="p1/4 bgcsec20a">.bgcsec20a</p>
 <p class="p1/4 bgcsec10a">.bgcsec10a</p>
+<p class="p1/4 bgcsec5a">.bgcsec5a</p>
 ```
 ##### Status
 
@@ -871,12 +916,23 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="p1/4 bgcdanger cwhite">.bgcdanger</p>
 <p class="p1/4 bgcneutral">.bgcneutral</p>
 ```
-#### Current Color
+#### Utility Colors
+
+##### Current Color
 
 ```example
 <div class="cpri">
   <div class="bgccur">
-    <span class="cwhite">My background is based in .cpri</span>
+    <span class="cwhite">My background is based on .cpri</span>
+  </div>
+</div>
+```
+##### Transparent
+
+```example
+<div class="bgcsec10">
+  <div class="bgctrans">
+    My background is transparent</span>
   </div>
 </div>
 ```
@@ -909,6 +965,19 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <div class="mb1/2 bd bdcblack30a">Border color bdcblack30a</div>
 <div class="mb1/2 bd bdcblack20a">Border color bdcblack20a</div>
 <div class="mb1/2 bd bdcblack10a">Border color bdcblack10a</div>
+```
+```example
+<div class="bdcblack p1/2">
+  <p class="bdcwhite90a">.cwhite90a</p>
+  <p class="bdcwhite80a">.cwhite80a</p>
+  <p class="bdcwhite70a">.cwhite70a</p>
+  <p class="bdcwhite60a">.cwhite60a</p>
+  <p class="bdcwhite50a">.cwhite50a</p>
+  <p class="bdcwhite40a">.cwhite40a</p>
+  <p class="bdcwhite30a">.cwhite30a</p>
+  <p class="bdcwhite20a">.cwhite20a</p>
+  <p class="bdcwhite10a">.cwhite10a</p>
+</div>
 ```
 ##### Secondary Tint
 
@@ -945,6 +1014,24 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <div class="mb1/2 bd bdcwarning">Border color bdcwarning</div>
 <div class="mb1/2 bd bdcdanger">Border color bdcdanger</div>
 <div class="mb1/2 bd bdcneutral">Border color bdcneutral</div>
+```
+#### Utility Colors
+
+##### Current Color
+
+```example
+<div class="cpri">
+  <div class="bd2 bdccur">
+    <span class="cwhite">My border is based on .cpri</span>
+  </div>
+</div>
+```
+##### Transparent
+
+```example
+<div class="bd2 bdctrans">
+  My border is transparent</span>
+</div>
 ```
 ### Borders
 
@@ -1015,6 +1102,17 @@ Use this to round corners of elements
 <div class="bdrsl1/2 bd h2 mb1/2 p1/2">Border radius left 1/2</div>
 ```
 
+### Box Shadow
+
+#### Outset
+
+```example
+<div class="bxsh1 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 1</div>
+<div class="bxsh2 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 2</div>
+<div class="bxsh3 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 3</div>
+<div class="bxsh4 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 4</div>
+<div class="bxsh5 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 5</div>
+```
 ### Opacity
 
 ```example

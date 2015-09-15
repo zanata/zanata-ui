@@ -1,0 +1,17 @@
+/**
+ * DOC
+ *
+ * ### Text Transform
+ *
+ * ```example
+ * <div class='ttn'>Text transform <strong>none</strong></div>
+ * <div class='ttc'>Text transform <strong>capitalize</strong></div>
+ * <div class='ttu'>Text transform <strong>uppercase</strong></div>
+ * <div class='ttl'>Text transform <strong>lowercase</strong></div>
+ * ```
+ */
+
+.ttn { text-transform: none }
+.ttc { text-transform: capitalize }
+.ttu { text-transform: uppercase }
+.ttl { text-transform: lowercase }
