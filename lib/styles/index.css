@@ -1676,11 +1676,15 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
   table-layout: fixed;
 }
 
+.fixedDataTableCellLayout_wrap3,
 .public_fixedDataTableCell_cellContent {
-  padding: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.public_fixedDataTableCell_cellContent {
+  padding: 0;
 }
 
 .public_fixedDataTableCell_columnResizerKnob {

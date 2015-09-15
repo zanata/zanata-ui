@@ -24,13 +24,7 @@
 .public_fixedDataTable_bodyRow {
   border-bottom: 1px solid color(var(--secondary) tint(90%));
   background-color: transparent;
-  opacity: .8;
   transition: .1s all ease-out;
-}
-
-.fixedDataTableRowLayout_rowWrapper:hover .public_fixedDataTable_bodyRow {
-  opacity: 1;
-  background-color: color(var(--secondary) tint(95%));
 }
 
 .public_fixedDataTable_main {
@@ -65,11 +59,15 @@
   table-layout: fixed;
 }
 
+.fixedDataTableCellLayout_wrap3,
 .public_fixedDataTableCell_cellContent {
-  padding: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.public_fixedDataTableCell_cellContent {
+  padding: 0;
 }
 
 .public_fixedDataTableCell_columnResizerKnob {
