@@ -8,6 +8,7 @@ import Loader from './components/Loader'
 import Overlay from './components/Overlay'
 import OverlayTrigger from './components/OverlayTrigger'
 import Tooltip from './components/Tooltip'
+import Modal from './components/Modal'
 import FixedDataTable from './components/FixedDataTable'
 import KeyComponent from './components/KeyComponent'
 
@@ -20,6 +21,7 @@ const Components = {
   Overlay: Overlay,
   OverlayTrigger: OverlayTrigger,
   Tooltip: Tooltip,
+  Modal: Modal,
   FixedDataTable: FixedDataTable,
   KeyComponent: KeyComponent
 }
