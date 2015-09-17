@@ -21,6 +21,8 @@
  * <div class="h4 mb1/2 bgcsec30">4</div>
  * <div class="h8 mb1/2 bgcsec30">8</div>
  * <div class="h16 mb1/2 bgcsec30">16</div>
+ * <div class="h32 mb1/2 bgcsec30">32</div>
+ * <div class="h64 mb1/2 bgcsec30">64</div>
  * ```
  */
 
@@ -34,6 +36,8 @@
 .h4       { height: 6rem }
 .h8       { height: 12rem }
 .h16      { height: 24rem }
+.h32      { height: 48rem }
+.h64      { height: 96rem }
 
 /**
  * DOC

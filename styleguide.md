@@ -165,6 +165,13 @@ Based on a minor-third scale. 0 is the default font size. Anything above scale 5
 <div class='ttu'>Text transform <strong>uppercase</strong></div>
 <div class='ttl'>Text transform <strong>lowercase</strong></div>
 ```
+### Line Height
+
+```example
+<div class="lhsingle bgcsec10">Single line height</div>
+<div class="lhdisplay bgcsec10">Display line height</div>
+<div class="lhcopy bgcsec10">Copy line height, also the standard</div>
+```
 ### Vertical Align
 
 #### Inline Alignment
@@ -290,10 +297,11 @@ Available sizes are:
 
 ### Width
 
-There are 2 types of widths:
+There are 3 types of widths:
 
 - vertical rhythm based (e.g. 1 = 1.5rem, 1&1/2 = 2.25rem etc)
 - percentage based (e.g. 50p = 50%)
+- font scale based (e.g. 0 = 1rem, 1 = 1.2rem)
 
 #### Rhythm based
 
@@ -308,6 +316,8 @@ There are 2 types of widths:
 <div class="bgsec10 mb1/2"><div class="w4 bgsec30">4</div></div>
 <div class="bgsec10 mb1/2"><div class="w8 bgsec30">8</div></div>
 <div class="bgsec10 mb1/2"><div class="w16 bgsec30">16</div></div>
+<div class="bgsec10 mb1/2"><div class="w32 bgsec30">32</div></div>
+<div class="bgsec10 mb1/2"><div class="w64 bgsec30">64</div></div>
 ```
 #### Percentage based
 
@@ -339,6 +349,31 @@ There are 2 types of widths:
 <div class="bgsec10 mb1/2"><div class="ws9 bgsec30">ws9</div></div>
 <div class="bgsec10 mb1/2"><div class="ws10 bgsec30">ws10</div></div>
 ```
+#### Max Widths
+
+ * #### Rhythm based
+
+```example
+<div class="bgsec10 mb1/2"><div class="maw4 bgsec30">4</div></div>
+<div class="bgsec10 mb1/2"><div class="maw8 bgsec30">8</div></div>
+<div class="bgsec10 mb1/2"><div class="maw16 bgsec30">16</div></div>
+<div class="bgsec10 mb1/2"><div class="maw32 bgsec30">32</div></div>
+<div class="bgsec10 mb1/2"><div class="maw64 bgsec30">64</div></div>
+```
+##### Percentage based
+
+```example
+<div class="bgsec10 mb1/2"><div class="maw10p bgsec30">10p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw20p bgsec30">20p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw30p bgsec30">30p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw40p bgsec30">40p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw50p bgsec30">50p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw60p bgsec30">60p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw70p bgsec30">70p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw80p bgsec30">80p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw90p bgsec30">90p</div></div>
+<div class="bgsec10 mb1/2"><div class="maw100p bgsec30">100p</div></div>
+```
 ### Height
 
 There are 2 types of heights:
@@ -359,6 +394,8 @@ There are 2 types of heights:
 <div class="h4 mb1/2 bgcsec30">4</div>
 <div class="h8 mb1/2 bgcsec30">8</div>
 <div class="h16 mb1/2 bgcsec30">16</div>
+<div class="h32 mb1/2 bgcsec30">32</div>
+<div class="h64 mb1/2 bgcsec30">64</div>
 ```
 #### Percentage based
 
@@ -389,6 +426,31 @@ There are 2 types of heights:
 <div class="bgsec10 mb1/2"><div class="hs8 bgsec30">hs8</div></div>
 <div class="bgsec10 mb1/2"><div class="hs9 bgsec30">hs9</div></div>
 <div class="bgsec10 mb1/2"><div class="hs10 bgsec30">hs10</div></div>
+```
+#### Max Widths
+
+#### Rhythm based
+
+```example
+<div class="mah4 mb1/2 bgcsec30">4</div>
+<div class="mah8 mb1/2 bgcsec30">8</div>
+<div class="mah16 mb1/2 bgcsec30">16</div>
+<div class="mah32 mb1/2 bgcsec30">32</div>
+<div class="mah64 mb1/2 bgcsec30">64</div>
+```
+##### Percentage based
+
+```example
+<div class="h8 mb1/2 bgcsec10"><div class="mah10p bgcsec30">10p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah20p bgcsec30">20p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah30p bgcsec30">30p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah40p bgcsec30">40p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah50p bgcsec30">50p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah60p bgcsec30">60p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah70p bgcsec30">70p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah80p bgcsec30">80p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah90p bgcsec30">90p</div></div>
+<div class="h8 mb1/2 bgcsec10"><div class="mah100p bgcsec30">100p</div></div>
 ```
 ### Position
 
@@ -484,9 +546,9 @@ Whether or not items in the container overflow
 ```
 
 ### Text Overflow
-
+```example
 <div class="tove ovh whsnw w4 p1/2 bgcsec10">Text overflow ellipsis</div>
-
+```
 ### Flex
 
 The flex-object is a powerful suite of utilities based on the
@@ -671,7 +733,7 @@ To make an element grow or shrink as needed, use the `.fxauto` utility. Which se
 ```
 ##### Flex Grow
 
-To make an element grow, but not shrink, use the `.flex-grow` utility. Which set `flex: 1 0 auto`.
+To make an element grow, but not shrink, use the `.fxgrow` utility. Which set `flex: 1 0 auto`.
 
 ```example
 <div class="dfx">
@@ -683,25 +745,25 @@ To make an element grow, but not shrink, use the `.flex-grow` utility. Which set
 ```
 ##### Flex None
 
-To prevent an element from growing or shrinking, use the `.fxn` utility.
+To prevent an element from growing or shrinking, use the `.fxnone` utility.
 
 ```example
 <div class="flex">
   <div class="fxauto ph2 pv1 bd">Hamburger</div>
   <div class="fxauto ph2 pv1 bd">Hamburger</div>
-  <div class="flex-none ph2 pv1 bd">Hamburger</div>
+  <div class="fxnone ph2 pv1 bd">Hamburger</div>
 </div>
 ```
 #### Ordering
 
-To change the order of child elements, use the `.flex-first` and `.flex-last` utilities.
+To change the order of child elements, use the `.ordfirst` and `.ordlast` utilities.
 
 ##### Order First
 
 ```example
 <div class="dfx">
   <div class="ph2 pv1 bd">Hamburger</div>
-  <div class="ord1st ph2 pv1 bd">First Hamburger</div>
+  <div class="ordfirst ph2 pv1 bd">First Hamburger</div>
   <div class="ph2 pv1 bd">Hamburger</div>
 </div>
 ```
@@ -834,6 +896,7 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 ##### Transparency
 
 ```example
+<p class="p1/4 bgcblack95a cwhite">.bgcblack95a</p>
 <p class="p1/4 bgcblack90a cwhite">.bgcblack90a</p>
 <p class="p1/4 bgcblack80a cwhite">.bgcblack80a</p>
 <p class="p1/4 bgcblack70a cwhite">.bgcblack70a</p>
@@ -843,10 +906,12 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
 <p class="p1/4 bgcblack30a">.bgcblack30a</p>
 <p class="p1/4 bgcblack20a">.bgcblack20a</p>
 <p class="p1/4 bgcblack10a">.bgcblack10a</p>
+<p class="p1/4 bgcblack5a">.bgcblack5a</p>
 ```
 
 ```example
 <div class="bgcblack p1/2">
+  <p class="bgcwhite95a">.cwhite95a</p>
   <p class="bgcwhite90a">.cwhite90a</p>
   <p class="bgcwhite80a">.cwhite80a</p>
   <p class="bgcwhite70a">.cwhite70a</p>
@@ -856,6 +921,7 @@ To change the order of child elements, use the `.flex-first` and `.flex-last` ut
   <p class="bgcwhite30a">.cwhite30a</p>
   <p class="bgcwhite20a">.cwhite20a</p>
   <p class="bgcwhite10a">.cwhite10a</p>
+  <p class="bgcwhite5a">.cwhite5a</p>
 </div>
 ```
 ##### Brand Colors
@@ -1112,6 +1178,25 @@ Use this to round corners of elements
 <div class="bxsh3 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 3</div>
 <div class="bxsh4 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 4</div>
 <div class="bxsh5 p1/2 bgcwhite bdrs1/4 mb2">Box shadow level 5</div>
+```
+#### Hide Scroll
+
+```example
+<div class="bxshhs h4 w8 mb1 p1 b ovya">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+</div>
+<div class="bxshhst h4 w8 mb1 p1 b ovya">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+</div>
+<div class="h4 w8 mb1 bd posr">
+  <div class="ovya posa a0">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+  </div>
+  <div class="bxshhsb posa l0 r0 b0"></div>
+</div>
 ```
 ### Opacity
 

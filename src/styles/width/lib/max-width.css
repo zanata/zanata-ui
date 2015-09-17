@@ -1,0 +1,51 @@
+/**
+ * DOC
+ *
+ * #### Max Widths
+ *
+ *  * #### Rhythm based
+ *
+ * ```example
+ * <div class="bgsec10 mb1/2"><div class="maw4 bgsec30">4</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw8 bgsec30">8</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw16 bgsec30">16</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw32 bgsec30">32</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw64 bgsec30">64</div></div>
+ * ```
+ */
+
+.maw4    { max-width: 6rem }
+.maw8    { max-width: 12rem }
+.maw16   { max-width: 24rem }
+.maw32   { max-width: 48rem }
+.maw64   { max-width: 96rem }
+
+/**
+ * DOC
+ *
+ * ##### Percentage based
+ *
+ * ```example
+ * <div class="bgsec10 mb1/2"><div class="maw10p bgsec30">10p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw20p bgsec30">20p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw30p bgsec30">30p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw40p bgsec30">40p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw50p bgsec30">50p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw60p bgsec30">60p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw70p bgsec30">70p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw80p bgsec30">80p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw90p bgsec30">90p</div></div>
+ * <div class="bgsec10 mb1/2"><div class="maw100p bgsec30">100p</div></div>
+ * ```
+ */
+
+.maw10p  { max-width: 10% }
+.maw20p  { max-width: 20% }
+.maw30p  { max-width: 30% }
+.maw40p  { max-width: 40% }
+.maw50p  { max-width: 50% }
+.maw60p  { max-width: 60% }
+.maw70p  { max-width: 70% }
+.maw80p  { max-width: 80% }
+.maw90p  { max-width: 90% }
+.maw100p { max-width: 100% }

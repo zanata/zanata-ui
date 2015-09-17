@@ -20,13 +20,13 @@
 
 .ovv  { overflow: visible }
 .ovh  { overflow: hidden }
-.ovs  { overflow: scroll }
-.ova  { overflow: auto }
+.ovs  { overflow: scroll; -webkit-overflow-scrolling: touch }
+.ova  { overflow: auto; -webkit-overflow-scrolling: touch }
 .ovxh { overflow-x: hidden }
 .ovxv { overflow-x: visible }
-.ovxs { overflow-x: scroll }
-.ovxa { overflow-x: auto }
+.ovxs { overflow-x: scroll; -webkit-overflow-scrolling: touch }
+.ovxa { overflow-x: auto; -webkit-overflow-scrolling: touch }
 .ovyv { overflow-y: visible }
 .ovyh { overflow-y: hidden }
-.ovys { overflow-y: scroll }
-.ovya { overflow-y: auto }
+.ovys { overflow-y: scroll; -webkit-overflow-scrolling: touch }
+.ovya { overflow-y: auto; -webkit-overflow-scrolling: touch }

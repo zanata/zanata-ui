@@ -1,0 +1,51 @@
+/**
+ * DOC
+ *
+ * #### Max Widths
+ *
+ * #### Rhythm based
+ *
+ * ```example
+ * <div class="mah4 mb1/2 bgcsec30">4</div>
+ * <div class="mah8 mb1/2 bgcsec30">8</div>
+ * <div class="mah16 mb1/2 bgcsec30">16</div>
+ * <div class="mah32 mb1/2 bgcsec30">32</div>
+ * <div class="mah64 mb1/2 bgcsec30">64</div>
+ * ```
+ */
+
+.mah4    { max-height: 6rem }
+.mah8    { max-height: 12rem }
+.mah16   { max-height: 24rem }
+.mah32   { max-height: 48rem }
+.mah64   { max-height: 96rem }
+
+/**
+ * DOC
+ *
+ * ##### Percentage based
+ *
+ * ```example
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah10p bgcsec30">10p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah20p bgcsec30">20p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah30p bgcsec30">30p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah40p bgcsec30">40p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah50p bgcsec30">50p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah60p bgcsec30">60p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah70p bgcsec30">70p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah80p bgcsec30">80p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah90p bgcsec30">90p</div></div>
+ * <div class="h8 mb1/2 bgcsec10"><div class="mah100p bgcsec30">100p</div></div>
+ * ```
+ */
+
+.mah10p  { max-height: 10% }
+.mah20p  { max-height: 20% }
+.mah30p  { max-height: 30% }
+.mah40p  { max-height: 40% }
+.mah50p  { max-height: 50% }
+.mah60p  { max-height: 60% }
+.mah70p  { max-height: 70% }
+.mah80p  { max-height: 80% }
+.mah90p  { max-height: 90% }
+.mah100p { max-height: 100% }

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The Core UI for Zanata",
   "main": "./lib/index.js",
+  "jsnext:main": "src/index.js",
   "style": "./lib/index.css",
   "scripts": {
     "test": "standard src/**/*.js ./src/**/*.jsx",
@@ -20,8 +21,19 @@
       "/src/components/Select/"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zanata/zanata-ui.git"
+  },
+  "keywords": [
+    "zanata",
+    "ui",
+    "browser",
+    "react"
+  ],
   "author": "Luke Brooker",
   "license": "MIT",
+  "homepage": "https://github.com/zanata/zanata-ui",
   "dependencies": {
     "babel-loader": "^5.3.2",
     "classnames": "^2.1.3",

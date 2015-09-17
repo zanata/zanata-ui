@@ -5,7 +5,10 @@ import Icon from '../Icon'
 import Loader from '../Loader'
 import OverlayTrigger from '../OverlayTrigger'
 import Tooltip from '../Tooltip'
+import Modal from '../Modal'
+
 import ObjectDataExample from '../FixedDataTable/examples/ObjectDataExample'
+import ModalBasicExample from '../Modal/examples/ModalBasicExample'
 
 export default class App extends React.Component {
   _handleInputChange = (event) => {
@@ -93,6 +96,9 @@ export default class App extends React.Component {
           <OverlayTrigger trigger='click' overlay={tooltipInverseWithTitle}>
             <button className='bdrs pv1/4 ph1 bgcpri cwhite'>Show a inverse tooltip with title</button>
           </OverlayTrigger>
+        </div>
+        <div className='mb2'>
+          <ModalBasicExample />
         </div>
       </div>
     )

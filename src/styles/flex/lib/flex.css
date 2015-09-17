@@ -278,7 +278,7 @@
  *
  * ##### Flex Grow
  *
- * To make an element grow, but not shrink, use the `.flex-grow` utility. Which set `flex: 1 0 auto`.
+ * To make an element grow, but not shrink, use the `.fxgrow` utility. Which set `flex: 1 0 auto`.
  *
  * ```example
  * <div class="dfx">
@@ -290,39 +290,39 @@
  * ```
  */
 
-.fxg { flex: 1 0 auto }
+.fxgrow { flex: 1 0 auto }
 
 /**
  * DOC
  *
  * ##### Flex None
  *
- * To prevent an element from growing or shrinking, use the `.fxn` utility.
+ * To prevent an element from growing or shrinking, use the `.fxnone` utility.
  *
  * ```example
  * <div class="flex">
  *   <div class="fxauto ph2 pv1 bd">Hamburger</div>
  *   <div class="fxauto ph2 pv1 bd">Hamburger</div>
- *   <div class="flex-none ph2 pv1 bd">Hamburger</div>
+ *   <div class="fxnone ph2 pv1 bd">Hamburger</div>
  * </div>
  * ```
  */
 
-.fxn { flex: none }
+.fxnone { flex: none }
 
 /**
  * DOC
  *
  * #### Ordering
  *
- * To change the order of child elements, use the `.flex-first` and `.flex-last` utilities.
+ * To change the order of child elements, use the `.ordfirst` and `.ordlast` utilities.
  *
  * ##### Order First
  *
  * ```example
  * <div class="dfx">
  *   <div class="ph2 pv1 bd">Hamburger</div>
- *   <div class="ord1st ph2 pv1 bd">First Hamburger</div>
+ *   <div class="ordfirst ph2 pv1 bd">First Hamburger</div>
  *   <div class="ph2 pv1 bd">Hamburger</div>
  * </div>
  * ```

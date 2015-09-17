@@ -1,10 +1,14 @@
-'use strict'
-
 import React from 'react'
 import marked from 'marked'
 let renderer = new marked.Renderer()
 
-class MarkdownContent extends React.Component {
+export default class MarkdownContent extends React.Component {
+  static propTypes = {
+    markdown: React.PropTypes.string
+  }
+  renderedMarkdown = () => {
+    return {__html: marked(this.props.markdown, { renderer: renderer })}
+  }
   render () {
     renderer.heading = function (text, level) {
       return `<h${level} class="${headingClass(level)}" id="${escapeText(text)}">${text}</h${level}>`
@@ -44,18 +48,10 @@ class MarkdownContent extends React.Component {
       }
     }
 
-    let self = this
-    function renderedMarkdown () {
-      return {__html: marked(self.props.markdown, { renderer: renderer })}
-    }
     return (
-      <div dangerouslySetInnerHTML={renderedMarkdown()}></div>
+      <div dangerouslySetInnerHTML={this.renderedMarkdown()}></div>
     )
   }
-}
-
-MarkdownContent.propTypes = {
-  markdown: React.PropTypes.string
 }
 
 function escapeText (text) {
@@ -89,5 +85,3 @@ function headingClass (level) {
       return ''
   }
 }
-
-export default MarkdownContent

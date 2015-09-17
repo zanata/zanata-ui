@@ -56,7 +56,7 @@ class ObjectDataExample extends React.Component {
   }
   _renderCell = (cellData, cellDataKey, rowData, rowIndex, columnData, width) => {
     return (
-      <div className='p1/4'>{cellData}</div>
+      <div className='p1/4'><input type='text' defaultValue={cellData} /></div>
     )
   }
   _onRowClick = (e, index) => {

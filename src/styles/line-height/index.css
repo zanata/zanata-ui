@@ -1,0 +1,15 @@
+/**
+ * DOC
+ *
+ * ### Line Height
+ *
+ * ```example
+ * <div class="lhsingle bgcsec10">Single line height</div>
+ * <div class="lhdisplay bgcsec10">Display line height</div>
+ * <div class="lhcopy bgcsec10">Copy line height, also the standard</div>
+ * ```
+ */
+
+.lhsingle  { line-height: 1 }
+.lhdisplay { line-height: 1.3 }
+.lhcopy    { line-height: 1.5 }

@@ -3,10 +3,11 @@
  *
  * ### Width
  *
- * There are 2 types of widths:
+ * There are 3 types of widths:
  *
  * - vertical rhythm based (e.g. 1 = 1.5rem, 1&1/2 = 2.25rem etc)
  * - percentage based (e.g. 50p = 50%)
+ * - font scale based (e.g. 0 = 1rem, 1 = 1.2rem)
  *
  * #### Rhythm based
  *
@@ -21,6 +22,8 @@
  * <div class="bgsec10 mb1/2"><div class="w4 bgsec30">4</div></div>
  * <div class="bgsec10 mb1/2"><div class="w8 bgsec30">8</div></div>
  * <div class="bgsec10 mb1/2"><div class="w16 bgsec30">16</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w32 bgsec30">32</div></div>
+ * <div class="bgsec10 mb1/2"><div class="w64 bgsec30">64</div></div>
  * ```
  */
 
@@ -34,6 +37,8 @@
 .w4       { width: 6rem }
 .w8       { width: 12rem }
 .w16      { width: 24rem }
+.w32      { width: 48rem }
+.w64      { width: 96rem }
 
 /**
  * DOC
