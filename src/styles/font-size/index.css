@@ -1,1 +1,50 @@
-@import './lib/font-size.css';
+/**
+ * DOC
+ *
+ * ### Font Size
+ *
+ * Based on a minor-third scale. 0 is the default font size. Anything above scale 5 should only be used for features or heroes
+ *
+ * - n = negative
+ *
+ * ```example
+ * <p class="fz10">Font size 10</p>
+ * <p class="fz9">Font size 9</p>
+ * <p class="fz8">Font size 8</p>
+ * <p class="fz7">Font size 7</p>
+ * <p class="fz6">Font size 6</p>
+ * <p class="fz5">Font size 5</p>
+ * <p class="fz4">Font size 4</p>
+ * <p class="fz3">Font size 3</p>
+ * <p class="fz2">Font size 2</p>
+ * <p class="fz1">Font size 1</p>
+ * <p class="fz0">Default Font size</p>
+ * <p class="fzn1">Negative Font size 1</p>
+ * <p class="fzn2">Negative Font size 2</p>
+ * ```
+ *
+ */
+
+.fz10 { font-size: 6.192rem }
+.fz9  { font-size: 5.16rem }
+.fz8  { font-size: 4.3rem }
+.fz7  { font-size: 3.583rem }
+.fz6  { font-size: 2.986rem }
+.fz5  { font-size: 2.488rem }
+.fz4  { font-size: 2.074rem }
+.fz3  { font-size: 1.728rem }
+.fz2  { font-size: 1.44rem }
+.fz1  { font-size: 1.2rem }
+.fz0  { font-size: 1rem }
+.fzn1 { font-size: 0.833rem }
+.fzn2 { font-size: 0.694rem }
+
+/**
+ * Container queries
+ *
+ * - cq-ns
+ * - cq-md
+ * - cq-lg
+ *
+ * Coming soon
+ */

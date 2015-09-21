@@ -1,6 +1,7 @@
 'use strict'
 
 import Select from './components/Select/lib/Select'
+import Button from './components/Button'
 import Input from './components/Input'
 import Icons from './components/Icons'
 import Icon from './components/Icon'
@@ -14,6 +15,7 @@ import KeyComponent from './components/KeyComponent'
 
 const Components = {
   Select: Select,
+  Button: Button,
   Input: Input,
   Icons: Icons,
   Icon: Icon,

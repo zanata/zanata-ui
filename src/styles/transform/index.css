@@ -3,6 +3,8 @@
  *
  * ### Transform
  *
+ * #### Rotate
+ *
  * ```example
  * <div class="trfr45">I'm rotated 45%</div>
  * <div class="trfr90">I'm rotated 90%</div>
@@ -18,3 +20,34 @@
 .trfr270 { transform: rotate(270deg) }
 .trfr315 { transform: rotate(315deg) }
 .trfr360 { transform: rotate(360deg) }
+
+/**
+ * DOC
+ *
+ * #### scale
+ *
+ * ```example
+ * <div class='trfs0'>Scale to 0</div>
+ * ```
+ */
+
+.trfs0 { transform: scale(0, 0) }
+
+
+/**
+ * DOC
+ *
+ * #### scale
+ *
+ * ```example
+ * <div class='trftyn100'>Transform Y -100%</div>
+ * <div class='trfty100'>Transform Y 100%</div>
+ * <div class='trftxn100'>Transform X -100%</div>
+ * <div class='trftx100'>Transform X 100%</div>
+ * ```
+ */
+
+.trftyn100 { transform: translateY(-100%) }
+.trfty100 { transform: translateY(100%) }
+.trftxn100 { transform: translateX(-100%) }
+.trftx100 { transform: translateX(100%) }

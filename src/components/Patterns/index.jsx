@@ -3,9 +3,10 @@ import Input from '../Input'
 import Icons from '../Icons'
 import Icon from '../Icon'
 import Loader from '../Loader'
+import Button from '../Button'
+import ButtonExample from '../Button/example'
 import OverlayTrigger from '../OverlayTrigger'
 import Tooltip from '../Tooltip'
-import Modal from '../Modal'
 
 import ObjectDataExample from '../FixedDataTable/examples/ObjectDataExample'
 import ModalBasicExample from '../Modal/examples/ModalBasicExample'
@@ -76,29 +77,32 @@ export default class App extends React.Component {
         <h3 className='fz3 fwsb mb1/2 csec'>Tooltip</h3>
         <div className='mb1'>
           <OverlayTrigger trigger='click' overlay={tooltip}>
-            <button className='bdrs pv1/4 ph1 bgcpri cwhite'>Show a tooltip on click</button>
+            <Button kind='default'> Show a tooltip on click</Button>
           </OverlayTrigger>
         </div>
         <div className='mb2'>
           <OverlayTrigger placement='bottom' overlay={tooltip}>
-            <button className='bdrs pv1/4 ph1 bgcpri cwhite'>Show a bottom tooltip</button>
+            <Button kind='success'> Show a bottom tooltip</Button>
           </OverlayTrigger>
         </div>
         <div className='mb1 dfx jcsb'>
           <OverlayTrigger placement='right' trigger='click' overlay={tooltipInverse}>
-            <button className='bdrs pv1/4 ph1 bgcpri cwhite'>Show a right tooltip with inverse tooltip on click</button>
+            <Button kind='unsure'> Show a right tooltip with inverse tooltip on click</Button>
           </OverlayTrigger>
           <OverlayTrigger placement='left' overlay={tooltipWithTitle}>
-            <button className='bdrs pv1/4 ph1 bgcpri cwhite'>Show a left tooltip with title</button>
+            <Button kind='danger' disabled> Show a left tooltip with title</Button>
           </OverlayTrigger>
         </div>
         <div className='mb2'>
           <OverlayTrigger trigger='click' overlay={tooltipInverseWithTitle}>
-            <button className='bdrs pv1/4 ph1 bgcpri cwhite'>Show a inverse tooltip with title</button>
+            <Button kind='warning'> Show a inverse tooltip with title</Button>
           </OverlayTrigger>
         </div>
         <div className='mb2'>
           <ModalBasicExample />
+        </div>
+        <div className='mb2'>
+          <ButtonExample />
         </div>
       </div>
     )

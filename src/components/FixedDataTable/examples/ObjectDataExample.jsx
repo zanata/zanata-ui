@@ -98,7 +98,7 @@ class ObjectDataExample extends React.Component {
         overflowY={controlledScrolling ? 'hidden' : 'auto'}>
         <Column
           dataKey='firstName'
-          fixed={true}
+          fixed
           label='First Name'
           width={100}
           flexGrow={1}
@@ -107,7 +107,7 @@ class ObjectDataExample extends React.Component {
           />
         <Column
           dataKey='lastName'
-          fixed={true}
+          fixed
           label='Last Name'
           width={100}
           flexGrow={1}

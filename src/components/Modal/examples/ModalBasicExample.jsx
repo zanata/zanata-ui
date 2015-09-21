@@ -1,5 +1,8 @@
 import React from 'react'
 import Modal from '../'
+import Button from '../../Button'
+
+// const Button = ButtonFactory(React)
 
 export default class ModalBasicExample extends React.Component {
   state = {
@@ -14,9 +17,9 @@ export default class ModalBasicExample extends React.Component {
   render () {
     return (
       <div className='modal-example'>
-        <button className='bdrs bgcpri cwhite pv1/4 ph1/2' onClick={this.open}>
+        <Button onClick={this.open} kind='primary'>
           Open Modal
-        </button>
+        </Button>
         <p>Click to get the full Modal experience!</p>
         <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header>
@@ -27,7 +30,7 @@ export default class ModalBasicExample extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <button className='mr1 cpri' onClick={this.close}>Cancel</button>
-            <button className='bgcpri cwhite bdrs ph3/4 pv1/4'>Submit</button>
+            <Button kind='default'>Submit</Button>
           </Modal.Footer>
         </Modal>
       </div>

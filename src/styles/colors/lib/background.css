@@ -264,3 +264,44 @@
 }
 
 
+/**
+ * DOC
+ *
+ * #### Lighten
+ *
+ * ```example
+ * <button class="bgclighten50 bgcpri bdrs pv1/4 ph3/4 cwhite">Lighter button</button>
+ * ```
+ */
+
+.bgclighten5  { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.05) }
+.bgclighten10 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.1) }
+.bgclighten20 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.2) }
+.bgclighten30 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.3) }
+.bgclighten40 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.4) }
+.bgclighten50 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.5) }
+.bgclighten60 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.6) }
+.bgclighten70 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.7) }
+.bgclighten80 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.8) }
+.bgclighten90 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.9) }
+
+/**
+ * DOC
+ *
+ * #### Darken
+ *
+ * ```example
+ * <button class="bgcdarken50 bgcpri bdrs pv1/4 ph3/4 cwhite">Lighter button</button>
+ * ```
+ */
+
+.bgcdarken5  { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.05) }
+.bgcdarken10 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.1) }
+.bgcdarken20 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.2) }
+.bgcdarken30 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.3) }
+.bgcdarken40 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.4) }
+.bgcdarken50 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.5) }
+.bgcdarken60 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.6) }
+.bgcdarken70 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.7) }
+.bgcdarken80 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.8) }
+.bgcdarken90 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.9) }

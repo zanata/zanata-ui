@@ -77,7 +77,8 @@
 @import './border-radius';
 @import './box-shadow';
 @import './opacity';
-@import './animations';
+@import './transition';
+@import './animation';
 
 /**
  * DOC
@@ -88,4 +89,5 @@
  *
  */
 
+@import './cursor';
 @import './accessibility';

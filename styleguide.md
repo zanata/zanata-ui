@@ -273,6 +273,7 @@ Using a rhythm of 1.5 times base font size
 Available sizes are:
 
 - 0
+- 1/8
 - 1/4
 - 1/2
 - 3/4
@@ -778,10 +779,25 @@ To change the order of child elements, use the `.ordfirst` and `.ordlast` utilit
 ```
 ### Transform
 
+#### Rotate
+
 ```example
 <div class="trfr45">I'm rotated 45%</div>
 <div class="trfr90">I'm rotated 90%</div>
 <div class="trfr180">I'm rotated 180%</div>
+```
+#### scale
+
+```example
+<div class='trfs0'>Scale to 0</div>
+```
+#### scale
+
+```example
+<div class='trftyn100'>Transform Y -100%</div>
+<div class='trfty100'>Transform Y 100%</div>
+<div class='trftxn100'>Transform X -100%</div>
+<div class='trftx100'>Transform X 100%</div>
 ```
 <hr class="mv4 csec20">
 
@@ -1002,6 +1018,16 @@ To change the order of child elements, use the `.ordfirst` and `.ordlast` utilit
   </div>
 </div>
 ```
+#### Lighten
+
+```example
+<button class="bgclighten50 bgcpri bdrs pv1/4 ph3/4 cwhite">Lighter button</button>
+```
+#### Darken
+
+```example
+<button class="bgcdarken50 bgcpri bdrs pv1/4 ph3/4 cwhite">Lighter button</button>
+```
 #### Border Colors
 
 ##### Desaturated
@@ -1213,6 +1239,15 @@ Use this to round corners of elements
 <div class="op10">Opacity 10%</div>
 <div class="op0">Opacity 0%</div>
 ```
+### Transitions
+
+All animations default to .3sec and only transition opacity and transformas. If you need to transition more add `a` for all.
+
+```example
+<div class="trseo">Ease out</div>
+<div class="trseo">Ease out back</div>
+<div class="traseo">Ease out back all</div>
+```
 ### Animations
 
 ```example
@@ -1222,6 +1257,18 @@ Use this to round corners of elements
 
 ## Miscellaneous
 
+### Cursor
+
+```example
+<div class="cura p1/2">Auto</div>
+<div class="curd p1/2">Default</div>
+<div class="curc p1/2">Crosshair</div>
+<div class="curha p1/2">Hand</div>
+<div class="curhe p1/2">Help</div>
+<div class="curm p1/2">Move</div>
+<div class="curp p1/2">Pointer</div>
+<div class="curt p1/2">Text</div>
+```
 ### Accessibility
 
 #### Screen Reader only

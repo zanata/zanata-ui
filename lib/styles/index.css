@@ -552,8 +552,8 @@ button:focus {
 textarea {
   -webkit-appearance: none;
   outline: none;
-  box-shadow: inherit;
-  border: inherit;
+  box-shadow: none;
+  border: none;
   background-color: inherit;
 }
 
@@ -1993,6 +1993,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * Available sizes are:
  *
  * - 0
+ * - 1/8
  * - 1/4
  * - 1/2
  * - 3/4
@@ -2018,6 +2019,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  */
 
 .p0        { padding: 0 }
+.p1\/8     { padding: 3px; padding: .1875rem }
 .p1\/4     { padding: 6px; padding: .375rem }
 .p1\/2     { padding: 12px; padding: .75rem }
 .p3\/4     { padding: 18px; padding: 1.125rem }
@@ -2029,6 +2031,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .p16       { padding: 384px; padding: 24rem }
 
 .ph0       { padding-left: 0;        padding-right: 0 }
+.ph1\/8    { padding-left: 3px; padding-left: .1875rem;  padding-right: 3px;  padding-right: .1875rem }
 .ph1\/4    { padding-left: 6px; padding-left: .375rem;  padding-right: 6px;  padding-right: .375rem }
 .ph1\/2    { padding-left: 12px; padding-left: .75rem;   padding-right: 12px;   padding-right: .75rem }
 .ph3\/4    { padding-left: 18px; padding-left: 1.125rem; padding-right: 18px; padding-right: 1.125rem }
@@ -2040,6 +2043,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .ph16      { padding-left: 384px; padding-left: 24rem;    padding-right: 384px;    padding-right: 24rem }
 
 .pv0       { padding-top: 0;         padding-bottom: 0 }
+.pv1\/8    { padding-top: 3px; padding-top: .1875rem;   padding-bottom: 3px;   padding-bottom: .1875rem }
 .pv1\/4    { padding-top: 6px; padding-top: .375rem;   padding-bottom: 6px;   padding-bottom: .375rem }
 .pv1\/2    { padding-top: 12px; padding-top: .75rem;    padding-bottom: 12px;    padding-bottom: .75rem }
 .pv3\/4    { padding-top: 18px; padding-top: 1.125rem;  padding-bottom: 18px;  padding-bottom: 1.125rem }
@@ -2051,6 +2055,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .pv16      { padding-top: 384px; padding-top: 24rem;     padding-bottom: 384px;     padding-bottom: 24rem }
 
 .pt0       { padding-top: 0 }
+.pt1\/8    { padding-top: 3px; padding-top: .1875rem }
 .pt1\/4    { padding-top: 6px; padding-top: .375rem }
 .pt1\/2    { padding-top: 12px; padding-top: .75rem }
 .pt3\/4    { padding-top: 18px; padding-top: 1.125rem }
@@ -2062,6 +2067,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .pt16      { padding-top: 384px; padding-top: 24rem }
 
 .pr0       { padding-right: 0 }
+.pr1\/8    { padding-right: 3px; padding-right: .1875rem }
 .pr1\/4    { padding-right: 6px; padding-right: .375rem }
 .pr1\/2    { padding-right: 12px; padding-right: .75rem }
 .pr3\/4    { padding-right: 18px; padding-right: 1.125rem }
@@ -2073,6 +2079,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .pr16      { padding-right: 384px; padding-right: 24rem }
 
 .pb0       { padding-bottom: 0 }
+.pb1\/8    { padding-bottom: 3px; padding-bottom: .1875rem }
 .pb1\/4    { padding-bottom: 6px; padding-bottom: .375rem }
 .pb1\/2    { padding-bottom: 12px; padding-bottom: .75rem }
 .pb3\/4    { padding-bottom: 18px; padding-bottom: 1.125rem }
@@ -2084,6 +2091,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .pb16      { padding-bottom: 384px; padding-bottom: 24rem }
 
 .pl0       { padding-left: 0 }
+.pl1\/8    { padding-left: 3px; padding-left: .1875rem }
 .pl1\/4    { padding-left: 6px; padding-left: .375rem }
 .pl1\/2    { padding-left: 12px; padding-left: .75rem }
 .pl3\/4    { padding-left: 18px; padding-left: 1.125rem }
@@ -2095,6 +2103,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .pl16      { padding-left: 384px; padding-left: 24rem }
 
 .m0        { margin: 0 }
+.m1\/8     { margin: 3px; margin: .1875rem }
 .m1\/4     { margin: 6px; margin: .375rem }
 .m1\/2     { margin: 12px; margin: .75rem }
 .m3\/4     { margin: 18px; margin: 1.125rem }
@@ -2106,6 +2115,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .m16       { margin: 384px; margin: 24rem }
 
 .mh0       { margin-left: 0;        margin-right: 0 }
+.mh1\/8    { margin-left: 3px; margin-left: .1875rem;  margin-right: 3px;  margin-right: .1875rem }
 .mh1\/4    { margin-left: 6px; margin-left: .375rem;  margin-right: 6px;  margin-right: .375rem }
 .mh1\/2    { margin-left: 12px; margin-left: .75rem;   margin-right: 12px;   margin-right: .75rem }
 .mh3\/4    { margin-left: 18px; margin-left: 1.125rem; margin-right: 18px; margin-right: 1.125rem }
@@ -2117,6 +2127,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .mh16      { margin-left: 384px; margin-left: 24rem;    margin-right: 384px;    margin-right: 24rem }
 
 .mv0       { margin-top: 0;         margin-bottom: 0 }
+.mv1\/8    { margin-top: 3px; margin-top: .1875rem;   margin-bottom: 3px;   margin-bottom: .1875rem }
 .mv1\/4    { margin-top: 6px; margin-top: .375rem;   margin-bottom: 6px;   margin-bottom: .375rem }
 .mv1\/2    { margin-top: 12px; margin-top: .75rem;    margin-bottom: 12px;    margin-bottom: .75rem }
 .mv3\/4    { margin-top: 18px; margin-top: 1.125rem;  margin-bottom: 18px;  margin-bottom: 1.125rem }
@@ -2128,6 +2139,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .mv16      { margin-top: 384px; margin-top: 24rem;     margin-bottom: 384px;     margin-bottom: 24rem }
 
 .mt0       { margin-top: 0 }
+.mt1\/8    { margin-top: 3px; margin-top: .1875rem }
 .mt1\/4    { margin-top: 6px; margin-top: .375rem }
 .mt1\/2    { margin-top: 12px; margin-top: .75rem }
 .mt3\/4    { margin-top: 18px; margin-top: 1.125rem }
@@ -2139,6 +2151,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .mt16      { margin-top: 384px; margin-top: 24rem }
 
 .mr0       { margin-right: 0 }
+.mr1\/8    { margin-right: 3px; margin-right: .1875rem }
 .mr1\/4    { margin-right: 6px; margin-right: .375rem }
 .mr1\/2    { margin-right: 12px; margin-right: .75rem }
 .mr3\/4    { margin-right: 18px; margin-right: 1.125rem }
@@ -2150,6 +2163,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .mr16      { margin-right: 384px; margin-right: 24rem }
 
 .mb0       { margin-bottom: 0 }
+.mb1\/8    { margin-bottom: 3px; margin-bottom: .1875rem }
 .mb1\/4    { margin-bottom: 6px; margin-bottom: .375rem }
 .mb1\/2    { margin-bottom: 12px; margin-bottom: .75rem }
 .mb3\/4    { margin-bottom: 18px; margin-bottom: 1.125rem }
@@ -2161,6 +2175,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .mb16      { margin-bottom: 384px; margin-bottom: 24rem }
 
 .ml0       { margin-left: 0 }
+.ml1\/8    { margin-left: 3px; margin-left: .1875rem }
 .ml1\/4    { margin-left: 6px; margin-left: .375rem }
 .ml1\/2    { margin-left: 12px; margin-left: .75rem }
 .ml3\/4    { margin-left: 18px; margin-left: 1.125rem }
@@ -3013,6 +3028,8 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  *
  * ### Transform
  *
+ * #### Rotate
+ *
  * ```example
  * <div class="trfr45">I'm rotated 45%</div>
  * <div class="trfr90">I'm rotated 90%</div>
@@ -3028,6 +3045,37 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .trfr270 { -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg) }
 .trfr315 { -webkit-transform: rotate(315deg); -ms-transform: rotate(315deg); transform: rotate(315deg) }
 .trfr360 { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg) }
+
+/**
+ * DOC
+ *
+ * #### scale
+ *
+ * ```example
+ * <div class='trfs0'>Scale to 0</div>
+ * ```
+ */
+
+.trfs0 { -webkit-transform: scale(0, 0); -ms-transform: scale(0, 0); transform: scale(0, 0) }
+
+
+/**
+ * DOC
+ *
+ * #### scale
+ *
+ * ```example
+ * <div class='trftyn100'>Transform Y -100%</div>
+ * <div class='trfty100'>Transform Y 100%</div>
+ * <div class='trftxn100'>Transform X -100%</div>
+ * <div class='trftx100'>Transform X 100%</div>
+ * ```
+ */
+
+.trftyn100 { -webkit-transform: translateY(-100%); -ms-transform: translateY(-100%); transform: translateY(-100%) }
+.trfty100 { -webkit-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%) }
+.trftxn100 { -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%) }
+.trftx100 { -webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%) }
 
 /**
  * DOC
@@ -3487,6 +3535,49 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .bgctrans {
   background-color: transparent;
 }
+
+
+/**
+ * DOC
+ *
+ * #### Lighten
+ *
+ * ```example
+ * <button class="bgclighten50 bgcpri bdrs pv1/4 ph3/4 cwhite">Lighter button</button>
+ * ```
+ */
+
+.bgclighten5  { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.05) }
+.bgclighten10 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.1) }
+.bgclighten20 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.2) }
+.bgclighten30 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.3) }
+.bgclighten40 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.4) }
+.bgclighten50 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.5) }
+.bgclighten60 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.6) }
+.bgclighten70 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.7) }
+.bgclighten80 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.8) }
+.bgclighten90 { box-shadow: inset 0 0 1000px 1000px rgba(255, 255, 255, 0.9) }
+
+/**
+ * DOC
+ *
+ * #### Darken
+ *
+ * ```example
+ * <button class="bgcdarken50 bgcpri bdrs pv1/4 ph3/4 cwhite">Lighter button</button>
+ * ```
+ */
+
+.bgcdarken5  { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.05) }
+.bgcdarken10 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.1) }
+.bgcdarken20 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.2) }
+.bgcdarken30 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.3) }
+.bgcdarken40 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.4) }
+.bgcdarken50 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.5) }
+.bgcdarken60 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.6) }
+.bgcdarken70 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.7) }
+.bgcdarken80 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.8) }
+.bgcdarken90 { box-shadow: inset 0 0 1000px 1000px rgba(0, 0, 0, 0.9) }
 /**
  * DOC
  *
@@ -3968,6 +4059,27 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 /**
  * DOC
  *
+ * ### Transitions
+ *
+ * All animations default to .3sec and only transition opacity and transformas. If you need to transition more add `a` for all.
+ *
+ * ```example
+ * <div class="trseo">Ease out</div>
+ * <div class="trseo">Ease out back</div>
+ * <div class="traseo">Ease out back all</div>
+ * ```
+ */
+
+.trseo  { -webkit-transition: -webkit-transform .3s cubic-bezier(0.19, 1, 0.22, 1), opacity .3s cubic-bezier(0.19, 1, 0.22, 1); transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1), opacity .3s cubic-bezier(0.19, 1, 0.22, 1) }
+.trseib { -webkit-transition: -webkit-transform .3s cubic-bezier(0.6, -0.28, 0.735, 0.045), opacity .3s cubic-bezier(0.6, -0.28, 0.735, 0.045); transition: transform .3s cubic-bezier(0.6, -0.28, 0.735, 0.045), opacity .3s cubic-bezier(0.6, -0.28, 0.735, 0.045) }
+.trseob { -webkit-transition: -webkit-transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .3s cubic-bezier(0.175, 0.885, 0.32, 1.275); transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .3s cubic-bezier(0.175, 0.885, 0.32, 1.275) }
+
+.trsaeo  { -webkit-transition: all .3s cubic-bezier(0.19, 1, 0.22, 1); transition: all .3s cubic-bezier(0.19, 1, 0.22, 1) }
+.trsaeib { -webkit-transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045); transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045) }
+.trsaeob { -webkit-transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275); transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275) }
+/**
+ * DOC
+ *
  * ### Animations
  *
  * ```example
@@ -4059,6 +4171,31 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  *
  */
 
+/**
+ * DOC
+ *
+ * ### Cursor
+ *
+ * ```example
+ * <div class="cura p1/2">Auto</div>
+ * <div class="curd p1/2">Default</div>
+ * <div class="curc p1/2">Crosshair</div>
+ * <div class="curha p1/2">Hand</div>
+ * <div class="curhe p1/2">Help</div>
+ * <div class="curm p1/2">Move</div>
+ * <div class="curp p1/2">Pointer</div>
+ * <div class="curt p1/2">Text</div>
+ * ```
+ */
+
+.cura { cursor: auto }
+.curd { cursor: default }
+.curc { cursor: crosshair }
+.curha { cursor: hand }
+.curhe { cursor: help }
+.curm { cursor: move }
+.curp { cursor: pointer }
+.curt { cursor: text }
 /**
  * DOC
  *
