@@ -2661,6 +2661,9 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .cdtrigger .cdtargeti   { display: inline }
 .cdtrigger .cdtargetfx  { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
 .cdtrigger .cdtargetifx { display: -webkit-inline-box; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex }
+
+/* For the opposite effect */
+.cdtrigger .cdtargetn   { display: none }
 /**
  * DOC
  *
@@ -3063,9 +3066,10 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * #### Rotate
  *
  * ```example
- * <div class="trfr45">I'm rotated 45%</div>
- * <div class="trfr90">I'm rotated 90%</div>
- * <div class="trfr180">I'm rotated 180%</div>
+ * <div class="trfr45 dib">I'm rotated 45%</div>
+ * <div class="trfr90 dib">I'm rotated 90%</div>
+ * <div class="trfr180 dib">I'm rotated 180%</div>
+ * <div class="trfr270 dib">I'm rotated 270%</div>
  * ```
  */
 
@@ -3081,7 +3085,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 /**
  * DOC
  *
- * #### scale
+ * #### Scale
  *
  * ```example
  * <div class='trfs0'>Scale to 0</div>
@@ -3094,7 +3098,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 /**
  * DOC
  *
- * #### scale
+ * #### Translate
  *
  * ```example
  * <div class='trftyn100'>Transform Y -100%</div>
@@ -3880,12 +3884,12 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .bdl      { border-left-width: 1px; border-left-style: solid }
 
 .bd2      { border-width: 2px; border-style: solid }
-.bd2h     { border-left-width: 2px; border-right-width: 2px; border-left-style: solid; border-right-style: solid }
-.bd2v     { border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid }
-.bd2t     { border-top-width: 2px; border-top-style: solid }
-.bd2r     { border-right-width: 2px; border-right-style: solid }
-.bd2b     { border-bottom-width: 2px; border-bottom-style: solid }
-.bd2l     { border-left-width: 2px; border-left-style: solid }
+.bdh2     { border-left-width: 2px; border-right-width: 2px; border-left-style: solid; border-right-style: solid }
+.bdv2     { border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid }
+.bdt2     { border-top-width: 2px; border-top-style: solid }
+.bdr2     { border-right-width: 2px; border-right-style: solid }
+.bdb2     { border-bottom-width: 2px; border-bottom-style: solid }
+.bdl2     { border-left-width: 2px; border-left-style: solid }
 
 .bdw1     { border-width: 1px }
 .bdwh1    { border-left-width: 1px; border-right-width: 1px }

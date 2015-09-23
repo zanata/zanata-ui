@@ -30,3 +30,6 @@
 .cdtrigger .cdtargeti   { display: inline }
 .cdtrigger .cdtargetfx  { display: flex }
 .cdtrigger .cdtargetifx { display: inline-flex }
+
+/* For the opposite effect */
+.cdtrigger .cdtargetn   { display: none }
