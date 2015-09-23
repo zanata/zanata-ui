@@ -53,12 +53,12 @@
 .bdl      { border-left-width: 1px; border-left-style: solid }
 
 .bd2      { border-width: 2px; border-style: solid }
-.bd2h     { border-left-width: 2px; border-right-width: 2px; border-left-style: solid; border-right-style: solid }
-.bd2v     { border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid }
-.bd2t     { border-top-width: 2px; border-top-style: solid }
-.bd2r     { border-right-width: 2px; border-right-style: solid }
-.bd2b     { border-bottom-width: 2px; border-bottom-style: solid }
-.bd2l     { border-left-width: 2px; border-left-style: solid }
+.bdh2     { border-left-width: 2px; border-right-width: 2px; border-left-style: solid; border-right-style: solid }
+.bdv2     { border-top-width: 2px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid }
+.bdt2     { border-top-width: 2px; border-top-style: solid }
+.bdr2     { border-right-width: 2px; border-right-style: solid }
+.bdb2     { border-bottom-width: 2px; border-bottom-style: solid }
+.bdl2     { border-left-width: 2px; border-left-style: solid }
 
 .bdw1     { border-width: 1px }
 .bdwh1    { border-left-width: 1px; border-right-width: 1px }

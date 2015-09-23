@@ -798,16 +798,17 @@ To change the order of child elements, use the `.ordfirst` and `.ordlast` utilit
 #### Rotate
 
 ```example
-<div class="trfr45">I'm rotated 45%</div>
-<div class="trfr90">I'm rotated 90%</div>
-<div class="trfr180">I'm rotated 180%</div>
+<div class="trfr45 dib">I'm rotated 45%</div>
+<div class="trfr90 dib">I'm rotated 90%</div>
+<div class="trfr180 dib">I'm rotated 180%</div>
+<div class="trfr270 dib">I'm rotated 270%</div>
 ```
-#### scale
+#### Scale
 
 ```example
 <div class='trfs0'>Scale to 0</div>
 ```
-#### scale
+#### Translate
 
 ```example
 <div class='trftyn100'>Transform Y -100%</div>
