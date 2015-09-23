@@ -1,12 +1,14 @@
 import React, { cloneElement } from 'react'
 import BaseOverlay from 'react-overlays/lib/Overlay'
-import { elementType } from 'react-prop-types';
+import { elementType } from 'react-prop-types'
 // import Fade from './Fade';
-import cx from 'classnames';
+import cx from 'classnames'
 
 export default class Overlay extends React.Component {
   static propTypes = {
     ...BaseOverlay.propTypes,
+    children: React.PropTypes.node,
+    transition: React.PropTypes.element,
     /**
      * Set the visibility of the Overlay
      */
@@ -56,7 +58,7 @@ export default class Overlay extends React.Component {
     rootClose: false,
     show: false
   }
-  render() {
+  render () {
     let {
         children: child
       , transition: transition

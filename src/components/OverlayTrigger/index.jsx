@@ -44,7 +44,7 @@ export default class OverlayTrigger extends React.Component {
     delayHide: React.PropTypes.number,
 
     /**
-     * The initial visibility state of the Overlay, for more nuanced visibility controll consider
+     * The initial visibility state of the Overlay, for more nuanced visibility control consider
      * using the Overlay component directly.
      */
     defaultOverlayShown: React.PropTypes.bool,
@@ -163,7 +163,7 @@ export default class OverlayTrigger extends React.Component {
     const trigger = React.Children.only(this.props.children)
     const triggerProps = trigger.props
 
-    const props = {
+    let props = {
       'aria-describedby': this.props.overlay.props.id
     }
 
