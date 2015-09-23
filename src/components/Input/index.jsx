@@ -2,6 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import { uniqueId, camelCase } from 'lodash'
 import shallowequal from 'shallowequal'
+import createChainedFunction from '../../utils/createChainedFunction'
 import KeyComponent from '../KeyComponent'
 import Icon from '../Icon'
 
@@ -37,40 +38,25 @@ class Input extends KeyComponent {
   }
   _handleChange = (event) => {
     let value = event.target.value
-    if (this.props.onChange) {
-      this.props.onChange(event)
-    }
     this.setState({value: value})
   }
-  _handleFocus = (event) => {
+  _handleFocus = () => {
     if (!this.props.disabled) {
       this.setState({focused: true})
       this.bindGlobalShortcut('esc', this._handleReset)
     }
-    if (this.props.onFocus) {
-      this.props.onFocus(event)
-    }
   }
-  _handleBlur = (event) => {
+  _handleBlur = () => {
     this.setState({focused: false})
     this.unbindShortcut('esc')
-    if (this.props.onBlur) {
-      this.props.onBlur(event)
-    }
   }
-  _handleMouseEnter = (event) => {
+  _handleMouseEnter = () => {
     if (!this.props.disabled) {
       this.setState({hover: true})
     }
-    if (this.props.onMouseEnter) {
-      this.props.onMouseEnter(event)
-    }
   }
-  _handleMouseLeave = (event) => {
+  _handleMouseLeave = () => {
     this.setState({hover: false})
-    if (this.props.onMouseEnter) {
-      this.props.onMouseLeave(event)
-    }
   }
   // Non Standard Events
   _handleReset = () => {
@@ -85,6 +71,11 @@ class Input extends KeyComponent {
     const describeId = this.props.description ? this.inputId + '_d' : undefined
     const inputStatusClass = this.props.status ? 'bdc' + this.props.status : undefined
     const textStatusClass = this.props.status ? 'c' + this.props.status : undefined
+    const onChange = createChainedFunction(this._handleChange, this.props.onChange)
+    const onFocus = createChainedFunction(this._handleFocus, this.props.onFocus)
+    const onBlur = createChainedFunction(this._handleBlur, this.props.onBlur)
+    const onMouseEnter = createChainedFunction(this._handleMouseEnter, this.props.onMouseEnter)
+    const onMouseLeave = createChainedFunction(this._handleMouseLeave, this.props.onMouseLeave)
     let value = this.state.value
     let labelClasses = cx(
       'db fwsb csec pv1/4',
@@ -136,11 +127,11 @@ class Input extends KeyComponent {
             ref={this.inputId}
             value={value}
             aria-describedby={describeId}
-            onChange={this._handleChange}
-            onMouseEnter={this._handleMouseEnter}
-            onMouseLeave={this._handleMouseLeave}
-            onFocus={this._handleFocus}
-            onBlur={this._handleBlur}
+            onChange={onChange}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onFocus={onFocus}
+            onBlur={onBlur}
             className={inputClasses} />
           {reset}
         </div>
