@@ -6,26 +6,31 @@ import createChainedFunction from '../../utils/createChainedFunction'
 import KeyComponent from '../KeyComponent'
 import Icon from '../Icon'
 
-const PropTypes = React.PropTypes
+const { string, func, bool, oneOf } = React.PropTypes
 
 class Input extends KeyComponent {
   static propTypes = {
-    label: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    type: PropTypes.string,
-    value: PropTypes.string,
-    id: PropTypes.string,
-    status: PropTypes.string,
-    outline: PropTypes.bool,
-    disabled: PropTypes.bool,
-    hideLabel: PropTypes.bool,
-    reset: PropTypes.bool,
-    className: PropTypes.string,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onBlur: PropTypes.func,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func
+    label: string.isRequired,
+    placeholder: string.isRequired,
+    description: string,
+    type: string,
+    value: string,
+    id: string,
+    status: string,
+    border: oneOf(['none', 'outline', 'underline']),
+    disabled: bool,
+    margin: string,
+    hideLabel: bool,
+    reset: bool,
+    className: string,
+    onChange: func,
+    onFocus: func,
+    onBlur: func,
+    onMouseEnter: func,
+    onMouseLeave: func
+  }
+  static defaultProps = {
+    border: 'none'
   }
   state = {
     focused: false,
@@ -71,6 +76,10 @@ class Input extends KeyComponent {
     const describeId = this.props.description ? this.inputId + '_d' : undefined
     const inputStatusClass = this.props.status ? 'bdc' + this.props.status : undefined
     const textStatusClass = this.props.status ? 'c' + this.props.status : undefined
+    const outline = this.props.border === 'outline'
+    const underline = this.props.border === 'underline'
+    const border = outline || underline
+    const marginClass = this.props.margin || undefined
     const onChange = createChainedFunction(this._handleChange, this.props.onChange)
     const onFocus = createChainedFunction(this._handleFocus, this.props.onFocus)
     const onBlur = createChainedFunction(this._handleBlur, this.props.onBlur)
@@ -85,17 +94,18 @@ class Input extends KeyComponent {
       }
     )
     let inputClasses = cx(
-      'db bdrs1/4',
       this.props.className,
       inputStatusClass,
       {
-        'bd bd2 h1&1/2 pl1/4': this.props.outline,
-        'pr1/4': this.props.outline && !this.props.reset,
+        'h1&1/2': border,
+        'pl1/4 bd2 bdrs1/4': outline,
+        'bdb2': underline,
+        'pr1/4': outline && !this.props.reset,
         'pr1': this.props.reset,
-        'bdcsec30': !this.state.hover && !this.state.focused && this.props.outline,
-        'bdcsec50': this.state.hover && !this.state.focused && this.props.outline,
+        'bdcsec30': !this.state.hover && !this.state.focused && border && !inputStatusClass,
+        'bdcsec50': this.state.hover && !this.state.focused && border && !inputStatusClass,
         'op50': this.props.disabled,
-        'bdcpri': this.state.focused && this.props.outline
+        'bdcpri': this.state.focused && border && !inputStatusClass
       }
     )
     let descriptionClasses = cx(
@@ -117,7 +127,7 @@ class Input extends KeyComponent {
     const reset = this.props.reset ? (<button className={resetClasses} onClick={this._handleReset}><span className='sronly'>Reset</span><Icon name='cross' /></button>) : undefined
 
     return (
-      <div>
+      <div className={marginClass}>
         <label className={labelClasses} htmlFor={this.inputId}>{this.props.label}</label>
         <div className='posr'>
           <input
