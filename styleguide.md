@@ -531,6 +531,22 @@ You can set the display of any element to none (hide it) by tacking on the `dn` 
 <div class="dn bgcsec10">Now you don't</div>
 ```
 
+### Context Display
+
+One of the rare times using nesting is acceptable. The only time this should used is when adding and removing classes in javascript is not performant for children
+
+```example
+<div class="cdtrigger">
+  <div>Something you can see</div>
+  <div class="cdtargetb">Something you can only see with `.cdtrigger` class on parent</div>
+</div>
+```
+
+```example
+<div class="cdtrigger">
+  <div>Something you can see and then… <div class="cdtargetib">Something you can only see with `.cdtrigger` class on parent that is inline-block</div></div>
+</div>
+```
 ### Overflow
 
 Whether or not items in the container overflow
