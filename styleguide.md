@@ -908,6 +908,16 @@ To change the order of child elements, use the `.ordfirst` and `.ordlast` utilit
 <p class="cdanger">.cdanger</p>
 <p class="cneutral">.cneutral</p>
 ```
+#### Lighten
+
+```example
+<div class="clighten50 cpri">Lighten text</div>
+```
+#### Darken
+
+```example
+<div class="cdarken50 cpri">Darken text</div>
+```
 #### Background Colors
 
 ##### Desaturated
@@ -1043,7 +1053,7 @@ To change the order of child elements, use the `.ordfirst` and `.ordlast` utilit
 #### Darken
 
 ```example
-<button class="bgcdarken50 bgcpri bdrs pv1/4 ph3/4 cwhite">Lighter button</button>
+<button class="bgcdarken50 bgcpri bdrs pv1/4 ph3/4 cwhite">Darken button</button>
 ```
 #### Border Colors
 

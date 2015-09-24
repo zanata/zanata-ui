@@ -37,5 +37,18 @@ export default {
   onMouseUpClass () {
     this.setState({ active: false })
     document.body.removeEventListener('mouseup', this.onMouseUpClass)
+  },
+  getState () {
+    if (this.props.disabled) {
+      return 'disabled'
+    } else if (this.state.active) {
+      return 'active'
+    } else if (this.state.hovered) {
+      return 'hovered'
+    } else if (this.state.focused) {
+      return 'focused'
+    } else {
+      return 'default'
+    }
   }
 }
