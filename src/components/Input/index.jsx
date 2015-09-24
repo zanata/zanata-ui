@@ -66,8 +66,8 @@ class Input extends KeyComponent {
   }
   // Non Standard Events
   _handleReset = () => {
-    console.log(this.props.onReset)
     this.props.onReset()
+    React.findDOMNode(this.refs[this.inputId]).focus()
   }
   render () {
     const type = this.props.type || 'text'
@@ -93,6 +93,7 @@ class Input extends KeyComponent {
     let inputClasses = cx(
       this.props.className,
       inputStatusClass,
+      'w100p db',
       {
         'h1&1/2': border,
         'pl1/4 bd2 bdrs1/4': outline,
