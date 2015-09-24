@@ -24,6 +24,7 @@ export default {
     React.findDOMNode(this).removeEventListener('mouseout', this.onMouseOutClass)
     React.findDOMNode(this).removeEventListener('mousedown', this.onMouseDownClass)
     React.findDOMNode(this).removeEventListener('mouseup', this.onMouseUpClass)
+    document.body.removeEventListener('mouseup', this.onMouseUpClass)
   },
   onFocusClass () { this.setState({ focused: true }) },
   onBlurClass () { this.setState({ focused: false }) },

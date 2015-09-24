@@ -5,6 +5,7 @@ import shallowequal from 'shallowequal'
 import createChainedFunction from '../../utils/createChainedFunction'
 import KeyComponent from '../KeyComponent'
 import Icon from '../Icon'
+import Button from '../Button'
 
 const { string, func, bool, oneOf } = React.PropTypes
 
@@ -21,11 +22,12 @@ class Input extends KeyComponent {
     disabled: bool,
     margin: string,
     hideLabel: bool,
-    reset: bool,
+    resetButton: bool,
     className: string,
     onChange: func,
     onFocus: func,
     onBlur: func,
+    onReset: func,
     onMouseEnter: func,
     onMouseLeave: func
   }
@@ -34,26 +36,25 @@ class Input extends KeyComponent {
   }
   state = {
     focused: false,
-    hover: false,
-    value: this.props.value
+    hover: false
   }
   inputId = this.props.id || uniqueId(camelCase(this.props.label) + '_')
   shouldComponentUpdate (nextProps, nextState) {
     return !shallowequal(nextProps, this.props) || !shallowequal(nextState, this.state)
   }
-  _handleChange = (event) => {
-    let value = event.target.value
-    this.setState({value: value})
-  }
   _handleFocus = () => {
     if (!this.props.disabled) {
       this.setState({focused: true})
-      this.bindGlobalShortcut('esc', this._handleReset)
+      if (this.props.onReset) {
+        this.bindGlobalShortcut('esc', this._handleReset)
+      }
     }
   }
   _handleBlur = () => {
     this.setState({focused: false})
-    this.unbindShortcut('esc')
+    if (this.props.onReset) {
+      this.unbindShortcut('esc')
+    }
   }
   _handleMouseEnter = () => {
     if (!this.props.disabled) {
@@ -65,14 +66,12 @@ class Input extends KeyComponent {
   }
   // Non Standard Events
   _handleReset = () => {
-    if (this.props.reset && this.state.value) {
-      this.setState({value: ''}, () => {
-        React.findDOMNode(this.refs[this.inputId]).focus()
-      })
-    }
+    console.log(this.props.onReset)
+    this.props.onReset()
   }
   render () {
     const type = this.props.type || 'text'
+    const showReset = this.props.onReset && this.props.resetButton
     const describeId = this.props.description ? this.inputId + '_d' : undefined
     const inputStatusClass = this.props.status ? 'bdc' + this.props.status : undefined
     const textStatusClass = this.props.status ? 'c' + this.props.status : undefined
@@ -80,12 +79,10 @@ class Input extends KeyComponent {
     const underline = this.props.border === 'underline'
     const border = outline || underline
     const marginClass = this.props.margin || undefined
-    const onChange = createChainedFunction(this._handleChange, this.props.onChange)
     const onFocus = createChainedFunction(this._handleFocus, this.props.onFocus)
     const onBlur = createChainedFunction(this._handleBlur, this.props.onBlur)
     const onMouseEnter = createChainedFunction(this._handleMouseEnter, this.props.onMouseEnter)
     const onMouseLeave = createChainedFunction(this._handleMouseLeave, this.props.onMouseLeave)
-    let value = this.state.value
     let labelClasses = cx(
       'db fwsb csec pv1/4',
       textStatusClass,
@@ -100,8 +97,8 @@ class Input extends KeyComponent {
         'h1&1/2': border,
         'pl1/4 bd2 bdrs1/4': outline,
         'bdb2': underline,
-        'pr1/4': outline && !this.props.reset,
-        'pr1': this.props.reset,
+        'pr1/4': outline && !showReset,
+        'pr1': showReset,
         'bdcsec30': !this.state.hover && !this.state.focused && border && !inputStatusClass,
         'bdcsec50': this.state.hover && !this.state.focused && border && !inputStatusClass,
         'op50': this.props.disabled,
@@ -116,16 +113,17 @@ class Input extends KeyComponent {
       }
     )
     let resetClasses = cx(
-      'z1 posa r0 t0 h100p ph1/4 csec50 aic',
-      {
-        'dn': !this.state.value,
-        'dfx': this.state.value
-      }
+      'z1 posa r0 t0 h100p'
     )
     // Set as undefined if not available as '' would render an empty span
-    const description = this.props.description ? (<p className={descriptionClasses} id={describeId}>{this.props.description}</p>) : undefined
-    const reset = this.props.reset ? (<button className={resetClasses} onClick={this._handleReset}><span className='sronly'>Reset</span><Icon name='cross' /></button>) : undefined
-
+    const description = this.props.description ? (
+      <p className={descriptionClasses} id={describeId}>{this.props.description}</p>
+    ) : undefined
+    const resetButton = (showReset && this.props.value) ? (
+      <Button padding='ph1/4' link kind='muted' className={resetClasses} onClick={this._handleReset}>
+        <span className='sronly'>Reset</span><Icon name='cross' />
+      </Button>
+    ) : undefined
     return (
       <div className={marginClass}>
         <label className={labelClasses} htmlFor={this.inputId}>{this.props.label}</label>
@@ -135,15 +133,13 @@ class Input extends KeyComponent {
             type={type}
             id={this.inputId}
             ref={this.inputId}
-            value={value}
             aria-describedby={describeId}
-            onChange={onChange}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onFocus={onFocus}
             onBlur={onBlur}
             className={inputClasses} />
-          {reset}
+          {resetButton}
         </div>
         {description}
       </div>

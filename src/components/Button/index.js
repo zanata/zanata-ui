@@ -62,7 +62,7 @@ const classes = {
     }
   },
   child: {
-    default: 'posr z1 difx aic jcsb'
+    default: 'posr z1 difx aic jcsb h100p'
   },
   loader: {
     default: 'posa a0 dfx jcc aic z2'
@@ -112,7 +112,7 @@ const ButtonFactory = React => {
         className,
         classes.default,
         classes.button.default,
-        !padding && classes.button.size[size],
+        padding || classes.button.size[size],
         bdrs || classes.button.bdrs,
         classes.button.kind[kind],
         disable && classes.states.disabled,
@@ -125,6 +125,7 @@ const ButtonFactory = React => {
         className,
         classes.default,
         classes.link.default,
+        padding,
         disable && classes.disabled,
         classes.link.kind[kind],
         disable && classes.states.disabled,

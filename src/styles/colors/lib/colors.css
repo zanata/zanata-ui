@@ -183,3 +183,45 @@
 .cwarning       { color: var(--warning) }
 .cdanger        { color: var(--danger) }
 .cneutral       { color: var(--neutral) }
+
+/**
+ * DOC
+ *
+ * #### Lighten
+ *
+ * ```example
+ * <div class="clighten50 cpri">Lighten text</div>
+ * ```
+ */
+
+.clighten5  { filter: brightness(1.05) }
+.clighten10 { filter: brightness(1.1) }
+.clighten20 { filter: brightness(1.2) }
+.clighten30 { filter: brightness(1.3) }
+.clighten40 { filter: brightness(1.4) }
+.clighten50 { filter: brightness(1.5) }
+.clighten60 { filter: brightness(1.6) }
+.clighten70 { filter: brightness(1.7) }
+.clighten80 { filter: brightness(1.8) }
+.clighten90 { filter: brightness(1.9) }
+
+/**
+ * DOC
+ *
+ * #### Darken
+ *
+ * ```example
+ * <div class="cdarken50 cpri">Darken text</div>
+ * ```
+ */
+
+.cdarken5  { filter: brightness(.95) }
+.cdarken10 { filter: brightness(.9) }
+.cdarken20 { filter: brightness(.8) }
+.cdarken30 { filter: brightness(.7) }
+.cdarken40 { filter: brightness(.6) }
+.cdarken50 { filter: brightness(.5) }
+.cdarken60 { filter: brightness(.4) }
+.cdarken70 { filter: brightness(.3) }
+.cdarken80 { filter: brightness(.2) }
+.cdarken90 { filter: brightness(.1) }
