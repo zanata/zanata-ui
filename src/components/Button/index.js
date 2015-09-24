@@ -11,7 +11,7 @@ const classes = {
     disabled: 'curd op70'
   },
   button: {
-    default: 'whsnw',
+    default: 'whsnw difx aic',
     states: {
       default: 'bxsh1',
       hover: 'bxsh2',
@@ -46,6 +46,7 @@ const classes = {
     }
   },
   link: {
+    default: 'difx aic',
     states: {
       hover: 'cdarken20',
       focus: 'cdarken20',
@@ -62,7 +63,7 @@ const classes = {
     }
   },
   child: {
-    default: 'posr z1 difx aic jcsb h100p'
+    default: 'posr z1 difx aic jcsb'
   },
   loader: {
     default: 'posa a0 dfx jcc aic z2'
