@@ -730,10 +730,7 @@ var Select = React.createClass({
 			}
 		);
 		var selectControlClasses = cx(
-			'posr',
-			'bgcwhite',
-			'bgcwhite',
-			'pl1/2', 'pr1&1/2'
+			'posr pr1&1/2'
 		)
 		var value = [];
 		if (this.props.multi) {
