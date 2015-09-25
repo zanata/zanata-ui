@@ -8,7 +8,7 @@ import Loader from '../Loader'
 const classes = {
   default: 'posr ovh trsaeo',
   states: {
-    disabled: 'curd op70'
+    disabled: 'curd'
   },
   button: {
     default: 'whsnw difx aic',
@@ -16,7 +16,8 @@ const classes = {
       default: 'bxsh1',
       hover: 'bxsh2',
       focus: 'bxsh2',
-      active: 'bxsh1'
+      active: 'bxsh1',
+      disabled: ''
     },
     bdrs: 'bdrs',
     size: {
@@ -41,7 +42,7 @@ const classes = {
         hover: 'bgclighten20',
         focus: 'bgclighten20',
         active: 'op0',
-        disabled: 'op0'
+        disabled: 'bgclighten40 z3'
       }
     }
   },
@@ -50,7 +51,8 @@ const classes = {
     states: {
       hover: 'cdarken20',
       focus: 'cdarken20',
-      active: 'cdarken40'
+      active: 'cdarken40',
+      disabled: 'op70'
     },
     kind: {
       default: 'cpri',
@@ -66,7 +68,7 @@ const classes = {
     default: 'posr z1 difx aic jcsb'
   },
   loader: {
-    default: 'posa a0 dfx jcc aic z2'
+    default: 'posa a0 dfx jcc aic z2 op0'
   }
 }
 
@@ -107,8 +109,7 @@ const ButtonFactory = React => {
         active,
         ...state
       } = this.state
-      const disable = disabled || loading
-      const interativeState = this.getState()
+      const is = this.getState(loading)
       let buttonClasses = cx(
         className,
         classes.default,
@@ -116,42 +117,44 @@ const ButtonFactory = React => {
         padding || classes.button.size[size],
         bdrs || classes.button.bdrs,
         classes.button.kind[kind],
-        disable && classes.states.disabled,
-        (interativeState === 'active') && classes.button.states.active,
-        (interativeState === 'hovered') && classes.button.states.hover,
-        (interativeState === 'focused') && classes.button.states.focus,
-        (interativeState === 'default') && classes.button.states.default,
+        is.disabled && classes.states.disabled,
+        is.disabled && classes.button.states.disabled,
+        is.active && classes.button.states.active,
+        is.hovered && classes.button.states.hover,
+        is.focused && classes.button.states.focus,
+        is.default && classes.button.states.default,
       )
       let linkClasses = cx(
         className,
         classes.default,
         classes.link.default,
         padding,
-        disable && classes.disabled,
         classes.link.kind[kind],
-        disable && classes.states.disabled,
-        (interativeState === 'active') && classes.link.states.active,
-        (interativeState === 'hovered') && classes.link.states.hover,
-        (interativeState === 'focused') && classes.link.states.focus
+        is.disabled && classes.states.disabled,
+        is.disabled && classes.link.states.disabled,
+        is.active && classes.link.states.active,
+        is.hovered && classes.link.states.hover,
+        is.focused && classes.link.states.focus
       )
       let buttonInteractiveClasses = cx(
         classes.button.interactive.default,
         bdrs || classes.button.bdrs,
-        disable && classes.button.interactive.states.disabled,
-        (interativeState === 'active') && classes.button.interactive.states.active,
-        (interativeState === 'hovered') && classes.button.interactive.states.hover,
-        (interativeState === 'focused') && classes.button.interactive.states.focus,
-        (interativeState === 'default') && classes.button.interactive.states.default,
+        is.disabled && classes.button.interactive.states.disabled,
+        is.active && classes.button.interactive.states.active,
+        is.hovered && classes.button.interactive.states.hover,
+        is.focused && classes.button.interactive.states.focus,
+        is.default && classes.button.interactive.states.default,
       )
-      const buttonInteractive = !link ? (
+      const buttonInteractive = link ? null : (
         <span className={buttonInteractiveClasses}></span>
-      ) : null
+      )
       const springConfig = [290, 17]
       const buttonChild = (
         <Spring defaultValue={{val: 0}} endValue={{val: loading ? -150 : 0, config: springConfig}}>
           {interpolated =>
             <span className={classes.child.default} style={{
               transform: `translateY(${interpolated.val}%)`,
+              WebkitTransform: `translateY(${interpolated.val}%)`,
               marginTop: (size === -1) && 1
             }}>
               {children}
@@ -159,11 +162,16 @@ const ButtonFactory = React => {
           }
         </Spring>
       )
-      const buttonLoaderSize = loading ? parseInt(size, 10) + 4 : null
+      const buttonLoaderSize = parseInt(size, 10) + 4
       const buttonLoader = (
         <Spring defaultValue={{val: 150}} endValue={{val: loading ? 0 : 150, config: springConfig}}>
           {interpolated =>
-            <span className={classes.loader.default} style={{transform: `translateY(${interpolated.val}%)`}}>
+            <span className={classes.loader.default}
+                  style={{
+                    transform: `translateY(${interpolated.val}%)`,
+                    WebkitTransform: `translateY(${interpolated.val}%)`,
+                    opacity: 1
+                  }}>
               <Loader size={buttonLoaderSize} />
             </span>
           }
