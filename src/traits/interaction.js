@@ -47,7 +47,7 @@ export default {
     window.removeEventListener('mouseup', this.state.mouseUpHandler)
   },
   getState (disabler) {
-    let is = {
+    const is = {
       disabled: false,
       active: false,
       hovered: false,

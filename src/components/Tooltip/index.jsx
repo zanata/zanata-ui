@@ -3,6 +3,8 @@ import cx from 'classnames'
 import { isRequiredForA11y } from 'react-prop-types'
 import { capitalize } from 'lodash'
 
+const { oneOf, oneOfType, string, number, bool, node, object } = React.PropTypes
+
 export default class Tooltip extends React.Component {
   static propTypes = {
     /**
@@ -11,49 +13,54 @@ export default class Tooltip extends React.Component {
      * @required
      */
     id: isRequiredForA11y(
-      React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.number
+      oneOfType([
+        string,
+        number
       ])
     ),
     /**
      * The direction the tooltip is positioned towards
      */
-    placement: React.PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    placement: oneOf(['top', 'right', 'bottom', 'left']),
     /**
      * The `left` position value for the tooltip
      */
-    positionLeft: React.PropTypes.number,
+    positionLeft: number,
     /**
      * The `top` position value for the tooltip
      */
-    positionTop: React.PropTypes.number,
+    positionTop: number,
     /**
      * The `left` position value for the tooltip arrow
      */
-    arrowOffsetLeft: React.PropTypes.oneOfType([
-      React.PropTypes.number, React.PropTypes.string
+    arrowOffsetLeft: oneOfType([
+      number, string
     ]),
     /**
      * The `top` position value for the tooltip arrow
      */
-    arrowOffsetTop: React.PropTypes.oneOfType([
-      React.PropTypes.number, React.PropTypes.string
+    arrowOffsetTop: oneOfType([
+      number, string
     ]),
+    /**
+     * How to align the tooltip contents
+     */
+    alignment: oneOf(['center', 'left', 'right']),
     /**
      * The title of the tooltip
      */
-    title: React.PropTypes.string,
+    title: string,
     /**
      * Should this use the dark version of this component
      */
-    inverse: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    children: React.PropTypes.node
+    inverse: bool,
+    className: string,
+    style: object,
+    children: node
   }
   static defaultProps = {
-    placement: 'top'
+    placement: 'top',
+    alignment: 'center'
   }
   render () {
     const {
@@ -64,12 +71,14 @@ export default class Tooltip extends React.Component {
       positionTop,
       arrowOffsetLeft,
       arrowOffsetTop,
+      alignment,
       className,
       style,
       children,
       ...props
     } = this.props
     const arrowSize = 6
+    const alignmentClass = 'ta' + alignment.charAt(0)
     let placementInverse = () => {
       switch (placement) {
         case 'top': return 'bottom'
@@ -90,7 +99,8 @@ export default class Tooltip extends React.Component {
     const tooltipClasses = cx(
       className,
       'ffsans posa z4 fzn1',
-      placement
+      placement,
+      alignmentClass
     )
     const tooltipStyle = {
       left: positionLeft,
@@ -124,7 +134,7 @@ export default class Tooltip extends React.Component {
       ['border' + capitalize(placement) + 'Color']: inverse ? 'rgba(0,0,0,.8)' : '#fff'
     }
     const tooltipTitleClasses = cx(
-      'ttu fzn2',
+      'ttu fzn2 mb1/4',
       {
         'csec70': !inverse,
         'cwhite70a': inverse
