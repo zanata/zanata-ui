@@ -16,7 +16,7 @@
  *
  */
 
-@import 'zanata-css-base';
+@import './base';
 
 /**
  * Components
@@ -24,8 +24,8 @@
  * Go first so utility styles will override them
  */
 
-@import '../components/Select/index.css';
-@import '../components/FixedDataTable/index.css';
+@import '../components/Select';
+@import '../components/FixedDataTable';
 
 /**
  * DOC
