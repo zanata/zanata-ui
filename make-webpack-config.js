@@ -5,7 +5,7 @@ var StatsPlugin = require('stats-webpack-plugin')
 
 module.exports = function (options) {
   var entry = {
-    main: './src/app'
+    main: './src/app.jsx'
   }
   var loaders = [
     {
@@ -37,7 +37,8 @@ module.exports = function (options) {
   ]
   var plugins = [
     new webpack.PrefetchPlugin('react'),
-    new webpack.PrefetchPlugin('react/lib/ReactComponentBrowserEnvironment')
+    new webpack.PrefetchPlugin('react/lib/ReactComponentBrowserEnvironment'),
+    new webpack.optimize.OccurenceOrderPlugin()
   ]
   plugins.push(new StatsPlugin('stats.json', {
     chunkModules: true,
@@ -53,6 +54,7 @@ module.exports = function (options) {
     plugins.push(
       new webpack.optimize.UglifyJsPlugin({
         compressor: {
+          screw_ie8: true,
           warnings: false
         }
       }),
@@ -67,6 +69,14 @@ module.exports = function (options) {
         }
       }),
       new webpack.NoErrorsPlugin()
+    )
+  } else {
+    plugins.push(
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify('development')
+        }
+      })
     )
   }
 
