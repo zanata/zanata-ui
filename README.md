@@ -14,5 +14,11 @@ npm start
 To include in Zanata:
 
 ```sh
-npm i zanata/zanata-ui --save
+npm i zanata-ui --save
+```
+
+To include specific components:
+
+```js
+import { Button, Input } from 'zanata-ui'
 ```
