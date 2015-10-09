@@ -1,8 +1,8 @@
 *.log
-/.*/
-/.eslint*
-/.flowconfig
-/.gitignore
-/.npmignore
-/webpack.*
-/src
+.*/
+.eslint*
+.flowconfig
+.gitignore
+.npmignore
+webpack.*
+src
