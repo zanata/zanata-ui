@@ -1,0 +1,17 @@
+/**
+ * Headings
+ *
+ * Reset to default font size to allow easy reuse
+ * Use extra classes for styling
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
