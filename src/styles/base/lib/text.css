@@ -1,0 +1,15 @@
+code,
+kbd,
+pre,
+samp {
+  font-family: Consolas, monaco, monospace;
+  margin: 0;
+}
+
+blockquote,
+dl,
+dd,
+p,
+pre {
+  margin: 0;
+}

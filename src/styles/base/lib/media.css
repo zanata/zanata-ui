@@ -1,0 +1,19 @@
+img {
+  max-width: 100%;
+}
+
+svg {
+  max-height: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: #999;
+}
