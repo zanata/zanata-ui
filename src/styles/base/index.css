@@ -4,12 +4,12 @@
  * Base
  */
 
-@import './forms.css';
-@import './global.css';
-@import './headings.css';
-@import './links.css';
-@import './lists.css';
-@import './tables.css';
-@import './media.css';
-@import './misc.css';
-@import './text.css';
+@import './lib/forms.css';
+@import './lib/global.css';
+@import './lib/headings.css';
+@import './lib/links.css';
+@import './lib/lists.css';
+@import './lib/tables.css';
+@import './lib/media.css';
+@import './lib/misc.css';
+@import './lib/text.css';
