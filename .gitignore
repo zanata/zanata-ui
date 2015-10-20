@@ -3,4 +3,6 @@
 /node_modules
 /dist
 /lib
+/src/components/Icons/icons.svg
+/src/components/Icons/index.jsx
 stats.json

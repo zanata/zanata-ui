@@ -6,20 +6,22 @@
   "jsnext:main": "src/index.js",
   "style": "lib/index.css",
   "scripts": {
-    "build:lib": "npm run styleguide & npm run generate-svg-sprite & cssnext src/styles/index.css lib/styles/index.css && babel src --out-dir lib --stage 0 && cp src/components/Icons/icons.svg lib/components/Icons",
-    "build:umd": "webpack src/index.js dist/zanata-ui.js --config webpack-development.config.js",
-    "build:umd:min": "webpack src/index.js dist/zanata-ui.min.js --config webpack-production.config.js",
-    "build": "npm run build:lib",
+    "build:css": "cssnext src/styles/index.css lib/styles/index.css",
+    "build:icons": "npm run svg && npm run icons",
+    "build:lib": "babel src --out-dir lib --stage 0",
+    "build:styleguide": "utils/extractCssComments/.bin/extractCssComments -i src/styles/index.css -o styleguide.md",
+    "build": "npm run build:styleguide & npm run build:icons && npm run build:lib && npm run build:css",
     "check": "npm run lint && npm run test",
-    "clean": "rimraf lib dist",
-    "generate-svg-sprite": "svg-sprite -sD src/components/Icons --symbol-dest '' --ss icons.svg --si src/components/Icons/src/*.svg && node utils/createSVGFile",
+    "clean:icons": "rimraf src/components/Icons/index.jsx src/components/Icons/icons.svg",
+    "clean": "rimraf lib dist & npm run clean:icons",
     "hot-dev-server": "webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 8000 --inline",
+    "icons": "node utils/createIconsComponent",
     "lint": "standard src/**/*.js src/**/*.jsx",
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run build",
     "preversion": "npm run clean && npm run check",
-    "styleguide": "utils/extractCssComments/.bin/extractCssComments -i src/styles/index.css -o styleguide.md",
-    "start": "npm run styleguide & npm run generate-svg-sprite && npm run hot-dev-server",
+    "start": "npm run build:styleguide & npm run build:icons && npm run hot-dev-server",
+    "svg": "svg-sprite -sD src/components/Icons --symbol-dest '' --ss icons.svg --si src/components/Icons/svgs/*.svg",
     "test": "echo \"Tests coming soon\"",
     "version": "npm run build"
   },
@@ -59,11 +61,11 @@
     "react-prop-types": "^0.3.0",
     "react-router": "^0.13.3",
     "react-stampit": "^0.9.0",
-    "shallowequal": "^0.2.2",
-    "svg-react-loader": "^0.1.5"
+    "shallowequal": "^0.2.2"
   },
   "devDependencies": {
     "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
     "babel-eslint": "^4.1.2",
     "babel-loader": "^5.3.2",
     "classnames": "^2.1.3",
@@ -72,7 +74,6 @@
     "cssnext-loader": "^1.0.1",
     "extract-text-webpack-plugin": "^0.8.2",
     "faker": "^3.0.1",
-    "file-loader": "^0.8.4",
     "html-loader": "^0.3.0",
     "markdown-loader": "^0.1.7",
     "marked": "^0.3.5",
@@ -90,7 +91,6 @@
     "webpack-dev-server": "^1.10.1"
   },
   "gitHead": "de1fc3cae6d75626bf3926148d0b37c79473bd7e",
-  "readme": "# Zanata UI\n\nThe core UI for Zanata.\n\nAlso includes a style guide and react pattern library\n\nTo run style guide and pattern library locally:\n\n```sh\nnpm i\nnpm start\n```\n\nTo include in Zanata:\n\n```sh\nnpm i zanata/zanata-ui --save\n```\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://zanata.atlassian.net/secure/Dashboard.jspa"
