@@ -8,7 +8,7 @@ var SingleValue = React.createClass({
 	},
 	render: function () {
 		var selectPlaceholderClasses = cx(
-			'pr2 fz2 posa ovh l0 t0 r0',
+			'fz2 csec whsnw ovh tove',
 			{
 				'csec50': !this.props.value,
 				'csec': this.props.value

@@ -76,18 +76,18 @@
  * #### Font Scale based
  *
  * ```example
- * <div class="bgsec10 mb1/2"><div class="hsn2 bgsec30">hsn2</div></div>
- * <div class="bgsec10 mb1/2"><div class="hsn1 bgsec30">hsn1</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs1 bgsec30">hs1</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs2 bgsec30">hs2</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs3 bgsec30">hs3</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs4 bgsec30">hs4</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs5 bgsec30">hs5</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs6 bgsec30">hs6</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs7 bgsec30">hs7</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs8 bgsec30">hs8</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs9 bgsec30">hs9</div></div>
- * <div class="bgsec10 mb1/2"><div class="hs10 bgsec30">hs10</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hsn2 bgcsec30">hsn2</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hsn1 bgcsec30">hsn1</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs1 bgcsec30">hs1</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs2 bgcsec30">hs2</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs3 bgcsec30">hs3</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs4 bgcsec30">hs4</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs5 bgcsec30">hs5</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs6 bgcsec30">hs6</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs7 bgcsec30">hs7</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs8 bgcsec30">hs8</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs9 bgcsec30">hs9</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="hs10 bgcsec30">hs10</div></div>
  * ```
  */
 

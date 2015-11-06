@@ -716,8 +716,7 @@ var Select = React.createClass({
 
 	render: function() {
 		var selectClass = cx(
-			'Select',
-			'posr',
+			'Select posr miw8 maw100p',
 			this.props.className,
 			{
 				'is-multi': this.props.multi,
@@ -729,9 +728,6 @@ var Select = React.createClass({
 				'has-value': this.state.value
 			}
 		);
-		var selectControlClasses = cx(
-			'posr pr1&1/2'
-		)
 		var value = [];
 		if (this.props.multi) {
 			this.state.values.forEach(function(val) {
@@ -769,7 +765,23 @@ var Select = React.createClass({
 		}
 
 		var loading = this.state.isLoading ? <span className="Select-loading" aria-hidden="true" /> : null;
-		var clear = this.props.clearable && this.state.value && !this.props.disabled ? <button className="posa r1 t0 b0 w1 h1&1/2 dfx aic jcc csec50" title={this.props.multi ? this.props.clearAllText : this.props.clearValueText} aria-label={this.props.multi ? this.props.clearAllText : this.props.clearValueText} onMouseDown={this.clearValue} onClick={this.clearValue}><Icon name='cross' size='s0' /></button> : null;
+		var clear = this.props.clearable && this.state.value && !this.props.disabled ? <button className="posa r1 t0 b0 w1 h100p dfx aic jcc csec50" title={this.props.multi ? this.props.clearAllText : this.props.clearValueText} aria-label={this.props.multi ? this.props.clearAllText : this.props.clearValueText} onMouseDown={this.clearValue} onClick={this.clearValue}><Icon name='cross' size='s0' /></button> : null;
+
+		var selectControlClassesBase = cx(
+			'dfx aic posr'
+		)
+		var selectControlClasses;
+		if (clear) {
+			selectControlClasses = cx(
+				selectControlClassesBase,
+				'pr2'
+			)
+		} else {
+			selectControlClasses = cx(
+				selectControlClassesBase,
+				'pr1'
+			)
+		}
 
 		var menu;
 		var menuProps;
@@ -789,12 +801,18 @@ var Select = React.createClass({
 		}
 
 		var input;
+		var inputClasses = cx(
+			'Select-input fz2 ovh w100p tove',
+			this.props.inputProps.className || '',
+			!this.state.inputValue && 'posa l0'
+		)
 		var inputProps = {
 			ref: 'input',
-			className: 'Select-input fz2 ' + (this.props.inputProps.className || ''),
+			className: inputClasses,
 			tabIndex: this.props.tabIndex || 0,
 			onFocus: this.handleInputFocus,
-			onBlur: this.handleInputBlur
+			onBlur: this.handleInputBlur,
+			maxLength: '60'
 		};
 		for (var key in this.props.inputProps) {
 			if (this.props.inputProps.hasOwnProperty(key) && key !== 'className') {
@@ -809,7 +827,7 @@ var Select = React.createClass({
 				input = <div {...inputProps}>&nbsp;</div>;
 			}
 		} else if (!this.props.multi || !this.state.values.length) {
-			input = <div className="Select-input fz2">&nbsp;</div>;
+			input = <div className="Select-input fz2 posa">&nbsp;</div>;
 		}
 
 		return (

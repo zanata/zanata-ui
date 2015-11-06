@@ -1,0 +1,51 @@
+/**
+ * DOC
+ *
+ * #### Min Widths
+ *
+ * #### Rhythm based
+ *
+ * ```example
+ * <div class="bgcsec10 mb1/2"><div class="miw4 bgcsec30">4</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw8 bgcsec30">8</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw16 bgcsec30">16</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw32 bgcsec30">32</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw64 bgcsec30">64</div></div>
+ * ```
+ */
+
+.miw4    { min-width: 6rem }
+.miw8    { min-width: 12rem }
+.miw16   { min-width: 24rem }
+.miw32   { min-width: 48rem }
+.miw64   { min-width: 96rem }
+
+/**
+ * DOC
+ *
+ * ##### Percentage based
+ *
+ * ```example
+ * <div class="bgcsec10 mb1/2"><div class="miw10p bgcsec30">10p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw20p bgcsec30">20p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw30p bgcsec30">30p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw40p bgcsec30">40p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw50p bgcsec30">50p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw60p bgcsec30">60p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw70p bgcsec30">70p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw80p bgcsec30">80p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw90p bgcsec30">90p</div></div>
+ * <div class="bgcsec10 mb1/2"><div class="miw100p bgcsec30">100p</div></div>
+ * ```
+ */
+
+.miw10p  { min-width: 10% }
+.miw20p  { min-width: 20% }
+.miw30p  { min-width: 30% }
+.miw40p  { min-width: 40% }
+.miw50p  { min-width: 50% }
+.miw60p  { min-width: 60% }
+.miw70p  { min-width: 70% }
+.miw80p  { min-width: 80% }
+.miw90p  { min-width: 90% }
+.miw100p { min-width: 100% }

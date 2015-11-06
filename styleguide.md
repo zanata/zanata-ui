@@ -307,73 +307,98 @@ There are 3 types of widths:
 #### Rhythm based
 
 ```example
-<div class="bgsec10 mb1/2"><div class="w0 bgsec30">0</div></div>
-<div class="bgsec10 mb1/2"><div class="w1/4 bgsec30">1/4</div></div>
-<div class="bgsec10 mb1/2"><div class="w1/2 bgsec30">1/2</div></div>
-<div class="bgsec10 mb1/2"><div class="w3/4 bgsec30">3/4</div></div>
-<div class="bgsec10 mb1/2"><div class="w1 bgsec30">1</div></div>
-<div class="bgsec10 mb1/2"><div class="w1&1/2 bgsec30">1&1/2</div></div>
-<div class="bgsec10 mb1/2"><div class="w2 bgsec30">2</div></div>
-<div class="bgsec10 mb1/2"><div class="w4 bgsec30">4</div></div>
-<div class="bgsec10 mb1/2"><div class="w8 bgsec30">8</div></div>
-<div class="bgsec10 mb1/2"><div class="w16 bgsec30">16</div></div>
-<div class="bgsec10 mb1/2"><div class="w32 bgsec30">32</div></div>
-<div class="bgsec10 mb1/2"><div class="w64 bgsec30">64</div></div>
+<div class="bgcsec10 mb1/2"><div class="w0 bgcsec30">0</div></div>
+<div class="bgcsec10 mb1/2"><div class="w1/4 bgcsec30">1/4</div></div>
+<div class="bgcsec10 mb1/2"><div class="w1/2 bgcsec30">1/2</div></div>
+<div class="bgcsec10 mb1/2"><div class="w3/4 bgcsec30">3/4</div></div>
+<div class="bgcsec10 mb1/2"><div class="w1 bgcsec30">1</div></div>
+<div class="bgcsec10 mb1/2"><div class="w1&1/2 bgcsec30">1&1/2</div></div>
+<div class="bgcsec10 mb1/2"><div class="w2 bgcsec30">2</div></div>
+<div class="bgcsec10 mb1/2"><div class="w4 bgcsec30">4</div></div>
+<div class="bgcsec10 mb1/2"><div class="w8 bgcsec30">8</div></div>
+<div class="bgcsec10 mb1/2"><div class="w16 bgcsec30">16</div></div>
+<div class="bgcsec10 mb1/2"><div class="w32 bgcsec30">32</div></div>
+<div class="bgcsec10 mb1/2"><div class="w64 bgcsec30">64</div></div>
 ```
 #### Percentage based
 
 ```example
-<div class="bgsec10 mb1/2"><div class="w10p bgsec30">10p</div></div>
-<div class="bgsec10 mb1/2"><div class="w20p bgsec30">20p</div></div>
-<div class="bgsec10 mb1/2"><div class="w30p bgsec30">30p</div></div>
-<div class="bgsec10 mb1/2"><div class="w40p bgsec30">40p</div></div>
-<div class="bgsec10 mb1/2"><div class="w50p bgsec30">50p</div></div>
-<div class="bgsec10 mb1/2"><div class="w60p bgsec30">60p</div></div>
-<div class="bgsec10 mb1/2"><div class="w70p bgsec30">70p</div></div>
-<div class="bgsec10 mb1/2"><div class="w80p bgsec30">80p</div></div>
-<div class="bgsec10 mb1/2"><div class="w90p bgsec30">90p</div></div>
-<div class="bgsec10 mb1/2"><div class="w100p bgsec30">100p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w10p bgcsec30">10p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w20p bgcsec30">20p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w30p bgcsec30">30p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w40p bgcsec30">40p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w50p bgcsec30">50p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w60p bgcsec30">60p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w70p bgcsec30">70p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w80p bgcsec30">80p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w90p bgcsec30">90p</div></div>
+<div class="bgcsec10 mb1/2"><div class="w100p bgcsec30">100p</div></div>
 ```
 #### Font Scale based
 
 ```example
-<div class="bgsec10 mb1/2"><div class="wsn2 bgsec30">wsn2</div></div>
-<div class="bgsec10 mb1/2"><div class="wsn1 bgsec30">wsn1</div></div>
-<div class="bgsec10 mb1/2"><div class="ws1 bgsec30">ws1</div></div>
-<div class="bgsec10 mb1/2"><div class="ws2 bgsec30">ws2</div></div>
-<div class="bgsec10 mb1/2"><div class="ws3 bgsec30">ws3</div></div>
-<div class="bgsec10 mb1/2"><div class="ws4 bgsec30">ws4</div></div>
-<div class="bgsec10 mb1/2"><div class="ws5 bgsec30">ws5</div></div>
-<div class="bgsec10 mb1/2"><div class="ws6 bgsec30">ws6</div></div>
-<div class="bgsec10 mb1/2"><div class="ws7 bgsec30">ws7</div></div>
-<div class="bgsec10 mb1/2"><div class="ws8 bgsec30">ws8</div></div>
-<div class="bgsec10 mb1/2"><div class="ws9 bgsec30">ws9</div></div>
-<div class="bgsec10 mb1/2"><div class="ws10 bgsec30">ws10</div></div>
+<div class="bgcsec10 mb1/2"><div class="wsn2 bgcsec30">wsn2</div></div>
+<div class="bgcsec10 mb1/2"><div class="wsn1 bgcsec30">wsn1</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws1 bgcsec30">ws1</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws2 bgcsec30">ws2</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws3 bgcsec30">ws3</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws4 bgcsec30">ws4</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws5 bgcsec30">ws5</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws6 bgcsec30">ws6</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws7 bgcsec30">ws7</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws8 bgcsec30">ws8</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws9 bgcsec30">ws9</div></div>
+<div class="bgcsec10 mb1/2"><div class="ws10 bgcsec30">ws10</div></div>
 ```
-#### Max Widths
+#### Min Widths
 
- * #### Rhythm based
+#### Rhythm based
 
 ```example
-<div class="bgsec10 mb1/2"><div class="maw4 bgsec30">4</div></div>
-<div class="bgsec10 mb1/2"><div class="maw8 bgsec30">8</div></div>
-<div class="bgsec10 mb1/2"><div class="maw16 bgsec30">16</div></div>
-<div class="bgsec10 mb1/2"><div class="maw32 bgsec30">32</div></div>
-<div class="bgsec10 mb1/2"><div class="maw64 bgsec30">64</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw4 bgcsec30">4</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw8 bgcsec30">8</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw16 bgcsec30">16</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw32 bgcsec30">32</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw64 bgcsec30">64</div></div>
 ```
 ##### Percentage based
 
 ```example
-<div class="bgsec10 mb1/2"><div class="maw10p bgsec30">10p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw20p bgsec30">20p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw30p bgsec30">30p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw40p bgsec30">40p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw50p bgsec30">50p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw60p bgsec30">60p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw70p bgsec30">70p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw80p bgsec30">80p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw90p bgsec30">90p</div></div>
-<div class="bgsec10 mb1/2"><div class="maw100p bgsec30">100p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw10p bgcsec30">10p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw20p bgcsec30">20p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw30p bgcsec30">30p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw40p bgcsec30">40p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw50p bgcsec30">50p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw60p bgcsec30">60p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw70p bgcsec30">70p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw80p bgcsec30">80p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw90p bgcsec30">90p</div></div>
+<div class="bgcsec10 mb1/2"><div class="miw100p bgcsec30">100p</div></div>
+```
+#### Max Widths
+
+#### Rhythm based
+
+```example
+<div class="bgcsec10 mb1/2"><div class="maw4 bgcsec30">4</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw8 bgcsec30">8</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw16 bgcsec30">16</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw32 bgcsec30">32</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw64 bgcsec30">64</div></div>
+```
+##### Percentage based
+
+```example
+<div class="bgcsec10 mb1/2"><div class="maw10p bgcsec30">10p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw20p bgcsec30">20p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw30p bgcsec30">30p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw40p bgcsec30">40p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw50p bgcsec30">50p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw60p bgcsec30">60p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw70p bgcsec30">70p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw80p bgcsec30">80p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw90p bgcsec30">90p</div></div>
+<div class="bgcsec10 mb1/2"><div class="maw100p bgcsec30">100p</div></div>
 ```
 ### Height
 
@@ -415,18 +440,18 @@ There are 2 types of heights:
 #### Font Scale based
 
 ```example
-<div class="bgsec10 mb1/2"><div class="hsn2 bgsec30">hsn2</div></div>
-<div class="bgsec10 mb1/2"><div class="hsn1 bgsec30">hsn1</div></div>
-<div class="bgsec10 mb1/2"><div class="hs1 bgsec30">hs1</div></div>
-<div class="bgsec10 mb1/2"><div class="hs2 bgsec30">hs2</div></div>
-<div class="bgsec10 mb1/2"><div class="hs3 bgsec30">hs3</div></div>
-<div class="bgsec10 mb1/2"><div class="hs4 bgsec30">hs4</div></div>
-<div class="bgsec10 mb1/2"><div class="hs5 bgsec30">hs5</div></div>
-<div class="bgsec10 mb1/2"><div class="hs6 bgsec30">hs6</div></div>
-<div class="bgsec10 mb1/2"><div class="hs7 bgsec30">hs7</div></div>
-<div class="bgsec10 mb1/2"><div class="hs8 bgsec30">hs8</div></div>
-<div class="bgsec10 mb1/2"><div class="hs9 bgsec30">hs9</div></div>
-<div class="bgsec10 mb1/2"><div class="hs10 bgsec30">hs10</div></div>
+<div class="bgcsec10 mb1/2"><div class="hsn2 bgcsec30">hsn2</div></div>
+<div class="bgcsec10 mb1/2"><div class="hsn1 bgcsec30">hsn1</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs1 bgcsec30">hs1</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs2 bgcsec30">hs2</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs3 bgcsec30">hs3</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs4 bgcsec30">hs4</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs5 bgcsec30">hs5</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs6 bgcsec30">hs6</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs7 bgcsec30">hs7</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs8 bgcsec30">hs8</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs9 bgcsec30">hs9</div></div>
+<div class="bgcsec10 mb1/2"><div class="hs10 bgcsec30">hs10</div></div>
 ```
 #### Max Widths
 
