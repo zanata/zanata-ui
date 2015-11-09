@@ -91,7 +91,8 @@ export default class OverlayTrigger extends React.Component {
   static defaultProps = {
     defaultOverlayShown: false,
     trigger: ['hover', 'focus'],
-    placement: 'top'
+    placement: 'top',
+    delay: 300
   }
   state = {
     isOverlayShown: this.props.defaultOverlayShown
