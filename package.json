@@ -1,6 +1,6 @@
 {
   "name": "zanata-ui",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "The Core UI for Zanata",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
