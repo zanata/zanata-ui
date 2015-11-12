@@ -9,14 +9,20 @@ export default class App extends React.Component {
   }
   render () {
     let languageList = [
-      { value: 'one', label: 'French', count: 432 },
-      { value: 'two', label: 'Russian', count: 34 },
-      { value: 'three', label: 'Spanish' },
-      { value: 'four', label: 'Chinese - Traditional, yes really', count: 2045 }
+      { value: 'fr', label: 'French', count: 432 },
+      { value: 'ru', label: 'Russian', count: 34 },
+      { value: 'es-ES', label: 'Spanish' },
+      { value: 'zh-Hant', label: 'Chinese - Traditional, yes really', count: 2045 }
     ]
     let optionOutput = (op) => {
       let count = op.count || 0
-      return <span className='dfx aic jcsb'><span className='tove ovh whsnw'>{op.label}</span><span className='csec50 pl1/4'>{count}</span></span>
+      return (
+        <span className='dfx aic jcsb'>
+          <span className='fxauto tove ovh whsnw' title={op.label}>{op.label}</span>
+          <span className='fxnone csec pl1/8 tove ovh whsnw tar maw4'>{op.value}</span>
+          <span className='fxnone csec50 pl1/8 tove ovh whsnw tar w2'>{count}</span>
+        </span>
+      )
     }
     return (
       <div>

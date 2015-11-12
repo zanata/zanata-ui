@@ -6,6 +6,7 @@
  * #### Rhythm based
  *
  * ```example
+ * <div class="bgcsec10 mb1/2"><div class="maw2 bgcsec30">2</div></div>
  * <div class="bgcsec10 mb1/2"><div class="maw4 bgcsec30">4</div></div>
  * <div class="bgcsec10 mb1/2"><div class="maw8 bgcsec30">8</div></div>
  * <div class="bgcsec10 mb1/2"><div class="maw16 bgcsec30">16</div></div>
@@ -14,6 +15,7 @@
  * ```
  */
 
+.maw2    { max-width: 3rem }
 .maw4    { max-width: 6rem }
 .maw8    { max-width: 12rem }
 .maw16   { max-width: 24rem }
