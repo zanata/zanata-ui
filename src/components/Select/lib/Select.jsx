@@ -716,7 +716,7 @@ var Select = React.createClass({
 
 	render: function() {
 		var selectClass = cx(
-			'Select posr miw8 maw100p bdrs1/4 bd2 bdcsec20',
+			'Select posr miw8 maw100p bdrs1/4 bd2 bdcsec30',
 			this.props.className,
 			{
 				'is-multi': this.props.multi,
@@ -768,7 +768,7 @@ var Select = React.createClass({
 		var clear = this.props.clearable && this.state.value && !this.props.disabled ? <button className="posa r1 t0 b0 w1 h100p dfx aic jcc csec50" title={this.props.multi ? this.props.clearAllText : this.props.clearValueText} aria-label={this.props.multi ? this.props.clearAllText : this.props.clearValueText} onMouseDown={this.clearValue} onClick={this.clearValue}><Icon name='cross' size='s0' /></button> : null;
 
 		var selectControlClassesBase = cx(
-			'ph1/4 dfx aic posr'
+			'pl1/2 pv1/8 dfx aic posr'
 		)
 		var selectControlClasses;
 		if (clear) {
@@ -779,7 +779,7 @@ var Select = React.createClass({
 		} else {
 			selectControlClasses = cx(
 				selectControlClassesBase,
-				'pr1'
+				'pr1&1/2'
 			)
 		}
 
@@ -802,9 +802,9 @@ var Select = React.createClass({
 
 		var input;
 		var inputClasses = cx(
-			'Select-input pl1/4 fz2 ovh w100p tove',
+			'Select-input fz2 ovh w100p tove',
 			this.props.inputProps.className || '',
-			!this.state.inputValue && 'posa l0'
+			!this.state.inputValue && 'posa l0 pl1/2'
 		)
 		var inputProps = {
 			ref: 'input',
@@ -836,7 +836,7 @@ var Select = React.createClass({
 				<div className={selectControlClasses} ref="control" onKeyDown={this.handleKeyDown} onMouseDown={this.handleMouseDown} onTouchEnd={this.handleMouseDown}>
 					{value}
 					{input}
-					<button className='posa r0 t0 b0 w1 dfx aic jcc csec' onMouseDown={this.handleMouseDownOnArrow} >
+					<button className='posa r0 t0 b0 w1&1/2 dfx aic jcc csec50' onMouseDown={this.handleMouseDownOnArrow} >
 						<Icon name='chevron-down' size='s1'/>
 					</button>
 					{loading}
