@@ -5,6 +5,7 @@ import shallowequal from 'shallowequal'
 import createChainedFunction from '../../utils/createChainedFunction'
 import KeyComponent from '../KeyComponent'
 import Icon from '../Icon'
+import Loader from '../Loader'
 import Button from '../Button'
 
 const { string, func, bool, oneOf } = React.PropTypes
@@ -18,11 +19,13 @@ class Input extends KeyComponent {
     value: string,
     id: string,
     status: string,
+    icon: string,
     border: oneOf(['none', 'outline', 'underline']),
     disabled: bool,
     margin: string,
     hideLabel: bool,
     resetButton: bool,
+    loading: bool,
     className: string,
     onChange: func,
     onFocus: func,
@@ -78,11 +81,22 @@ class Input extends KeyComponent {
     const outline = this.props.border === 'outline'
     const underline = this.props.border === 'underline'
     const border = outline || underline
+    const loading = this.props.loading
     const marginClass = this.props.margin || undefined
     const onFocus = createChainedFunction(this._handleFocus, this.props.onFocus)
     const onBlur = createChainedFunction(this._handleBlur, this.props.onBlur)
     const onMouseEnter = createChainedFunction(this._handleMouseEnter, this.props.onMouseEnter)
     const onMouseLeave = createChainedFunction(this._handleMouseLeave, this.props.onMouseLeave)
+    const iconClasses = cx(
+      'z1 posa l0 t0 h100p ph1/4 df aic jcc',
+      {
+        'csec': this.state.focused,
+        'csec50': !this.state.focused
+      }
+    )
+    const icon = this.props.icon ? (
+      <span className={iconClasses} ><Icon name={this.props.icon} /></span>
+    ) : undefined
     let labelClasses = cx(
       'db fwsb csec pv1/4',
       textStatusClass,
@@ -90,45 +104,57 @@ class Input extends KeyComponent {
         'sronly': this.props.hideLabel
       }
     )
-    let inputClasses = cx(
+    const inputClasses = cx(
       this.props.className,
       inputStatusClass,
       'w100p db',
       {
         'h1&1/2': border,
-        'pl1/4 bd2 bdrs1/4': outline,
+        'bd2 bdrs1/4': outline,
+        'pl1/4': outline && !icon,
         'bdb2': underline,
-        'pr1/4': outline && !showReset,
-        'pr1': showReset,
+        'pr1/4': outline && !showReset && !loading,
+        'pr1': showReset || loading,
+        'pl1': icon,
         'bdcsec30': !this.state.hover && !this.state.focused && border && !inputStatusClass,
         'bdcsec50': this.state.hover && !this.state.focused && border && !inputStatusClass,
         'op50': this.props.disabled,
         'bdcpri': this.state.focused && border && !inputStatusClass
       }
     )
-    let descriptionClasses = cx(
+    const descriptionClasses = cx(
       'mt1/4 op70',
       textStatusClass,
       {
         'csec': !this.props.status
       }
     )
-    let resetClasses = cx(
+    const resetClasses = cx(
       'z1 posa r0 t0 h100p'
+    )
+    const loaderClasses = cx(
+      resetClasses,
+      'csec df aic jcc w1 pr1/8'
     )
     // Set as undefined if not available as '' would render an empty span
     const description = this.props.description ? (
       <p className={descriptionClasses} id={describeId}>{this.props.description}</p>
     ) : undefined
-    const resetButton = (showReset && this.props.value) ? (
+    const resetButton = (showReset && this.props.value && !loading) ? (
       <Button padding='ph1/4' link kind='muted' className={resetClasses} onClick={this._handleReset}>
         <span className='sronly'>Reset</span><Icon name='cross' />
       </Button>
+    ) : undefined
+    const loader = loading ? (
+      <span className={loaderClasses}>
+        <Loader/>
+      </span>
     ) : undefined
     return (
       <div className={marginClass}>
         <label className={labelClasses} htmlFor={this.inputId}>{this.props.label}</label>
         <div className='posr'>
+          {icon}
           <input
             {...this.props}
             type={type}
@@ -141,6 +167,7 @@ class Input extends KeyComponent {
             onBlur={onBlur}
             className={inputClasses} />
           {resetButton}
+          {loader}
         </div>
         {description}
       </div>

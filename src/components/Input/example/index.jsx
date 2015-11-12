@@ -3,10 +3,20 @@ import Input from '../'
 
 export default class InputExample extends React.Component {
   state = {
-    myinput: ''
+    myinput: '',
+    loadingInput: '',
+    loading: false
   }
   _handleInputChange = (event) => {
     console.log(event.target.value)
+  }
+  _handleLoadingChange = (event) => {
+    this.setState({loading: true, loadingInput: event.target.value})
+    console.log(this.state)
+    setTimeout(() => {
+      this.setState({loading: false})
+      console.log(this.state)
+    }, 500)
   }
   _handleInputFocus = (customIndex) => {
     return (event) => {
@@ -19,6 +29,10 @@ export default class InputExample extends React.Component {
   _handleReset = () => {
     console.log('Reset')
     this.setState({ myinput: '' })
+  }
+  _handleLoadingReset = () => {
+    console.log('Reset')
+    this.setState({ loadingInput: '' })
   }
   render () {
     return (
@@ -36,6 +50,17 @@ export default class InputExample extends React.Component {
                border='outline'
                onChange={this._handleResetExampleChange}
                onReset={this._handleReset}
+               resetButton
+               margin='mb1'
+               className='w100p' />
+        <Input label='Test input with reset and loading and icon'
+               placeholder='This input has fake loading'
+               value={this.state.loadingInput}
+               border='outline'
+               icon='search'
+               loading={this.state.loading}
+               onChange={this._handleLoadingChange}
+               onReset={this._handleLoadingReset}
                resetButton
                margin='mb1'
                className='w100p' />

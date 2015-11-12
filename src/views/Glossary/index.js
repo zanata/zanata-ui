@@ -4,7 +4,7 @@ import Input from '../../components/Input'
 import Icon from '../../components/Icon'
 
 export default class App extends React.Component {
-  handleChange (val) {
+  _handleChange (val) {
     console.log(val)
   }
   render () {
@@ -16,18 +16,18 @@ export default class App extends React.Component {
     ]
     let optionOutput = (op) => {
       let count = op.count || 0
-      return <span className="dfx aic jcsb"><span className="tove ovh whsnw">{op.label}</span><span className='csec50 pl1/4'>{count}</span></span>
+      return <span className='dfx aic jcsb'><span className='tove ovh whsnw'>{op.label}</span><span className='csec50 pl1/4'>{count}</span></span>
     }
     return (
       <div>
-        <div className='dfx aic mb1'>
+        <div className='dfx aic mb2'>
           <div className='fxauto dfx aic'>
             <h1 className='fz2 dib csec whsnw'>System Glossary</h1>
             <Icon name='chevron-right' className='mh1/2 csec50' size='s1'/>
             <Select
               name='language-selection'
               value=''
-              placeholder="Select a translation language…"
+              placeholder='Select a translation language…'
               optionRenderer={optionOutput}
               options={languageList}
               onChange={this._handleChange}
@@ -40,10 +40,15 @@ export default class App extends React.Component {
         <div className='dfx aic mb1'>
           <div className='fxauto'>
             <div className='posr w8'>
-              <Input label='Search Glossary' outline className='w100p pr1&1/2' type='search' placeholder='Search Glossary' />
-              <button className='posa r0 t0 fzn1 h1&1/2 p1/4 csec50 dfx aic'>
-                <Icon name='search' size='s1' />
-              </button>
+              <Input hideLabel
+                label='Search Glossary'
+                border='outline'
+                type='search'
+                placeholder='Search Glossary'
+                icon='search'
+                loading
+                onReset={console.log('Reset')}
+                resetButton />
             </div>
           </div>
           <div className='dfx aic'>
