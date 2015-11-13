@@ -4,7 +4,7 @@
   "description": "The Core UI for Zanata",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
-  "style": "lib/index.css",
+  "style": "lib/styles/index.css",
   "scripts": {
     "build:css": "cssnext src/styles/index.css lib/styles/index.css",
     "build:icons": "npm run svg && npm run icons",

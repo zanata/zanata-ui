@@ -380,6 +380,7 @@ There are 3 types of widths:
 #### Rhythm based
 
 ```example
+<div class="bgcsec10 mb1/2"><div class="maw2 bgcsec30">2</div></div>
 <div class="bgcsec10 mb1/2"><div class="maw4 bgcsec30">4</div></div>
 <div class="bgcsec10 mb1/2"><div class="maw8 bgcsec30">8</div></div>
 <div class="bgcsec10 mb1/2"><div class="maw16 bgcsec30">16</div></div>
