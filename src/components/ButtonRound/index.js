@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Button from '../Button'
-import { mergeClasses, flattenClasses } from '../../utils/styleUtils'
+import { mergeClasses } from '../../utils/styleUtils'
 
 const classes = {
   base: {
@@ -46,20 +46,20 @@ const classes = {
     }
   },
   primary: {
-    bgc: 'Bgc(pri)',
+    bgc: 'Bgc(pri)'
   },
   success: {
-    bgc: 'Bgc(success)',
+    bgc: 'Bgc(success)'
   },
   unsure: {
     bgc: 'Bgc(unsure)',
     c: 'C(#000.6)'
   },
   warning: {
-    bgc: 'Bgc(warning)',
+    bgc: 'Bgc(warning)'
   },
   danger: {
-    bgc: 'Bgc(danger)',
+    bgc: 'Bgc(danger)'
   },
   muted: {
     bd: 'Bd(bd1) bdc(#000.01)',

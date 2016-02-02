@@ -64,16 +64,18 @@ export default class Tooltip extends Component {
     const tooltipArrowStyle = {
       [placementInverse()]: -arrowSize,
       borderWidth: arrowSize,
-      [(placement === 'left' || placement === 'right') ? 'marginTop' : 'marginLeft']: -(arrowSize + 1),
+      [(placement === 'left' || placement === 'right') ? 'marginTop' : 'marginLeft']: -(arrowSize + 1), // eslint-disable-line max-len
       ['border' + capitalize(placementInverse()) + 'Width']: 0,
-      ['border' + capitalize(placement) + 'Color']: inverse ? 'transparent' : 'rgb(210,226,231)'
+      ['border' + capitalize(placement) + 'Color']: inverse
+        ? 'transparent' : 'rgb(210,226,231)'
     }
     const tooltipArrowInnerStyle = {
       borderWidth: arrowSize,
       [placementInverse()]: inverse ? 0 : 1,
-      [(placement === 'left' || placement === 'right') ? 'bottom' : 'marginLeft']: -arrowSize,
+      [(placement === 'left' || placement === 'right') ? 'bottom' : 'marginLeft']: -arrowSize, // eslint-disable-line max-len
       ['border' + capitalize(placementInverse()) + 'Width']: 0,
-      ['border' + capitalize(placement) + 'Color']: inverse ? 'rgba(0,0,0,.8)' : '#fff'
+      ['border' + capitalize(placement) + 'Color']: inverse
+        ? 'rgba(0,0,0,.8)' : '#fff'
     }
     const tooltipTitleClasses = cx(
       'ttu fzn2 mb1/4',
@@ -82,7 +84,8 @@ export default class Tooltip extends Component {
         'cwhite70a': inverse
       }
     )
-    const tooltipTitle = title ? (<h2 className={tooltipTitleClasses}>{title}</h2>) : undefined
+    const tooltipTitle = title
+      ? (<h2 className={tooltipTitleClasses}>{title}</h2>) : undefined
 
     return (
       <div
@@ -93,7 +96,11 @@ export default class Tooltip extends Component {
       >
         <div
           className={tooltipArrowClasses}
-          style={{left: arrowOffsetLeft, top: arrowOffsetTop, ...tooltipArrowStyle}}
+          style={{
+            left: arrowOffsetLeft,
+            top: arrowOffsetTop,
+            ...tooltipArrowStyle
+          }}
         >
           <div className={tooltipArrowClasses} style={tooltipArrowInnerStyle}/>
         </div>

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Button from '../Button'
-import { mergeClasses, flattenClasses } from '../../utils/styleUtils'
+import { mergeClasses } from '../../utils/styleUtils'
 
 const classes = {
   base: {

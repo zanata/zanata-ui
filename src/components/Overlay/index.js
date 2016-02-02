@@ -39,7 +39,8 @@ Overlay.propTypes = {
    */
   show: PropTypes.bool,
   /**
-   * Specify whether the overlay should trigger onHide when the user clicks outside the overlay
+   * Specify whether the overlay should trigger
+   * onHide when the user clicks outside the overlay
    */
   rootClose: PropTypes.bool,
   /**

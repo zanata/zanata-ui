@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Input from '../'
 
-export default class InputExample extends React.Component {
+/* eslint-disable */
+
+export default class InputExample extends Component {
   state = {
     myinput: '',
     loadingInput: '',
@@ -68,3 +70,4 @@ export default class InputExample extends React.Component {
     )
   }
 }
+/* eslint-enable */

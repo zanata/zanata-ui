@@ -32,10 +32,15 @@ class MarkdownMenu extends Component {
         <ul>
           {menu.map(function (item, i) {
             return <li key={i}>
-                <Link className='fz1 fwsb' to={'/styles#' + escapeText(item.title)}>{item.title}</Link>
+                <Link className='fz1 fwsb'
+                  to={'/styles#' + escapeText(item.title)}>{item.title}</Link>
                 <ul className='mb1/2'>
                   {item.sections.map(function (section, sectionKey) {
-                    return <li key={sectionKey}><Link to={'/styles#' + escapeText(section.title)}>{section.title}</Link></li>
+                    return <li key={sectionKey}>
+                      <Link to={'/styles#' + escapeText(section.title)}>
+                        {section.title}
+                      </Link>
+                    </li>
                   })}
                 </ul>
               </li>

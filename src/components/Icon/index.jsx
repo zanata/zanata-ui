@@ -28,7 +28,9 @@ export default class Icon extends React.Component {
     )
     return (
       <span {...this.props} className={classes}>
-        <svg dangerouslySetInnerHTML={{ __html: svgIcon }} className='posa a0' style={{ maxWidth: '100%', fill: 'currentColor' }} />
+        <svg dangerouslySetInnerHTML={{ __html: svgIcon }}
+          className='posa a0'
+          style={{ maxWidth: '100%', fill: 'currentColor' }} />
       </span>
     )
   }

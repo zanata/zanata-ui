@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { cloneElement, Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import contains from 'dom-helpers/query/contains'
@@ -111,9 +110,10 @@ class OverlayTrigger extends Component {
     }, delay)
   };
   // Simple implementation of mouseEnter and mouseLeave.
-  // React's built version is broken: https://github.com/facebook/react/issues/4251
-  // for cases when the trigger is disabled and mouseOut/Over can cause flicker moving
-  // from one child element to another.
+  // React's built version is broken:
+  // https://github.com/facebook/react/issues/4251
+  // for cases when the trigger is disabled and mouseOut/Over can
+  // cause flicker moving from one child element to another.
   handleMouseOverOut = (handler, e) => {
     let target = e.currentTarget
     let related = e.relatedTarget || e.nativeEvent.toElement
@@ -123,8 +123,10 @@ class OverlayTrigger extends Component {
     }
   };
   componentWillMount () {
-    this.handleMouseOver = this.handleMouseOverOut.bind(null, this.handleDelayedShow)
-    this.handleMouseOut = this.handleMouseOverOut.bind(null, this.handleDelayedHide)
+    this.handleMouseOver =
+      this.handleMouseOverOut.bind(null, this.handleDelayedShow)
+    this.handleMouseOut =
+      this.handleMouseOverOut.bind(null, this.handleDelayedHide)
   }
   componentDidMount () {
     this._mountNode = document.createElement('div')
@@ -151,7 +153,10 @@ class OverlayTrigger extends Component {
     // create in render otherwise owner is lost...
     this._overlay = this.getOverlay()
 
-    props.onClick = createChainedFunction(triggerProps.onClick, this.props.onClick)
+    props.onClick = createChainedFunction(
+      triggerProps.onClick,
+      this.props.onClick
+    )
 
     if (isOneOf('click', this.props.trigger)) {
       props.onClick = createChainedFunction(this.toggle, props.onClick)
@@ -159,16 +164,34 @@ class OverlayTrigger extends Component {
 
     if (isOneOf('hover', this.props.trigger)) {
       warning(!(this.props.trigger === 'hover'),
-        '[zanata-ui] Specifying only the `"hover"` trigger limits the visibilty of the overlay to just mouse users. ' +
-        'Consider also including the `"focus"` trigger so that touch and keyboard only users can see the overlay as well.')
+        `[zanata-ui] Specifying only the "hover" trigger limits the
+        visibilty of the overlay to just mouse users. Consider also including
+        the "focus" trigger so that touch and keyboard only users can see
+        the overlay as well.`)
 
-      props.onMouseOver = createChainedFunction(this.handleMouseOver, this.props.onMouseOver, triggerProps.onMouseOver)
-      props.onMouseOut = createChainedFunction(this.handleMouseOut, this.props.onMouseOut, triggerProps.onMouseOut)
+      props.onMouseOver = createChainedFunction(
+        this.handleMouseOver,
+        this.props.onMouseOver,
+        triggerProps.onMouseOver
+      )
+      props.onMouseOut = createChainedFunction(
+        this.handleMouseOut,
+        this.props.onMouseOut,
+        triggerProps.onMouseOut
+      )
     }
 
     if (isOneOf('focus', this.props.trigger)) {
-      props.onFocus = createChainedFunction(this.handleDelayedShow, this.props.onFocus, triggerProps.onFocus)
-      props.onBlur = createChainedFunction(this.handleDelayedHide, this.props.onBlur, triggerProps.onBlur)
+      props.onFocus = createChainedFunction(
+        this.handleDelayedShow,
+        this.props.onFocus,
+        triggerProps.onFocus
+      )
+      props.onBlur = createChainedFunction(
+        this.handleDelayedHide,
+        this.props.onBlur,
+        triggerProps.onBlur
+      )
     }
 
     return cloneElement(
@@ -202,7 +225,8 @@ OverlayTrigger.propTypes = {
   delayHide: PropTypes.number,
 
   /**
-   * The initial visibility state of the Overlay, for more nuanced visibility control consider
+   * The initial visibility state of the Overlay,
+   * for more nuanced visibility control consider
    * using the Overlay component directly.
    */
   defaultOverlayShown: PropTypes.bool,

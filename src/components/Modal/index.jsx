@@ -49,7 +49,8 @@ export default class Modal extends Component {
         className={modalClasses}
       >
         <div className='dfx aic jcc posr z5 h100p pv1/2'>
-          <div className='dfx fxdc w32 bxsh5 bgcwhite95a mh1/2 mv1 mah100p bdrs3/4 posr tac'>
+          <div className={'dfx fxdc w32 bxsh5 bgcwhite95a' +
+            ' mh1/2 mv1 mah100p bdrs3/4 posr tac'}>
             {close}
             {children}
           </div>

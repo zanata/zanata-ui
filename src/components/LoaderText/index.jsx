@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import warning from 'warning'
 import { mergeClasses, flattenClasses } from '../../utils/styleUtils'
 import Loader from '../Loader'
@@ -28,7 +28,8 @@ const LoaderText = ({
   ...props
 }) => {
   const themed = mergeClasses(classes, theme)
-  warning(!className, 'Please use `theme` instead of `className` to style LoaderText.')
+  warning(!className,
+    'Please use `theme` instead of `className` to style LoaderText.')
   return loading
     ? (<span className={flattenClasses(themed)} {...props}>
         {loadingText} <Loader theme={loaderTheme} size={size} />

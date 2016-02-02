@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
 
-export default class ModalTitle extends React.Component {
+export default class ModalTitle extends Component {
   render () {
     let {
       children,

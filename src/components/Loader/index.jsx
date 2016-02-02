@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import warning from 'warning'
 import { mergeClasses, flattenClasses } from '../../utils/styleUtils'
 import Icon from '../Icon'
@@ -87,12 +87,21 @@ const Loader = ({
     themed.base,
     themed[size]
   )
-  warning(!className, 'Please use `theme` instead of `className` to style Loader.')
+  warning(!className,
+    'Please use `theme` instead of `className` to style Loader.')
   return (
     <span className={flattenClasses(stateTheme)} {...props}>
       <Icon name='dot' className={flattenClasses(dotClasses.base)} />
-      <Icon name='dot' className={flattenClasses(mergeClasses(dotClasses.base, dotClasses.second))} />
-      <Icon name='dot' className={flattenClasses(mergeClasses(dotClasses.base, dotClasses.third))} />
+      <Icon name='dot'
+        className={flattenClasses(
+          mergeClasses(dotClasses.base, dotClasses.second)
+        )}
+      />
+      <Icon name='dot'
+        className={flattenClasses(
+          mergeClasses(dotClasses.base, dotClasses.third)
+        )}
+      />
     </span>
   )
 }

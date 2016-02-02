@@ -34,7 +34,8 @@ class ObjectDataExample extends Component {
       <div className='p1/4'>{label}</div>
     )
   };
-  _renderCell = (cellData, cellDataKey, rowData, rowIndex, columnData, width) => {
+  _renderCell = (cellData, cellDataKey, rowData,
+    rowIndex, columnData, width) => {
     return (
       <div className='p1/4'><input type='text' defaultValue={cellData} /></div>
     )

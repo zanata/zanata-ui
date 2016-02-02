@@ -5,7 +5,10 @@ export default class ModalFooter extends Component {
   render () {
     let { children, ...props } = this.props
     return (
-      <footer {...props} className={cx('fxnone ph1 pv3/4 bgcblack5a tac', props.className)}>
+      <footer
+        className={cx('fxnone ph1 pv3/4 bgcblack5a tac', props.className)}
+        {...props}
+      >
         {children}
       </footer>
     )
@@ -13,5 +16,5 @@ export default class ModalFooter extends Component {
 }
 
 ModalFooter.propTypes = {
-  children: React.PropTypes.node
+  children: PropTypes.node
 }

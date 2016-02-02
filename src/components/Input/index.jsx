@@ -7,7 +7,7 @@ import createChainedFunction from '../../utils/createChainedFunction'
 import KeyComponent from '../KeyComponent'
 import Icon from '../Icon'
 import Loader from '../Loader'
-import Button from '../Button'
+import ButtonLink from '../ButtonLink'
 
 class Input extends KeyComponent {
   state = {
@@ -43,14 +43,17 @@ class Input extends KeyComponent {
     ReactDOM.findDOMNode(this.refs[this.inputId]).focus()
   };
   shouldComponentUpdate (nextProps, nextState) {
-    return !shallowequal(nextProps, this.props) || !shallowequal(nextState, this.state)
+    return !shallowequal(nextProps, this.props) ||
+      !shallowequal(nextState, this.state)
   }
   render () {
     const type = this.props.type || 'text'
     const showReset = this.props.onReset && this.props.resetButton
     const describeId = this.props.description ? this.inputId + '_d' : undefined
-    const inputStatusClass = this.props.status ? 'bdc' + this.props.status : undefined
-    const textStatusClass = this.props.status ? 'c' + this.props.status : undefined
+    const inputStatusClass = this.props.status
+      ? 'bdc' + this.props.status : undefined
+    const textStatusClass = this.props.status
+      ? 'c' + this.props.status : undefined
     const outline = this.props.border === 'outline'
     const underline = this.props.border === 'underline'
     const border = outline || underline
@@ -58,8 +61,10 @@ class Input extends KeyComponent {
     const marginClass = this.props.margin || undefined
     const onFocus = createChainedFunction(this._handleFocus, this.props.onFocus)
     const onBlur = createChainedFunction(this._handleBlur, this.props.onBlur)
-    const onMouseEnter = createChainedFunction(this._handleMouseEnter, this.props.onMouseEnter)
-    const onMouseLeave = createChainedFunction(this._handleMouseLeave, this.props.onMouseLeave)
+    const onMouseEnter =
+      createChainedFunction(this._handleMouseEnter, this.props.onMouseEnter)
+    const onMouseLeave =
+      createChainedFunction(this._handleMouseLeave, this.props.onMouseLeave)
     const iconClasses = cx(
       'z1 posa l0 t0 h100p ph1/4 df aic jcc',
       {
@@ -89,8 +94,10 @@ class Input extends KeyComponent {
         'pr1/4': outline && !showReset && !loading,
         'pr1': showReset || loading,
         'pl1': icon,
-        'bdcsec30': !this.state.hover && !this.state.focused && border && !inputStatusClass,
-        'bdcsec50': this.state.hover && !this.state.focused && border && !inputStatusClass,
+        'bdcsec30': !this.state.hover && !this.state.focused &&
+          border && !inputStatusClass,
+        'bdcsec50': this.state.hover && !this.state.focused &&
+          border && !inputStatusClass,
         'op50': this.props.disabled,
         'bdcpri': this.state.focused && border && !inputStatusClass
       }
@@ -111,12 +118,17 @@ class Input extends KeyComponent {
     )
     // Set as undefined if not available as '' would render an empty span
     const description = this.props.description ? (
-      <p className={descriptionClasses} id={describeId}>{this.props.description}</p>
+      <p className={descriptionClasses} id={describeId}>
+        {this.props.description}
+      </p>
     ) : undefined
     const resetButton = (showReset && this.props.value && !loading) ? (
-      <Button padding='ph1/4' link kind='muted' className={resetClasses} onClick={this._handleReset}>
+      <ButtonLink
+        type='muted'
+        className={resetClasses}
+        onClick={this._handleReset}>
         <span className='sronly'>Reset</span><Icon name='cross' />
-      </Button>
+      </ButtonLink>
     ) : undefined
     const loader = loading ? (
       <span className={loaderClasses}>
@@ -125,7 +137,8 @@ class Input extends KeyComponent {
     ) : undefined
     return (
       <div className={marginClass}>
-        <label className={labelClasses} htmlFor={this.inputId}>{this.props.label}</label>
+        <label className={labelClasses}
+          htmlFor={this.inputId}>{this.props.label}</label>
         <div className='posr'>
           {icon}
           <input

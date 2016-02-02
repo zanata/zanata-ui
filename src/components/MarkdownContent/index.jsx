@@ -8,7 +8,10 @@ export default class MarkdownContent extends Component {
   };
   render () {
     renderer.heading = function (text, level) {
-      return `<h${level} class="${headingClass(level)}" id="${escapeText(text)}">${text}</h${level}>`
+      return `<h${level}
+         class="${headingClass(level)}" id="${escapeText(text)}">
+        ${text}
+      </h${level}>`
     }
     renderer.paragraph = function (text) {
       return `<p class="mb1">${text}</p>`
@@ -26,17 +29,28 @@ export default class MarkdownContent extends Component {
     renderer.code = function (code, lang, escaped) {
       // escaped = true
       if (!lang) {
-        return `<pre class="mv1"><code>${(escaped ? code : escape(code, true))}\n</code></pre>`
+        return `<pre class="mv1"><code>
+          ${(escaped ? code : escape(code, true))}
+          \n</code></pre>`
       } else if (lang === 'example') {
         return `<h4 class="csec50 mt1/2">Example</h4>
                 <div class="mb2 bd bdcsec30">
                   <div class="p1">
                     <div>${code}</div>
                   </div>
-                  <pre class="p1/2 bdt bdcsec30 bgcsec10 fzn1"><code class="${this.options.langPrefix}${escape(lang, true)}">${escape(code, true)}\n</code></pre>\n
+                  <pre class="p1/2 bdt bdcsec30 bgcsec10 fzn1">
+                    <code
+                      class="${this.options.langPrefix}${escape(lang, true)}">
+                      ${escape(code, true)}\n
+                    </code>
+                  </pre>\n
                 </div>`
       } else {
-        return `<pre class="mv1"><code class="${this.options.langPrefix}${escape(lang, true)}">${(escaped ? code : escape(code, true))}\n</code></pre>\n`
+        return `<pre class="mv1">
+          <code class="${this.options.langPrefix}${escape(lang, true)}">
+            ${(escaped ? code : escape(code, true))}\n
+          </code>
+        </pre>\n`
       }
     }
 
