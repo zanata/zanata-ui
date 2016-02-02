@@ -3,6 +3,7 @@
 /* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
 
 var React = require('react');
+import ReactDOM from 'react-dom'
 var Input = require('react-input-autosize');
 var cx = require('classnames');
 var Icon = require('../../Icon');
@@ -114,8 +115,8 @@ var Select = React.createClass({
 			if (!this.state.isOpen) {
 				return;
 			}
-			var menuElem = React.findDOMNode(this.refs.selectMenuContainer);
-			var controlElem = React.findDOMNode(this.refs.control);
+			var menuElem = ReactDOM.findDOMNode(this.refs.selectMenuContainer);
+			var controlElem = ReactDOM.findDOMNode(this.refs.control);
 
 			var eventOccuredOutsideMenu = this.clickedOutsideElement(menuElem, event);
 			var eventOccuredOutsideControl = this.clickedOutsideElement(controlElem, event);
@@ -192,8 +193,8 @@ var Select = React.createClass({
 		}
 		if (this._focusedOptionReveal) {
 			if (this.refs.focused && this.refs.menu) {
-				var focusedDOM = React.findDOMNode(this.refs.focused);
-				var menuDOM = React.findDOMNode(this.refs.menu);
+				var focusedDOM = ReactDOM.findDOMNode(this.refs.focused);
+				var menuDOM = ReactDOM.findDOMNode(this.refs.menu);
 				var focusedRect = focusedDOM.getBoundingClientRect();
 				var menuRect = menuDOM.getBoundingClientRect();
 
@@ -334,7 +335,7 @@ var Select = React.createClass({
 
 	getInputNode: function () {
 		var input = this.refs.input;
-		return this.props.searchable ? input : React.findDOMNode(input);
+		return this.props.searchable ? input : ReactDOM.findDOMNode(input);
 	},
 
 	fireChangeEvent: function(newState) {

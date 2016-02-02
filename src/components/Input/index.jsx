@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import ReactDOM from 'react-dom'
 import cx from 'classnames'
 import { uniqueId, camelCase } from 'lodash'
 import shallowequal from 'shallowequal'
@@ -39,7 +40,7 @@ class Input extends KeyComponent {
   // Non Standard Events
   _handleReset = () => {
     this.props.onReset()
-    React.findDOMNode(this.refs[this.inputId]).focus()
+    ReactDOM.findDOMNode(this.refs[this.inputId]).focus()
   };
   shouldComponentUpdate (nextProps, nextState) {
     return !shallowequal(nextProps, this.props) || !shallowequal(nextState, this.state)

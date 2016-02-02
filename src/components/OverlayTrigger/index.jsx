@@ -43,7 +43,7 @@ class OverlayTrigger extends Component {
     }
   };
   getOverlayTarget = () => {
-    return React.findDOMNode(this)
+    return ReactDOM.findDOMNode(this)
   };
   getOverlay = () => {
     let overlayProps = {
