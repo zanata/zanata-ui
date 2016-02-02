@@ -61,12 +61,13 @@ function main (argv, callback) {
     process.stdout.write('Please enter an input file `-i <filepath>`')
     return callback()
   } else {
-    var data = extractCssComments(input)
-    if (!output) {
-      process.stdout.write(data + '\n')
-      return callback()
-    }
-    return fs.writeFile(output, data, callback)
+    extractCssComments(input, function(comments) {
+      if (!output) {
+        process.stdout.write(data + '\n')
+        return callback()
+      }
+      return fs.writeFile(output, comments, callback)
+    })
   }
 }
 

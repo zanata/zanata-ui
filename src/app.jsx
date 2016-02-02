@@ -1,5 +1,7 @@
 import React from 'react'
-import css from './styles/index.css' // eslint-disable-line
+import ReactDOM from 'react-dom'
+import './styles/index.css' // eslint-disable-line
+import './styles/atomic.css' // eslint-disable-line
 import Router from 'react-router'
 import { DefaultRoute, Link, Route, RouteHandler } from 'react-router'
 import Icons from './components/Icons'
@@ -52,5 +54,5 @@ let routes = (
 )
 
 Router.run(routes, Router.HashLocation, (Root) => {
-  React.render(<Root/>, document.getElementById('app'))
+  ReactDOM.render(<Root/>, document.getElementById('app'))
 })

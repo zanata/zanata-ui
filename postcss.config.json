@@ -1,0 +1,14 @@
+{
+  "use": [
+    "postcss-import",
+    "postcss-url",
+    "postcss-cssnext",
+    "postcss-browser-reporter",
+    "postcss-reporter"
+  ],
+  "input": "src/styles/index.css",
+  "output": "lib/styles/index.css",
+  "autoprefixer": {
+    "browsers": "> 5%"
+  }
+}
