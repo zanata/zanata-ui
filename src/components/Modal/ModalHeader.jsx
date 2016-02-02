@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
 
-export default class ModalHeader extends React.Component {
-  static propTypes = {
-    children: React.PropTypes.node
-  }
+export default class ModalHeader extends Component {
   render () {
-    let { children, ...props } = this.props
+    const {
+      children,
+      ...props
+    } = this.props
     return (
       <header {...props} className={cx('p1', props.className)}>
         {children}
       </header>
     )
   }
+}
+
+ModalHeader.propTypes = {
+  children: PropTypes.node
 }

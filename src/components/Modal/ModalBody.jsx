@@ -1,17 +1,7 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
 
-const { node, bool, string } = React.PropTypes
-
-export default class ModalBody extends React.Component {
-  static propTypes = {
-    scrollable: bool,
-    className: string,
-    children: node
-  }
-  static defaultProps = {
-    scrollable: true
-  }
+export default class ModalBody extends Component {
   render () {
     const { children,
             className,
@@ -29,4 +19,13 @@ export default class ModalBody extends React.Component {
       </div>
     )
   }
+}
+
+ModalBody.propTypes = {
+  scrollable: PropTypes.bool,
+  className: PropTypes.string,
+  children: PropTypes.node
+}
+ModalBody.defaultProps = {
+  scrollable: true
 }

@@ -1,67 +1,9 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
 import { isRequiredForA11y } from 'react-prop-types'
 import { capitalize } from 'lodash'
 
-const { oneOf, oneOfType, string, number, bool, node, object } = React.PropTypes
-
-export default class Tooltip extends React.Component {
-  static propTypes = {
-    /**
-     * An html id attribute, necessary for accessibility
-     * @type {string}
-     * @required
-     */
-    id: isRequiredForA11y(
-      oneOfType([
-        string,
-        number
-      ])
-    ),
-    /**
-     * The direction the tooltip is positioned towards
-     */
-    placement: oneOf(['top', 'right', 'bottom', 'left']),
-    /**
-     * The `left` position value for the tooltip
-     */
-    positionLeft: number,
-    /**
-     * The `top` position value for the tooltip
-     */
-    positionTop: number,
-    /**
-     * The `left` position value for the tooltip arrow
-     */
-    arrowOffsetLeft: oneOfType([
-      number, string
-    ]),
-    /**
-     * The `top` position value for the tooltip arrow
-     */
-    arrowOffsetTop: oneOfType([
-      number, string
-    ]),
-    /**
-     * How to align the tooltip contents
-     */
-    alignment: oneOf(['center', 'left', 'right']),
-    /**
-     * The title of the tooltip
-     */
-    title: string,
-    /**
-     * Should this use the dark version of this component
-     */
-    inverse: bool,
-    className: string,
-    style: object,
-    children: node
-  }
-  static defaultProps = {
-    placement: 'top',
-    alignment: 'center'
-  }
+export default class Tooltip extends Component {
   render () {
     const {
       placement,
@@ -87,7 +29,7 @@ export default class Tooltip extends React.Component {
         case 'right': return 'left'
         default: return
       }
-    }()
+    }
     let extraTooltipStyle = () => {
       switch (placement) {
         case 'top': return { marginTop: -arrowSize }
@@ -95,7 +37,7 @@ export default class Tooltip extends React.Component {
         case 'left': return { marginLeft: -arrowSize }
         case 'right': return { marginLeft: arrowSize }
       }
-    }()
+    }
     const tooltipClasses = cx(
       className,
       'ffsans posa z4 fzn1',
@@ -106,7 +48,7 @@ export default class Tooltip extends React.Component {
       left: positionLeft,
       top: positionTop,
       maxWidth: '16rem',
-      ...extraTooltipStyle,
+      ...extraTooltipStyle(),
       ...style
     }
     const tooltipInnerClasses = cx(
@@ -120,17 +62,17 @@ export default class Tooltip extends React.Component {
       'posa db w0 h0 bdss bdctrans z1'
     )
     const tooltipArrowStyle = {
-      [placementInverse]: -arrowSize,
+      [placementInverse()]: -arrowSize,
       borderWidth: arrowSize,
       [(placement === 'left' || placement === 'right') ? 'marginTop' : 'marginLeft']: -(arrowSize + 1),
-      ['border' + capitalize(placementInverse) + 'Width']: 0,
+      ['border' + capitalize(placementInverse()) + 'Width']: 0,
       ['border' + capitalize(placement) + 'Color']: inverse ? 'transparent' : 'rgb(210,226,231)'
     }
     const tooltipArrowInnerStyle = {
       borderWidth: arrowSize,
-      [placementInverse]: inverse ? 0 : 1,
+      [placementInverse()]: inverse ? 0 : 1,
       [(placement === 'left' || placement === 'right') ? 'bottom' : 'marginLeft']: -arrowSize,
-      ['border' + capitalize(placementInverse) + 'Width']: 0,
+      ['border' + capitalize(placementInverse()) + 'Width']: 0,
       ['border' + capitalize(placement) + 'Color']: inverse ? 'rgba(0,0,0,.8)' : '#fff'
     }
     const tooltipTitleClasses = cx(
@@ -163,4 +105,64 @@ export default class Tooltip extends React.Component {
       </div>
     )
   }
+}
+
+Tooltip.propTypes = {
+  /**
+   * An html id attribute, necessary for accessibility
+   * @type {string}
+   * @required
+   */
+  id: isRequiredForA11y(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ])
+  ),
+  /**
+   * The direction the tooltip is positioned towards
+   */
+  placement: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+  /**
+   * The `left` position value for the tooltip
+   */
+  positionLeft: PropTypes.number,
+  /**
+   * The `top` position value for the tooltip
+   */
+  positionTop: PropTypes.number,
+  /**
+   * The `left` position value for the tooltip arrow
+   */
+  arrowOffsetLeft: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
+  /**
+   * The `top` position value for the tooltip arrow
+   */
+  arrowOffsetTop: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
+  /**
+   * How to align the tooltip contents
+   */
+  alignment: PropTypes.oneOf(['center', 'left', 'right']),
+  /**
+   * The title of the tooltip
+   */
+  title: PropTypes.string,
+  /**
+   * Should this use the dark version of this component
+   */
+  inverse: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.node
+}
+
+Tooltip.defaultProps = {
+  placement: 'top',
+  alignment: 'center'
 }

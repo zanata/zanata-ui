@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component, PropTypes }from 'react'
 import { Modal as OverlayModal } from 'react-overlays'
 import cx from 'classnames'
 import Header from './ModalHeader'
@@ -6,6 +6,7 @@ import Title from './ModalTitle'
 import Body from './ModalBody'
 import Footer from './ModalFooter'
 import Icon from '../Icon'
+import ButtonLink from '../ButtonLink'
 
 const commonClasses = cx(
   'posf a0'
@@ -21,21 +22,24 @@ const backdropClasses = cx(
   'z4 bgcblack op50'
 )
 
-class Modal extends React.Component {
-  static propTypes = {
-    children: React.PropTypes.node,
-    closeButton: React.PropTypes.bool
-  }
-  static defaultProps = {
-    closeButton: true,
-    closeLabel: 'Close'
-  }
+export default class Modal extends Component {
   render () {
     let { children, closeButton, ...props } = this.props
     let close = closeButton ? (
-      <button aria-label={props.closeLabel} className='posa r0 t0 p1/2 dfx aic jcc csec70a z1' onClick={props.onHide}>
+      <ButtonLink aria-label={props.closeLabel}
+        theme={{
+          base: {
+            pos: 'Pos(a)',
+            e: 'End(0)',
+            t: 'T(0)',
+            p: 'P(rh)',
+            z: 'Z(1)'
+          }
+        }}
+        type='muted'
+        onClick={props.onHide}>
         <Icon name='cross' size='2' className='op70'/>
-      </button>
+      </ButtonLink>
     ) : undefined
     return (
       <OverlayModal
@@ -60,4 +64,11 @@ Modal.Title = Title
 Modal.Body = Body
 Modal.Footer = Footer
 
-export default Modal
+Modal.propTypes = {
+  children: PropTypes.node,
+  closeButton: PropTypes.bool
+}
+Modal.defaultProps = {
+  closeButton: true,
+  closeLabel: 'Close'
+}

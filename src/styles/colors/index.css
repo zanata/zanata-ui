@@ -1,3 +1,7 @@
+@import './lib/colors';
+@import './lib/background';
+@import './lib/border';
+
 :root {
   --primary   : hsl(194, 97%, 43%);
   --secondary : hsl(194, 62%, 33%);
@@ -10,7 +14,3 @@
   --danger    : hsl(359, 100%, 62%);
   --neutral   : hsl(195, 32%, 80%);
 }
-
-@import './lib/colors';
-@import './lib/background';
-@import './lib/border';

@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class Icons extends React.Component {
+class Icons extends Component {
   render () {
     function icons() {
       return {__html: {{svgFile: 'icons.svg'}}}
     }
     return (
-      <div className='posa' dangerouslySetInnerHTML={icons()} />
+      <div className='Pos(a)' dangerouslySetInnerHTML={icons()} />
     )
   }
 }

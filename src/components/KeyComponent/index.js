@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Combokeys from 'combokeys'
 import CombokeysGlobal from 'combokeys/plugins/global-bind'
 import CombokeysBindDictionary from 'combokeys/plugins/bind-dictionary'
@@ -6,9 +6,9 @@ import CombokeysBindDictionary from 'combokeys/plugins/bind-dictionary'
 let combokeys = new Combokeys(document)
 combokeys = CombokeysBindDictionary(CombokeysGlobal(combokeys))
 
-class KeyComponent extends React.Component {
+class KeyComponent extends Component {
   // Array for keeping track of shortcuts bindings
-  keyboardBindings = []
+  keyboardBindings = [];
   /**
    * Bind a function to a keyboard shortcut
    *
@@ -18,7 +18,7 @@ class KeyComponent extends React.Component {
   bindShortcut = (key, callback) => {
     combokeys.bind(key, callback)
     this.keyboardBindings.push(key)
-  }
+  };
     /**
    * Bind a function to a keyboard shortcut, even inside an input field
    *
@@ -28,7 +28,7 @@ class KeyComponent extends React.Component {
   bindGlobalShortcut = (key, callback) => {
     combokeys.bindGlobal(key, callback)
     this.keyboardBindings.push(key)
-  }
+  };
   /**
    * Unbind a keyboard shortcut
    *
@@ -40,7 +40,7 @@ class KeyComponent extends React.Component {
       this.keyboardBindings.splice(index, 1)
     }
     combokeys.unbind(key)
-  }
+  };
   /**
    * Remove any keyboard bindings
    */
@@ -51,7 +51,7 @@ class KeyComponent extends React.Component {
     this.keyboardBindings.forEach(function (binding) {
       combokeys.unbind(binding)
     })
-  }
+  };
   /**
    * Handle component unmount
    */

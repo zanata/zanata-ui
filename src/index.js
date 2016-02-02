@@ -1,5 +1,7 @@
 export Select from './components/Select/lib/Select'
 export Button from './components/Button'
+export ButtonLink from './components/ButtonLink'
+export ButtonRound from './components/ButtonRound'
 export Input from './components/Input'
 export Icons from './components/Icons'
 export Icon from './components/Icon'

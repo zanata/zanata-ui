@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import cx from 'classnames'
 import { uniqueId, camelCase } from 'lodash'
 import shallowequal from 'shallowequal'
@@ -8,43 +8,12 @@ import Icon from '../Icon'
 import Loader from '../Loader'
 import Button from '../Button'
 
-const { string, func, bool, oneOf } = React.PropTypes
-
 class Input extends KeyComponent {
-  static propTypes = {
-    label: string.isRequired,
-    placeholder: string.isRequired,
-    description: string,
-    type: string,
-    value: string,
-    id: string,
-    status: string,
-    icon: string,
-    border: oneOf(['none', 'outline', 'underline']),
-    disabled: bool,
-    margin: string,
-    hideLabel: bool,
-    resetButton: bool,
-    loading: bool,
-    className: string,
-    onChange: func,
-    onFocus: func,
-    onBlur: func,
-    onReset: func,
-    onMouseEnter: func,
-    onMouseLeave: func
-  }
-  static defaultProps = {
-    border: 'none'
-  }
   state = {
     focused: false,
     hover: false
-  }
-  inputId = this.props.id || uniqueId(camelCase(this.props.label) + '_')
-  shouldComponentUpdate (nextProps, nextState) {
-    return !shallowequal(nextProps, this.props) || !shallowequal(nextState, this.state)
-  }
+  };
+  inputId = this.props.id || uniqueId(camelCase(this.props.label) + '_');
   _handleFocus = () => {
     if (!this.props.disabled) {
       this.setState({focused: true})
@@ -52,25 +21,28 @@ class Input extends KeyComponent {
         this.bindGlobalShortcut('esc', this._handleReset)
       }
     }
-  }
+  };
   _handleBlur = () => {
     this.setState({focused: false})
     if (this.props.onReset) {
       this.unbindShortcut('esc')
     }
-  }
+  };
   _handleMouseEnter = () => {
     if (!this.props.disabled) {
       this.setState({hover: true})
     }
-  }
+  };
   _handleMouseLeave = () => {
     this.setState({hover: false})
-  }
+  };
   // Non Standard Events
   _handleReset = () => {
     this.props.onReset()
     React.findDOMNode(this.refs[this.inputId]).focus()
+  };
+  shouldComponentUpdate (nextProps, nextState) {
+    return !shallowequal(nextProps, this.props) || !shallowequal(nextState, this.state)
   }
   render () {
     const type = this.props.type || 'text'
@@ -174,6 +146,34 @@ class Input extends KeyComponent {
     )
   }
 
+}
+
+Input.propTypes = {
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  id: PropTypes.string,
+  status: PropTypes.string,
+  icon: PropTypes.string,
+  border: PropTypes.oneOf(['none', 'outline', 'underline']),
+  disabled: PropTypes.bool,
+  margin: PropTypes.string,
+  hideLabel: PropTypes.bool,
+  resetButton: PropTypes.bool,
+  loading: PropTypes.bool,
+  className: PropTypes.string,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onReset: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
+}
+
+Input.defaultProps = {
+  border: 'none'
 }
 
 export default Input

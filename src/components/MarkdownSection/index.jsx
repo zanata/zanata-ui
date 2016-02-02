@@ -1,10 +1,9 @@
-
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import nets from 'nets'
 import MarkdownMenu from '../MarkdownMenu'
 import MarkdownContent from '../MarkdownContent'
 
-class MarkdownSection extends React.Component {
+export default class MarkdownSection extends Component {
   constructor () {
     super()
     this.state = {
@@ -40,8 +39,6 @@ class MarkdownSection extends React.Component {
 }
 
 MarkdownSection.propTypes = {
-  fileName: React.PropTypes.string,
-  content: React.PropTypes.string
+  fileName: PropTypes.string,
+  content: PropTypes.string
 }
-
-export default MarkdownSection

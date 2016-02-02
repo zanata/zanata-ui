@@ -10,6 +10,13 @@
   --base-form-color-placeholder-focus: hsl(194, 30%, 86%);
 }
 
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 /**
  * DOC
  *
@@ -29,10 +36,14 @@ input[type="submit"] {
 
 /* Reset buttons so they can be used like links */
 button {
-  background: transparent;
+  background-color: transparent;
   border: 0;
+  cursor: pointer;
   padding: 0;
   text-align: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /**

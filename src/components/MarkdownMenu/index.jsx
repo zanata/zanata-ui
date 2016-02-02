@@ -1,10 +1,8 @@
-'use strict'
-
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import { lexer } from 'marked'
 
-class MarkdownMenu extends React.Component {
+class MarkdownMenu extends Component {
 
   render () {
     let parsedMarkdown = lexer(this.props.markdown)
@@ -49,7 +47,7 @@ class MarkdownMenu extends React.Component {
 }
 
 MarkdownMenu.propTypes = {
-  markdown: React.PropTypes.string
+  markdown: PropTypes.string
 }
 
 function escapeText (text) {

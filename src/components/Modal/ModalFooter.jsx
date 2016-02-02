@@ -1,10 +1,7 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
 
-export default class ModalFooter extends React.Component {
-  static propTypes = {
-    children: React.PropTypes.node
-  }
+export default class ModalFooter extends Component {
   render () {
     let { children, ...props } = this.props
     return (
@@ -13,4 +10,8 @@ export default class ModalFooter extends React.Component {
       </footer>
     )
   }
+}
+
+ModalFooter.propTypes = {
+  children: React.PropTypes.node
 }

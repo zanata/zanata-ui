@@ -1,8 +1,6 @@
-'use strict'
+import React, { Component, PropTypes } from 'react'
 
-import React from 'react'
-
-class MenuItem extends React.Component {
+export default class MenuItem extends Component {
   render () {
     return (
       <li><a href={this.props.link}>{this.props.text}</a></li>
@@ -11,8 +9,6 @@ class MenuItem extends React.Component {
 }
 
 MenuItem.propTypes = {
-  link: React.PropTypes.string,
-  text: React.PropTypes.string
+  link: PropTypes.string,
+  text: PropTypes.string
 }
-
-export default MenuItem

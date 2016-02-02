@@ -1,36 +1,28 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import marked from 'marked'
 let renderer = new marked.Renderer()
 
-export default class MarkdownContent extends React.Component {
-  static propTypes = {
-    markdown: React.PropTypes.string
-  }
+export default class MarkdownContent extends Component {
   renderedMarkdown = () => {
     return {__html: marked(this.props.markdown, { renderer: renderer })}
-  }
+  };
   render () {
     renderer.heading = function (text, level) {
       return `<h${level} class="${headingClass(level)}" id="${escapeText(text)}">${text}</h${level}>`
     }
-
     renderer.paragraph = function (text) {
       return `<p class="mb1">${text}</p>`
     }
-
     renderer.hr = function () {
       return '<hr>\n'
     }
-
     renderer.list = function (body, ordered) {
       var type = ordered ? 'ol' : 'ul'
       return '<' + type + ' class="mb1">\n' + body + '</' + type + '>\n'
     }
-
     renderer.listitem = function (text) {
       return '<li class="listd">' + text + '</li>\n'
     }
-
     renderer.code = function (code, lang, escaped) {
       // escaped = true
       if (!lang) {
@@ -84,4 +76,8 @@ function headingClass (level) {
     default:
       return ''
   }
+}
+
+MarkdownContent.propTypes = {
+  markdown: PropTypes.string
 }

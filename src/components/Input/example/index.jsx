@@ -6,10 +6,10 @@ export default class InputExample extends React.Component {
     myinput: '',
     loadingInput: '',
     loading: false
-  }
+  };
   _handleInputChange = (event) => {
     console.log(event.target.value)
-  }
+  };
   _handleLoadingChange = (event) => {
     this.setState({loading: true, loadingInput: event.target.value})
     console.log(this.state)
@@ -17,23 +17,23 @@ export default class InputExample extends React.Component {
       this.setState({loading: false})
       console.log(this.state)
     }, 500)
-  }
+  };
   _handleInputFocus = (customIndex) => {
     return (event) => {
       console.info('focus', this, customIndex, event)
     }
-  }
+  };
   _handleResetExampleChange = (event) => {
     this.setState({ myinput: event.target.value })
-  }
+  };
   _handleReset = () => {
     console.log('Reset')
     this.setState({ myinput: '' })
-  }
+  };
   _handleLoadingReset = () => {
     console.log('Reset')
     this.setState({ loadingInput: '' })
-  }
+  };
   render () {
     return (
       <div>

@@ -3,7 +3,7 @@ import InputExample from '../Input/example'
 import Icons from '../Icons'
 import Icon from '../Icon'
 import Loader from '../Loader'
-import Button from '../Button'
+import ButtonRound from '../ButtonRound'
 import ButtonExample from '../Button/example'
 import OverlayTrigger from '../OverlayTrigger'
 import Tooltip from '../Tooltip'
@@ -38,10 +38,17 @@ export default class App extends React.Component {
         <p className='mb1'>More to come</p>
         <h2 className='fz4 fwl mb1 csec'>Loader</h2>
         <div className='mb1 dfx aic'>
-          Default loader size: <span className='p1/4 bgcsec10 bdrs ml1/2 mr1 h1&1/2 w1&1/2 difx aic jcc'><Loader /></span> Size 5 Loader: <Loader className='dib ml1/2' size={5}/>
+          Default loader size:
+          <span className='p1/4 bgcsec10 bdrs ml1/2 mr1 h1&1/2 w1&1/2 difx aic jcc'>
+            <Loader />
+          </span>
+          Size 5 Loader:
+          <span className='dib ml1/2'>
+            <Loader size='5'/>
+          </span>
         </div>
-        <div className='mb1 dfx aic'>
-          Size 10 loader: <Loader size={10} className='ml1/2'/>
+        <div className='mb1 ml1/2 dfx aic'>
+          Size 10 loader: <Loader size='10' />
         </div>
         <h2 className='fz4 fwl mb1 csec'>Forms</h2>
         <h3 className='fz3 fwsb mb1/2 csec'>Inputs</h3>
@@ -58,25 +65,25 @@ export default class App extends React.Component {
         <h3 className='fz3 fwsb mb1/2 csec'>Tooltip</h3>
         <div className='mb1'>
           <OverlayTrigger trigger='click' overlay={tooltip}>
-            <Button kind='default'> Show a tooltip on click</Button>
+            <ButtonRound type='default'> Show a tooltip on click</ButtonRound>
           </OverlayTrigger>
         </div>
         <div className='mb2'>
           <OverlayTrigger placement='bottom' overlay={tooltip}>
-            <Button kind='success'> Show a bottom tooltip</Button>
+            <ButtonRound type='success'> Show a bottom tooltip</ButtonRound>
           </OverlayTrigger>
         </div>
         <div className='mb1 dfx jcsb'>
           <OverlayTrigger placement='right' trigger='click' overlay={tooltipInverse}>
-            <Button kind='unsure'> Show a right tooltip with inverse tooltip on click</Button>
+            <ButtonRound type='unsure'> Show a right tooltip with inverse tooltip on click</ButtonRound>
           </OverlayTrigger>
           <OverlayTrigger placement='left' overlay={tooltipWithTitle}>
-            <Button kind='danger' disabled> Show a left tooltip with title</Button>
+            <ButtonRound type='danger' disabled> Show a left tooltip with title</ButtonRound>
           </OverlayTrigger>
         </div>
         <div className='mb2'>
           <OverlayTrigger trigger='click' overlay={tooltipInverseWithTitle}>
-            <Button kind='warning'> Show a inverse tooltip with title</Button>
+            <ButtonRound type='warning'> Show a inverse tooltip with title</ButtonRound>
           </OverlayTrigger>
         </div>
         <div className='mb2'>
