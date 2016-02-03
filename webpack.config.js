@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!postcss-loader'
+        loader: 'style!css!postcss?parser=postcss-safe-parser'
       }
     ]
   },
@@ -36,9 +36,9 @@ module.exports = {
       require('postcss-import')({ addDependencyTo: webpack }),
       require('postcss-url')(),
       require('postcss-cssnext')(),
-      // require('autoprefixer')(),
+      require('autoprefixer')(),
       require('postcss-browser-reporter')(),
-      require('postcss-reporter')(),
+      require('postcss-reporter')()
     ]
   },
   resolve: {

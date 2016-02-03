@@ -3,11 +3,13 @@
     "postcss-import",
     "postcss-url",
     "postcss-cssnext",
+    "autoprefixer",
     "postcss-browser-reporter",
     "postcss-reporter"
   ],
   "input": "src/styles/index.css",
   "output": "lib/styles/index.css",
+  "parser": "postcss-safe-parser",
   "autoprefixer": {
     "browsers": "> 5%"
   }
