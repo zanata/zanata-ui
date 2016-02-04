@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import warning from 'warning'
 import Button from '../Button'
 import { mergeClasses } from '../../utils/styleUtils'
 
@@ -91,6 +92,7 @@ const ButtonRound = ({
   theme,
   type = 'default',
   size = '0',
+  className,
   ...props
 }) => {
   const themed = mergeClasses(classes, theme)
@@ -101,11 +103,13 @@ const ButtonRound = ({
       themed[size]
     )
   }
+  warning(!className,
+    'Please use `theme` instead of `className` to style ButtonRound.')
   return (
     <Button
+      {...props}
       disabled={disabled}
       theme={stateTheme}
-      {...props}
     >
       {children}
     </Button>

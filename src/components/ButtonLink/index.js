@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import warning from 'warning'
 import Button from '../Button'
 import { mergeClasses } from '../../utils/styleUtils'
 
@@ -14,9 +15,6 @@ const classes = {
     },
     active: {
       filter: 'Brightness(.5):a'
-    },
-    disabled: {
-      c: 'C(pri):di'
     }
   },
   default: {
@@ -47,6 +45,7 @@ const ButtonLink = ({
   disabled,
   theme,
   type = 'default',
+  className,
   ...props
 }) => {
   const themed = mergeClasses(classes, theme)
@@ -56,11 +55,13 @@ const ButtonLink = ({
       ...(type && themed[type])
     }
   }
+  warning(!className,
+    'Please use `theme` instead of `className` to style ButtonLink.')
   return (
     <Button
+      {...props}
       disabled={disabled}
       theme={stateTheme}
-      {...props}
     >
       {children}
     </Button>
