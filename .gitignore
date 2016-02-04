@@ -6,4 +6,5 @@
 /src/components/Icons/icons.svg
 /src/components/Icons/index.jsx
 stats.json
-atomic.css
+/src/styles/atomic.css
+variables.json

@@ -5,6 +5,7 @@ import Icon from '../Icon'
 import Loader from '../Loader'
 import ButtonRound from '../ButtonRound'
 import ButtonExample from '../Button/example'
+import SelectExample from '../Select/example'
 import OverlayTrigger from '../OverlayTrigger'
 import Tooltip from '../Tooltip'
 
@@ -111,6 +112,9 @@ export default class App extends React.Component {
         </div>
         <div className='mb2'>
           <ButtonExample />
+        </div>
+        <div className='mb2'>
+          <SelectExample />
         </div>
       </div>
     )

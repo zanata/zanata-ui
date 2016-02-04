@@ -1,4 +1,4 @@
-export Select from './components/Select/lib/Select'
+export Select from './components/Select'
 export Button from './components/Button'
 export ButtonLink from './components/ButtonLink'
 export ButtonRound from './components/ButtonRound'
