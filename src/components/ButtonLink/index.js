@@ -48,7 +48,6 @@ const ButtonLink = ({
   className,
   ...props
 }) => {
-  console.log(theme, classes)
   const themed = mergeClasses(classes, theme)
   const stateTheme = {
     base: mergeClasses(
