@@ -155,7 +155,7 @@
   position: relative;
   text-align: center;
   vertical-align: middle;
-  width: 1.33333em; }
+  width: 1.6em; }
   .Select-clear-zone:hover {
     color: #ea4356; }
 
@@ -165,7 +165,7 @@
   line-height: 1; }
 
 .Select--multi .Select-clear-zone {
-  width: 1.33333em; }
+  width: 1.6em; }
 
 .Select-arrow-zone {
   cursor: pointer;
