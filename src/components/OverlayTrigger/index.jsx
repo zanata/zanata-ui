@@ -133,7 +133,7 @@ class OverlayTrigger extends Component {
     ReactDOM.render(this._overlay, this._mountNode)
   }
   componentWillUnmount () {
-    React.unmountComponentAtNode(this._mountNode)
+    ReactDOM.unmountComponentAtNode(this._mountNode)
     this._mountNode = null
     clearTimeout(this._hoverDelay)
   }
