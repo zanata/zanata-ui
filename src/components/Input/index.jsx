@@ -4,10 +4,34 @@ import cx from 'classnames'
 import { uniqueId, camelCase } from 'lodash'
 import shallowequal from 'shallowequal'
 import createChainedFunction from '../../utils/createChainedFunction'
+import { mergeClasses, flattenClasses } from '../../utils/styleUtils'
 import KeyComponent from '../KeyComponent'
 import Icon from '../Icon'
 import Loader from '../Loader'
 import ButtonLink from '../ButtonLink'
+
+const resetTheme = {
+  base: {
+    end: 'End(0)',
+    h: 'H(100%)',
+    pos: 'Pos(a)',
+    t: 'T(0)',
+    w: 'W(r1h)',
+    z: 'Z(1)'
+  }
+}
+const loaderTheme = mergeClasses(
+  resetTheme,
+  {
+    base: {
+      ai: 'Ai(c)',
+      c: 'C(dark)',
+      d: 'D(f)',
+      jc: 'Jc(c)',
+      p: 'Pend(re)'
+    }
+  }
+)
 
 class Input extends KeyComponent {
   state = {
@@ -92,7 +116,7 @@ class Input extends KeyComponent {
         'pl1/4': outline && !icon,
         'bdb2': underline,
         'pr1/4': outline && !showReset && !loading,
-        'pr1': showReset || loading,
+        'pr1&1/2': showReset || loading,
         'pl1': icon,
         'bdcsec30': !this.state.hover && !this.state.focused &&
           border && !inputStatusClass,
@@ -109,13 +133,6 @@ class Input extends KeyComponent {
         'csec': !this.props.status
       }
     )
-    const resetClasses = cx(
-      'z1 posa r0 t0 h100p'
-    )
-    const loaderClasses = cx(
-      resetClasses,
-      'csec df aic jcc w1 pr1/8'
-    )
     // Set as undefined if not available as '' would render an empty span
     const description = this.props.description ? (
       <p className={descriptionClasses} id={describeId}>
@@ -125,13 +142,13 @@ class Input extends KeyComponent {
     const resetButton = (showReset && this.props.value && !loading) ? (
       <ButtonLink
         type='muted'
-        className={resetClasses}
+        theme={resetTheme}
         onClick={this._handleReset}>
         <span className='sronly'>Reset</span><Icon name='cross' />
       </ButtonLink>
     ) : undefined
     const loader = loading ? (
-      <span className={loaderClasses}>
+      <span className={flattenClasses(loaderTheme)}>
         <Loader/>
       </span>
     ) : undefined

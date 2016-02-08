@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './styles/index.css'
+import '../lib/styles/index.css'
 import Router from 'react-router'
 import { DefaultRoute, Link, Route, RouteHandler } from 'react-router'
 import Icons from './components/Icons'

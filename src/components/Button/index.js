@@ -16,7 +16,7 @@ const classes = {
 const Button = ({
   children,
   disabled,
-  theme,
+  theme = {},
   className,
   ...props
 }) => {

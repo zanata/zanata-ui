@@ -1,5 +1,4 @@
 var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var _ = require('lodash')
 var defaultConfig = require('./webpack.config.js')
 
@@ -10,16 +9,11 @@ module.exports = _.merge({}, defaultConfig, {
       defaultConfig.module.loaders[0],
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
-          'style',
-          'css?safe',
-          'postcss'
-        )
+        loader: 'style!css?safe'
       }
     ]
   },
   plugins: defaultConfig.plugins.concat([
-    new ExtractTextPlugin('bundle.css'),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {

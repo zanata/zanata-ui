@@ -21,7 +21,7 @@
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run build",
     "preversion": "npm run clean && npm run check",
-    "start": "npm run build:styleguide & npm run build:icons & npm run build:sass && npm run hot-dev-server",
+    "start": "npm run build:css & npm run build:styleguide & npm run build:icons && npm run hot-dev-server",
     "svg": "svg-sprite -sD src/components/Icons --symbol-dest '' --ss icons.svg --si src/components/Icons/svgs/*.svg",
     "test": "echo \"Tests coming soon\"",
     "variables": "node utils/writeVariablesJson",

@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css!postcss?parser=postcss-safe-parser'
+        loader: 'style!css?safe'
       }
     ]
   },
@@ -31,16 +31,6 @@ module.exports = {
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new webpack.NoErrorsPlugin()
   ],
-  postcss: function (webpack) {
-    return [
-      require('postcss-import')({ addDependencyTo: webpack }),
-      require('postcss-url')(),
-      require('postcss-cssnext')(),
-      require('autoprefixer')(),
-      require('postcss-browser-reporter')(),
-      require('postcss-reporter')()
-    ]
-  },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json', '.css']
   },

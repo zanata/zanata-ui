@@ -89,7 +89,7 @@ const classes = {
 const ButtonRound = ({
   children,
   disabled,
-  theme,
+  theme = {},
   type = 'default',
   size = '0',
   className,

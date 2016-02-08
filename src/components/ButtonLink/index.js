@@ -43,17 +43,18 @@ const classes = {
 const ButtonLink = ({
   children,
   disabled,
-  theme,
+  theme = {},
   type = 'default',
   className,
   ...props
 }) => {
+  console.log(theme, classes)
   const themed = mergeClasses(classes, theme)
   const stateTheme = {
-    base: {
-      ...themed.base,
-      ...(type && themed[type])
-    }
+    base: mergeClasses(
+      themed.base,
+      themed[type]
+    )
   }
   warning(!className,
     'Please use `theme` instead of `className` to style ButtonLink.')
