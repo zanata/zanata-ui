@@ -14,5 +14,4 @@ export Modal from './components/Modal'
 export FixedDataTable from './components/FixedDataTable'
 export KeyComponent from './components/KeyComponent'
 
-export mergeClasses from './utils/styleUtils'
-export flattenClasses from './utils/styleUtils'
+export { mergeClasses, flattenClasses } from './utils/styleUtils'
