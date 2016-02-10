@@ -13,3 +13,6 @@ export Tooltip from './components/Tooltip'
 export Modal from './components/Modal'
 export FixedDataTable from './components/FixedDataTable'
 export KeyComponent from './components/KeyComponent'
+
+export mergeClasses from './utils/styleUtils'
+export flattenClasses from './utils/styleUtils'
