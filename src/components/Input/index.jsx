@@ -1,11 +1,11 @@
-import React, { PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import cx from 'classnames'
 import { uniqueId, camelCase } from 'lodash'
 import shallowequal from 'shallowequal'
 import createChainedFunction from '../../utils/createChainedFunction'
 import { mergeClasses, flattenClasses } from '../../utils/styleUtils'
-import KeyComponent from '../KeyComponent'
+import KeyboardShortcuts from '../KeyboardShortcuts'
 import Icon from '../Icon'
 import Loader from '../Loader'
 import ButtonLink from '../ButtonLink'
@@ -33,7 +33,7 @@ const loaderTheme = mergeClasses(
   }
 )
 
-class Input extends KeyComponent {
+class Input extends Component {
   state = {
     focused: false,
     hover: false
@@ -43,14 +43,14 @@ class Input extends KeyComponent {
     if (!this.props.disabled) {
       this.setState({focused: true})
       if (this.props.onReset) {
-        this.bindGlobalShortcut('esc', this._handleReset)
+        this.props.bindGlobalShortcut('esc', this._handleReset)
       }
     }
   };
   _handleBlur = () => {
     this.setState({focused: false})
     if (this.props.onReset) {
-      this.unbindShortcut('esc')
+      this.props.unbindShortcut('esc')
     }
   };
   _handleMouseEnter = () => {
@@ -207,4 +207,4 @@ Input.defaultProps = {
   border: 'none'
 }
 
-export default Input
+export default KeyboardShortcuts(Input)
