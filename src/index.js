@@ -12,6 +12,6 @@ export OverlayTrigger from './components/OverlayTrigger'
 export Tooltip from './components/Tooltip'
 export Modal from './components/Modal'
 export FixedDataTable from './components/FixedDataTable'
-export KeyComponent from './components/KeyComponent'
+export KeyboardShortcuts from './components/KeyboardShortcuts'
 
 export { mergeClasses, flattenClasses } from './utils/styleUtils'

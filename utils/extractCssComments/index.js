@@ -10,7 +10,7 @@ function extractCssComments (cssPath, cb) {
   .use(atImport())
   .process(css, {
     from: cssPath
-  }).then(function(result) {
+  }).then(function (result) {
     var comments = ''
     result.root.each(function (rule, i) {
       if (rule.type === 'comment') {
