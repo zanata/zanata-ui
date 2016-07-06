@@ -1,10 +1,16 @@
 .DS_Store
 *.log
 /node_modules
-/dist
 /lib
-/src/components/Icons/icons.svg
-/src/components/Icons/index.jsx
-stats.json
+/dist
+
+# idea
+*.idea/
+*.iml
+
+# Generated css and js files
 /src/styles/atomic.css
-variables.json
+/src/components/Icons/icons.svg
+/src/components/Select/index.css
+/src/components/Icon/list.js
+/styleguide/build

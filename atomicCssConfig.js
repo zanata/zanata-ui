@@ -1,8 +1,8 @@
-var variables = require('./variables')
+var variables = require('./src/constants/styles')
 
-function pxToRem (value, baseFontSize) {
+function pxToRem (pixels, baseFontSize) {
   baseFontSize = baseFontSize || '16'
-  return +(value / baseFontSize).toFixed(3) + 'rem'
+  return +(pixels / baseFontSize).toFixed(3) + 'rem'
 }
 
 function flatten (target) {
@@ -36,7 +36,7 @@ var customVars = flatten(
   Object.assign(
     {},
     {
-      zsans: "'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif", // eslint-disable-line
+      zsans: "'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif", // eslint-disable-line max-len
       zmono: "'Source Code Pro', Hack, Consolas, monaco, monospace"
     },
     variables
@@ -47,35 +47,12 @@ module.exports = {
   cssDest: './src/styles/atomic.css',
   configs: {
     breakPoints: {
+      oxsm: '@media screen and (max-width: ' + pxToRem(469) + ')',
       sm: '@media screen and (min-width: ' + pxToRem(470) + ')',
+      lesm: '@media screen and (max-width: ' + pxToRem(879) + ')',
       md: '@media screen and (min-width: ' + pxToRem(880) + ')',
       lg: '@media screen and (min-width: ' + pxToRem(1200) + ')'
     },
-    custom: customVars,
-    classNames: [
-      'Lh(1.5)',
-      'Ff(zsans)',
-      'H(100%)',
-      'M(0)',
-      // These are needed for generated icon classes
-      'W(msn2)',
-      'W(msn1)',
-      'W(ms0)',
-      'W(ms1)',
-      'W(ms2)',
-      'W(ms3)',
-      'W(ms4)',
-      'W(ms5)',
-      'W(ms6)',
-      'H(msn2)',
-      'H(msn1)',
-      'H(ms0)',
-      'H(ms1)',
-      'H(ms2)',
-      'H(ms3)',
-      'H(ms4)',
-      'H(ms5)',
-      'H(ms6)'
-    ]
+    custom: customVars
   }
 }

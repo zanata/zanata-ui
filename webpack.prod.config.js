@@ -1,19 +1,40 @@
 var webpack = require('webpack')
+var path = require('path')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var _ = require('lodash')
 var defaultConfig = require('./webpack.config.js')
+var bundleDest = __dirname + '/dist'
 
 module.exports = _.merge({}, defaultConfig, {
-  entry: './src/index',
+  cache: false,
+  output: {
+    path: bundleDest,
+    filename: 'zanata-ui.min.js'
+  },
   module: {
     loaders: [
-      defaultConfig.module.loaders[0],
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        include: path.join(__dirname, 'src'),
+        loader: 'babel',
+        query: {
+          presets: ['react', 'stage-0', 'es2015']
+        },
+        babelrc: false
+      },
       {
         test: /\.css$/,
-        loader: 'style!css?safe'
+        loader: ExtractTextPlugin.extract(
+          'style',
+          'css',
+          'autoprefixer?browsers=last 2 versions'
+        )
       }
     ]
   },
   plugins: defaultConfig.plugins.concat([
+    new ExtractTextPlugin('zanata-ui.css'),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -22,7 +43,7 @@ module.exports = _.merge({}, defaultConfig, {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('production')
       }
     })
   ])

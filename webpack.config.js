@@ -1,34 +1,39 @@
 var webpack = require('webpack')
 var path = require('path')
+var bundleDest = __dirname + '/dist'
 
 module.exports = {
-  context: __dirname,
-  entry: {
-    main: './src/app.jsx'
-  },
+  entry: './src/index.js',
   output: {
-    path: __dirname,
-    filename: 'bundle.js',
-    pathinfo: true
+    path: bundleDest,
+    filename: 'zanata-ui.js'
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'eslint'
+      }
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
+        include: path.join(__dirname, 'src'),
         loader: 'atomic-loader?configPath=' + __dirname +
-          '/atomicCssConfig.js!babel',
-        include: path.join(__dirname, 'src')
+          '/atomicCssConfig.js' +
+          '!babel?presets[]=react,presets[]=stage-0,presets[]=es2015'
       },
       {
         test: /\.css$/,
-        loader: 'style!css?safe'
+        include: path.join(__dirname, 'src'),
+        loader: 'style!css!autoprefixer?browsers=last 2 versions'
       }
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({ 'global.GENTLY': false }),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
@@ -36,5 +41,9 @@ module.exports = {
   },
   node: {
     __dirname: true
+  },
+  eslint: {
+    failOnWarning: false,
+    failOnError: true
   }
 }

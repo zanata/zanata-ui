@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
-import warning from 'warning'
-import { mergeClasses, flattenClasses } from '../../utils/styleUtils'
+import { merge } from 'lodash'
+import Base from '../Base'
 import Icon from '../Icon'
 
 const classes = {
@@ -9,7 +9,7 @@ const classes = {
     d: 'D(if)',
     jc: 'Jc(sb)'
   },
-  '-1': {
+  'n1': {
     w: 'W(ms1)',
     h: 'H(ms1)'
   },
@@ -77,38 +77,49 @@ const dotClasses = {
 }
 
 const Loader = ({
-  size = '0',
+  size,
   theme,
-  className,
   ...props
 }) => {
-  const themed = mergeClasses(classes, theme)
-  const stateTheme = mergeClasses(
+  const themed = merge({}, classes, theme)
+  const themedState = merge({},
     themed.base,
     themed[size]
   )
-  warning(!className,
-    'Please use `theme` instead of `className` to style Loader.')
   return (
-    <span className={flattenClasses(stateTheme)} {...props}>
-      <Icon name='dot' className={flattenClasses(dotClasses.base)} />
+    <Base
+      componentName='Loader'
+      theme={themedState}
+      {...props}>
+      <Icon name='dot' atomic={dotClasses.base} />
       <Icon name='dot'
-        className={flattenClasses(
-          mergeClasses(dotClasses.base, dotClasses.second)
-        )}
+        atomic={merge({}, dotClasses.base, dotClasses.second)}
       />
       <Icon name='dot'
-        className={flattenClasses(
-          mergeClasses(dotClasses.base, dotClasses.third)
-        )}
+        atomic={merge({}, dotClasses.base, dotClasses.third)}
       />
-    </span>
+    </Base>
   )
 }
 
 Loader.propTypes = {
-  size: PropTypes.string,
+  /**
+   * The size of each loader, based on modular scale. Default is '0'
+   */
+  size: PropTypes.oneOf(
+    ['n1', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+  ),
+  /**
+   * Based on an [atomic classes](http://acss.io/reference) object.
+   * This should be merged to a single object before it is passed
+   * into the base component.
+   * Each component can have it's own structure for it's theme object.
+   */
   theme: PropTypes.object
+}
+
+Loader.defaultProps = {
+  size: '0'
 }
 
 export default Loader

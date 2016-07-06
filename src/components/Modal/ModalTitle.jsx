@@ -1,20 +1,30 @@
-import React, { Component, PropTypes } from 'react'
-import cx from 'classnames'
+import React, { PropTypes } from 'react'
+import Base from '../Base'
 
-export default class ModalTitle extends Component {
-  render () {
-    let {
-      children,
-      ...props
-    } = this.props
-    return (
-      <h2 {...props} className={cx('fz3 fwl lhsingle csec', props.className)}>
-        {children}
-      </h2>
-    )
-  }
+const classes = {
+  c: 'C(pri)',
+  fz: 'Fz(ms3)',
+  fw: 'Fw(300)',
+  lh: 'Lh(1)'
+}
+
+const ModalTitle = ({
+  children,
+  ...props
+}) => {
+  return (
+    <Base tagName='h2' {...props}
+      theme={classes}>
+      {children}
+    </Base>
+  )
 }
 
 ModalTitle.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node]
+  )
 }
+
+export default ModalTitle

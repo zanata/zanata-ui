@@ -3,7 +3,6 @@
     "postcss-import",
     "postcss-url",
     "postcss-cssnext",
-    "autoprefixer",
     "postcss-browser-reporter",
     "postcss-reporter"
   ],

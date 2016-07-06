@@ -1,43 +1,116 @@
 import React, { PropTypes } from 'react'
-import cx from 'classnames'
+import { merge } from 'lodash'
+import Base from '../Base'
 
-export default class Icon extends React.Component {
-  _sizeClasses (size) {
-    switch (size) {
-      case 'n2': return 'W(msn2) H(msn2)'
-      case 'n1': return 'W(msn1) H(msn1)'
-      case '1': return 'W(ms1) H(ms1)'
-      case '2': return 'W(ms2) H(ms2)'
-      case '3': return 'W(ms3) H(ms3)'
-      case '4': return 'W(ms4) H(ms4)'
-      case '5': return 'W(ms5) H(ms5)'
-      case '6': return 'W(ms6) H(ms6)'
-      case '7': return 'W(ms7) H(ms7)'
-      case '8': return 'W(ms8) H(ms8)'
-      case '9': return 'W(ms9) H(ms9)'
-      case '10': return 'W(ms10) H(ms10)'
-      default: return 'W(ms0) H(ms0)'
+const classes = {
+  base: {
+    d: 'D(ib)',
+    flxs: 'Flxs(0)',
+    pos: 'Pos(r)'
+  },
+  sizes: {
+    'n2': {
+      w: 'W(msn2)',
+      h: 'H(msn2)'
+    },
+    'n1': {
+      w: 'W(msn1)',
+      h: 'H(msn1)'
+    },
+    '0': {
+      w: 'W(ms0)',
+      h: 'H(ms0)'
+    },
+    '1': {
+      w: 'W(ms1)',
+      h: 'H(ms1)'
+    },
+    '2': {
+      w: 'W(ms2)',
+      h: 'H(ms2)'
+    },
+    '3': {
+      w: 'W(ms3)',
+      h: 'H(ms3)'
+    },
+    '4': {
+      w: 'W(ms4)',
+      h: 'H(ms4)'
+    },
+    '5': {
+      w: 'W(ms5)',
+      h: 'H(ms5)'
+    },
+    '6': {
+      w: 'W(ms6)',
+      h: 'H(ms6)'
+    },
+    '7': {
+      w: 'W(ms7)',
+      h: 'H(ms7)'
+    },
+    '8': {
+      w: 'W(ms8)',
+      h: 'H(ms8)'
+    },
+    '9': {
+      w: 'W(ms9)',
+      h: 'H(ms9)'
+    },
+    '10': {
+      w: 'W(ms10)',
+      h: 'H(ms10)'
     }
   }
-  render () {
-    let svgIcon = `<use xlink:href="#Icon-${this.props.name}" />`
-    let classes = cx(
-      'dib posr',
-      this.props.className,
-      this._sizeClasses(this.props.size)
-    )
-    return (
-      <span {...this.props} className={classes}>
-        <svg dangerouslySetInnerHTML={{ __html: svgIcon }}
-          className='StretchedBox Maw(100%)'
-          style={{ fill: 'currentColor' }} />
-      </span>
-    )
-  }
+}
+
+const Icon = ({
+  name,
+  size = '0',
+  theme,
+  ...props
+}) => {
+  const svgIcon = `<use xlink:href="#Icon-${name}" />`
+  const themed = merge({},
+    classes,
+    theme
+  )
+  const themedState = merge({},
+    themed.base,
+    themed.sizes[size]
+  )
+  return (
+    <Base
+      tagName='span'
+      componentName='Icon'
+      theme={themedState}
+      {...props}>
+      <svg dangerouslySetInnerHTML={{ __html: svgIcon }}
+        className='Pos(a) H(100%) W(100%) T(0) Start(0)'
+        style={{ fill: 'currentColor' }} />
+    </Base>
+  )
 }
 
 Icon.propTypes = {
+  /**
+   * The name of the icon.
+   * See list.js in the same folder for possible icons.
+   */
   name: PropTypes.string.isRequired,
-  size: PropTypes.string,
-  className: PropTypes.string
+  /**
+   * The size of the icon based on the modular scale.
+   */
+  size: PropTypes.oneOf(
+    ['n2', 'n1', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+  ),
+  /**
+   * Based on an [atomic classes](http://acss.io/reference) object.
+   * This should be merged to a single object before it is passed
+   * into the base component.
+   * Each component can have it's own structure for it's theme object.
+   */
+  theme: PropTypes.object
 }
+
+export default Icon

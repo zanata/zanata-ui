@@ -1,0 +1,117 @@
+{
+  "types": [
+    "default",
+    "primary",
+    "success",
+    "unsure",
+    "warning",
+    "danger",
+    "muted"
+  ],
+  "colors": {
+    "pri": "rgb(27, 167, 217)",
+    "sec": "rgb(135, 98, 234)",
+    "success": "rgb(36, 200, 137)",
+    "unsure": "rgb(215, 213, 67)",
+    "warning": "rgb(252, 153, 71)",
+    "danger": "rgb(234, 66, 86)",
+    "dark": "rgb(84, 102, 122)",
+    "muted": "rgb(162, 179, 190)",
+    "neutral": "rgb(189, 212, 220)",
+    "light": "rgb(237, 242, 248)"
+  },
+  "gradients": {
+    "grdshine": "linear-gradient(rgba(255,255,255,.4), transparent)"
+  },
+  "borders": {
+    "bd1": "solid 1px",
+    "bd2": "solid 2px"
+  },
+  "rhythm": {
+    "re": "0.1875rem",
+    "rq": "0.375rem",
+    "rh": "0.75rem",
+    "r3q": "1.125rem",
+    "r1": "1.5rem",
+    "r1q": "1.875rem",
+    "r1h": "2.25rem",
+    "r2": "3rem",
+    "r3": "4.5rem",
+    "r4": "6rem",
+    "r6": "9rem",
+    "r8": "12rem",
+    "r16": "24rem",
+    "r32": "48rem"
+  },
+  "rhythmem": {
+    "ee": "0.1875em",
+    "eq": "0.375em",
+    "eh": "0.75em",
+    "e3q": "1.125em",
+    "e1": "1.5em",
+    "e1q": "1.875em",
+    "e1h": "2.25em",
+    "e2": "3em",
+    "e3": "4.5em",
+    "e4": "6em",
+    "e6": "9em",
+    "e8": "12em",
+    "e16": "24em",
+    "e32": "48em"
+  },
+  "ms": {
+    "msn2": "0.694rem",
+    "msn1": "0.833rem",
+    "ms0": "1rem",
+    "ms1": "1.2rem",
+    "ms2": "1.44rem",
+    "ms3": "1.728rem",
+    "ms4": "2.074rem",
+    "ms5": "2.488rem",
+    "ms6": "2.986rem",
+    "ms7": "3.583rem",
+    "ms8": "4.3rem",
+    "ms9": "5.16rem",
+    "ms10": "6.192rem",
+    "ms11": "7.43rem",
+    "ms12": "8.916rem"
+  },
+  "borderRadius": {
+    "rnd": "500px"
+  },
+  "shadows": {
+    "sh1": "0 1px 4px 0 rgba(0, 0, 0, 0.185)",
+    "sh2": "0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.15)",
+    "sh3": "0 11px 7px 0 rgba(0, 0, 0, 0.09), 0 13px 25px 0 rgba(0, 0, 0, 0.15)",
+    "sh4": "0 14px 12px 0 rgba(0, 0, 0, 0.085), 0 20px 40px 0 rgba(0, 0, 0, 0.15)",
+    "sh5": "0 17px 17px 0 rgba(0, 0, 0, 0.075), 0 27px 55px 0 rgba(0, 0, 0, 0.15)",
+    "shw": "0 0 15px 5px #fff",
+    "ish1": "inset 0 1px 4px 0 rgba(0, 0, 0, 0.185)",
+    "ishbd2": "inset 0 0 0 2px currentColor"
+  },
+  "flexbox": {
+    "flx1": "1",
+    "if": "inline-flex"
+  },
+  "transitions": {
+    "eo": "transform .3s cubic-bezier(0.19, 1, 0.22, 1), opacity .3s cubic-bezier(0.19, 1, 0.22, 1)",
+    "eib": "transform .3s cubic-bezier(0.6, -0.28, 0.735, 0.045), opacity .3s cubic-bezier(0.6, -0.28, 0.735, 0.045)",
+    "eob": "transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+    "aeo": "all .3s cubic-bezier(0.19, 1, 0.22, 1)",
+    "aeib": "all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045)",
+    "aeob": "all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+  },
+  "animation": {
+    "anibd": "bouncedelay"
+  },
+  "defaults": {
+    "i": "inherit"
+  },
+  "zIndex": {
+    "tooltipArrow": 100,
+    "select": 200,
+    "tooltip": 300,
+    "backDrop": 400,
+    "modal": 500
+  }
+}

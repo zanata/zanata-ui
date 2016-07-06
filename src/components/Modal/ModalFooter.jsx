@@ -1,20 +1,32 @@
-import React, { Component, PropTypes } from 'react'
-import cx from 'classnames'
+import React, { PropTypes } from 'react'
+import Base from '../Base'
 
-export default class ModalFooter extends Component {
-  render () {
-    let { children, ...props } = this.props
-    return (
-      <footer
-        className={cx('fxnone ph1 pv3/4 bgcblack5a tac', props.className)}
-        {...props}
-      >
-        {children}
-      </footer>
-    )
-  }
+const classes = {
+  bgc: 'Bgc(#000.05)',
+  flx: 'Flx(n)',
+  p: 'Px(r1) Py(r3q)',
+  ta: 'Ta(c)'
+}
+
+const ModalFooter = ({
+  children,
+  ...props
+}) => {
+  return (
+    <Base tagName='footer'
+      theme={classes}
+      {...props}
+    >
+      {children}
+    </Base>
+  )
 }
 
 ModalFooter.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node]
+  )
 }
+
+export default ModalFooter

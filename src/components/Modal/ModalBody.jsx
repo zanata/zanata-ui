@@ -1,31 +1,52 @@
-import React, { Component, PropTypes } from 'react'
-import cx from 'classnames'
+import React, { PropTypes } from 'react'
+import { merge } from 'lodash'
+import Base from '../Base'
 
-export default class ModalBody extends Component {
-  render () {
-    const { children,
-            className,
-            scrollable,
-            ...props
-          } = this.props
-    const classes = cx(
-      'fxauto ph1 pt1 pb2',
-      className,
-      scrollable && 'ovya'
-    )
-    return (
-      <div {...props} className={classes}>
-        {children}
-      </div>
-    )
+const classes = {
+  base: {
+    p: 'Px(r1) Pt(r1) Pb(r2)',
+    t: 'Ta(s)'
+  },
+  scrollable: {
+    ov: 'Ov(a) Ovx(h)'
   }
 }
 
+const ModalBody = ({
+  children,
+  scrollable,
+  theme,
+  ...props
+}) => {
+  const themed = merge({},
+    classes,
+    theme
+  )
+  const themedState = merge({},
+    themed.base,
+    scrollable && themed.scrollable
+  )
+  return (
+    <Base {...props}
+      theme={themedState}>
+      {children}
+    </Base>
+  )
+}
+
 ModalBody.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node]
+  ),
+  /**
+   * Wether to allow the body to be scrollable
+   */
   scrollable: PropTypes.bool,
-  className: PropTypes.string,
-  children: PropTypes.node
+  theme: PropTypes.object
 }
 ModalBody.defaultProps = {
   scrollable: true
 }
+
+export default ModalBody

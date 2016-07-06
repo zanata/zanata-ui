@@ -1,124 +1,116 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import cx from 'classnames'
 import { isRequiredForA11y } from 'react-prop-types'
 import { capitalize } from 'lodash'
+import { colors } from '../../constants/styles'
 
-export default class Tooltip extends Component {
-  render () {
-    const {
-      placement,
-      title,
-      inverse,
-      positionLeft,
-      positionTop,
-      arrowOffsetLeft,
-      arrowOffsetTop,
-      alignment,
-      className,
-      style,
-      children,
-      ...props
-    } = this.props
-    const arrowSize = 6
-    const alignmentClass = 'ta' + alignment.charAt(0)
-    let placementInverse = () => {
-      switch (placement) {
-        case 'top': return 'bottom'
-        case 'bottom': return 'top'
-        case 'left': return 'right'
-        case 'right': return 'left'
-        default: return
-      }
+const Tooltip = ({
+  placement,
+  title,
+  inverse,
+  positionLeft,
+  positionTop,
+  arrowOffsetLeft,
+  arrowOffsetTop,
+  alignment,
+  className,
+  style,
+  children,
+  ...props
+}) => {
+  const arrowSize = 6
+  const alignmentClass = 'Ta(' + alignment.charAt(0) + ')'
+  let placementInverse = () => {
+    switch (placement) {
+      case 'top': return 'bottom'
+      case 'bottom': return 'top'
+      case 'left': return 'right'
+      case 'right': return 'left'
+      default: return
     }
-    let extraTooltipStyle = () => {
-      switch (placement) {
-        case 'top': return { marginTop: -arrowSize }
-        case 'bottom': return { marginTop: arrowSize }
-        case 'left': return { marginLeft: -arrowSize }
-        case 'right': return { marginLeft: arrowSize }
-      }
-    }
-    const tooltipClasses = cx(
-      className,
-      'ffsans posa z4 fzn1',
-      placement,
-      alignmentClass
-    )
-    const tooltipStyle = {
-      left: positionLeft,
-      top: positionTop,
-      maxWidth: '16rem',
-      ...extraTooltipStyle(),
-      ...style
-    }
-    const tooltipInnerClasses = cx(
-      'bdrs1/4 bd p1/4 bxsh3',
-      {
-        'csec bgcwhite bdcsec10': !inverse,
-        'cwhite bgcblack80a bdctrans': inverse
-      }
-    )
-    const tooltipArrowClasses = cx(
-      'posa db w0 h0 bdss bdctrans z1'
-    )
-    const tooltipArrowStyle = {
-      [placementInverse()]: -arrowSize,
-      borderWidth: arrowSize,
-      [(placement === 'left' || placement === 'right') ? 'marginTop' : 'marginLeft']: -(arrowSize + 1), // eslint-disable-line max-len
-      ['border' + capitalize(placementInverse()) + 'Width']: 0,
-      ['border' + capitalize(placement) + 'Color']: inverse
-        ? 'transparent' : 'rgb(210,226,231)'
-    }
-    const tooltipArrowInnerStyle = {
-      borderWidth: arrowSize,
-      [placementInverse()]: inverse ? 0 : 1,
-      [(placement === 'left' || placement === 'right') ? 'bottom' : 'marginLeft']: -arrowSize, // eslint-disable-line max-len
-      ['border' + capitalize(placementInverse()) + 'Width']: 0,
-      ['border' + capitalize(placement) + 'Color']: inverse
-        ? 'rgba(0,0,0,.8)' : '#fff'
-    }
-    const tooltipTitleClasses = cx(
-      'ttu fzn2 mb1/4',
-      {
-        'csec70': !inverse,
-        'cwhite70a': inverse
-      }
-    )
-    const tooltipTitle = title
-      ? (<h2 className={tooltipTitleClasses}>{title}</h2>) : undefined
-
-    return (
-      <div
-        role='tooltip'
-        {...props}
-        className={tooltipClasses}
-        style={tooltipStyle}
-      >
-        <div
-          className={tooltipArrowClasses}
-          style={{
-            left: arrowOffsetLeft,
-            top: arrowOffsetTop,
-            ...tooltipArrowStyle
-          }}
-        >
-          <div className={tooltipArrowClasses} style={tooltipArrowInnerStyle}/>
-        </div>
-
-        <div className={tooltipInnerClasses}>
-          {tooltipTitle}
-          {children}
-        </div>
-      </div>
-    )
   }
+  let extraTooltipStyle = () => {
+    switch (placement) {
+      case 'top': return { marginTop: -arrowSize }
+      case 'bottom': return { marginTop: arrowSize }
+      case 'left': return { marginLeft: -arrowSize }
+      case 'right': return { marginLeft: arrowSize }
+    }
+  }
+  const tooltipClasses = cx(
+    className,
+    'Ff(zsans) Pos(a) Z(tooltip) Fz(msn1)',
+    placement,
+    alignmentClass
+  )
+  const tooltipStyle = {
+    left: positionLeft,
+    top: positionTop,
+    maxWidth: '16rem',
+    ...extraTooltipStyle(),
+    ...style
+  }
+  const tooltipInnerClasses = cx(
+    'Bdrs(rq) Bd(bd1) P(rq) Bxsh(sh3)',
+    {
+      'C(dark) Bgc(#fff) Bdc(light)': !inverse,
+      'C(#fff) Bgc(#000.8) Bdc(t)': inverse
+    }
+  )
+  const tooltipArrowClasses = cx(
+    'Pos(a) D(b) W(0) H(0) Bds(s) Bdc(t) Z(tooltipArrow)'
+  )
+  const tooltipArrowStyle = {
+    [placementInverse()]: -arrowSize,
+    borderWidth: arrowSize,
+    [(placement === 'left' || placement === 'right') ? 'marginTop' : 'marginLeft']: -(arrowSize + 1), // eslint-disable-line max-len
+    ['border' + capitalize(placementInverse()) + 'Width']: 0,
+    ['border' + capitalize(placement) + 'Color']: inverse
+      ? 'transparent' : colors.light
+  }
+  const tooltipArrowInnerStyle = {
+    borderWidth: arrowSize,
+    [placementInverse()]: inverse ? 0 : 1,
+    [(placement === 'left' || placement === 'right') ? 'bottom' : 'marginLeft']: -arrowSize, // eslint-disable-line max-len
+    ['border' + capitalize(placementInverse()) + 'Width']: 0,
+    ['border' + capitalize(placement) + 'Color']: inverse
+      ? 'rgba(0,0,0,.8)' : '#fff'
+  }
+  const tooltipTitleClasses = 'Tt(u) Fz(msn2) Mb(rq) Op(.7)'
+  const tooltipTitle = title
+    ? (<h2 className={tooltipTitleClasses}>{title}</h2>) : undefined
+
+  return (
+    <div
+      role='tooltip'
+      {...props}
+      className={tooltipClasses}
+      style={tooltipStyle}
+    >
+      <div
+        className={tooltipArrowClasses}
+        style={{
+          left: arrowOffsetLeft,
+          top: arrowOffsetTop,
+          ...tooltipArrowStyle
+        }}
+      >
+        <div className={tooltipArrowClasses} style={tooltipArrowInnerStyle} />
+      </div>
+
+      <div className={tooltipInnerClasses}>
+        {tooltipTitle}
+        {children}
+      </div>
+    </div>
+  )
 }
 
 Tooltip.propTypes = {
   /**
    * An html id attribute, necessary for accessibility
    * @type {string}
-   * @required
+   * @required for A11y
    */
   id: isRequiredForA11y(
     PropTypes.oneOfType([
@@ -132,10 +124,12 @@ Tooltip.propTypes = {
   placement: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   /**
    * The `left` position value for the tooltip
+   * TODO: pixels or em?
    */
   positionLeft: PropTypes.number,
   /**
    * The `top` position value for the tooltip
+   * TODO: pixels or em?
    */
   positionTop: PropTypes.number,
   /**
@@ -146,7 +140,7 @@ Tooltip.propTypes = {
     PropTypes.string
   ]),
   /**
-   * The `top` position value for the tooltip arrow
+   * The css attribute `top` position value for the tooltip arrow
    */
   arrowOffsetTop: PropTypes.oneOfType([
     PropTypes.number,
@@ -173,3 +167,5 @@ Tooltip.defaultProps = {
   placement: 'top',
   alignment: 'center'
 }
+
+export default Tooltip

@@ -1,20 +1,27 @@
-import React, { Component, PropTypes } from 'react'
-import cx from 'classnames'
+import React, { PropTypes } from 'react'
+import Base from '../Base'
 
-export default class ModalHeader extends Component {
-  render () {
-    const {
-      children,
-      ...props
-    } = this.props
-    return (
-      <header {...props} className={cx('p1', props.className)}>
-        {children}
-      </header>
-    )
-  }
+const classes = {
+  p: 'P(r1)'
+}
+
+const ModalHeader = ({
+  children,
+  ...props
+}) => {
+  return (
+    <Base tagName='header' {...props}
+      theme={classes}>
+      {children}
+    </Base>
+  )
 }
 
 ModalHeader.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node]
+  )
 }
+
+export default ModalHeader
