@@ -28,7 +28,7 @@ module.exports = _.merge({}, defaultConfig, {
         loader: ExtractTextPlugin.extract(
           'style',
           'css',
-          'autoprefixer?browsers=last 2 versions'
+          'postcss?browsers=last 2 versions'
         )
       }
     ]

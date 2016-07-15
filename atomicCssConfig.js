@@ -53,6 +53,10 @@ module.exports = {
       md: '@media screen and (min-width: ' + pxToRem(880) + ')',
       lg: '@media screen and (min-width: ' + pxToRem(1200) + ')'
     },
-    custom: customVars
+    custom: customVars,
+    classNames: [
+      'Mend(rh)',
+      'Tt(c)'
+    ]
   }
 }
