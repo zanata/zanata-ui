@@ -5,7 +5,7 @@ var glob = require('glob');
 module.exports = {
   title: 'Zanata UI Style Guide',
   components: './src/components/*/index.{js,jsx}',
-  template: './styleguide.html',
+  template: './index.html',
   updateWebpackConfig: function (webpackConfig, env) {
     webpackConfig.entry.push(path.join(__dirname, 'src/styles/base.css'))
     webpackConfig.entry.push(path.join(__dirname, 'src/styles/atomic.css'))
