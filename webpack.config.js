@@ -1,4 +1,6 @@
 var webpack = require('webpack')
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
 var path = require('path')
 var bundleDest = __dirname + '/dist'
 
@@ -28,9 +30,12 @@ module.exports = {
       {
         test: /\.css$/,
         include: path.join(__dirname, 'src'),
-        loader: 'style!css!autoprefixer?browsers=last 2 versions'
+        loader: 'style!css!postcss?browsers=last 2 versions'
       }
     ]
+  },
+  postcss: function () {
+    return [precss, autoprefixer];
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
