@@ -1,6 +1,6 @@
 {
   "name": "zanata-ui",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "The Core UI for Zanata",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "build:sass": "npm run variables && node-sass src/styles/components/Select.scss -o src/styles/components --include-path node_modules --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js",
     "build:icons": "npm run svg && npm run icons",
     "build:webpack": "webpack -p --config webpack.prod.config.js --bail --display-error-details",
-    "build:lib": "babel --presets react,es2015,stage-0 -d lib/ src/",
+    "build:lib": "babel --presets react,es2015,stage-0 -d lib/ src/ --copy-files",
     "icons": "node scripts/createIconsComponent && node scripts/generateIconList",
     "prepublish": "npm run build",
     "start": "npm run build:dev && styleguidist build && styleguidist server",

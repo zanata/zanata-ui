@@ -2,10 +2,15 @@ var defaultWebpackConfig = require('./webpack.config.js')
 var path = require('path')
 var glob = require('glob');
 
+var serverHost = process.env.OPENSHIFT_NODEJS_IP || 'localhost'
+var serverPort = process.env.OPENSHIFT_NODEJS_PORT || 3000
+
 module.exports = {
   title: 'Zanata UI Style Guide',
   components: './src/components/*/index.{js,jsx}',
   template: './index.html',
+  serverHost: serverHost,
+  serverPort: serverPort,
   updateWebpackConfig: function (webpackConfig, env) {
     webpackConfig.entry.push(path.join(__dirname, 'src/styles/base.css'))
     webpackConfig.entry.push(path.join(__dirname, 'src/styles/atomic.css'))

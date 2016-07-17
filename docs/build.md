@@ -19,10 +19,24 @@ command line or in node can be run from here. It should be fairly easy to
 follow. Have a look at [package.json](../package.json) under the
 `scripts` property.
 
-## Build dist
-
-To build bundle css and js in `dist` directory:
+## Compile and bundle
 
 ```sh
 npm run build
+```
+
+This will compile js files in `lib` folder and bundle css and js in `dist` directory.
+
+## NPM publish
+
+Before publishing package, make sure it is tagged.
+
+```sh
+git tag v1.0.0
+```
+
+To publish package in npmjs.org, run 
+
+```sh
+npm publish
 ```
