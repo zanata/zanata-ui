@@ -1,4 +1,3 @@
-import './styles/index.css'
 /**
  * Components that will be available via individual import
  */
