@@ -3,7 +3,7 @@
  * ============
  * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
  * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
- * MIT License: https://github.com/keystonejs/react-select
+ * MIT License: https://github.com/JedWatson/react-select
 */
 @keyframes Select-animation-spin {
   to {
@@ -47,6 +47,8 @@
   width: 100%; }
   .Select-control:hover {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06); }
+  .Select-control .Select-input:focus {
+    outline: none; }
 
 .is-searchable.is-open > .Select-control {
   cursor: text; }
@@ -83,17 +85,19 @@
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.has-value.Select--single:not(.is-focused) > .Select-control > .Select-value .Select-value-label,
-.has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value .Select-value-label {
+.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
   color: #54667a; }
 
-.has-value.Select--single:not(.is-focused) > .Select-control > .Select-value a.Select-value-label,
-.has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value a.Select-value-label {
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label {
   cursor: pointer;
   text-decoration: none; }
-  .has-value.Select--single:not(.is-focused) > .Select-control > .Select-value a.Select-value-label:hover,
-  .has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value a.Select-value-label:hover {
+  .has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover, .has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+  .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+  .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
     color: #1ba7d9;
+    outline: none;
     text-decoration: underline; }
 
 .Select-input {
@@ -168,6 +172,17 @@
 
 .Select--multi .Select-clear-zone {
   width: 1.6em; }
+
+.Select--multi .Select-multi-value-wrapper {
+  display: inline-block; }
+
+.Select .Select-aria-only {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden; }
 
 .Select-arrow-zone {
   cursor: pointer;
