@@ -1,1 +1,0 @@
-    <Heading>Heading</Heading>

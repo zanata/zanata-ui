@@ -1,9 +1,0 @@
-/**
- * All css file needs to be included in here
- */
-@import './base.css';
-@import './atomic.css';
-@import './animations.css';
-@import './extras.css';
-@import './components/LogoLoader.css';
-@import './components/Select.css';
